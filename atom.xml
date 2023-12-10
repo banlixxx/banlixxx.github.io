@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-12-10T03:11:07.617Z</updated>
+  <updated>2023-12-10T03:51:07.565Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,64 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用定时器倒计时</title>
+    <link href="http://example.com/2023/12/10/%E4%BD%BF%E7%94%A8%E5%AE%9A%E6%97%B6%E5%99%A8%E5%80%92%E8%AE%A1%E6%97%B6/"/>
+    <id>http://example.com/2023/12/10/%E4%BD%BF%E7%94%A8%E5%AE%9A%E6%97%B6%E5%99%A8%E5%80%92%E8%AE%A1%E6%97%B6/</id>
+    <published>2023-12-10T03:46:59.000Z</published>
+    <updated>2023-12-10T03:51:07.565Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">&lt;button @click=&quot;getCode&quot;&gt;</span><br><span class="line">  &#123;&#123;</span><br><span class="line">    second === totalSecond ? &#x27;获取验证码&#x27; : second + &#x27;秒后重新发送&#x27;</span><br><span class="line">  &#125;&#125;</span><br><span class="line">&lt;/button&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">  name: &#x27;LoginPage&#x27;,</span><br><span class="line">  data() &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      totalSecond: 60, // 总秒数</span><br><span class="line">      second: 60, // 当前秒数，开定时器对 second--</span><br><span class="line">      timer: null // 定时器 id</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  // 离开页面清除定时器</span><br><span class="line">  destroyed() &#123;</span><br><span class="line">    clearInterval(this.timer)</span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    // 获取短信验证码</span><br><span class="line">    getCode() &#123;</span><br><span class="line">      // 开启倒计时</span><br><span class="line">      if (this.timer || this.second !=== this.totalSecond) return</span><br><span class="line">      this.timer = setInterval(() =&gt; &#123;</span><br><span class="line">        this.second--</span><br><span class="line">        if (this.second &lt;= 0) &#123;</span><br><span class="line">          clearInterval(this.timer)</span><br><span class="line">          this.timer = null // 重置定时器 id</span><br><span class="line">          this.second = this.totalSecond // 归位</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;, 1000)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span c</summary>
+      
+    
+    
+    
+    <category term="Vue2" scheme="http://example.com/categories/Vue2/"/>
+    
+    <category term="Vue2 基础" scheme="http://example.com/categories/Vue2/Vue2-%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="Vue2" scheme="http://example.com/tags/Vue2/"/>
+    
+    <category term="定时器" scheme="http://example.com/tags/%E5%AE%9A%E6%97%B6%E5%99%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Toast 轻提示</title>
+    <link href="http://example.com/2023/12/10/toast%E8%BD%BB%E6%8F%90%E7%A4%BA/"/>
+    <id>http://example.com/2023/12/10/toast%E8%BD%BB%E6%8F%90%E7%A4%BA/</id>
+    <published>2023-12-10T03:14:41.000Z</published>
+    <updated>2023-12-10T03:28:55.531Z</updated>
+    
+    <content type="html"><![CDATA[<h5 id="1-注册安装"><a href="#1-注册安装" class="headerlink" title="1 注册安装"></a>1 注册安装</h5><p>官网：<a class="link"   href="https://vant-contrib.gitee.io/vant/v2/#/zh-CN/toast" >https://vant-contrib.gitee.io/vant/v2/#/zh-CN/toast<i class="fas fa-external-link-alt"></i></a></p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">Toast</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;vant&#x27;</span></span><br><span class="line"><span class="title class_">Vue</span>.<span class="title function_">use</span>(<span class="title class_">Toast</span>)</span><br></pre></td></tr></table></figure><h5 id="2-两种使用方式"><a href="#2-两种使用方式" class="headerlink" title="2 两种使用方式"></a>2 两种使用方式</h5><h6 id="2-1-导入调用"><a href="#2-1-导入调用" class="headerlink" title="2.1 导入调用"></a>2.1 导入调用</h6><p>组件内 或 非组件中 均可</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">Toast</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;vant&#x27;</span></span><br><span class="line"><span class="title class_">Toast</span>(<span class="string">&#x27;提示内容&#x27;</span>)</span><br><span class="line"><span class="title class_">Toast</span>.<span class="title function_">success</span>(<span class="string">&#x27;成功文案&#x27;</span>)</span><br></pre></td></tr></table></figure><h6 id="2-2-通过-this-直接调用"><a href="#2-2-通过-this-直接调用" class="headerlink" title="2.2 通过 this 直接调用"></a>2.2 通过 this 直接调用</h6><p>必须组件内<br>本质：全局引入 Toast 组建后，会自动将方法注册挂载到了 Vue 原型上 <code>Vue.prototype.$toast = xxx</code></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">this.$toast(&#x27;提示内容&#x27;)</span><br><span class="line">this.$toast.success(&#x27;成功文案&#x27;)</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h5 id=&quot;1-注册安装&quot;&gt;&lt;a href=&quot;#1-注册安装&quot; class=&quot;headerlink&quot; title=&quot;1 注册安装&quot;&gt;&lt;/a&gt;1 注册安装&lt;/h5&gt;&lt;p&gt;官网：&lt;a class=&quot;link&quot;   href=&quot;https://vant-contrib.gitee.</summary>
+      
+    
+    
+    
+    <category term="Vue2" scheme="http://example.com/categories/Vue2/"/>
+    
+    <category term="Vant 组件库" scheme="http://example.com/categories/Vue2/Vant-%E7%BB%84%E4%BB%B6%E5%BA%93/"/>
+    
+    
+    <category term="Vue2" scheme="http://example.com/tags/Vue2/"/>
+    
+    <category term="Vant 组件库" scheme="http://example.com/tags/Vant-%E7%BB%84%E4%BB%B6%E5%BA%93/"/>
+    
+    <category term="Toast" scheme="http://example.com/tags/Toast/"/>
+    
+  </entry>
   
   <entry>
     <title>Axios 封装</title>
