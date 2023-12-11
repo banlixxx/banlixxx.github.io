@@ -9,7 +9,7 @@
     
     <title>
         
-            Vue2 中 router/index.js 基础配置 |
+            XR-FRAME - 基础能力 - Geometry基础图形 |
         
         斑狸
     </title>
@@ -203,7 +203,7 @@
             <div class="post-content-bottom border-box">
                 
                     <div class="post-title">
-                        Vue2 中 router/index.js 基础配置
+                        XR-FRAME - 基础能力 - Geometry基础图形
                     </div>
                 
 
@@ -231,13 +231,13 @@
         
             <span class="meta-info-item post-create-date">
                 <i class="icon fa-solid fa-calendar-check"></i>&nbsp;
-                <span class="pc">2023-12-07 11:14:26</span>
-                <span class="mobile">2023-12-07 11:14</span>
+                <span class="pc">2023-12-11 17:11:51</span>
+                <span class="mobile">2023-12-11 17:11</span>
             </span>
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="pc" data-updated="Fri Dec 08 2023 11:06:11 GMT+0800">2023-12-08 11:06:11</span>
+                <span class="pc" data-updated="Mon Dec 11 2023 17:51:11 GMT+0800">2023-12-11 17:51:11</span>
             </span>
         
 
@@ -245,10 +245,10 @@
             <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
                 <ul class="post-category-ul">
                     
-                            <li class="category-item"><a href="/categories/Vue2/">Vue2</a></li>
+                            <li class="category-item"><a href="/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/">微信小程序</a></li>
                         
                     
-                            <li class="category-item">&nbsp;<i class="icon fas fa-angle-right"></i>&nbsp;<a href="/categories/Vue2/Vue2-%E5%9F%BA%E7%A1%80/">Vue2 基础</a></li>
+                            <li class="category-item">&nbsp;<i class="icon fas fa-angle-right"></i>&nbsp;<a href="/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/xr-frame/">xr-frame</a></li>
                         
                     
                 </ul>
@@ -260,10 +260,10 @@
                 <i class="icon fas fa-tags"></i>&nbsp;
                 <ul class="post-tag-ul">
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/Vue2/">Vue2</a></li>
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/">微信小程序</a></li>
                         
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/vue-router/">vue-router</a></li>
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/xr-frame/">xr-frame</a></li>
                         
                     
                 </ul>
@@ -273,12 +273,12 @@
         
         
             <span class="meta-info-item post-wordcount">
-                <i class="icon fas fa-file-word"></i>&nbsp;<span>309 字</span>
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>837 字</span>
             </span>
         
         
             <span class="meta-info-item post-min2read">
-                <i class="icon fas fa-clock"></i>&nbsp;<span>1 分钟</span>
+                <i class="icon fas fa-clock"></i>&nbsp;<span>4 分钟</span>
             </span>
         
         
@@ -299,9 +299,17 @@
                 <div class="post-content keep-markdown-body">
                     
 
-                    <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// /src/router/index.js 基础配置</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">Vue</span> <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">VueRouter</span> <span class="keyword">from</span> <span class="string">&#x27;vue-router&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">HomeView</span> <span class="keyword">from</span> <span class="string">&#x27;../views/HomeView.vue&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="title class_">Vue</span>.<span class="title function_">use</span>(<span class="title class_">VueRouter</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> routes = [</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">path</span>: <span class="string">&#x27;/&#x27;</span>,</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&#x27;home&#x27;</span>,</span><br><span class="line">    <span class="attr">component</span>: <span class="title class_">HomeView</span></span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">path</span>: <span class="string">&#x27;/about&#x27;</span>,</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&#x27;about&#x27;</span>,</span><br><span class="line">    <span class="comment">// route level code-splitting</span></span><br><span class="line">    <span class="comment">// this generates a separate chunk (about.[hash].js) for this route</span></span><br><span class="line">    <span class="comment">// which is lazy-loaded when the route is visited.</span></span><br><span class="line">    <span class="attr">component</span>: <span class="function">() =&gt;</span></span><br><span class="line">      <span class="keyword">import</span>(<span class="comment">/* webpackChunkName: &quot;about&quot; */</span> <span class="string">&#x27;../views/AboutView.vue&#x27;</span>)</span><br><span class="line">  &#125;</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> router = <span class="keyword">new</span> <span class="title class_">VueRouter</span>(&#123;</span><br><span class="line">  routes</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> router</span><br></pre></td></tr></table></figure>
+                    <h5 id="1-项目地址"><a href="#1-项目地址" class="headerlink" title="1 项目地址"></a>1 项目地址</h5><p>官方项目地址：<a class="link"   target="_blank" rel="noopener" href="https://github.com/dtysky/xr-frame-demo/tree/master/miniprogram/components/xr-basic" >https://github.com/dtysky/xr-frame-demo/tree/master/miniprogram/components/xr-basic<i class="fas fa-external-link-alt"></i></a></p>
+<h5 id="2-代码解析"><a href="#2-代码解析" class="headerlink" title="2 代码解析"></a>2 代码解析</h5><p>主要代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;xr-scene id=&quot;xr-scene&quot; bind:ready=&quot;handleReady&quot;&gt;</span><br><span class="line">  &lt;xr-assets bind:progress=&quot;handleAssetsProgress&quot; bind:loaded=&quot;handleAssetsLoaded&quot;&gt;</span><br><span class="line">    &lt;xr-asset-material asset-id=&quot;standard-mat&quot; effect=&quot;standard&quot; /&gt;</span><br><span class="line">  &lt;/xr-assets&gt;</span><br><span class="line">  &lt;xr-node&gt;</span><br><span class="line">    &lt;xr-mesh node-id=&quot;mesh-plane&quot; position=&quot;0 -0.02 -4&quot; rotation=&quot;0 0 0&quot; scale=&quot;5 1 5&quot; geometry=&quot;plane&quot; material=&quot;standard-mat&quot; uniforms=&quot;u_baseColorFactor:0.48 0.78 0.64 1&quot; receive-shadow&gt;&lt;/xr-mesh&gt;</span><br><span class="line">    &lt;xr-mesh id=&quot;cube&quot; node-id=&quot;mesh-cube&quot; position=&quot;-1 0.5 -3.5&quot; scale=&quot;1 1 1&quot; rotation=&quot;0 45 0&quot; geometry=&quot;cube&quot; material=&quot;standard-mat&quot; uniforms=&quot;u_baseColorFactor:0.298 0.764 0.85 1&quot; cast-shadow&gt;&lt;/xr-mesh&gt;</span><br><span class="line">    &lt;xr-mesh node-id=&quot;mesh-cylinder&quot; position=&quot;1 0.7 -3.5&quot; scale=&quot;1 0.7 1&quot; geometry=&quot;cylinder&quot; material=&quot;standard-mat&quot; uniforms=&quot;u_baseColorFactor:1 0.776 0.364 1&quot; cast-shadow&gt;&lt;/xr-mesh&gt;</span><br><span class="line">    &lt;xr-mesh node-id=&quot;mesh-sphere&quot; position=&quot;0 1.25 -5&quot; scale=&quot;1.25 1.25 1.25&quot; geometry=&quot;sphere&quot; material=&quot;standard-mat&quot; uniforms=&quot;u_baseColorFactor:0.937 0.176 0.368 1&quot; cast-shadow&gt;&lt;/xr-mesh&gt;</span><br><span class="line">    &lt;xr-camera</span><br><span class="line">      id=&quot;camera&quot; node-id=&quot;camera&quot; position=&quot;0 1.6 0&quot; clear-color=&quot;0.925 0.925 0.925 1&quot;</span><br><span class="line">      target=&quot;mesh-sphere&quot;</span><br><span class="line">      camera-orbit-control=&quot;&quot;</span><br><span class="line">    &gt;&lt;/xr-camera&gt;</span><br><span class="line">  &lt;/xr-node&gt;</span><br><span class="line">  &lt;xr-node node-id=&quot;lights&quot;&gt;</span><br><span class="line">    &lt;xr-light type=&quot;ambient&quot; color=&quot;1 1 1&quot; intensity=&quot;1&quot; /&gt;</span><br><span class="line">    &lt;xr-light type=&quot;directional&quot; rotation=&quot;40 170 0&quot; color=&quot;1 1 1&quot; intensity=&quot;3&quot; cast-shadow/&gt;</span><br><span class="line">  &lt;/xr-node&gt;</span><br><span class="line">&lt;/xr-scene&gt;</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">Vue</span> <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">VueRouter</span> <span class="keyword">from</span> <span class="string">&#x27;vue-router&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">Login</span> <span class="keyword">from</span> <span class="string">&#x27;@/views/login&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">Layout</span> <span class="keyword">from</span> <span class="string">&#x27;@/views/layout&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">Search</span> <span class="keyword">from</span> <span class="string">&#x27;@/views/search&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">MyOrder</span> <span class="keyword">from</span> <span class="string">&#x27;@/views/myorder&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">Pay</span> <span class="keyword">from</span> <span class="string">&#x27;@/views/pay&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">ProDetail</span> <span class="keyword">from</span> <span class="string">&#x27;@/views/prodetail&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">SearchList</span> <span class="keyword">from</span> <span class="string">&#x27;@/views/search/list&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">Home</span> <span class="keyword">from</span> <span class="string">&#x27;@/views/layout/home.vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">Cart</span> <span class="keyword">from</span> <span class="string">&#x27;@/views/layout/cart.vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">Category</span> <span class="keyword">from</span> <span class="string">&#x27;@/views/layout/category.vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">User</span> <span class="keyword">from</span> <span class="string">&#x27;@/views/layout/user.vue&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="title class_">Vue</span>.<span class="title function_">use</span>(<span class="title class_">VueRouter</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> routes = [</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">path</span>: <span class="string">&#x27;/login&#x27;</span>,</span><br><span class="line">    <span class="attr">component</span>: <span class="title class_">Login</span></span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">path</span>: <span class="string">&#x27;/&#x27;</span>,</span><br><span class="line">    <span class="attr">component</span>: <span class="title class_">Layout</span>,</span><br><span class="line">    <span class="attr">redirect</span>: <span class="string">&#x27;/home&#x27;</span>,</span><br><span class="line">    <span class="attr">children</span>: [</span><br><span class="line">      &#123; <span class="attr">path</span>: <span class="string">&#x27;home&#x27;</span>, <span class="attr">component</span>: <span class="title class_">Home</span> &#125;,</span><br><span class="line">      &#123; <span class="attr">path</span>: <span class="string">&#x27;cart&#x27;</span>, <span class="attr">component</span>: <span class="title class_">Cart</span> &#125;,</span><br><span class="line">      &#123; <span class="attr">path</span>: <span class="string">&#x27;user&#x27;</span>, <span class="attr">component</span>: <span class="title class_">User</span> &#125;,</span><br><span class="line">      &#123; <span class="attr">path</span>: <span class="string">&#x27;category&#x27;</span>, <span class="attr">component</span>: <span class="title class_">Category</span> &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">path</span>: <span class="string">&#x27;/search&#x27;</span>,</span><br><span class="line">    <span class="attr">component</span>: <span class="title class_">Search</span></span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">path</span>: <span class="string">&#x27;/pay&#x27;</span>,</span><br><span class="line">    <span class="attr">component</span>: <span class="title class_">Pay</span></span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">path</span>: <span class="string">&#x27;/myorder&#x27;</span>,</span><br><span class="line">    <span class="attr">component</span>: <span class="title class_">MyOrder</span></span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">path</span>: <span class="string">&#x27;/prodetail:id&#x27;</span>,</span><br><span class="line">    <span class="attr">component</span>: <span class="title class_">ProDetail</span></span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">path</span>: <span class="string">&#x27;/searchlist&#x27;</span>,</span><br><span class="line">    <span class="attr">component</span>: <span class="title class_">SearchList</span></span><br><span class="line">  &#125;</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> router = <span class="keyword">new</span> <span class="title class_">VueRouter</span>(&#123;</span><br><span class="line">  routes</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> router</span><br></pre></td></tr></table></figure>
+<h6 id="2-1-xr-scene"><a href="#2-1-xr-scene" class="headerlink" title="2.1 xr-scene"></a>2.1 xr-scene</h6><p>&emsp;&emsp;对于所有的 xr-frame 小程序组件，其最外层必须有一个xr-scene标签作为根元素，并且组件内只能有一个，以此作为整个组件的基础。<br>&emsp;&emsp;在编写组件时，常常用到的那个 this.scene，其实就是这个元素。<br>&emsp;&emsp;可用来添加事件，如 ready 事件，场景第一次解析完毕。</p>
+<h6 id="2-2-xr-assets"><a href="#2-2-xr-assets" class="headerlink" title="2.2 xr-assets"></a>2.2 xr-assets</h6><p>&emsp;&emsp;用于包裹所需要加载的资源，可以绑定事件。</p>
+<h6 id="2-3-xr-asset-material"><a href="#2-3-xr-asset-material" class="headerlink" title="2.3 xr-asset-material"></a>2.3 xr-asset-material</h6><p>&emsp;&emsp;材质：asset-id 为材质的 id，可以用于给下面的 xr-mesh 进行绑定；effect 用于指定材质的效果，一般选 standard 即可。</p>
+<h6 id="2-4-xr-mesh"><a href="#2-4-xr-mesh" class="headerlink" title="2.4 xr-mesh"></a>2.4 xr-mesh</h6><p>&emsp;&emsp;网格：geometry 用于指定所要加载的物体的形状；node-id 为物体的 id，可以用于给 xr-camera 进行绑定，以确定相机朝向；material 可以用于绑定对应的材质 id；uniforms 是渲染相关的属性；cast-shadow 用于产生阴影，receive-shadow 用于接收其他物体产生的阴影，并且需要给灯光也开启 cast-shadow 效果。</p>
+<h6 id="2-5-xr-camera"><a href="#2-5-xr-camera" class="headerlink" title="2.5 xr-camera"></a>2.5 xr-camera</h6><p>&emsp;&emsp;相机：clear-color 为相机底色；target 为相机朝向，可以绑定相应物体的 id；camera-orbit-control，相机控制器组件提供了一个简单的绕着相机 target 旋转的控制方式，一般而言只需要在元素上添加 camera-orbit-control 属性即可。</p>
+<h6 id="2-6-xr-light"><a href="#2-6-xr-light" class="headerlink" title="2.6 xr-light"></a>2.6 xr-light</h6><p>&emsp;&emsp;灯光：type，灯光类型；color，灯光颜色；intensity，灯光亮度；rotation，灯光方向；cast-shadow，允许灯光产生阴影效果，只有主平行光能够产生阴影，相对应的 receive-shadow 去接收阴影。</p>
+
                 </div>
 
                 
@@ -310,11 +318,11 @@
     <div class="copyright-info-content border-box">
         <div class="copyright-info-top border-box">
             <div class="copyright-post-title border-box text-ellipsis">
-                Vue2 中 router/index.js 基础配置
+                XR-FRAME - 基础能力 - Geometry基础图形
             </div>
 
             <div class="copyright-post-link border-box text-ellipsis">
-                2023/12/07/Vue2中router-index-js基础配置/
+                2023/12/11/XR-FRAME-基础能力-Geometry基础图形/
             </div>
         </div>
 
@@ -330,7 +338,7 @@
                 <div class="type">
                     发布于
                 </div>
-                <div class="content">2023-12-07 11:14</div>
+                <div class="content">2023-12-11 17:11</div>
             </div>
 
 
@@ -364,11 +372,11 @@
                             <ul class="post-tags-box border-box">
                                 
                                     <li class="tag-item border-box">
-                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/Vue2/">Vue2</a>
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/">微信小程序</a>
                                     </li>
                                 
                                     <li class="tag-item border-box">
-                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/vue-router/">vue-router</a>
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/xr-frame/">xr-frame</a>
                                     </li>
                                 
                             </ul>
@@ -407,31 +415,15 @@
                 
                     <div class="post-nav border-box">
                         
-                            <div class="prev-post">
-                                <a class="prev"
-                                   rel="prev"
-                                   href="/2023/12/07/Vue2%E4%B8%ADVant%E7%BB%84%E4%BB%B6%E5%BA%93%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/"
-                                   title="Vue2 中 Vant 组件库的基本使用方法"
-                                >
-                                    <span class="left arrow-icon flex-center">
-                                        <i class="fas fa-chevron-left"></i>
-                                    </span>
-                                    <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">Vue2 中 Vant 组件库的基本使用方法</span>
-                                        <span class="post-nav-item">上一篇</span>
-                                    </span>
-                                </a>
-                            </div>
-                        
                         
                             <div class="next-post">
                                 <a class="next"
                                    rel="next"
-                                   href="/2023/12/07/%E6%96%B0%E5%BB%BAVue2%E9%A1%B9%E7%9B%AE%E7%9A%84%E6%AD%A5%E9%AA%A4/"
-                                   title="新建 Vue2 项目的步骤"
+                                   href="/2023/12/10/%E4%BD%BF%E7%94%A8%E5%AE%9A%E6%97%B6%E5%99%A8%E5%80%92%E8%AE%A1%E6%97%B6/"
+                                   title="使用定时器倒计时"
                                 >
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">新建 Vue2 项目的步骤</span>
+                                        <span class="post-nav-title-item text-ellipsis">使用定时器倒计时</span>
                                         <span class="post-nav-item">下一篇</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
@@ -541,7 +533,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        
+        <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E9%A1%B9%E7%9B%AE%E5%9C%B0%E5%9D%80"><span class="nav-text">1 项目地址</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E4%BB%A3%E7%A0%81%E8%A7%A3%E6%9E%90"><span class="nav-text">2 代码解析</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#2-1-xr-scene"><span class="nav-text">2.1 xr-scene</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-2-xr-assets"><span class="nav-text">2.2 xr-assets</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-3-xr-asset-material"><span class="nav-text">2.3 xr-asset-material</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-4-xr-mesh"><span class="nav-text">2.4 xr-mesh</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-5-xr-camera"><span class="nav-text">2.5 xr-camera</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-6-xr-light"><span class="nav-text">2.6 xr-light</span></a></li></ol></li></ol>
     </div>
 </div>
 
@@ -740,7 +732,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        
+        <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E9%A1%B9%E7%9B%AE%E5%9C%B0%E5%9D%80"><span class="nav-text">1 项目地址</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E4%BB%A3%E7%A0%81%E8%A7%A3%E6%9E%90"><span class="nav-text">2 代码解析</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#2-1-xr-scene"><span class="nav-text">2.1 xr-scene</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-2-xr-assets"><span class="nav-text">2.2 xr-assets</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-3-xr-asset-material"><span class="nav-text">2.3 xr-asset-material</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-4-xr-mesh"><span class="nav-text">2.4 xr-mesh</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-5-xr-camera"><span class="nav-text">2.5 xr-camera</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-6-xr-light"><span class="nav-text">2.6 xr-light</span></a></li></ol></li></ol>
     </div>
 </div>
 
