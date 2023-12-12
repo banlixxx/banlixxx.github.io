@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-12-12T02:46:21.099Z</updated>
+  <updated>2023-12-12T03:04:51.799Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>统一在每次请求后台时，添加 loading 效果</title>
+    <link href="http://example.com/2023/12/12/%E7%BB%9F%E4%B8%80%E5%9C%A8%E6%AF%8F%E6%AC%A1%E8%AF%B7%E6%B1%82%E5%90%8E%E5%8F%B0%E6%97%B6%EF%BC%8C%E6%B7%BB%E5%8A%A0loading%E6%95%88%E6%9E%9C/"/>
+    <id>http://example.com/2023/12/12/%E7%BB%9F%E4%B8%80%E5%9C%A8%E6%AF%8F%E6%AC%A1%E8%AF%B7%E6%B1%82%E5%90%8E%E5%8F%B0%E6%97%B6%EF%BC%8C%E6%B7%BB%E5%8A%A0loading%E6%95%88%E6%9E%9C/</id>
+    <published>2023-12-12T02:59:19.000Z</published>
+    <updated>2023-12-12T03:04:51.799Z</updated>
+    
+    <content type="html"><![CDATA[<h5 id="1-配置-Axios"><a href="#1-配置-Axios" class="headerlink" title="1 配置 Axios"></a>1 配置 Axios</h5><p>参考方法：<a class="link"   href="https://banlixxx.github.io/2023/12/10/axios%E5%B0%81%E8%A3%85/" >Axios 封装<i class="fas fa-external-link-alt"></i></a></p><h5 id="2-请求时打开-loading"><a href="#2-请求时打开-loading" class="headerlink" title="2 请求时打开 loading"></a>2 请求时打开 loading</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// /utils/request.js中</span></span><br><span class="line"><span class="comment">// 添加请求拦截器</span></span><br><span class="line">request.<span class="property">interceptors</span>.<span class="property">request</span>.<span class="title function_">use</span>(</span><br><span class="line">  <span class="keyword">function</span> (<span class="params">config</span>) &#123;</span><br><span class="line">    <span class="comment">// 在发送请求之前做些什么</span></span><br><span class="line">    <span class="title class_">Toast</span>.<span class="title function_">loading</span>(&#123;</span><br><span class="line">      <span class="attr">message</span>: <span class="string">&#x27;请求中...&#x27;</span>,</span><br><span class="line">      <span class="attr">forbidClick</span>: <span class="literal">true</span>,</span><br><span class="line">      <span class="attr">loadingType</span>: <span class="string">&#x27;spinner&#x27;</span>,</span><br><span class="line">      <span class="attr">duration</span>: <span class="number">0</span></span><br><span class="line">    &#125;)</span><br><span class="line">    <span class="keyword">return</span> config</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="keyword">function</span> (<span class="params">error</span>) &#123;</span><br><span class="line">    <span class="comment">// 对请求错误做些什么</span></span><br><span class="line">    <span class="keyword">return</span> <span class="title class_">Promise</span>.<span class="title function_">reject</span>(error)</span><br><span class="line">  &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure><h5 id="3-响应时关闭-loading"><a href="#3-响应时关闭-loading" class="headerlink" title="3 响应时关闭 loading"></a>3 响应时关闭 loading</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 添加响应拦截器</span></span><br><span class="line">request.<span class="property">interceptors</span>.<span class="property">response</span>.<span class="title function_">use</span>(</span><br><span class="line">  <span class="keyword">function</span> (<span class="params">response</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> res = response.<span class="property">data</span></span><br><span class="line">    <span class="keyword">if</span> (res.<span class="property">status</span> !== <span class="number">200</span>) &#123;</span><br><span class="line">      <span class="title class_">Toast</span>(res.<span class="property">message</span>)</span><br><span class="line">      <span class="keyword">return</span> <span class="title class_">Promise</span>.<span class="title function_">reject</span>(res.<span class="property">message</span>)</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="comment">// 清除 loading 中的效果</span></span><br><span class="line">      <span class="title class_">Toast</span>.<span class="title function_">clear</span>()</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 对响应数据做点什么</span></span><br><span class="line">    <span class="keyword">return</span> res</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="keyword">function</span> (<span class="params">error</span>) &#123;</span><br><span class="line">    <span class="comment">// 对响应错误做点什么</span></span><br><span class="line">    <span class="keyword">return</span> <span class="title class_">Promise</span>.<span class="title function_">reject</span>(error)</span><br><span class="line">  &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h5 id=&quot;1-配置-Axios&quot;&gt;&lt;a href=&quot;#1-配置-Axios&quot; class=&quot;headerlink&quot; title=&quot;1 配置 Axios&quot;&gt;&lt;/a&gt;1 配置 Axios&lt;/h5&gt;&lt;p&gt;参考方法：&lt;a class=&quot;link&quot;   href=&quot;https://b</summary>
+      
+    
+    
+    
+    <category term="Vue2" scheme="http://example.com/categories/Vue2/"/>
+    
+    <category term="Vue2 基础" scheme="http://example.com/categories/Vue2/Vue2-%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="Vue2" scheme="http://example.com/tags/Vue2/"/>
+    
+    <category term="Axios" scheme="http://example.com/tags/Axios/"/>
+    
+    <category term="Toast" scheme="http://example.com/tags/Toast/"/>
+    
+  </entry>
   
   <entry>
     <title>Storage 存储模块 - Vuex 持久化处理</title>

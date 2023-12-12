@@ -9,7 +9,7 @@
     
     <title>
         
-            使用定时器倒计时 |
+            统一在每次请求后台时，添加 loading 效果 |
         
         斑狸
     </title>
@@ -203,7 +203,7 @@
             <div class="post-content-bottom border-box">
                 
                     <div class="post-title">
-                        使用定时器倒计时
+                        统一在每次请求后台时，添加 loading 效果
                     </div>
                 
 
@@ -231,13 +231,13 @@
         
             <span class="meta-info-item post-create-date">
                 <i class="icon fa-solid fa-calendar-check"></i>&nbsp;
-                <span class="pc">2023-12-10 11:46:59</span>
-                <span class="mobile">2023-12-10 11:46</span>
+                <span class="pc">2023-12-12 10:59:19</span>
+                <span class="mobile">2023-12-12 10:59</span>
             </span>
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="pc" data-updated="Sun Dec 10 2023 12:40:35 GMT+0800">2023-12-10 12:40:35</span>
+                <span class="pc" data-updated="Tue Dec 12 2023 11:04:51 GMT+0800">2023-12-12 11:04:51</span>
             </span>
         
 
@@ -263,7 +263,10 @@
                             <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/Vue2/">Vue2</a></li>
                         
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E5%AE%9A%E6%97%B6%E5%99%A8/">定时器</a></li>
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/Axios/">Axios</a></li>
+                        
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/Toast/">Toast</a></li>
                         
                     
                 </ul>
@@ -273,7 +276,7 @@
         
         
             <span class="meta-info-item post-wordcount">
-                <i class="icon fas fa-file-word"></i>&nbsp;<span>151 字</span>
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>165 字</span>
             </span>
         
         
@@ -299,8 +302,10 @@
                 <div class="post-content keep-markdown-body">
                     
 
-                    <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">&lt;button @click=&quot;getCode&quot;&gt;</span><br><span class="line">  &#123;&#123;</span><br><span class="line">    second === totalSecond ? &#x27;获取验证码&#x27; : second + &#x27;秒后重新发送&#x27;</span><br><span class="line">  &#125;&#125;</span><br><span class="line">&lt;/button&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">  name: &#x27;LoginPage&#x27;,</span><br><span class="line">  data() &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      totalSecond: 60, // 总秒数</span><br><span class="line">      second: 60, // 当前秒数，开定时器对 second--</span><br><span class="line">      timer: null // 定时器 id</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  // 离开页面清除定时器</span><br><span class="line">  destroyed() &#123;</span><br><span class="line">    clearInterval(this.timer)</span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    // 获取短信验证码</span><br><span class="line">    getCode() &#123;</span><br><span class="line">      // 开启倒计时</span><br><span class="line">      if (this.timer || this.second !=== this.totalSecond) return</span><br><span class="line">      this.timer = setInterval(() =&gt; &#123;</span><br><span class="line">        this.second--</span><br><span class="line">        if (this.second &lt;= 0) &#123;</span><br><span class="line">          clearInterval(this.timer)</span><br><span class="line">          this.timer = null // 重置定时器 id</span><br><span class="line">          this.second = this.totalSecond // 归位</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;, 1000)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+                    <h5 id="1-配置-Axios"><a href="#1-配置-Axios" class="headerlink" title="1 配置 Axios"></a>1 配置 Axios</h5><p>参考方法：<a class="link"   target="_blank" rel="noopener" href="https://banlixxx.github.io/2023/12/10/axios%E5%B0%81%E8%A3%85/" >Axios 封装<i class="fas fa-external-link-alt"></i></a></p>
+<h5 id="2-请求时打开-loading"><a href="#2-请求时打开-loading" class="headerlink" title="2 请求时打开 loading"></a>2 请求时打开 loading</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// /utils/request.js中</span></span><br><span class="line"><span class="comment">// 添加请求拦截器</span></span><br><span class="line">request.<span class="property">interceptors</span>.<span class="property">request</span>.<span class="title function_">use</span>(</span><br><span class="line">  <span class="keyword">function</span> (<span class="params">config</span>) &#123;</span><br><span class="line">    <span class="comment">// 在发送请求之前做些什么</span></span><br><span class="line">    <span class="title class_">Toast</span>.<span class="title function_">loading</span>(&#123;</span><br><span class="line">      <span class="attr">message</span>: <span class="string">&#x27;请求中...&#x27;</span>,</span><br><span class="line">      <span class="attr">forbidClick</span>: <span class="literal">true</span>,</span><br><span class="line">      <span class="attr">loadingType</span>: <span class="string">&#x27;spinner&#x27;</span>,</span><br><span class="line">      <span class="attr">duration</span>: <span class="number">0</span></span><br><span class="line">    &#125;)</span><br><span class="line">    <span class="keyword">return</span> config</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="keyword">function</span> (<span class="params">error</span>) &#123;</span><br><span class="line">    <span class="comment">// 对请求错误做些什么</span></span><br><span class="line">    <span class="keyword">return</span> <span class="title class_">Promise</span>.<span class="title function_">reject</span>(error)</span><br><span class="line">  &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
 
+<h5 id="3-响应时关闭-loading"><a href="#3-响应时关闭-loading" class="headerlink" title="3 响应时关闭 loading"></a>3 响应时关闭 loading</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 添加响应拦截器</span></span><br><span class="line">request.<span class="property">interceptors</span>.<span class="property">response</span>.<span class="title function_">use</span>(</span><br><span class="line">  <span class="keyword">function</span> (<span class="params">response</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> res = response.<span class="property">data</span></span><br><span class="line">    <span class="keyword">if</span> (res.<span class="property">status</span> !== <span class="number">200</span>) &#123;</span><br><span class="line">      <span class="title class_">Toast</span>(res.<span class="property">message</span>)</span><br><span class="line">      <span class="keyword">return</span> <span class="title class_">Promise</span>.<span class="title function_">reject</span>(res.<span class="property">message</span>)</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="comment">// 清除 loading 中的效果</span></span><br><span class="line">      <span class="title class_">Toast</span>.<span class="title function_">clear</span>()</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 对响应数据做点什么</span></span><br><span class="line">    <span class="keyword">return</span> res</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="keyword">function</span> (<span class="params">error</span>) &#123;</span><br><span class="line">    <span class="comment">// 对响应错误做点什么</span></span><br><span class="line">    <span class="keyword">return</span> <span class="title class_">Promise</span>.<span class="title function_">reject</span>(error)</span><br><span class="line">  &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
                 </div>
 
                 
@@ -309,11 +314,11 @@
     <div class="copyright-info-content border-box">
         <div class="copyright-info-top border-box">
             <div class="copyright-post-title border-box text-ellipsis">
-                使用定时器倒计时
+                统一在每次请求后台时，添加 loading 效果
             </div>
 
             <div class="copyright-post-link border-box text-ellipsis">
-                2023/12/10/使用定时器倒计时/
+                2023/12/12/统一在每次请求后台时，添加loading效果/
             </div>
         </div>
 
@@ -329,7 +334,7 @@
                 <div class="type">
                     发布于
                 </div>
-                <div class="content">2023-12-10 11:46</div>
+                <div class="content">2023-12-12 10:59</div>
             </div>
 
 
@@ -367,7 +372,11 @@
                                     </li>
                                 
                                     <li class="tag-item border-box">
-                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E5%AE%9A%E6%97%B6%E5%99%A8/">定时器</a>
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/Axios/">Axios</a>
+                                    </li>
+                                
+                                    <li class="tag-item border-box">
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/Toast/">Toast</a>
                                     </li>
                                 
                             </ul>
@@ -406,31 +415,15 @@
                 
                     <div class="post-nav border-box">
                         
-                            <div class="prev-post">
-                                <a class="prev"
-                                   rel="prev"
-                                   href="/2023/12/11/XR-FRAME-%E5%9F%BA%E7%A1%80%E8%83%BD%E5%8A%9B-Geometry%E5%9F%BA%E7%A1%80%E5%9B%BE%E5%BD%A2/"
-                                   title="XR-FRAME - 基础能力 - Geometry基础图形"
-                                >
-                                    <span class="left arrow-icon flex-center">
-                                        <i class="fas fa-chevron-left"></i>
-                                    </span>
-                                    <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">XR-FRAME - 基础能力 - Geometry基础图形</span>
-                                        <span class="post-nav-item">上一篇</span>
-                                    </span>
-                                </a>
-                            </div>
-                        
                         
                             <div class="next-post">
                                 <a class="next"
                                    rel="next"
-                                   href="/2023/12/10/toast%E8%BD%BB%E6%8F%90%E7%A4%BA/"
-                                   title="Toast 轻提示"
+                                   href="/2023/12/12/storage%E5%AD%98%E5%82%A8%E6%A8%A1%E5%9D%97-vuex%E6%8C%81%E4%B9%85%E5%8C%96%E5%A4%84%E7%90%86/"
+                                   title="Storage 存储模块 - Vuex 持久化处理"
                                 >
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">Toast 轻提示</span>
+                                        <span class="post-nav-title-item text-ellipsis">Storage 存储模块 - Vuex 持久化处理</span>
                                         <span class="post-nav-item">下一篇</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
@@ -540,7 +533,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        
+        <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E9%85%8D%E7%BD%AE-Axios"><span class="nav-text">1 配置 Axios</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E8%AF%B7%E6%B1%82%E6%97%B6%E6%89%93%E5%BC%80-loading"><span class="nav-text">2 请求时打开 loading</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-%E5%93%8D%E5%BA%94%E6%97%B6%E5%85%B3%E9%97%AD-loading"><span class="nav-text">3 响应时关闭 loading</span></a></li></ol>
     </div>
 </div>
 
@@ -739,7 +732,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        
+        <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E9%85%8D%E7%BD%AE-Axios"><span class="nav-text">1 配置 Axios</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E8%AF%B7%E6%B1%82%E6%97%B6%E6%89%93%E5%BC%80-loading"><span class="nav-text">2 请求时打开 loading</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-%E5%93%8D%E5%BA%94%E6%97%B6%E5%85%B3%E9%97%AD-loading"><span class="nav-text">3 响应时关闭 loading</span></a></li></ol>
     </div>
 </div>
 
