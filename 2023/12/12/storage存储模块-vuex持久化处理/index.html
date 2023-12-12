@@ -9,7 +9,7 @@
     
     <title>
         
-            使用 Vant 组件库实现顶部导航栏 Navbar |
+            Storage 存储模块 - Vuex 持久化处理 |
         
         斑狸
     </title>
@@ -203,7 +203,7 @@
             <div class="post-content-bottom border-box">
                 
                     <div class="post-title">
-                        使用 Vant 组件库实现顶部导航栏 Navbar
+                        Storage 存储模块 - Vuex 持久化处理
                     </div>
                 
 
@@ -231,13 +231,13 @@
         
             <span class="meta-info-item post-create-date">
                 <i class="icon fa-solid fa-calendar-check"></i>&nbsp;
-                <span class="pc">2023-12-08 11:20:09</span>
-                <span class="mobile">2023-12-08 11:20</span>
+                <span class="pc">2023-12-12 10:32:35</span>
+                <span class="mobile">2023-12-12 10:32</span>
             </span>
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="pc" data-updated="Fri Dec 08 2023 11:34:01 GMT+0800">2023-12-08 11:34:01</span>
+                <span class="pc" data-updated="Tue Dec 12 2023 10:46:21 GMT+0800">2023-12-12 10:46:21</span>
             </span>
         
 
@@ -248,7 +248,7 @@
                             <li class="category-item"><a href="/categories/Vue2/">Vue2</a></li>
                         
                     
-                            <li class="category-item">&nbsp;<i class="icon fas fa-angle-right"></i>&nbsp;<a href="/categories/Vue2/Vant-%E7%BB%84%E4%BB%B6%E5%BA%93/">Vant 组件库</a></li>
+                            <li class="category-item">&nbsp;<i class="icon fas fa-angle-right"></i>&nbsp;<a href="/categories/Vue2/Vue2-%E5%9F%BA%E7%A1%80/">Vue2 基础</a></li>
                         
                     
                 </ul>
@@ -263,10 +263,7 @@
                             <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/Vue2/">Vue2</a></li>
                         
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/Vant-%E7%BB%84%E4%BB%B6%E5%BA%93/">Vant 组件库</a></li>
-                        
-                    
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/Navbar/">Navbar</a></li>
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/Vuex/">Vuex</a></li>
                         
                     
                 </ul>
@@ -276,7 +273,7 @@
         
         
             <span class="meta-info-item post-wordcount">
-                <i class="icon fas fa-file-word"></i>&nbsp;<span>113 字</span>
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>140 字</span>
             </span>
         
         
@@ -302,12 +299,10 @@
                 <div class="post-content keep-markdown-body">
                     
 
-                    <h6 id="1-vant-ui-js-按需引入"><a href="#1-vant-ui-js-按需引入" class="headerlink" title="1 vant-ui,js 按需引入"></a>1 vant-ui,js 按需引入</h6><p>官方地址：<a class="link"   target="_blank" rel="noopener" href="https://vant-contrib.gitee.io/vant/v2/#/zh-CN/nav-bar" >https://vant-contrib.gitee.io/vant/v2/#/zh-CN/nav-bar<i class="fas fa-external-link-alt"></i></a></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">Vue</span> <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">NavBar</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;vant&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="title class_">Vue</span>.<span class="title function_">use</span>(<span class="title class_">NavBar</span>);</span><br></pre></td></tr></table></figure>
+                    <h5 id="1-新建-storage-模块"><a href="#1-新建-storage-模块" class="headerlink" title="1 新建 storage 模块"></a>1 新建 storage 模块</h5><p>前提：<a class="link"   target="_blank" rel="noopener" href="https://banlixxx.github.io/2023/12/12/vuex%E6%9E%84%E5%BB%BA%E5%AD%90%E6%A8%A1%E5%9D%97/" >Vuex 构建子模块<i class="fas fa-external-link-alt"></i></a><br>新建 &#x2F;utils&#x2F;storage.js</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="variable constant_">INFO_KEY</span> = <span class="string">&#x27;hm_shopping_info&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 获取个人信息</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> <span class="title function_">getInfo</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> result = <span class="variable language_">localStorage</span>.<span class="title function_">getItem</span>(<span class="variable constant_">INFO_KEY</span>)</span><br><span class="line">  <span class="keyword">return</span> result</span><br><span class="line">    ? <span class="title class_">JSON</span>.<span class="title function_">parse</span>(result)</span><br><span class="line">    : &#123;</span><br><span class="line">        <span class="attr">token</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">        <span class="attr">userId</span>: <span class="string">&#x27;&#x27;</span></span><br><span class="line">      &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 设置个人信息</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> <span class="title function_">setInfo</span> = info =&gt; &#123;</span><br><span class="line">  <span class="variable language_">localStorage</span>.<span class="title function_">setItem</span>(<span class="variable constant_">INFO_KEY</span>, <span class="title class_">JSON</span>.<span class="title function_">stringify</span>(info))</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 移除个人信息</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> <span class="title function_">removeInfo</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">  <span class="variable language_">localStorage</span>.<span class="title function_">removeItem</span>(<span class="variable constant_">INFO_KEY</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h6 id="2-组件中使用"><a href="#2-组件中使用" class="headerlink" title="2 组件中使用"></a>2 组件中使用</h6><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">van-nav-bar</span></span></span><br><span class="line"><span class="tag">  <span class="attr">title</span>=<span class="string">&quot;标题&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">left-text</span>=<span class="string">&quot;返回&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">right-text</span>=<span class="string">&quot;按钮&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">left-arrow</span></span></span><br><span class="line"><span class="tag">  @<span class="attr">click-left</span>=<span class="string">&quot;$router.go(-1)&quot;</span></span></span><br><span class="line"><span class="tag">  @<span class="attr">click-right</span>=<span class="string">&quot;onClickRight&quot;</span></span></span><br><span class="line"><span class="tag">/&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h6 id="3-修改样式"><a href="#3-修改样式" class="headerlink" title="3 修改样式"></a>3 修改样式</h6><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 设置导航条 返回箭头 颜色</span></span><br><span class="line"><span class="selector-class">.van-nav-bar</span> &#123;</span><br><span class="line">  <span class="selector-class">.van-icon-arrow-left</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#333</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="2-Vuex-User-模块持久化处理"><a href="#2-Vuex-User-模块持久化处理" class="headerlink" title="2 Vuex User 模块持久化处理"></a>2 Vuex User 模块持久化处理</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; getInfo, setInfo &#125; <span class="keyword">from</span> <span class="string">&#x27;@/utils/storage&#x27;</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  <span class="attr">namespaced</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="title function_">state</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      <span class="attr">userInfo</span>: <span class="title function_">getInfo</span>()</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">mutations</span>: &#123;</span><br><span class="line">    <span class="title function_">setUserInfo</span>(<span class="params">state, obj</span>) &#123;</span><br><span class="line">      state.<span class="property">userInfo</span> = obj</span><br><span class="line">      <span class="title function_">setInfo</span>(obj)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">actions</span>: &#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
                 </div>
 
                 
@@ -316,11 +311,11 @@
     <div class="copyright-info-content border-box">
         <div class="copyright-info-top border-box">
             <div class="copyright-post-title border-box text-ellipsis">
-                使用 Vant 组件库实现顶部导航栏 Navbar
+                Storage 存储模块 - Vuex 持久化处理
             </div>
 
             <div class="copyright-post-link border-box text-ellipsis">
-                2023/12/08/使用vant组件库实现顶部导航栏navbar/
+                2023/12/12/storage存储模块-vuex持久化处理/
             </div>
         </div>
 
@@ -336,7 +331,7 @@
                 <div class="type">
                     发布于
                 </div>
-                <div class="content">2023-12-08 11:20</div>
+                <div class="content">2023-12-12 10:32</div>
             </div>
 
 
@@ -374,11 +369,7 @@
                                     </li>
                                 
                                     <li class="tag-item border-box">
-                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/Vant-%E7%BB%84%E4%BB%B6%E5%BA%93/">Vant 组件库</a>
-                                    </li>
-                                
-                                    <li class="tag-item border-box">
-                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/Navbar/">Navbar</a>
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/Vuex/">Vuex</a>
                                     </li>
                                 
                             </ul>
@@ -417,31 +408,15 @@
                 
                     <div class="post-nav border-box">
                         
-                            <div class="prev-post">
-                                <a class="prev"
-                                   rel="prev"
-                                   href="/2023/12/10/axios%E5%B0%81%E8%A3%85/"
-                                   title="Axios 封装"
-                                >
-                                    <span class="left arrow-icon flex-center">
-                                        <i class="fas fa-chevron-left"></i>
-                                    </span>
-                                    <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">Axios 封装</span>
-                                        <span class="post-nav-item">上一篇</span>
-                                    </span>
-                                </a>
-                            </div>
-                        
                         
                             <div class="next-post">
                                 <a class="next"
                                    rel="next"
-                                   href="/2023/12/08/%E4%BD%BF%E7%94%A8vant%E7%BB%84%E4%BB%B6%E5%BA%93%E5%AE%9E%E7%8E%B0%E5%BA%95%E9%83%A8%E5%AF%BC%E8%88%AAtabbar/"
-                                   title="使用 Vant 组件库实现底部导航 Tabbar"
+                                   href="/2023/12/12/vuex%E6%9E%84%E5%BB%BA%E5%AD%90%E6%A8%A1%E5%9D%97/"
+                                   title="Vuex 构建子模块"
                                 >
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">使用 Vant 组件库实现底部导航 Tabbar</span>
+                                        <span class="post-nav-title-item text-ellipsis">Vuex 构建子模块</span>
                                         <span class="post-nav-item">下一篇</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
@@ -551,7 +526,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#1-vant-ui-js-%E6%8C%89%E9%9C%80%E5%BC%95%E5%85%A5"><span class="nav-text">1 vant-ui,js 按需引入</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-%E7%BB%84%E4%BB%B6%E4%B8%AD%E4%BD%BF%E7%94%A8"><span class="nav-text">2 组件中使用</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#3-%E4%BF%AE%E6%94%B9%E6%A0%B7%E5%BC%8F"><span class="nav-text">3 修改样式</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E6%96%B0%E5%BB%BA-storage-%E6%A8%A1%E5%9D%97"><span class="nav-text">1 新建 storage 模块</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-Vuex-User-%E6%A8%A1%E5%9D%97%E6%8C%81%E4%B9%85%E5%8C%96%E5%A4%84%E7%90%86"><span class="nav-text">2 Vuex User 模块持久化处理</span></a></li></ol>
     </div>
 </div>
 
@@ -750,7 +725,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#1-vant-ui-js-%E6%8C%89%E9%9C%80%E5%BC%95%E5%85%A5"><span class="nav-text">1 vant-ui,js 按需引入</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-%E7%BB%84%E4%BB%B6%E4%B8%AD%E4%BD%BF%E7%94%A8"><span class="nav-text">2 组件中使用</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#3-%E4%BF%AE%E6%94%B9%E6%A0%B7%E5%BC%8F"><span class="nav-text">3 修改样式</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E6%96%B0%E5%BB%BA-storage-%E6%A8%A1%E5%9D%97"><span class="nav-text">1 新建 storage 模块</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-Vuex-User-%E6%A8%A1%E5%9D%97%E6%8C%81%E4%B9%85%E5%8C%96%E5%A4%84%E7%90%86"><span class="nav-text">2 Vuex User 模块持久化处理</span></a></li></ol>
     </div>
 </div>
 

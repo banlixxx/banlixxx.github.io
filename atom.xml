@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-12-12T02:23:45.623Z</updated>
+  <updated>2023-12-12T02:46:21.099Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Storage 存储模块 - Vuex 持久化处理</title>
+    <link href="http://example.com/2023/12/12/storage%E5%AD%98%E5%82%A8%E6%A8%A1%E5%9D%97-vuex%E6%8C%81%E4%B9%85%E5%8C%96%E5%A4%84%E7%90%86/"/>
+    <id>http://example.com/2023/12/12/storage%E5%AD%98%E5%82%A8%E6%A8%A1%E5%9D%97-vuex%E6%8C%81%E4%B9%85%E5%8C%96%E5%A4%84%E7%90%86/</id>
+    <published>2023-12-12T02:32:35.000Z</published>
+    <updated>2023-12-12T02:46:21.099Z</updated>
+    
+    <content type="html"><![CDATA[<h5 id="1-新建-storage-模块"><a href="#1-新建-storage-模块" class="headerlink" title="1 新建 storage 模块"></a>1 新建 storage 模块</h5><p>前提：<a class="link"   href="https://banlixxx.github.io/2023/12/12/vuex%E6%9E%84%E5%BB%BA%E5%AD%90%E6%A8%A1%E5%9D%97/" >Vuex 构建子模块<i class="fas fa-external-link-alt"></i></a><br>新建 &#x2F;utils&#x2F;storage.js</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="variable constant_">INFO_KEY</span> = <span class="string">&#x27;hm_shopping_info&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 获取个人信息</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> <span class="title function_">getInfo</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> result = <span class="variable language_">localStorage</span>.<span class="title function_">getItem</span>(<span class="variable constant_">INFO_KEY</span>)</span><br><span class="line">  <span class="keyword">return</span> result</span><br><span class="line">    ? <span class="title class_">JSON</span>.<span class="title function_">parse</span>(result)</span><br><span class="line">    : &#123;</span><br><span class="line">        <span class="attr">token</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">        <span class="attr">userId</span>: <span class="string">&#x27;&#x27;</span></span><br><span class="line">      &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 设置个人信息</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> <span class="title function_">setInfo</span> = info =&gt; &#123;</span><br><span class="line">  <span class="variable language_">localStorage</span>.<span class="title function_">setItem</span>(<span class="variable constant_">INFO_KEY</span>, <span class="title class_">JSON</span>.<span class="title function_">stringify</span>(info))</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 移除个人信息</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> <span class="title function_">removeInfo</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">  <span class="variable language_">localStorage</span>.<span class="title function_">removeItem</span>(<span class="variable constant_">INFO_KEY</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h5 id="2-Vuex-User-模块持久化处理"><a href="#2-Vuex-User-模块持久化处理" class="headerlink" title="2 Vuex User 模块持久化处理"></a>2 Vuex User 模块持久化处理</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; getInfo, setInfo &#125; <span class="keyword">from</span> <span class="string">&#x27;@/utils/storage&#x27;</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  <span class="attr">namespaced</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="title function_">state</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      <span class="attr">userInfo</span>: <span class="title function_">getInfo</span>()</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">mutations</span>: &#123;</span><br><span class="line">    <span class="title function_">setUserInfo</span>(<span class="params">state, obj</span>) &#123;</span><br><span class="line">      state.<span class="property">userInfo</span> = obj</span><br><span class="line">      <span class="title function_">setInfo</span>(obj)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">actions</span>: &#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h5 id=&quot;1-新建-storage-模块&quot;&gt;&lt;a href=&quot;#1-新建-storage-模块&quot; class=&quot;headerlink&quot; title=&quot;1 新建 storage 模块&quot;&gt;&lt;/a&gt;1 新建 storage 模块&lt;/h5&gt;&lt;p&gt;前提：&lt;a class=&quot;link&quot;</summary>
+      
+    
+    
+    
+    <category term="Vue2" scheme="http://example.com/categories/Vue2/"/>
+    
+    <category term="Vue2 基础" scheme="http://example.com/categories/Vue2/Vue2-%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="Vue2" scheme="http://example.com/tags/Vue2/"/>
+    
+    <category term="Vuex" scheme="http://example.com/tags/Vuex/"/>
+    
+  </entry>
   
   <entry>
     <title>Vuex 构建子模块</title>
