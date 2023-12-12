@@ -9,7 +9,7 @@
     
     <title>
         
-            响应拦截器统一处理错误 |
+            XR-FRAME - 基础能力 - Alpha 透明画布 |
         
         斑狸
     </title>
@@ -203,7 +203,7 @@
             <div class="post-content-bottom border-box">
                 
                     <div class="post-title">
-                        响应拦截器统一处理错误
+                        XR-FRAME - 基础能力 - Alpha 透明画布
                     </div>
                 
 
@@ -231,13 +231,13 @@
         
             <span class="meta-info-item post-create-date">
                 <i class="icon fa-solid fa-calendar-check"></i>&nbsp;
-                <span class="pc">2023-12-12 09:51:06</span>
-                <span class="mobile">2023-12-12 09:51</span>
+                <span class="pc">2023-12-12 14:56:33</span>
+                <span class="mobile">2023-12-12 14:56</span>
             </span>
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="pc" data-updated="Tue Dec 12 2023 10:10:17 GMT+0800">2023-12-12 10:10:17</span>
+                <span class="pc" data-updated="Tue Dec 12 2023 16:16:32 GMT+0800">2023-12-12 16:16:32</span>
             </span>
         
 
@@ -245,10 +245,10 @@
             <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
                 <ul class="post-category-ul">
                     
-                            <li class="category-item"><a href="/categories/Vue2/">Vue2</a></li>
+                            <li class="category-item"><a href="/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/">微信小程序</a></li>
                         
                     
-                            <li class="category-item">&nbsp;<i class="icon fas fa-angle-right"></i>&nbsp;<a href="/categories/Vue2/Vue2-%E5%9F%BA%E7%A1%80/">Vue2 基础</a></li>
+                            <li class="category-item">&nbsp;<i class="icon fas fa-angle-right"></i>&nbsp;<a href="/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/xr-frame/">xr-frame</a></li>
                         
                     
                 </ul>
@@ -260,10 +260,10 @@
                 <i class="icon fas fa-tags"></i>&nbsp;
                 <ul class="post-tag-ul">
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/Vue2/">Vue2</a></li>
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/">微信小程序</a></li>
                         
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/Axios/">Axios</a></li>
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/xr-frame/">xr-frame</a></li>
                         
                     
                 </ul>
@@ -273,12 +273,12 @@
         
         
             <span class="meta-info-item post-wordcount">
-                <i class="icon fas fa-file-word"></i>&nbsp;<span>99 字</span>
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>467 字</span>
             </span>
         
         
             <span class="meta-info-item post-min2read">
-                <i class="icon fas fa-clock"></i>&nbsp;<span>1 分钟</span>
+                <i class="icon fas fa-clock"></i>&nbsp;<span>2 分钟</span>
             </span>
         
         
@@ -299,8 +299,11 @@
                 <div class="post-content keep-markdown-body">
                     
 
-                    <h5 id="1-配置-Axios"><a href="#1-配置-Axios" class="headerlink" title="1 配置 Axios"></a>1 配置 Axios</h5><p>参考方法：<a class="link"   target="_blank" rel="noopener" href="https://banlixxx.github.io/2023/12/10/axios%E5%B0%81%E8%A3%85/" >Axios 封装<i class="fas fa-external-link-alt"></i></a></p>
-<h5 id="2-配置响应拦截器"><a href="#2-配置响应拦截器" class="headerlink" title="2 配置响应拦截器"></a>2 配置响应拦截器</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">Toast</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;vant&#x27;</span></span><br><span class="line"></span><br><span class="line">...</span><br><span class="line"></span><br><span class="line"><span class="comment">// 添加响应拦截器</span></span><br><span class="line">request.<span class="property">interceptors</span>.<span class="property">response</span>.<span class="title function_">use</span>(<span class="keyword">function</span> (<span class="params">response</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> res = response.<span class="property">data</span></span><br><span class="line">  <span class="keyword">if</span> (res.<span class="property">status</span> !== <span class="number">200</span>) &#123;</span><br><span class="line">    <span class="comment">// 给提示</span></span><br><span class="line">    <span class="title class_">Toast</span>(res.<span class="property">message</span>)</span><br><span class="line">    <span class="comment">// 抛出一个错误的Promise</span></span><br><span class="line">    <span class="keyword">return</span> <span class="title class_">Promise</span>.<span class="title function_">reject</span>(res.<span class="property">message</span>)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// 对响应数据做点什么</span></span><br><span class="line">  <span class="keyword">return</span> res</span><br><span class="line">&#125;, <span class="keyword">function</span> (<span class="params">error</span>) &#123;</span><br><span class="line">  <span class="comment">// 对响应错误做点什么</span></span><br><span class="line">  <span class="keyword">return</span> <span class="title class_">Promise</span>.<span class="title function_">reject</span>(error)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+                    <h5 id="1-项目地址"><a href="#1-项目地址" class="headerlink" title="1 项目地址"></a>1 项目地址</h5><p>官方项目地址：<a class="link"   target="_blank" rel="noopener" href="https://github.com/dtysky/xr-frame-demo/tree/master/miniprogram/components/xr-basic-alpha" >https://github.com/dtysky/xr-frame-demo/tree/master/miniprogram/components/xr-basic-alpha<i class="fas fa-external-link-alt"></i></a></p>
+<h5 id="2-代码解析"><a href="#2-代码解析" class="headerlink" title="2 代码解析"></a>2 代码解析</h5><p>主要代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;xr-scene render-system=&quot;alpha:true&quot; bind:ready=&quot;handleReady&quot;&gt;</span><br><span class="line">  &lt;xr-node&gt;</span><br><span class="line">    &lt;xr-mesh id=&quot;cube&quot; node-id=&quot;mesh-cube&quot; position=&quot;-0.5 0 0&quot; geometry=&quot;cube&quot; uniforms=&quot;u_baseColorFactor:0.298 0.764 0.85 &#123;&#123;cubeAlpha&#125;&#125;&quot; states=&quot;alphaMode:BLEND&quot; /&gt;</span><br><span class="line">    &lt;xr-mesh node-id=&quot;mesh-sphere&quot; position=&quot;0.5 0 0&quot; geometry=&quot;sphere&quot; uniforms=&quot;u_baseColorFactor:0.937 0.176 0.368 &#123;&#123;sphereAlpha&#125;&#125;&quot; states=&quot;alphaMode:BLEND&quot; /&gt;</span><br><span class="line">    &lt;xr-node node-id=&quot;target&quot; position=&quot;0 0 0&quot; /&gt;</span><br><span class="line">    &lt;xr-camera</span><br><span class="line">      id=&quot;camera&quot; node-id=&quot;camera&quot; position=&quot;0 2 2&quot; clear-color=&quot;&#123;&#123;clearColor&#125;&#125;&quot;</span><br><span class="line">      target=&quot;target&quot; camera-orbit-control=&quot;&quot;</span><br><span class="line">    &gt;&lt;/xr-camera&gt;</span><br><span class="line">  &lt;/xr-node&gt;</span><br><span class="line">  &lt;xr-node node-id=&quot;lights&quot;&gt;</span><br><span class="line">    &lt;xr-light type=&quot;ambient&quot; color=&quot;1 1 1&quot; intensity=&quot;1&quot; /&gt;</span><br><span class="line">    &lt;xr-light type=&quot;directional&quot; rotation=&quot;40 170 0&quot; color=&quot;1 1 1&quot; intensity=&quot;3&quot; /&gt;</span><br><span class="line">  &lt;/xr-node&gt;</span><br><span class="line">&lt;/xr-scene&gt;</span><br></pre></td></tr></table></figure>
+
+<p>&emsp;&emsp;这段代码中开启了 render-system 的 alpha 属性，并且将 xr-camera 元素上的 clear-color 的透明通道设置了一个非零的值，还开启了 xr-mesh 的 BLEND 混合和设置了 baseColor 的透明通道。<br>&emsp;&emsp;有时候需要让画布有一定的透明度，来和画布后面的背景混合，即<code>render-system=&quot;alpha:true&quot;</code>。render-system 为渲染系统；alpha，是否支持画布输出透明通道，并且能够和背景混合。xml 中数据类型为 boolean。<br>&emsp;&emsp;<code>states=&quot;alphaMode:BLEND&quot;</code>给网格开启透明混合。states 为初始要写入的渲染状态，xml 中的数据类型为 map，目前支持 renderQueue、cullOn、depthTestOn、depthTestWrite、alphaMode、alphaCutOff，alphaMode 和 alphaCutOff 遵循 glTF 标准；alphaMode，透明模式，材质支持的渲染状态，类型有 ‘OPAQUE’、’BLEND’、’MASK’。</p>
 
                 </div>
 
@@ -310,11 +313,11 @@
     <div class="copyright-info-content border-box">
         <div class="copyright-info-top border-box">
             <div class="copyright-post-title border-box text-ellipsis">
-                响应拦截器统一处理错误
+                XR-FRAME - 基础能力 - Alpha 透明画布
             </div>
 
             <div class="copyright-post-link border-box text-ellipsis">
-                2023/12/12/响应拦截器统一处理错误/
+                2023/12/12/XR-FRAME-基础能力-Alpha透明画布/
             </div>
         </div>
 
@@ -330,7 +333,7 @@
                 <div class="type">
                     发布于
                 </div>
-                <div class="content">2023-12-12 09:51</div>
+                <div class="content">2023-12-12 14:56</div>
             </div>
 
 
@@ -364,11 +367,11 @@
                             <ul class="post-tags-box border-box">
                                 
                                     <li class="tag-item border-box">
-                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/Vue2/">Vue2</a>
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/">微信小程序</a>
                                     </li>
                                 
                                     <li class="tag-item border-box">
-                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/Axios/">Axios</a>
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/xr-frame/">xr-frame</a>
                                     </li>
                                 
                             </ul>
@@ -407,31 +410,15 @@
                 
                     <div class="post-nav border-box">
                         
-                            <div class="prev-post">
-                                <a class="prev"
-                                   rel="prev"
-                                   href="/2023/12/12/vuex%E6%9E%84%E5%BB%BA%E5%AD%90%E6%A8%A1%E5%9D%97/"
-                                   title="Vuex 构建子模块"
-                                >
-                                    <span class="left arrow-icon flex-center">
-                                        <i class="fas fa-chevron-left"></i>
-                                    </span>
-                                    <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">Vuex 构建子模块</span>
-                                        <span class="post-nav-item">上一篇</span>
-                                    </span>
-                                </a>
-                            </div>
-                        
                         
                             <div class="next-post">
                                 <a class="next"
                                    rel="next"
-                                   href="/2023/12/11/XR-FRAME-%E5%9F%BA%E7%A1%80%E8%83%BD%E5%8A%9B-Geometry%E5%9F%BA%E7%A1%80%E5%9B%BE%E5%BD%A2/"
-                                   title="XR-FRAME - 基础能力 - Geometry基础图形"
+                                   href="/2023/12/12/vant%E7%BB%84%E4%BB%B6%E5%AE%9A%E5%88%B6%E4%B8%BB%E9%A2%98%E7%9A%84%E6%96%B9%E6%B3%95/"
+                                   title="Vant 组件定制主题的方法"
                                 >
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">XR-FRAME - 基础能力 - Geometry基础图形</span>
+                                        <span class="post-nav-title-item text-ellipsis">Vant 组件定制主题的方法</span>
                                         <span class="post-nav-item">下一篇</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
@@ -541,7 +528,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E9%85%8D%E7%BD%AE-Axios"><span class="nav-text">1 配置 Axios</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E9%85%8D%E7%BD%AE%E5%93%8D%E5%BA%94%E6%8B%A6%E6%88%AA%E5%99%A8"><span class="nav-text">2 配置响应拦截器</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E9%A1%B9%E7%9B%AE%E5%9C%B0%E5%9D%80"><span class="nav-text">1 项目地址</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E4%BB%A3%E7%A0%81%E8%A7%A3%E6%9E%90"><span class="nav-text">2 代码解析</span></a></li></ol>
     </div>
 </div>
 
@@ -740,7 +727,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E9%85%8D%E7%BD%AE-Axios"><span class="nav-text">1 配置 Axios</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E9%85%8D%E7%BD%AE%E5%93%8D%E5%BA%94%E6%8B%A6%E6%88%AA%E5%99%A8"><span class="nav-text">2 配置响应拦截器</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E9%A1%B9%E7%9B%AE%E5%9C%B0%E5%9D%80"><span class="nav-text">1 项目地址</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E4%BB%A3%E7%A0%81%E8%A7%A3%E6%9E%90"><span class="nav-text">2 代码解析</span></a></li></ol>
     </div>
 </div>
 
