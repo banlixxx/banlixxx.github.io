@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-12-12T03:04:51.799Z</updated>
+  <updated>2023-12-12T03:44:09.230Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,62 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Vuex 中主模块调用子模块的数据</title>
+    <link href="http://example.com/2023/12/12/vuex%E4%B8%AD%E4%B8%BB%E6%A8%A1%E5%9D%97%E8%B0%83%E7%94%A8%E5%AD%90%E6%A8%A1%E5%9D%97%E7%9A%84%E6%95%B0%E6%8D%AE/"/>
+    <id>http://example.com/2023/12/12/vuex%E4%B8%AD%E4%B8%BB%E6%A8%A1%E5%9D%97%E8%B0%83%E7%94%A8%E5%AD%90%E6%A8%A1%E5%9D%97%E7%9A%84%E6%95%B0%E6%8D%AE/</id>
+    <published>2023-12-12T03:35:45.000Z</published>
+    <updated>2023-12-12T03:44:09.230Z</updated>
+    
+    <content type="html"><![CDATA[<h5 id="1-构建子模块"><a href="#1-构建子模块" class="headerlink" title="1 构建子模块"></a>1 构建子模块</h5><p>参考方法：<a class="link"   href="https://banlixxx.github.io/2023/12/12/vuex%E6%9E%84%E5%BB%BA%E5%AD%90%E6%A8%A1%E5%9D%97/" >Vuex 构建子模块<i class="fas fa-external-link-alt"></i></a></p><h5 id="2-调用子模块数据"><a href="#2-调用子模块数据" class="headerlink" title="2 调用子模块数据"></a>2 调用子模块数据</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// /store/index.js</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">Vue</span> <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">Vuex</span> <span class="keyword">from</span> <span class="string">&#x27;vuex&#x27;</span></span><br><span class="line"><span class="keyword">import</span> user <span class="keyword">from</span> <span class="string">&#x27;@/store/modules/user.js&#x27;</span></span><br><span class="line"><span class="title class_">Vue</span>.<span class="title function_">use</span>(<span class="title class_">Vuex</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">new</span> <span class="title class_">Vuex</span>.<span class="title class_">Store</span>(&#123;</span><br><span class="line">  <span class="attr">state</span>: &#123;&#125;,</span><br><span class="line">  <span class="attr">getters</span>: &#123;</span><br><span class="line">    <span class="title function_">token</span>(<span class="params">state</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> state.<span class="property">user</span>.<span class="property">userInfo</span>.<span class="property">token</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">mutations</span>: &#123;&#125;,</span><br><span class="line">  <span class="attr">actions</span>: &#123;&#125;,</span><br><span class="line">  <span class="attr">modules</span>: &#123;</span><br><span class="line">    user</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><h5 id="3-在-router-index-js-中调用"><a href="#3-在-router-index-js-中调用" class="headerlink" title="3 在 router&#x2F;index.js 中调用"></a>3 在 router&#x2F;index.js 中调用</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> store <span class="keyword">from</span> <span class="string">&#x27;@/store&#x27;</span></span><br><span class="line"></span><br><span class="line">.....</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> authUrl = [<span class="string">&#x27;/pay&#x27;</span>, <span class="string">&#x27;/myorder&#x27;</span>]</span><br><span class="line">router.<span class="title function_">beforeEach</span>(<span class="function">(<span class="params">to, <span class="keyword">from</span>, next</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> token = store.<span class="property">getters</span>.<span class="property">token</span></span><br><span class="line">  <span class="keyword">if</span> (!authUrl.<span class="title function_">includes</span>(to.<span class="property">path</span>)) &#123;</span><br><span class="line">    <span class="title function_">next</span>()</span><br><span class="line">    <span class="keyword">return</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (token) &#123;</span><br><span class="line">    <span class="title function_">next</span>()</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="title function_">next</span>(<span class="string">&#x27;/login&#x27;</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h5 id=&quot;1-构建子模块&quot;&gt;&lt;a href=&quot;#1-构建子模块&quot; class=&quot;headerlink&quot; title=&quot;1 构建子模块&quot;&gt;&lt;/a&gt;1 构建子模块&lt;/h5&gt;&lt;p&gt;参考方法：&lt;a class=&quot;link&quot;   href=&quot;https://banlixxx.gith</summary>
+      
+    
+    
+    
+    <category term="Vue2" scheme="http://example.com/categories/Vue2/"/>
+    
+    <category term="Vue2 基础" scheme="http://example.com/categories/Vue2/Vue2-%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="Vue2" scheme="http://example.com/tags/Vue2/"/>
+    
+    <category term="Vuex" scheme="http://example.com/tags/Vuex/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>全局前置导航守卫</title>
+    <link href="http://example.com/2023/12/12/%E5%85%A8%E5%B1%80%E5%89%8D%E7%BD%AE%E5%AF%BC%E8%88%AA%E5%AE%88%E5%8D%AB/"/>
+    <id>http://example.com/2023/12/12/%E5%85%A8%E5%B1%80%E5%89%8D%E7%BD%AE%E5%AF%BC%E8%88%AA%E5%AE%88%E5%8D%AB/</id>
+    <published>2023-12-12T03:09:17.000Z</published>
+    <updated>2023-12-12T03:29:51.279Z</updated>
+    
+    <content type="html"><![CDATA[<h5 id="1-配置-vue-router"><a href="#1-配置-vue-router" class="headerlink" title="1 配置 vue-router"></a>1 配置 vue-router</h5><p>参考方法：<a class="link"   href="https://banlixxx.github.io/2023/12/07/Vue2%E4%B8%ADrouter-index-js%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/" >Vue2 中 router&#x2F;index.js 基础配置<i class="fas fa-external-link-alt"></i></a></p><h5 id="2-配置全局导航守卫"><a href="#2-配置全局导航守卫" class="headerlink" title="2 配置全局导航守卫"></a>2 配置全局导航守卫</h5><p>官网：<a class="link"   href="https://router.vuejs.org/zh/guide/advanced/navigation-guards.html" >https://router.vuejs.org/zh/guide/advanced/navigation-guards.html<i class="fas fa-external-link-alt"></i></a></p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> router = <span class="keyword">new</span> <span class="title class_">VueRouter</span>(&#123;......&#125;)</span><br><span class="line"></span><br><span class="line">router.<span class="title function_">beforeEach</span>(<span class="function">(<span class="params">to, <span class="keyword">from</span>, next</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">// 1. to   往哪里去， 到哪去的路由信息对象</span></span><br><span class="line">  <span class="comment">//    to.path 跳转路径</span></span><br><span class="line">  <span class="comment">//    to.fullPath 包含查询参数的跳转路径</span></span><br><span class="line">  <span class="comment">// 2. from 从哪里来， 从哪来的路由信息对象</span></span><br><span class="line">  <span class="comment">// 3. next() 是否放行</span></span><br><span class="line">  <span class="comment">//    如果next()调用，就是放行</span></span><br><span class="line">  <span class="comment">//    next(路径) 拦截到某个路径页面</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> router</span><br></pre></td></tr></table></figure><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> authUrl = [<span class="string">&#x27;/pay&#x27;</span>, <span class="string">&#x27;/myorder&#x27;</span>]</span><br><span class="line">router.<span class="title function_">beforeEach</span>(<span class="function">(<span class="params">to, <span class="keyword">from</span>, next</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> token = store.<span class="property">state</span>.<span class="property">user</span>.<span class="property">userInfo</span>.<span class="property">token</span></span><br><span class="line">  <span class="keyword">if</span> (!authUrl.<span class="title function_">includes</span>(to.<span class="property">path</span>)) &#123;</span><br><span class="line">    <span class="title function_">next</span>()</span><br><span class="line">    <span class="keyword">return</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (token) &#123;</span><br><span class="line">    <span class="title function_">next</span>()</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="title function_">next</span>(<span class="string">&#x27;/login&#x27;</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h5 id=&quot;1-配置-vue-router&quot;&gt;&lt;a href=&quot;#1-配置-vue-router&quot; class=&quot;headerlink&quot; title=&quot;1 配置 vue-router&quot;&gt;&lt;/a&gt;1 配置 vue-router&lt;/h5&gt;&lt;p&gt;参考方法：&lt;a class=&quot;lin</summary>
+      
+    
+    
+    
+    <category term="Vue2" scheme="http://example.com/categories/Vue2/"/>
+    
+    <category term="Vue2 基础" scheme="http://example.com/categories/Vue2/Vue2-%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="Vue2" scheme="http://example.com/tags/Vue2/"/>
+    
+    <category term="vue-router" scheme="http://example.com/tags/vue-router/"/>
+    
+  </entry>
   
   <entry>
     <title>统一在每次请求后台时，添加 loading 效果</title>
