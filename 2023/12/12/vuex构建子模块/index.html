@@ -9,7 +9,7 @@
     
     <title>
         
-            使用定时器倒计时 |
+            Vuex 构建子模块 |
         
         斑狸
     </title>
@@ -203,7 +203,7 @@
             <div class="post-content-bottom border-box">
                 
                     <div class="post-title">
-                        使用定时器倒计时
+                        Vuex 构建子模块
                     </div>
                 
 
@@ -231,13 +231,13 @@
         
             <span class="meta-info-item post-create-date">
                 <i class="icon fa-solid fa-calendar-check"></i>&nbsp;
-                <span class="pc">2023-12-10 11:46:59</span>
-                <span class="mobile">2023-12-10 11:46</span>
+                <span class="pc">2023-12-12 10:16:02</span>
+                <span class="mobile">2023-12-12 10:16</span>
             </span>
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="pc" data-updated="Sun Dec 10 2023 12:40:35 GMT+0800">2023-12-10 12:40:35</span>
+                <span class="pc" data-updated="Tue Dec 12 2023 10:23:45 GMT+0800">2023-12-12 10:23:45</span>
             </span>
         
 
@@ -263,7 +263,7 @@
                             <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/Vue2/">Vue2</a></li>
                         
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E5%AE%9A%E6%97%B6%E5%99%A8/">定时器</a></li>
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/Vuex/">Vuex</a></li>
                         
                     
                 </ul>
@@ -273,7 +273,7 @@
         
         
             <span class="meta-info-item post-wordcount">
-                <i class="icon fas fa-file-word"></i>&nbsp;<span>151 字</span>
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>156 字</span>
             </span>
         
         
@@ -299,8 +299,14 @@
                 <div class="post-content keep-markdown-body">
                     
 
-                    <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">&lt;button @click=&quot;getCode&quot;&gt;</span><br><span class="line">  &#123;&#123;</span><br><span class="line">    second === totalSecond ? &#x27;获取验证码&#x27; : second + &#x27;秒后重新发送&#x27;</span><br><span class="line">  &#125;&#125;</span><br><span class="line">&lt;/button&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">  name: &#x27;LoginPage&#x27;,</span><br><span class="line">  data() &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      totalSecond: 60, // 总秒数</span><br><span class="line">      second: 60, // 当前秒数，开定时器对 second--</span><br><span class="line">      timer: null // 定时器 id</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  // 离开页面清除定时器</span><br><span class="line">  destroyed() &#123;</span><br><span class="line">    clearInterval(this.timer)</span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    // 获取短信验证码</span><br><span class="line">    getCode() &#123;</span><br><span class="line">      // 开启倒计时</span><br><span class="line">      if (this.timer || this.second !=== this.totalSecond) return</span><br><span class="line">      this.timer = setInterval(() =&gt; &#123;</span><br><span class="line">        this.second--</span><br><span class="line">        if (this.second &lt;= 0) &#123;</span><br><span class="line">          clearInterval(this.timer)</span><br><span class="line">          this.timer = null // 重置定时器 id</span><br><span class="line">          this.second = this.totalSecond // 归位</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;, 1000)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+                    <h5 id="1-新建-user-js-子模块"><a href="#1-新建-user-js-子模块" class="headerlink" title="1 新建 user.js 子模块"></a>1 新建 user.js 子模块</h5><p>新建 &#x2F;store&#x2F;modules&#x2F;user.js 文件</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  <span class="attr">namespaced</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="title function_">state</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      <span class="attr">userInfo</span>: &#123;</span><br><span class="line">        <span class="attr">token</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">        <span class="attr">userId</span>: <span class="string">&#x27;&#x27;</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">mutations</span>: &#123;&#125;,</span><br><span class="line">  <span class="attr">actions</span>: &#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<h5 id="2-挂载到-vuex-上"><a href="#2-挂载到-vuex-上" class="headerlink" title="2 挂载到 vuex 上"></a>2 挂载到 vuex 上</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">Vue</span> <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">Vuex</span> <span class="keyword">from</span> <span class="string">&#x27;vuex&#x27;</span></span><br><span class="line"><span class="keyword">import</span> user <span class="keyword">from</span> <span class="string">&#x27;./modules/user&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="title class_">Vue</span>.<span class="title function_">use</span>(<span class="title class_">Vuex</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">new</span> <span class="title class_">Vuex</span>.<span class="title class_">Store</span>(&#123;</span><br><span class="line">  <span class="attr">modules</span>: &#123;</span><br><span class="line">    user</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h5 id="3-提供-mutations"><a href="#3-提供-mutations" class="headerlink" title="3 提供 mutations"></a>3 提供 mutations</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">mutations</span>: &#123;</span><br><span class="line">  setUserInfo (state, obj) &#123;</span><br><span class="line">    state.<span class="property">userInfo</span> = obj</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<h5 id="4-页面中-commit-调用"><a href="#4-页面中-commit-调用" class="headerlink" title="4 页面中 commit 调用"></a>4 页面中 commit 调用</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 登录按钮（校验 &amp; 提交）</span></span><br><span class="line"><span class="keyword">async</span> login () &#123;</span><br><span class="line">  <span class="keyword">if</span> (!<span class="variable language_">this</span>.<span class="title function_">validFn</span>()) &#123;</span><br><span class="line">    <span class="keyword">return</span></span><br><span class="line">  &#125;</span><br><span class="line">  ...</span><br><span class="line">  <span class="keyword">const</span> res = <span class="keyword">await</span> <span class="title function_">codeLogin</span>(<span class="variable language_">this</span>.<span class="property">mobile</span>, <span class="variable language_">this</span>.<span class="property">msgCode</span>)</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">$store</span>.<span class="title function_">commit</span>(<span class="string">&#x27;user/setUserInfo&#x27;</span>, res.<span class="property">data</span>)</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">$router</span>.<span class="title function_">push</span>(<span class="string">&#x27;/&#x27;</span>)</span><br><span class="line">  <span class="variable language_">this</span>.$toast(<span class="string">&#x27;登录成功&#x27;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
                 </div>
 
                 
@@ -309,11 +315,11 @@
     <div class="copyright-info-content border-box">
         <div class="copyright-info-top border-box">
             <div class="copyright-post-title border-box text-ellipsis">
-                使用定时器倒计时
+                Vuex 构建子模块
             </div>
 
             <div class="copyright-post-link border-box text-ellipsis">
-                2023/12/10/使用定时器倒计时/
+                2023/12/12/vuex构建子模块/
             </div>
         </div>
 
@@ -329,7 +335,7 @@
                 <div class="type">
                     发布于
                 </div>
-                <div class="content">2023-12-10 11:46</div>
+                <div class="content">2023-12-12 10:16</div>
             </div>
 
 
@@ -367,7 +373,7 @@
                                     </li>
                                 
                                     <li class="tag-item border-box">
-                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E5%AE%9A%E6%97%B6%E5%99%A8/">定时器</a>
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/Vuex/">Vuex</a>
                                     </li>
                                 
                             </ul>
@@ -406,31 +412,15 @@
                 
                     <div class="post-nav border-box">
                         
-                            <div class="prev-post">
-                                <a class="prev"
-                                   rel="prev"
-                                   href="/2023/12/11/XR-FRAME-%E5%9F%BA%E7%A1%80%E8%83%BD%E5%8A%9B-Geometry%E5%9F%BA%E7%A1%80%E5%9B%BE%E5%BD%A2/"
-                                   title="XR-FRAME - 基础能力 - Geometry基础图形"
-                                >
-                                    <span class="left arrow-icon flex-center">
-                                        <i class="fas fa-chevron-left"></i>
-                                    </span>
-                                    <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">XR-FRAME - 基础能力 - Geometry基础图形</span>
-                                        <span class="post-nav-item">上一篇</span>
-                                    </span>
-                                </a>
-                            </div>
-                        
                         
                             <div class="next-post">
                                 <a class="next"
                                    rel="next"
-                                   href="/2023/12/10/toast%E8%BD%BB%E6%8F%90%E7%A4%BA/"
-                                   title="Toast 轻提示"
+                                   href="/2023/12/12/%E5%93%8D%E5%BA%94%E6%8B%A6%E6%88%AA%E5%99%A8%E7%BB%9F%E4%B8%80%E5%A4%84%E7%90%86%E9%94%99%E8%AF%AF/"
+                                   title="响应拦截器统一处理错误"
                                 >
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">Toast 轻提示</span>
+                                        <span class="post-nav-title-item text-ellipsis">响应拦截器统一处理错误</span>
                                         <span class="post-nav-item">下一篇</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
@@ -540,7 +530,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        
+        <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E6%96%B0%E5%BB%BA-user-js-%E5%AD%90%E6%A8%A1%E5%9D%97"><span class="nav-text">1 新建 user.js 子模块</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E6%8C%82%E8%BD%BD%E5%88%B0-vuex-%E4%B8%8A"><span class="nav-text">2 挂载到 vuex 上</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-%E6%8F%90%E4%BE%9B-mutations"><span class="nav-text">3 提供 mutations</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-%E9%A1%B5%E9%9D%A2%E4%B8%AD-commit-%E8%B0%83%E7%94%A8"><span class="nav-text">4 页面中 commit 调用</span></a></li></ol>
     </div>
 </div>
 
@@ -739,7 +729,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        
+        <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E6%96%B0%E5%BB%BA-user-js-%E5%AD%90%E6%A8%A1%E5%9D%97"><span class="nav-text">1 新建 user.js 子模块</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E6%8C%82%E8%BD%BD%E5%88%B0-vuex-%E4%B8%8A"><span class="nav-text">2 挂载到 vuex 上</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-%E6%8F%90%E4%BE%9B-mutations"><span class="nav-text">3 提供 mutations</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-%E9%A1%B5%E9%9D%A2%E4%B8%AD-commit-%E8%B0%83%E7%94%A8"><span class="nav-text">4 页面中 commit 调用</span></a></li></ol>
     </div>
 </div>
 

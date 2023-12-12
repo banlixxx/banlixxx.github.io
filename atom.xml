@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-12-12T02:10:17.905Z</updated>
+  <updated>2023-12-12T02:23:45.623Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Vuex 构建子模块</title>
+    <link href="http://example.com/2023/12/12/vuex%E6%9E%84%E5%BB%BA%E5%AD%90%E6%A8%A1%E5%9D%97/"/>
+    <id>http://example.com/2023/12/12/vuex%E6%9E%84%E5%BB%BA%E5%AD%90%E6%A8%A1%E5%9D%97/</id>
+    <published>2023-12-12T02:16:02.000Z</published>
+    <updated>2023-12-12T02:23:45.623Z</updated>
+    
+    <content type="html"><![CDATA[<h5 id="1-新建-user-js-子模块"><a href="#1-新建-user-js-子模块" class="headerlink" title="1 新建 user.js 子模块"></a>1 新建 user.js 子模块</h5><p>新建 &#x2F;store&#x2F;modules&#x2F;user.js 文件</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  <span class="attr">namespaced</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="title function_">state</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      <span class="attr">userInfo</span>: &#123;</span><br><span class="line">        <span class="attr">token</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">        <span class="attr">userId</span>: <span class="string">&#x27;&#x27;</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">mutations</span>: &#123;&#125;,</span><br><span class="line">  <span class="attr">actions</span>: &#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h5 id="2-挂载到-vuex-上"><a href="#2-挂载到-vuex-上" class="headerlink" title="2 挂载到 vuex 上"></a>2 挂载到 vuex 上</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">Vue</span> <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">Vuex</span> <span class="keyword">from</span> <span class="string">&#x27;vuex&#x27;</span></span><br><span class="line"><span class="keyword">import</span> user <span class="keyword">from</span> <span class="string">&#x27;./modules/user&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="title class_">Vue</span>.<span class="title function_">use</span>(<span class="title class_">Vuex</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">new</span> <span class="title class_">Vuex</span>.<span class="title class_">Store</span>(&#123;</span><br><span class="line">  <span class="attr">modules</span>: &#123;</span><br><span class="line">    user</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><h5 id="3-提供-mutations"><a href="#3-提供-mutations" class="headerlink" title="3 提供 mutations"></a>3 提供 mutations</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">mutations</span>: &#123;</span><br><span class="line">  setUserInfo (state, obj) &#123;</span><br><span class="line">    state.<span class="property">userInfo</span> = obj</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure><h5 id="4-页面中-commit-调用"><a href="#4-页面中-commit-调用" class="headerlink" title="4 页面中 commit 调用"></a>4 页面中 commit 调用</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 登录按钮（校验 &amp; 提交）</span></span><br><span class="line"><span class="keyword">async</span> login () &#123;</span><br><span class="line">  <span class="keyword">if</span> (!<span class="variable language_">this</span>.<span class="title function_">validFn</span>()) &#123;</span><br><span class="line">    <span class="keyword">return</span></span><br><span class="line">  &#125;</span><br><span class="line">  ...</span><br><span class="line">  <span class="keyword">const</span> res = <span class="keyword">await</span> <span class="title function_">codeLogin</span>(<span class="variable language_">this</span>.<span class="property">mobile</span>, <span class="variable language_">this</span>.<span class="property">msgCode</span>)</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">$store</span>.<span class="title function_">commit</span>(<span class="string">&#x27;user/setUserInfo&#x27;</span>, res.<span class="property">data</span>)</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">$router</span>.<span class="title function_">push</span>(<span class="string">&#x27;/&#x27;</span>)</span><br><span class="line">  <span class="variable language_">this</span>.$toast(<span class="string">&#x27;登录成功&#x27;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h5 id=&quot;1-新建-user-js-子模块&quot;&gt;&lt;a href=&quot;#1-新建-user-js-子模块&quot; class=&quot;headerlink&quot; title=&quot;1 新建 user.js 子模块&quot;&gt;&lt;/a&gt;1 新建 user.js 子模块&lt;/h5&gt;&lt;p&gt;新建 &amp;#x2F;store</summary>
+      
+    
+    
+    
+    <category term="Vue2" scheme="http://example.com/categories/Vue2/"/>
+    
+    <category term="Vue2 基础" scheme="http://example.com/categories/Vue2/Vue2-%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="Vue2" scheme="http://example.com/tags/Vue2/"/>
+    
+    <category term="Vuex" scheme="http://example.com/tags/Vuex/"/>
+    
+  </entry>
   
   <entry>
     <title>响应拦截器统一处理错误</title>
