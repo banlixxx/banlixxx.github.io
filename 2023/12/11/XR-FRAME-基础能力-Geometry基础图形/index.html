@@ -237,7 +237,7 @@
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="pc" data-updated="Mon Dec 11 2023 17:51:11 GMT+0800">2023-12-11 17:51:11</span>
+                <span class="pc" data-updated="Tue Dec 12 2023 16:49:47 GMT+0800">2023-12-12 16:49:47</span>
             </span>
         
 
@@ -273,7 +273,7 @@
         
         
             <span class="meta-info-item post-wordcount">
-                <i class="icon fas fa-file-word"></i>&nbsp;<span>837 字</span>
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>1k 字</span>
             </span>
         
         
@@ -307,6 +307,8 @@
 <h6 id="2-2-xr-assets"><a href="#2-2-xr-assets" class="headerlink" title="2.2 xr-assets"></a>2.2 xr-assets</h6><p>&emsp;&emsp;用于包裹所需要加载的资源，可以绑定事件。</p>
 <h6 id="2-3-xr-asset-material"><a href="#2-3-xr-asset-material" class="headerlink" title="2.3 xr-asset-material"></a>2.3 xr-asset-material</h6><p>&emsp;&emsp;材质：asset-id 为材质的 id，可以用于给下面的 xr-mesh 进行绑定；effect 用于指定材质的效果，一般选 standard 即可。</p>
 <h6 id="2-4-xr-mesh"><a href="#2-4-xr-mesh" class="headerlink" title="2.4 xr-mesh"></a>2.4 xr-mesh</h6><p>&emsp;&emsp;网格：geometry 用于指定所要加载的物体的形状；node-id 为物体的 id，可以用于给 xr-camera 进行绑定，以确定相机朝向；material 可以用于绑定对应的材质 id；uniforms 是渲染相关的属性；cast-shadow 用于产生阴影，receive-shadow 用于接收其他物体产生的阴影，并且需要给灯光也开启 cast-shadow 效果。</p>
+<p>&emsp;&emsp;其中 geometry 是必传的，值为注册过的几何数据的资源id。material 是创建过的材质的资源id，如果不写则会默认使用一个标准的使用了 standard 效果的材质。</p>
+<p>&emsp;&emsp;uniforms 和 states 比较特殊，它们其实是材质的数据，但为了方便开发者使用，不去给每一个网格都创建一个材质，所以提供了这样的一种方式。在这种方式下，会自动拷贝一份材质，对材质的修改不会影响到原始材质，同时对原始材质的修改也不会影响到这个网格，这点一定要注意！</p>
 <h6 id="2-5-xr-camera"><a href="#2-5-xr-camera" class="headerlink" title="2.5 xr-camera"></a>2.5 xr-camera</h6><p>&emsp;&emsp;相机：clear-color 为相机底色；target 为相机朝向，可以绑定相应物体的 id；camera-orbit-control，相机控制器组件提供了一个简单的绕着相机 target 旋转的控制方式，一般而言只需要在元素上添加 camera-orbit-control 属性即可。</p>
 <h6 id="2-6-xr-light"><a href="#2-6-xr-light" class="headerlink" title="2.6 xr-light"></a>2.6 xr-light</h6><p>&emsp;&emsp;灯光：type，灯光类型；color，灯光颜色；intensity，灯光亮度；rotation，灯光方向；cast-shadow，允许灯光产生阴影效果，只有主平行光能够产生阴影，相对应的 receive-shadow 去接收阴影。</p>
 
@@ -596,7 +598,7 @@
             
                 <span class="count-box border-box word">
                     <span class="item-type border-box">总字数</span>
-                    <span class="item-value border-box word">5.5k</span>
+                    <span class="item-value border-box word">6.5k</span>
                 </span>
             
 

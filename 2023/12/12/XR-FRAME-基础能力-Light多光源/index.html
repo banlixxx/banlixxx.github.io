@@ -9,7 +9,7 @@
     
     <title>
         
-            XR-FRAME - 基础能力 - Alpha 透明画布 |
+            XR-FRAME-基础能力-Light多光源 |
         
         斑狸
     </title>
@@ -203,7 +203,7 @@
             <div class="post-content-bottom border-box">
                 
                     <div class="post-title">
-                        XR-FRAME - 基础能力 - Alpha 透明画布
+                        XR-FRAME-基础能力-Light多光源
                     </div>
                 
 
@@ -231,13 +231,13 @@
         
             <span class="meta-info-item post-create-date">
                 <i class="icon fa-solid fa-calendar-check"></i>&nbsp;
-                <span class="pc">2023-12-12 14:56:33</span>
-                <span class="mobile">2023-12-12 14:56</span>
+                <span class="pc">2023-12-12 16:24:22</span>
+                <span class="mobile">2023-12-12 16:24</span>
             </span>
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="pc" data-updated="Tue Dec 12 2023 16:18:35 GMT+0800">2023-12-12 16:18:35</span>
+                <span class="pc" data-updated="Tue Dec 12 2023 16:53:48 GMT+0800">2023-12-12 16:53:48</span>
             </span>
         
 
@@ -273,12 +273,12 @@
         
         
             <span class="meta-info-item post-wordcount">
-                <i class="icon fas fa-file-word"></i>&nbsp;<span>467 字</span>
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>831 字</span>
             </span>
         
         
             <span class="meta-info-item post-min2read">
-                <i class="icon fas fa-clock"></i>&nbsp;<span>2 分钟</span>
+                <i class="icon fas fa-clock"></i>&nbsp;<span>4 分钟</span>
             </span>
         
         
@@ -299,11 +299,11 @@
                 <div class="post-content keep-markdown-body">
                     
 
-                    <h5 id="1-项目地址"><a href="#1-项目地址" class="headerlink" title="1 项目地址"></a>1 项目地址</h5><p>官方项目地址：<a class="link"   target="_blank" rel="noopener" href="https://github.com/dtysky/xr-frame-demo/tree/master/miniprogram/components/xr-basic-alpha" >https://github.com/dtysky/xr-frame-demo/tree/master/miniprogram/components/xr-basic-alpha<i class="fas fa-external-link-alt"></i></a></p>
+                    <h5 id="1-项目地址"><a href="#1-项目地址" class="headerlink" title="1 项目地址"></a>1 项目地址</h5><p>官方项目地址：<a class="link"   target="_blank" rel="noopener" href="https://github.com/dtysky/xr-frame-demo/tree/master/miniprogram/components/xr-basic-light" >https://github.com/dtysky/xr-frame-demo/tree/master/miniprogram/components/xr-basic-light<i class="fas fa-external-link-alt"></i></a></p>
 <h5 id="2-代码解析"><a href="#2-代码解析" class="headerlink" title="2 代码解析"></a>2 代码解析</h5><p>主要代码：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;xr-scene render-system=&quot;alpha:true&quot; bind:ready=&quot;handleReady&quot;&gt;</span><br><span class="line">  &lt;xr-node&gt;</span><br><span class="line">    &lt;xr-mesh id=&quot;cube&quot; node-id=&quot;mesh-cube&quot; position=&quot;-0.5 0 0&quot; geometry=&quot;cube&quot; uniforms=&quot;u_baseColorFactor:0.298 0.764 0.85 &#123;&#123;cubeAlpha&#125;&#125;&quot; states=&quot;alphaMode:BLEND&quot; /&gt;</span><br><span class="line">    &lt;xr-mesh node-id=&quot;mesh-sphere&quot; position=&quot;0.5 0 0&quot; geometry=&quot;sphere&quot; uniforms=&quot;u_baseColorFactor:0.937 0.176 0.368 &#123;&#123;sphereAlpha&#125;&#125;&quot; states=&quot;alphaMode:BLEND&quot; /&gt;</span><br><span class="line">    &lt;xr-node node-id=&quot;target&quot; position=&quot;0 0 0&quot; /&gt;</span><br><span class="line">    &lt;xr-camera</span><br><span class="line">      id=&quot;camera&quot; node-id=&quot;camera&quot; position=&quot;0 2 2&quot; clear-color=&quot;&#123;&#123;clearColor&#125;&#125;&quot;</span><br><span class="line">      target=&quot;target&quot; camera-orbit-control=&quot;&quot;</span><br><span class="line">    &gt;&lt;/xr-camera&gt;</span><br><span class="line">  &lt;/xr-node&gt;</span><br><span class="line">  &lt;xr-node node-id=&quot;lights&quot;&gt;</span><br><span class="line">    &lt;xr-light type=&quot;ambient&quot; color=&quot;1 1 1&quot; intensity=&quot;1&quot; /&gt;</span><br><span class="line">    &lt;xr-light type=&quot;directional&quot; rotation=&quot;40 170 0&quot; color=&quot;1 1 1&quot; intensity=&quot;3&quot; /&gt;</span><br><span class="line">  &lt;/xr-node&gt;</span><br><span class="line">&lt;/xr-scene&gt;</span><br></pre></td></tr></table></figure>
-
-<p>&emsp;&emsp;这段代码中开启了 render-system 的 alpha 属性，并且将 xr-camera 元素上的 clear-color 的透明通道设置了一个非零的值，还开启了 xr-mesh 的 BLEND 混合和设置了 baseColor 的透明通道。<br>&emsp;&emsp;有时候需要让画布有一定的透明度，来和画布后面的背景混合，即<code>render-system=&quot;alpha:true&quot;</code>。render-system 为渲染系统；alpha，是否支持画布输出透明通道，并且能够和背景混合。xml 中数据类型为 boolean。<br>&emsp;&emsp;<code>states=&quot;alphaMode:BLEND&quot;</code>给网格开启透明混合。states 为初始要写入的渲染状态，xml 中的数据类型为 map，目前支持 renderQueue、cullOn、depthTestOn、depthTestWrite、alphaMode、alphaCutOff，alphaMode 和 alphaCutOff 遵循 glTF 标准；alphaMode，透明模式，材质支持的渲染状态，类型有 ‘OPAQUE’、’BLEND’、’MASK’。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&lt;xr-scene id=&quot;xr-scene&quot; bind:ready=&quot;handleReady&quot;&gt;</span><br><span class="line">  &lt;xr-assets bind:progress=&quot;handleAssetsProgress&quot; bind:loaded=&quot;handleAssetsLoaded&quot;&gt;</span><br><span class="line">    &lt;xr-asset-material asset-id=&quot;standard-mat&quot; effect=&quot;standard&quot; /&gt;</span><br><span class="line">  &lt;/xr-assets&gt;</span><br><span class="line">  &lt;xr-node&gt;</span><br><span class="line">    &lt;xr-node node-id=&quot;camera-target&quot; position=&quot;0 0 0&quot;&gt;&lt;/xr-node&gt;</span><br><span class="line">    &lt;xr-mesh node-id=&quot;mesh-cube-floor&quot; position=&quot;2 -1.01 0&quot; rotation=&quot;0 0 0&quot; scale=&quot;10 1 10&quot; geometry=&quot;cube&quot; material=&quot;standard-mat&quot; uniforms=&quot;u_baseColorFactor:0.2 0.2 0.2 1&quot; states=&quot;cullOn: false&quot;&gt;&lt;/xr-mesh&gt;</span><br><span class="line">    &lt;xr-mesh node-id=&quot;mesh-cube&quot; position=&quot;0.6 -0.25 0.8&quot; rotation=&quot;0 30 0&quot; scale=&quot;0.5 0.5 0.5&quot; geometry=&quot;cube&quot; material=&quot;standard-mat&quot; uniforms=&quot;u_baseColorFactor:1 1 1 1&quot;&gt;&lt;/xr-mesh&gt;</span><br><span class="line">    &lt;xr-mesh node-id=&quot;mesh-sphere&quot; position=&quot;2 -0.15 -1&quot; scale=&quot;0.4 0.4 0.4&quot; geometry=&quot;sphere&quot; material=&quot;standard-mat&quot; uniforms=&quot;u_baseColorFactor:1 1 1 1&quot;&gt;&lt;/xr-mesh&gt;</span><br><span class="line">    &lt;xr-mesh node-id=&quot;mesh-cylinder&quot; position=&quot;-0.2 -0.2 -0.8&quot; scale=&quot;0.5 0.4 0.5&quot; geometry=&quot;cylinder&quot; material=&quot;standard-mat&quot; uniforms=&quot;u_baseColorFactor:1 1 1 1&quot;&gt;&lt;/xr-mesh&gt;</span><br><span class="line">    &lt;xr-mesh node-id=&quot;mesh-cube-far&quot; position=&quot;3 -0.25 1&quot; rotation=&quot;0 -30 0&quot; scale=&quot;0.5 0.5 0.5&quot; geometry=&quot;cube&quot; material=&quot;standard-mat&quot; uniforms=&quot;u_baseColorFactor:1 1 1 1&quot;&gt;&lt;/xr-mesh&gt;</span><br><span class="line">    &lt;xr-camera</span><br><span class="line">      id=&quot;camera&quot; node-id=&quot;camera&quot; position=&quot;-2 1 0&quot; clear-color=&quot;0 0 0 1&quot;</span><br><span class="line">      target=&quot;camera-target&quot;</span><br><span class="line">      camera-orbit-control=&quot;&quot;</span><br><span class="line">    &gt;&lt;/xr-camera&gt;</span><br><span class="line">  &lt;/xr-node&gt;</span><br><span class="line">  &lt;xr-node node-id=&quot;lights&quot;&gt;</span><br><span class="line">    &lt;xr-light type=&quot;ambient&quot; color=&quot;1 1 1&quot; intensity=&quot;0.1&quot; /&gt;</span><br><span class="line">    &lt;xr-light type=&quot;directional&quot; rotation=&quot;40 170 0&quot; color=&quot;1 1 1&quot; intensity=&quot;0.2&quot; /&gt;</span><br><span class="line">    &lt;xr-light type=&quot;point&quot; position=&quot;0 0 0&quot; color=&quot;1 0 0&quot; range=&quot;3&quot; intensity=&quot;3&quot; /&gt;</span><br><span class="line">    &lt;xr-light type=&quot;point&quot; position=&quot;2 0 1&quot; color=&quot;0 1 0&quot; range=&quot;3&quot; intensity=&quot;3&quot; /&gt;</span><br><span class="line">    &lt;xr-light type=&quot;spot&quot; position=&quot;0 0 0&quot; color=&quot;0 0 1&quot; range=&quot;12&quot; intensity=&quot;12&quot; rotation=&quot;0 120 0&quot; inner-cone-angle=&quot;30&quot; outer-cone-angle=&quot;35&quot; /&gt;</span><br><span class="line">  &lt;/xr-node&gt;</span><br><span class="line">&lt;/xr-scene&gt;</span><br></pre></td></tr></table></figure>
+<h6 id="2-1-灯光"><a href="#2-1-灯光" class="headerlink" title="2.1 灯光"></a>2.1 灯光</h6><p>&emsp;&emsp;环境光：类型是 ambient，支持颜色 color 和亮度 intensity，直接影响物体的基础颜色和亮度。<br>&emsp;&emsp;平行光：类型是 directional，支持颜色 color 和亮度 intensity，以及通过旋转 rotation 决定的方向，为物体表面通过不同光照算法提供明暗。<br>&emsp;&emsp;点光源：类型是 point，支持颜色 color 和亮度 intensity，以及 position 决定的位置和 range 决定的照亮范围。<br>&emsp;&emsp;聚光灯：类型是 spot，支持颜色 color 和亮度 intensity，以及 position 决定的位置、rotation 决定的方向、range 决定的照亮范围，和 inner-cone-angle 与 outer-cone-angle 决定的锥角。</p>
+<h6 id="2-2-阴影"><a href="#2-2-阴影" class="headerlink" title="2.2 阴影"></a>2.2 阴影</h6><p>&emsp;&emsp;阴影是灯光和网格的协作结果，只有主平行光能够产生阴影。<br>&emsp;&emsp;给需要接收阴影的 xr-mesh 开启 receive-shadow，给需要产生阴影的 xr-mesh 开启 cast-shadow，最后开启主光源的 cast-shadow 总开关允许灯光产生阴影。</p>
 
                 </div>
 
@@ -313,11 +313,11 @@
     <div class="copyright-info-content border-box">
         <div class="copyright-info-top border-box">
             <div class="copyright-post-title border-box text-ellipsis">
-                XR-FRAME - 基础能力 - Alpha 透明画布
+                XR-FRAME-基础能力-Light多光源
             </div>
 
             <div class="copyright-post-link border-box text-ellipsis">
-                2023/12/12/XR-FRAME-基础能力-Alpha透明画布/
+                2023/12/12/XR-FRAME-基础能力-Light多光源/
             </div>
         </div>
 
@@ -333,7 +333,7 @@
                 <div class="type">
                     发布于
                 </div>
-                <div class="content">2023-12-12 14:56</div>
+                <div class="content">2023-12-12 16:24</div>
             </div>
 
 
@@ -410,31 +410,15 @@
                 
                     <div class="post-nav border-box">
                         
-                            <div class="prev-post">
-                                <a class="prev"
-                                   rel="prev"
-                                   href="/2023/12/12/XR-FRAME-%E5%9F%BA%E7%A1%80%E8%83%BD%E5%8A%9B-Light%E5%A4%9A%E5%85%89%E6%BA%90/"
-                                   title="XR-FRAME-基础能力-Light多光源"
-                                >
-                                    <span class="left arrow-icon flex-center">
-                                        <i class="fas fa-chevron-left"></i>
-                                    </span>
-                                    <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">XR-FRAME-基础能力-Light多光源</span>
-                                        <span class="post-nav-item">上一篇</span>
-                                    </span>
-                                </a>
-                            </div>
-                        
                         
                             <div class="next-post">
                                 <a class="next"
                                    rel="next"
-                                   href="/2023/12/12/vant%E7%BB%84%E4%BB%B6%E5%AE%9A%E5%88%B6%E4%B8%BB%E9%A2%98%E7%9A%84%E6%96%B9%E6%B3%95/"
-                                   title="Vant 组件定制主题的方法"
+                                   href="/2023/12/12/XR-FRAME-%E5%9F%BA%E7%A1%80%E8%83%BD%E5%8A%9B-Alpha%E9%80%8F%E6%98%8E%E7%94%BB%E5%B8%83/"
+                                   title="XR-FRAME - 基础能力 - Alpha 透明画布"
                                 >
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">Vant 组件定制主题的方法</span>
+                                        <span class="post-nav-title-item text-ellipsis">XR-FRAME - 基础能力 - Alpha 透明画布</span>
                                         <span class="post-nav-item">下一篇</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
@@ -544,7 +528,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E9%A1%B9%E7%9B%AE%E5%9C%B0%E5%9D%80"><span class="nav-text">1 项目地址</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E4%BB%A3%E7%A0%81%E8%A7%A3%E6%9E%90"><span class="nav-text">2 代码解析</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E9%A1%B9%E7%9B%AE%E5%9C%B0%E5%9D%80"><span class="nav-text">1 项目地址</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E4%BB%A3%E7%A0%81%E8%A7%A3%E6%9E%90"><span class="nav-text">2 代码解析</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#2-1-%E7%81%AF%E5%85%89"><span class="nav-text">2.1 灯光</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-2-%E9%98%B4%E5%BD%B1"><span class="nav-text">2.2 阴影</span></a></li></ol></li></ol>
     </div>
 </div>
 
@@ -743,7 +727,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E9%A1%B9%E7%9B%AE%E5%9C%B0%E5%9D%80"><span class="nav-text">1 项目地址</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E4%BB%A3%E7%A0%81%E8%A7%A3%E6%9E%90"><span class="nav-text">2 代码解析</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E9%A1%B9%E7%9B%AE%E5%9C%B0%E5%9D%80"><span class="nav-text">1 项目地址</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E4%BB%A3%E7%A0%81%E8%A7%A3%E6%9E%90"><span class="nav-text">2 代码解析</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#2-1-%E7%81%AF%E5%85%89"><span class="nav-text">2.1 灯光</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-2-%E9%98%B4%E5%BD%B1"><span class="nav-text">2.2 阴影</span></a></li></ol></li></ol>
     </div>
 </div>
 
