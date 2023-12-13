@@ -9,7 +9,7 @@
     
     <title>
         
-            声明式导航-跳转传参 |
+            XR-FRAME-基础能力-Animation动画 |
         
         斑狸
     </title>
@@ -203,7 +203,7 @@
             <div class="post-content-bottom border-box">
                 
                     <div class="post-title">
-                        声明式导航-跳转传参
+                        XR-FRAME-基础能力-Animation动画
                     </div>
                 
 
@@ -231,13 +231,13 @@
         
             <span class="meta-info-item post-create-date">
                 <i class="icon fa-solid fa-calendar-check"></i>&nbsp;
-                <span class="pc">2023-12-13 12:14:39</span>
-                <span class="mobile">2023-12-13 12:14</span>
+                <span class="pc">2023-12-13 14:55:58</span>
+                <span class="mobile">2023-12-13 14:55</span>
             </span>
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="pc" data-updated="Wed Dec 13 2023 12:48:01 GMT+0800">2023-12-13 12:48:01</span>
+                <span class="pc" data-updated="Wed Dec 13 2023 15:49:23 GMT+0800">2023-12-13 15:49:23</span>
             </span>
         
 
@@ -245,10 +245,10 @@
             <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
                 <ul class="post-category-ul">
                     
-                            <li class="category-item"><a href="/categories/Vue2/">Vue2</a></li>
+                            <li class="category-item"><a href="/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/">微信小程序</a></li>
                         
                     
-                            <li class="category-item">&nbsp;<i class="icon fas fa-angle-right"></i>&nbsp;<a href="/categories/Vue2/Vue2-%E5%9F%BA%E7%A1%80/">Vue2 基础</a></li>
+                            <li class="category-item">&nbsp;<i class="icon fas fa-angle-right"></i>&nbsp;<a href="/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/xr-frame/">xr-frame</a></li>
                         
                     
                 </ul>
@@ -260,7 +260,10 @@
                 <i class="icon fas fa-tags"></i>&nbsp;
                 <ul class="post-tag-ul">
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/Vue2/">Vue2</a></li>
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/">微信小程序</a></li>
+                        
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/xr-frame/">xr-frame</a></li>
                         
                     
                 </ul>
@@ -270,12 +273,12 @@
         
         
             <span class="meta-info-item post-wordcount">
-                <i class="icon fas fa-file-word"></i>&nbsp;<span>317 字</span>
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>1.2k 字</span>
             </span>
         
         
             <span class="meta-info-item post-min2read">
-                <i class="icon fas fa-clock"></i>&nbsp;<span>1 分钟</span>
+                <i class="icon fas fa-clock"></i>&nbsp;<span>6 分钟</span>
             </span>
         
         
@@ -296,21 +299,21 @@
                 <div class="post-content keep-markdown-body">
                     
 
-                    <h5 id="1-查询参数传参"><a href="#1-查询参数传参" class="headerlink" title="1 查询参数传参"></a>1 查询参数传参</h5><h6 id="1-1-配置动态路由"><a href="#1-1-配置动态路由" class="headerlink" title="1.1 配置动态路由"></a>1.1 配置动态路由</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// router/index.js中</span></span><br><span class="line"><span class="keyword">const</span> router = <span class="keyword">new</span> <span class="title class_">VueRouter</span>(&#123;</span><br><span class="line">  <span class="attr">routes</span>: [</span><br><span class="line">    ...,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">path</span>: <span class="string">&#x27;/search&#x27;</span>,</span><br><span class="line">      <span class="attr">component</span>: <span class="title class_">Search</span></span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+                    <h5 id="1-项目地址"><a href="#1-项目地址" class="headerlink" title="1 项目地址"></a>1 项目地址</h5><p>官方项目地址：<a class="link"   target="_blank" rel="noopener" href="https://github.com/dtysky/xr-frame-demo/tree/master/miniprogram/components/xr-basic-animation" >https://github.com/dtysky/xr-frame-demo/tree/master/miniprogram/components/xr-basic-animation<i class="fas fa-external-link-alt"></i></a></p>
+<h5 id="2-代码解析"><a href="#2-代码解析" class="headerlink" title="2 代码解析"></a>2 代码解析</h5><p>主要代码：</p>
+<p>index.wxml 文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">&lt;xr-scene id=&quot;xr-scene&quot; bind:ready=&quot;handleReady&quot;&gt;</span><br><span class="line">  &lt;xr-assets bind:progress=&quot;handleAssetsProgress&quot; bind:loaded=&quot;handleAssetsLoaded&quot;&gt;</span><br><span class="line">    &lt;xr-asset-load asset-id=&quot;basic-anim&quot; type=&quot;keyframe&quot; src=&quot;/assets/animation/basic-animation.json&quot;/&gt;</span><br><span class="line">    &lt;xr-asset-load type=&quot;texture&quot; asset-id=&quot;waifu&quot; src=&quot;/assets/waifu.png&quot; /&gt;</span><br><span class="line">    &lt;xr-asset-material asset-id=&quot;standard-mat&quot; effect=&quot;standard&quot; /&gt;</span><br><span class="line">  &lt;/xr-assets&gt;</span><br><span class="line">  &lt;xr-node&gt;</span><br><span class="line">    &lt;xr-node node-id=&quot;camera-target&quot; position=&quot;0 0 0&quot;&gt;&lt;/xr-node&gt;</span><br><span class="line">    &lt;xr-mesh</span><br><span class="line">      node-id=&quot;mesh-plane&quot; position=&quot;0 -0.8 0&quot; rotation=&quot;0 0 0&quot; scale=&quot;10 1 8&quot; geometry=&quot;plane&quot; material=&quot;standard-mat&quot; uniforms=&quot;u_baseColorFactor:0.48 0.78 0.64 1&quot; states=&quot;cullOn: false&quot;</span><br><span class="line">      anim-keyframe=&quot;basic-anim&quot; anim-autoplay=&quot;clip:plane, speed:4&quot;</span><br><span class="line">      receive-shadow</span><br><span class="line">    &gt;&lt;/xr-mesh&gt;</span><br><span class="line">    &lt;xr-mesh</span><br><span class="line">      node-id=&quot;mesh-cube&quot; position=&quot;-3 0 2&quot; scale=&quot;1 1 1&quot; rotation=&quot;0 0 0&quot; geometry=&quot;cube&quot; material=&quot;standard-mat&quot; uniforms=&quot;u_baseColorFactor:0.298 0.764 0.85 1&quot;</span><br><span class="line">      anim-keyframe=&quot;basic-anim&quot; anim-clipmap=&quot;default:cube&quot; anim-autoplay=&quot;clip:cube, speed:2&quot;</span><br><span class="line">      cast-shadow</span><br><span class="line">    &gt;&lt;/xr-mesh&gt;</span><br><span class="line">    ......</span><br><span class="line">    &lt;xr-mesh node-id=&quot;mesh-light-cube&quot; position=&quot;-5 1 0&quot; scale=&quot;0.5 10 10&quot; rotation=&quot;0 0 0&quot; geometry=&quot;cube&quot; material=&quot;standard-mat&quot; uniforms=&quot;u_baseColorFactor:0.3 0.3 0.3 1, u_baseColorMap: waifu&quot;&gt;&lt;/xr-mesh&gt;</span><br><span class="line">    &lt;xr-camera</span><br><span class="line">      id=&quot;camera&quot; node-id=&quot;camera&quot; position=&quot;5 3 0&quot; clear-color=&quot;0.925 0.925 0.925 1&quot;</span><br><span class="line">      target=&quot;camera-target&quot;</span><br><span class="line">      camera-orbit-control=&quot;&quot;</span><br><span class="line">    &gt;&lt;/xr-camera&gt;</span><br><span class="line">  &lt;/xr-node&gt;</span><br><span class="line">  &lt;xr-node node-id=&quot;lights&quot;&gt;</span><br><span class="line">    &lt;xr-light type=&quot;ambient&quot; color=&quot;1 1 1&quot; intensity=&quot;1&quot; /&gt;</span><br><span class="line">    &lt;xr-light type=&quot;directional&quot; rotation=&quot;30 230 0&quot; color=&quot;1 1 1&quot; intensity=&quot;3&quot; cast-shadow/&gt;</span><br><span class="line">    &lt;xr-light</span><br><span class="line">      type=&quot;spot&quot; position=&quot;-4 1 0&quot; rotation=&quot;0 -90 0&quot; color=&quot;0 1 0&quot; range=&quot;20&quot; intensity=&quot;100&quot; inner-cone-angle=&quot;20&quot; outer-cone-angle=&quot;60&quot;</span><br><span class="line">      anim-keyframe=&quot;basic-anim&quot; anim-autoplay=&quot;clip:spotLight, speed:2&quot;</span><br><span class="line">    /&gt;</span><br><span class="line">&lt;/xr-node&gt;</span><br><span class="line">&lt;/xr-scene&gt;</span><br></pre></td></tr></table></figure>
 
-<h6 id="1-2-配置导航链接"><a href="#1-2-配置导航链接" class="headerlink" title="1.2 配置导航链接"></a>1.2 配置导航链接</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">to=<span class="string">&quot;/search?参数名=参数值&quot;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>basic-animation.json 文件</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;keyframe&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;cube&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;0&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;position&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="number">-3</span><span class="punctuation">,</span> <span class="number">0</span><span class="punctuation">,</span> <span class="number">2</span><span class="punctuation">]</span></span><br><span class="line">      <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;50&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;rotation&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="number">0</span><span class="punctuation">,</span> <span class="number">0</span><span class="punctuation">,</span> <span class="number">0</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;scale&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="number">1</span><span class="punctuation">,</span> <span class="number">1</span><span class="punctuation">,</span> <span class="number">1</span><span class="punctuation">]</span></span><br><span class="line">      <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;100&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;position&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="number">3</span><span class="punctuation">,</span> <span class="number">0</span><span class="punctuation">,</span> <span class="number">2</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;rotation&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="number">0</span><span class="punctuation">,</span> <span class="number">3.14</span><span class="punctuation">,</span> <span class="number">0</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;scale&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="number">1.4</span><span class="punctuation">,</span> <span class="number">1.4</span><span class="punctuation">,</span> <span class="number">1.4</span><span class="punctuation">]</span></span><br><span class="line">      <span class="punctuation">&#125;</span></span><br><span class="line">    <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">    ......</span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;animation&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;default&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;keyframe&quot;</span><span class="punctuation">:</span> <span class="string">&quot;cube&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;duration&quot;</span><span class="punctuation">:</span> <span class="number">1</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;ease&quot;</span><span class="punctuation">:</span> <span class="string">&quot;ease-in-out&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;loop&quot;</span><span class="punctuation">:</span> <span class="number">400000</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;delay&quot;</span><span class="punctuation">:</span> <span class="number">1</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;direction&quot;</span><span class="punctuation">:</span> <span class="string">&quot;both&quot;</span></span><br><span class="line">    <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">    ......</span><br><span class="line">    <span class="attr">&quot;spotLight&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;keyframe&quot;</span><span class="punctuation">:</span> <span class="string">&quot;spotLight&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;duration&quot;</span><span class="punctuation">:</span> <span class="number">2</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;ease&quot;</span><span class="punctuation">:</span> <span class="string">&quot;ease-in-out&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;loop&quot;</span><span class="punctuation">:</span> <span class="number">400000</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;delay&quot;</span><span class="punctuation">:</span> <span class="number">1</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;direction&quot;</span><span class="punctuation">:</span> <span class="string">&quot;both&quot;</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
 
-<h6 id="1-3-对应组件接收传递过来的值"><a href="#1-3-对应组件接收传递过来的值" class="headerlink" title="1.3 对应组件接收传递过来的值"></a>1.3 对应组件接收传递过来的值</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$route.<span class="property">query</span>.参数名</span><br></pre></td></tr></table></figure>
+<h6 id="2-1-首先定义动画"><a href="#2-1-首先定义动画" class="headerlink" title="2.1 首先定义动画"></a>2.1 首先定义动画</h6><p>&emsp;&emsp;可以看到其中有两个部分：keyframe 和 animation。<br>&emsp;&emsp;keyframe 中定义了帧动画具体的行为，本质上类似于 css3 中的 keyframes，其中进度的范围是 0~100，每个进度下是动画具体影响的键和值。属性的值仅仅支持 number、number-array 和 color 类型的数据，可以有 position、rotation、scale、material(material.u_baseColorFactor) 等。<br>&emsp;&emsp;animation 中定义了暴露给 animator 的片段，其中第一级的每个键都是片段的名字，它对应的值就是其作为动画播放时的一些参数。keyframe 定义这个片段对应于上面定义的哪个 keyframe，duration 是以秒为单位的时长，loop 是默认循环次数（-1为永远循环），delay 是播放延迟，direction 是播放方向，默认 forwards，可选 backwards 和 both（在循环时交替前向反向），ease 则是时间函数，决定动画的插值曲线。</p>
+<h6 id="2-2-把动画作为资源引入-xml"><a href="#2-2-把动画作为资源引入-xml" class="headerlink" title="2.2 把动画作为资源引入 xml"></a>2.2 把动画作为资源引入 xml</h6><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;xr-asset-load asset-id=&quot;basic-anim&quot; type=&quot;keyframe&quot; src=&quot;/assets/animation/basic-animation.json&quot;/&gt;</span><br></pre></td></tr></table></figure>
 
-<h5 id="2-动态路由传参"><a href="#2-动态路由传参" class="headerlink" title="2 动态路由传参"></a>2 动态路由传参</h5><h6 id="2-1-配置动态路由"><a href="#2-1-配置动态路由" class="headerlink" title="2.1 配置动态路由"></a>2.1 配置动态路由</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// router/index.js中</span></span><br><span class="line"><span class="keyword">const</span> router = <span class="keyword">new</span> <span class="title class_">VueRouter</span>(&#123;</span><br><span class="line">  <span class="attr">routes</span>: [</span><br><span class="line">    ...,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">path</span>: <span class="string">&#x27;/search/:参数名&#x27;</span>,</span><br><span class="line">      <span class="attr">component</span>: <span class="title class_">Search</span></span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>&emsp;&emsp;其中 asset-id 为给资源绑定的 id，type 为 keyframe 类型。</p>
+<h6 id="2-3-给-mesh-或-light-等绑定动画"><a href="#2-3-给-mesh-或-light-等绑定动画" class="headerlink" title="2.3 给 mesh 或 light 等绑定动画"></a>2.3 给 mesh 或 light 等绑定动画</h6><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;xr-mesh</span><br><span class="line">  node-id=&quot;mesh-cube&quot; position=&quot;-3 0 2&quot; scale=&quot;1 1 1&quot; rotation=&quot;0 0 0&quot; geometry=&quot;cube&quot; material=&quot;standard-mat&quot; uniforms=&quot;u_baseColorFactor:0.298 0.764 0.85 1&quot;</span><br><span class="line">  anim-keyframe=&quot;basic-anim&quot; anim-clipmap=&quot;default:cube&quot; anim-autoplay=&quot;clip:cube, speed:2&quot;</span><br><span class="line">  cast-shadow</span><br><span class="line">&gt;&lt;/xr-mesh&gt;</span><br><span class="line"></span><br><span class="line">&lt;xr-light</span><br><span class="line">  type=&quot;spot&quot; position=&quot;-4 1 0&quot; rotation=&quot;0 -90 0&quot; color=&quot;0 1 0&quot; range=&quot;20&quot; intensity=&quot;100&quot; inner-cone-angle=&quot;20&quot; outer-cone-angle=&quot;60&quot;</span><br><span class="line">  anim-keyframe=&quot;basic-anim&quot; anim-autoplay=&quot;clip:spotLight, speed:2&quot;</span><br><span class="line">/&gt;</span><br></pre></td></tr></table></figure>
 
-<h6 id="2-2-配置导航链接"><a href="#2-2-配置导航链接" class="headerlink" title="2.2 配置导航链接"></a>2.2 配置导航链接</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">to=<span class="string">&quot;/search/参数值&quot;</span></span><br></pre></td></tr></table></figure>
-
-<h6 id="2-3-对应组件接收传递过来的值"><a href="#2-3-对应组件接收传递过来的值" class="headerlink" title="2.3 对应组件接收传递过来的值"></a>2.3 对应组件接收传递过来的值</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$route.<span class="property">params</span>.参数名</span><br></pre></td></tr></table></figure>
-
-<h5 id="3-两种传参方式的区别"><a href="#3-两种传参方式的区别" class="headerlink" title="3 两种传参方式的区别"></a>3 两种传参方式的区别</h5><h6 id="3-1-查询参数传参"><a href="#3-1-查询参数传参" class="headerlink" title="3.1 查询参数传参"></a>3.1 查询参数传参</h6><p>比较适合传多个参数<br>跳转：<code>to=&quot;/path?参数名1=参数值1&amp;参数名2=参数值2&quot;</code><br>获取：<code>$route.query.参数名</code></p>
-<h6 id="3-2-动态路由传参"><a href="#3-2-动态路由传参" class="headerlink" title="3.2 动态路由传参"></a>3.2 动态路由传参</h6><p>传单个参数比较方便<br>配置动态路由：<code>path: &quot;/path/:参数名&quot;</code><br>跳转：<code>to=&quot;/path/参数值&quot;</code><br>获取：<code>$route.params.参数名</code></p>
-<h5 id="4-小问题"><a href="#4-小问题" class="headerlink" title="4 小问题"></a>4 小问题</h5><p>问题：配置了路由<code>path:&quot;/path/:id&quot;</code>，为什么<code>to=&quot;/path&quot;</code>，会未匹配到组件，显示空白？<br>原因：<code>/path/:id</code>表示必须要传参，如果不传参也希望匹配，可以加个可选符“？”，<code>&#123;path: &quot;/path/:id?&quot;, component: ...&#125;</code></p>
+<p>&emsp;&emsp;其中 anim-keyframe 绑定了 asset-id，anim-autoplay 绑定了动画名。<br>&emsp;&emsp;anim-autoplay 指定了是否要默认播放以及默认播放的片段和参数，如果不写 clip 数据则会播放所有的片段。anim-clipmap 则是给默认加载的动画指定一个片段映射，而这个默认的动画就是 anim-keyframe 指定的。</p>
 
                 </div>
 
@@ -320,11 +323,11 @@
     <div class="copyright-info-content border-box">
         <div class="copyright-info-top border-box">
             <div class="copyright-post-title border-box text-ellipsis">
-                声明式导航-跳转传参
+                XR-FRAME-基础能力-Animation动画
             </div>
 
             <div class="copyright-post-link border-box text-ellipsis">
-                2023/12/13/声明式导航-跳转传参/
+                2023/12/13/XR-FRAME-基础能力-Animation动画/
             </div>
         </div>
 
@@ -340,7 +343,7 @@
                 <div class="type">
                     发布于
                 </div>
-                <div class="content">2023-12-13 12:14</div>
+                <div class="content">2023-12-13 14:55</div>
             </div>
 
 
@@ -374,7 +377,11 @@
                             <ul class="post-tags-box border-box">
                                 
                                     <li class="tag-item border-box">
-                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/Vue2/">Vue2</a>
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/">微信小程序</a>
+                                    </li>
+                                
+                                    <li class="tag-item border-box">
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/xr-frame/">xr-frame</a>
                                     </li>
                                 
                             </ul>
@@ -416,14 +423,14 @@
                             <div class="prev-post">
                                 <a class="prev"
                                    rel="prev"
-                                   href="/2023/12/13/%E7%BC%96%E7%A8%8B%E5%BC%8F%E5%AF%BC%E8%88%AA/"
-                                   title="编程式导航"
+                                   href="/2023/12/13/XR-FRAME-%E5%9F%BA%E7%A1%80%E8%83%BD%E5%8A%9B-Video%E8%A7%86%E9%A2%91%E7%BA%B9%E7%90%86/"
+                                   title="XR-FRAME-基础能力-Video视频纹理"
                                 >
                                     <span class="left arrow-icon flex-center">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">编程式导航</span>
+                                        <span class="post-nav-title-item text-ellipsis">XR-FRAME-基础能力-Video视频纹理</span>
                                         <span class="post-nav-item">上一篇</span>
                                     </span>
                                 </a>
@@ -433,11 +440,11 @@
                             <div class="next-post">
                                 <a class="next"
                                    rel="next"
-                                   href="/2023/12/13/props%E4%B8%AD%E9%BB%98%E8%AE%A4%E4%B8%BA%E5%AF%B9%E8%B1%A1%E6%97%B6%E7%9A%84%E5%86%99%E6%B3%95/"
-                                   title="props中默认为对象时的写法"
+                                   href="/2023/12/13/%E7%BC%96%E7%A8%8B%E5%BC%8F%E5%AF%BC%E8%88%AA/"
+                                   title="编程式导航"
                                 >
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">props中默认为对象时的写法</span>
+                                        <span class="post-nav-title-item text-ellipsis">编程式导航</span>
                                         <span class="post-nav-item">下一篇</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
@@ -547,7 +554,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E6%9F%A5%E8%AF%A2%E5%8F%82%E6%95%B0%E4%BC%A0%E5%8F%82"><span class="nav-text">1 查询参数传参</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#1-1-%E9%85%8D%E7%BD%AE%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1"><span class="nav-text">1.1 配置动态路由</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#1-2-%E9%85%8D%E7%BD%AE%E5%AF%BC%E8%88%AA%E9%93%BE%E6%8E%A5"><span class="nav-text">1.2 配置导航链接</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#1-3-%E5%AF%B9%E5%BA%94%E7%BB%84%E4%BB%B6%E6%8E%A5%E6%94%B6%E4%BC%A0%E9%80%92%E8%BF%87%E6%9D%A5%E7%9A%84%E5%80%BC"><span class="nav-text">1.3 对应组件接收传递过来的值</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1%E4%BC%A0%E5%8F%82"><span class="nav-text">2 动态路由传参</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#2-1-%E9%85%8D%E7%BD%AE%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1"><span class="nav-text">2.1 配置动态路由</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-2-%E9%85%8D%E7%BD%AE%E5%AF%BC%E8%88%AA%E9%93%BE%E6%8E%A5"><span class="nav-text">2.2 配置导航链接</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-3-%E5%AF%B9%E5%BA%94%E7%BB%84%E4%BB%B6%E6%8E%A5%E6%94%B6%E4%BC%A0%E9%80%92%E8%BF%87%E6%9D%A5%E7%9A%84%E5%80%BC"><span class="nav-text">2.3 对应组件接收传递过来的值</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-%E4%B8%A4%E7%A7%8D%E4%BC%A0%E5%8F%82%E6%96%B9%E5%BC%8F%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-text">3 两种传参方式的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#3-1-%E6%9F%A5%E8%AF%A2%E5%8F%82%E6%95%B0%E4%BC%A0%E5%8F%82"><span class="nav-text">3.1 查询参数传参</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#3-2-%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1%E4%BC%A0%E5%8F%82"><span class="nav-text">3.2 动态路由传参</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-%E5%B0%8F%E9%97%AE%E9%A2%98"><span class="nav-text">4 小问题</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E9%A1%B9%E7%9B%AE%E5%9C%B0%E5%9D%80"><span class="nav-text">1 项目地址</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E4%BB%A3%E7%A0%81%E8%A7%A3%E6%9E%90"><span class="nav-text">2 代码解析</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#2-1-%E9%A6%96%E5%85%88%E5%AE%9A%E4%B9%89%E5%8A%A8%E7%94%BB"><span class="nav-text">2.1 首先定义动画</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-2-%E6%8A%8A%E5%8A%A8%E7%94%BB%E4%BD%9C%E4%B8%BA%E8%B5%84%E6%BA%90%E5%BC%95%E5%85%A5-xml"><span class="nav-text">2.2 把动画作为资源引入 xml</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-3-%E7%BB%99-mesh-%E6%88%96-light-%E7%AD%89%E7%BB%91%E5%AE%9A%E5%8A%A8%E7%94%BB"><span class="nav-text">2.3 给 mesh 或 light 等绑定动画</span></a></li></ol></li></ol>
     </div>
 </div>
 
@@ -746,7 +753,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E6%9F%A5%E8%AF%A2%E5%8F%82%E6%95%B0%E4%BC%A0%E5%8F%82"><span class="nav-text">1 查询参数传参</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#1-1-%E9%85%8D%E7%BD%AE%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1"><span class="nav-text">1.1 配置动态路由</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#1-2-%E9%85%8D%E7%BD%AE%E5%AF%BC%E8%88%AA%E9%93%BE%E6%8E%A5"><span class="nav-text">1.2 配置导航链接</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#1-3-%E5%AF%B9%E5%BA%94%E7%BB%84%E4%BB%B6%E6%8E%A5%E6%94%B6%E4%BC%A0%E9%80%92%E8%BF%87%E6%9D%A5%E7%9A%84%E5%80%BC"><span class="nav-text">1.3 对应组件接收传递过来的值</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1%E4%BC%A0%E5%8F%82"><span class="nav-text">2 动态路由传参</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#2-1-%E9%85%8D%E7%BD%AE%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1"><span class="nav-text">2.1 配置动态路由</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-2-%E9%85%8D%E7%BD%AE%E5%AF%BC%E8%88%AA%E9%93%BE%E6%8E%A5"><span class="nav-text">2.2 配置导航链接</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-3-%E5%AF%B9%E5%BA%94%E7%BB%84%E4%BB%B6%E6%8E%A5%E6%94%B6%E4%BC%A0%E9%80%92%E8%BF%87%E6%9D%A5%E7%9A%84%E5%80%BC"><span class="nav-text">2.3 对应组件接收传递过来的值</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-%E4%B8%A4%E7%A7%8D%E4%BC%A0%E5%8F%82%E6%96%B9%E5%BC%8F%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-text">3 两种传参方式的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#3-1-%E6%9F%A5%E8%AF%A2%E5%8F%82%E6%95%B0%E4%BC%A0%E5%8F%82"><span class="nav-text">3.1 查询参数传参</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#3-2-%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1%E4%BC%A0%E5%8F%82"><span class="nav-text">3.2 动态路由传参</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-%E5%B0%8F%E9%97%AE%E9%A2%98"><span class="nav-text">4 小问题</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E9%A1%B9%E7%9B%AE%E5%9C%B0%E5%9D%80"><span class="nav-text">1 项目地址</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E4%BB%A3%E7%A0%81%E8%A7%A3%E6%9E%90"><span class="nav-text">2 代码解析</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#2-1-%E9%A6%96%E5%85%88%E5%AE%9A%E4%B9%89%E5%8A%A8%E7%94%BB"><span class="nav-text">2.1 首先定义动画</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-2-%E6%8A%8A%E5%8A%A8%E7%94%BB%E4%BD%9C%E4%B8%BA%E8%B5%84%E6%BA%90%E5%BC%95%E5%85%A5-xml"><span class="nav-text">2.2 把动画作为资源引入 xml</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-3-%E7%BB%99-mesh-%E6%88%96-light-%E7%AD%89%E7%BB%91%E5%AE%9A%E5%8A%A8%E7%94%BB"><span class="nav-text">2.3 给 mesh 或 light 等绑定动画</span></a></li></ol></li></ol>
     </div>
 </div>
 
