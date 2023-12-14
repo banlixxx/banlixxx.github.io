@@ -9,7 +9,7 @@
     
     <title>
         
-            分类: Git |
+            归档 |
         
         斑狸
     </title>
@@ -82,7 +82,7 @@
                     </li>
                     
                         <li class="menu-item">
-                            <a class=""
+                            <a class="active"
                                href="/archives"
                             >归档</a>
                         </li>
@@ -94,7 +94,7 @@
                         </li>
                     
                         <li class="menu-item">
-                            <a class="active"
+                            <a class=""
                                href="/categories"
                             >分类</a>
                         </li>
@@ -144,7 +144,7 @@
             </li>
             
                 <li class="drawer-menu-item flex-center">
-                    <a class=""
+                    <a class="active"
                        href="/archives"
                     >归档</a>
                 </li>
@@ -156,7 +156,7 @@
                 </li>
             
                 <li class="drawer-menu-item flex-center">
-                    <a class="active"
+                    <a class=""
                        href="/categories"
                     >分类</a>
                 </li>
@@ -195,11 +195,8 @@
                 
 
                     <div class="fade-in-down-animation">
-    <div class="category-container border-box">
-        <div class="category-name">
-            <i class="fas fa-folder"></i>&nbsp;Git
-        </div>
-        <div class="category-post-list">
+    <div class="archives-container">
+        <div class="archives-timeline border-box">
             
 <div class="archive-list-container border-box">
     
@@ -208,13 +205,6 @@
                 <span class="archive-year">2023</span>
             </div>
             <ul class="archive-item-body border-box">
-                
-                    <li class="post-item border-box">
-                        <span class="post-date border-box">12-06</span>
-                        <a class="post-title border-box text-ellipsis"
-                           href="/2023/12/06/Git%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/"
-                        >Git 基础操作</a>
-                    </li>
                 
                     <li class="post-item border-box">
                         <span class="post-date border-box">12-06</span>
@@ -231,6 +221,31 @@
         </div>
     </div>
     
+    <div class="paginator border-box flex-center">
+        <div class="btn-wrap allowed">
+            <a class="jump-btn"
+               href="/archives/page/3/"
+            ><i class="fa-solid fa-chevron-left"></i></a>
+        </div>
+
+
+        <div class="page-number-box border-box flex-center">
+            <input class="page-number-input border-box base-color-size"
+                   type="number"
+                   value="4"
+                   min="1"
+                   max="4"
+            ><span class="delimiter base-color-size">/</span><span class="base-color-size">4</span>
+        </div>
+
+
+        <div class="btn-wrap">
+            <a class="jump-btn"
+               href="/"
+            ><i class="fa-solid fa-chevron-right"></i></a>
+        </div>
+    </div>
+
 
 
 
@@ -413,8 +428,6 @@
     
 
     <!-- category-page -->
-    
-        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.5/source/js/page/category-page.js"></script>
     
 
     <!-- links-page -->
