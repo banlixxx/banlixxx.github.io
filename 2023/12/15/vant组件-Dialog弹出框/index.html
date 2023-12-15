@@ -9,7 +9,7 @@
     
     <title>
         
-            使用 Vant 组件库实现顶部导航栏 Navbar |
+            vant组件-Dialog弹出框 |
         
         斑狸
     </title>
@@ -203,7 +203,7 @@
             <div class="post-content-bottom border-box">
                 
                     <div class="post-title">
-                        使用 Vant 组件库实现顶部导航栏 Navbar
+                        vant组件-Dialog弹出框
                     </div>
                 
 
@@ -231,13 +231,13 @@
         
             <span class="meta-info-item post-create-date">
                 <i class="icon fa-solid fa-calendar-check"></i>&nbsp;
-                <span class="pc">2023-12-08 11:20:09</span>
-                <span class="mobile">2023-12-08 11:20</span>
+                <span class="pc">2023-12-15 11:12:40</span>
+                <span class="mobile">2023-12-15 11:12</span>
             </span>
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="pc" data-updated="Fri Dec 08 2023 11:34:01 GMT+0800">2023-12-08 11:34:01</span>
+                <span class="pc" data-updated="Fri Dec 15 2023 11:16:16 GMT+0800">2023-12-15 11:16:16</span>
             </span>
         
 
@@ -266,9 +266,6 @@
                             <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/Vant-%E7%BB%84%E4%BB%B6%E5%BA%93/">Vant 组件库</a></li>
                         
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/Navbar/">Navbar</a></li>
-                        
-                    
                 </ul>
             </span>
         
@@ -276,7 +273,7 @@
         
         
             <span class="meta-info-item post-wordcount">
-                <i class="icon fas fa-file-word"></i>&nbsp;<span>113 字</span>
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>143 字</span>
             </span>
         
         
@@ -302,10 +299,13 @@
                 <div class="post-content keep-markdown-body">
                     
 
-                    <h6 id="1-vant-ui-js-按需引入"><a href="#1-vant-ui-js-按需引入" class="headerlink" title="1 vant-ui,js 按需引入"></a>1 vant-ui,js 按需引入</h6><p>官方地址：<a class="link"   target="_blank" rel="noopener" href="https://vant-contrib.gitee.io/vant/v2/#/zh-CN/nav-bar" >https://vant-contrib.gitee.io/vant/v2/#/zh-CN/nav-bar<i class="fas fa-external-link-alt"></i></a></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">Vue</span> <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">NavBar</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;vant&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="title class_">Vue</span>.<span class="title function_">use</span>(<span class="title class_">NavBar</span>);</span><br></pre></td></tr></table></figure>
-<h6 id="2-组件中使用"><a href="#2-组件中使用" class="headerlink" title="2 组件中使用"></a>2 组件中使用</h6><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">van-nav-bar</span></span></span><br><span class="line"><span class="tag">  <span class="attr">title</span>=<span class="string">&quot;标题&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">left-text</span>=<span class="string">&quot;返回&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">right-text</span>=<span class="string">&quot;按钮&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">left-arrow</span></span></span><br><span class="line"><span class="tag">  @<span class="attr">click-left</span>=<span class="string">&quot;$router.go(-1)&quot;</span></span></span><br><span class="line"><span class="tag">  @<span class="attr">click-right</span>=<span class="string">&quot;onClickRight&quot;</span></span></span><br><span class="line"><span class="tag">/&gt;</span></span><br></pre></td></tr></table></figure>
-<h6 id="3-修改样式"><a href="#3-修改样式" class="headerlink" title="3 修改样式"></a>3 修改样式</h6><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 设置导航条 返回箭头 颜色</span></span><br><span class="line"><span class="selector-class">.van-nav-bar</span> &#123;</span><br><span class="line">  <span class="selector-class">.van-icon-arrow-left</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#333</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+                    <h5 id="1-注册安装"><a href="#1-注册安装" class="headerlink" title="1 注册安装"></a>1 注册安装</h5><p>官网：<a class="link"   target="_blank" rel="noopener" href="https://vant-contrib.gitee.io/vant/v2/#/zh-CN/dialog" >https://vant-contrib.gitee.io/vant/v2/#/zh-CN/dialog<i class="fas fa-external-link-alt"></i></a></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">Vue</span> <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">Dialog</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;vant&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 全局注册</span></span><br><span class="line"><span class="title class_">Vue</span>.<span class="title function_">use</span>(<span class="title class_">Dialog</span>);</span><br></pre></td></tr></table></figure>
+<h5 id="2-使用方式"><a href="#2-使用方式" class="headerlink" title="2 使用方式"></a>2 使用方式</h5><p>用于确认消息，包含取消和确认按钮。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Dialog</span>.<span class="title function_">confirm</span>(&#123;</span><br><span class="line">  <span class="attr">title</span>: <span class="string">&#x27;标题&#x27;</span>,</span><br><span class="line">  <span class="attr">message</span>: <span class="string">&#x27;弹窗内容&#x27;</span>,</span><br><span class="line">&#125;)</span><br><span class="line">  .<span class="title function_">then</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// on confirm</span></span><br><span class="line">  &#125;)</span><br><span class="line">  .<span class="title function_">catch</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// on cancel</span></span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
+<p>当然，引入 Dialog 组件后，会自动在 Vue 的 prototype 上挂载 $dialog 方法，在所有组件内部都可以直接调用此方法。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  <span class="title function_">mounted</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">$dialog</span>.<span class="title function_">alert</span>(&#123;</span><br><span class="line">      <span class="attr">message</span>: <span class="string">&#x27;弹窗内容&#x27;</span>,</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
                 </div>
 
                 
@@ -314,11 +314,11 @@
     <div class="copyright-info-content border-box">
         <div class="copyright-info-top border-box">
             <div class="copyright-post-title border-box text-ellipsis">
-                使用 Vant 组件库实现顶部导航栏 Navbar
+                vant组件-Dialog弹出框
             </div>
 
             <div class="copyright-post-link border-box text-ellipsis">
-                2023/12/08/使用vant组件库实现顶部导航栏navbar/
+                2023/12/15/vant组件-Dialog弹出框/
             </div>
         </div>
 
@@ -334,7 +334,7 @@
                 <div class="type">
                     发布于
                 </div>
-                <div class="content">2023-12-08 11:20</div>
+                <div class="content">2023-12-15 11:12</div>
             </div>
 
 
@@ -373,10 +373,6 @@
                                 
                                     <li class="tag-item border-box">
                                         <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/Vant-%E7%BB%84%E4%BB%B6%E5%BA%93/">Vant 组件库</a>
-                                    </li>
-                                
-                                    <li class="tag-item border-box">
-                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/Navbar/">Navbar</a>
                                     </li>
                                 
                             </ul>
@@ -418,14 +414,14 @@
                             <div class="prev-post">
                                 <a class="prev"
                                    rel="prev"
-                                   href="/2023/12/10/axios%E5%B0%81%E8%A3%85/"
-                                   title="Axios 封装"
+                                   href="/2023/12/15/%E8%AF%B7%E6%B1%82%E6%8B%A6%E6%88%AA%E5%99%A8%E7%BB%9F%E4%B8%80%E6%90%BA%E5%B8%A6Token/"
+                                   title="请求拦截器统一携带Token"
                                 >
                                     <span class="left arrow-icon flex-center">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">Axios 封装</span>
+                                        <span class="post-nav-title-item text-ellipsis">请求拦截器统一携带Token</span>
                                         <span class="post-nav-item">上一篇</span>
                                     </span>
                                 </a>
@@ -435,11 +431,11 @@
                             <div class="next-post">
                                 <a class="next"
                                    rel="next"
-                                   href="/2023/12/08/%E4%BD%BF%E7%94%A8vant%E7%BB%84%E4%BB%B6%E5%BA%93%E5%AE%9E%E7%8E%B0%E5%BA%95%E9%83%A8%E5%AF%BC%E8%88%AAtabbar/"
-                                   title="使用 Vant 组件库实现底部导航 Tabbar"
+                                   href="/2023/12/14/XR-FRAME-%E5%9F%BA%E7%A1%80%E8%83%BD%E5%8A%9B-Interaction%E4%BA%A4%E4%BA%92/"
+                                   title="XR-FRAME - 基础能力 - Interaction交互"
                                 >
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">使用 Vant 组件库实现底部导航 Tabbar</span>
+                                        <span class="post-nav-title-item text-ellipsis">XR-FRAME - 基础能力 - Interaction交互</span>
                                         <span class="post-nav-item">下一篇</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
@@ -549,7 +545,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#1-vant-ui-js-%E6%8C%89%E9%9C%80%E5%BC%95%E5%85%A5"><span class="nav-text">1 vant-ui,js 按需引入</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-%E7%BB%84%E4%BB%B6%E4%B8%AD%E4%BD%BF%E7%94%A8"><span class="nav-text">2 组件中使用</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#3-%E4%BF%AE%E6%94%B9%E6%A0%B7%E5%BC%8F"><span class="nav-text">3 修改样式</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E6%B3%A8%E5%86%8C%E5%AE%89%E8%A3%85"><span class="nav-text">1 注册安装</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F"><span class="nav-text">2 使用方式</span></a></li></ol>
     </div>
 </div>
 
@@ -748,7 +744,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#1-vant-ui-js-%E6%8C%89%E9%9C%80%E5%BC%95%E5%85%A5"><span class="nav-text">1 vant-ui,js 按需引入</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-%E7%BB%84%E4%BB%B6%E4%B8%AD%E4%BD%BF%E7%94%A8"><span class="nav-text">2 组件中使用</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#3-%E4%BF%AE%E6%94%B9%E6%A0%B7%E5%BC%8F"><span class="nav-text">3 修改样式</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E6%B3%A8%E5%86%8C%E5%AE%89%E8%A3%85"><span class="nav-text">1 注册安装</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F"><span class="nav-text">2 使用方式</span></a></li></ol>
     </div>
 </div>
 
