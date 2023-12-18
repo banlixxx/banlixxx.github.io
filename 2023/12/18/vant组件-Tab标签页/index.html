@@ -9,7 +9,7 @@
     
     <title>
         
-            XR-FRAME - 基础能力 - Share 录屏和截屏 |
+            vant组件-Tab标签页 |
         
         斑狸
     </title>
@@ -203,7 +203,7 @@
             <div class="post-content-bottom border-box">
                 
                     <div class="post-title">
-                        XR-FRAME - 基础能力 - Share 录屏和截屏
+                        vant组件-Tab标签页
                     </div>
                 
 
@@ -231,13 +231,13 @@
         
             <span class="meta-info-item post-create-date">
                 <i class="icon fa-solid fa-calendar-check"></i>&nbsp;
-                <span class="pc">2023-12-15 14:45:39</span>
-                <span class="mobile">2023-12-15 14:45</span>
+                <span class="pc">2023-12-18 12:21:03</span>
+                <span class="mobile">2023-12-18 12:21</span>
             </span>
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="pc" data-updated="Fri Dec 15 2023 15:59:33 GMT+0800">2023-12-15 15:59:33</span>
+                <span class="pc" data-updated="Mon Dec 18 2023 12:23:11 GMT+0800">2023-12-18 12:23:11</span>
             </span>
         
 
@@ -245,10 +245,10 @@
             <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
                 <ul class="post-category-ul">
                     
-                            <li class="category-item"><a href="/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/">微信小程序</a></li>
+                            <li class="category-item"><a href="/categories/Vue2/">Vue2</a></li>
                         
                     
-                            <li class="category-item">&nbsp;<i class="icon fas fa-angle-right"></i>&nbsp;<a href="/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/xr-frame/">xr-frame</a></li>
+                            <li class="category-item">&nbsp;<i class="icon fas fa-angle-right"></i>&nbsp;<a href="/categories/Vue2/Vant-%E7%BB%84%E4%BB%B6%E5%BA%93/">Vant 组件库</a></li>
                         
                     
                 </ul>
@@ -260,10 +260,10 @@
                 <i class="icon fas fa-tags"></i>&nbsp;
                 <ul class="post-tag-ul">
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/">微信小程序</a></li>
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/Vue2/">Vue2</a></li>
                         
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/xr-frame/">xr-frame</a></li>
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/Vant-%E7%BB%84%E4%BB%B6%E5%BA%93/">Vant 组件库</a></li>
                         
                     
                 </ul>
@@ -273,12 +273,12 @@
         
         
             <span class="meta-info-item post-wordcount">
-                <i class="icon fas fa-file-word"></i>&nbsp;<span>667 字</span>
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>167 字</span>
             </span>
         
         
             <span class="meta-info-item post-min2read">
-                <i class="icon fas fa-clock"></i>&nbsp;<span>3 分钟</span>
+                <i class="icon fas fa-clock"></i>&nbsp;<span>1 分钟</span>
             </span>
         
         
@@ -299,9 +299,10 @@
                 <div class="post-content keep-markdown-body">
                     
 
-                    <h4 id="1-项目地址"><a href="#1-项目地址" class="headerlink" title="1 项目地址"></a>1 项目地址</h4><p>官方项目地址：<a class="link"   target="_blank" rel="noopener" href="https://github.com/dtysky/xr-frame-demo/tree/master/miniprogram/components/xr-basic-share" >https://github.com/dtysky/xr-frame-demo/tree/master/miniprogram/components/xr-basic-share<i class="fas fa-external-link-alt"></i></a></p>
-<h4 id="2-代码解析"><a href="#2-代码解析" class="headerlink" title="2 代码解析"></a>2 代码解析</h4><p>主要代码：<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- wxml文件里的代码较为简单，加载了一个gltf时钟 --&gt;</span><br><span class="line">&lt;xr-scene bind:ready=&quot;handleReady&quot;&gt;</span><br><span class="line">  &lt;xr-asset-load type=&quot;gltf&quot; asset-id=&quot;clock&quot; src=&quot;https://mmbizwxaminiprogram-1258344707.cos.ap-guangzhou.myqcloud.com/xr-frame/demo/clock/scene.gltf&quot; /&gt;</span><br><span class="line"></span><br><span class="line">  &lt;xr-light type=&quot;ambient&quot; color=&quot;1 1 1&quot; intensity=&quot;1&quot; /&gt;</span><br><span class="line">  &lt;xr-light type=&quot;directional&quot; rotation=&quot;40 70 0&quot; color=&quot;1 1 1&quot; intensity=&quot;3&quot; cast-shadow /&gt;</span><br><span class="line"></span><br><span class="line">  &lt;slot&gt;&lt;/slot&gt;</span><br><span class="line">  </span><br><span class="line">  &lt;xr-gltf model=&quot;clock&quot; scale=&quot;0.1 0.1 0.1&quot; rotation=&quot;90 0 0&quot; anim-autoplay /&gt;</span><br><span class="line"></span><br><span class="line">  &lt;xr-node node-id=&quot;target&quot;&gt;&lt;/xr-node&gt;</span><br><span class="line">  &lt;xr-camera node-id=&quot;camera&quot; clear-color=&quot;0.4 0.8 0.6 1&quot; position=&quot;0 0 4&quot; target=&quot;target&quot; camera-orbit-control /&gt;</span><br><span class="line">&lt;/xr-scene&gt;</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br></pre></td><td class="code"><pre><span class="line">// 主要逻辑在js中</span><br><span class="line">Component(&#123;</span><br><span class="line">  behaviors: [require(&#x27;../common/share-behavior&#x27;).default],</span><br><span class="line">  // 父传子，父组件传递的参数</span><br><span class="line">  properties: &#123;</span><br><span class="line">  	// captureState用来控制截图</span><br><span class="line">    captureState: &#123;</span><br><span class="line">      type: Number,</span><br><span class="line">      value: 0,</span><br><span class="line">      observer: function (newVal, oldVal) &#123;</span><br><span class="line">        if (newVal !== oldVal) &#123;</span><br><span class="line">          if (newVal === 1) &#123;</span><br><span class="line">            // captureState为1时进行截图操作</span><br><span class="line">            this.capture();</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">    // recordState用来控制录屏</span><br><span class="line">    recordState: &#123;</span><br><span class="line">      type: Number,</span><br><span class="line">      value: 0,</span><br><span class="line">      observer: function (newVal, oldVal) &#123;</span><br><span class="line">        if (newVal !== oldVal) &#123;</span><br><span class="line">          if (newVal === 0) &#123;</span><br><span class="line">          	// recordState为0时录屏结束</span><br><span class="line">            this.recordEnd();</span><br><span class="line">          &#125; else &#123;</span><br><span class="line">          	// recordState为1时录屏开始</span><br><span class="line">            this.recordStart();</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    // 截屏质量</span><br><span class="line">    captureQuality: &#123;</span><br><span class="line">      type: Number,</span><br><span class="line">      value: 0.8,</span><br><span class="line">    &#125;,</span><br><span class="line">    // 截屏格式</span><br><span class="line">    captureType: &#123;</span><br><span class="line">      type: String,</span><br><span class="line">      value: &#x27;jpg&#x27;,</span><br><span class="line">    &#125;,</span><br><span class="line">    // 录屏FPS</span><br><span class="line">    recordFPS: &#123;</span><br><span class="line">      type: Number,</span><br><span class="line">      value: 30,</span><br><span class="line">    &#125;,</span><br><span class="line">    // 录屏尺寸相关</span><br><span class="line">    recordWidth: &#123;</span><br><span class="line">      type: Number,</span><br><span class="line">      value: undefined,</span><br><span class="line">    &#125;,</span><br><span class="line">    // 录屏尺寸相关</span><br><span class="line">    recordHeight: &#123;</span><br><span class="line">      type: Number,</span><br><span class="line">      value: undefined,</span><br><span class="line">    &#125;,</span><br><span class="line">    // 录屏BPS</span><br><span class="line">    recordBPS: &#123;</span><br><span class="line">      type: Number,</span><br><span class="line">      value: 1000,</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">  data: &#123;</span><br><span class="line">    loaded: false</span><br><span class="line">  &#125;,</span><br><span class="line">  lifetimes: &#123;&#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    handleReady(&#123;detail&#125;) &#123;</span><br><span class="line">      const scene = this.scene = detail.value;</span><br><span class="line">      // share.recordPause() 暂停本次录屏</span><br><span class="line">      const appHide = () =&gt; this.scene.share.recordPause();</span><br><span class="line">      // share.recordResume() 唤醒本次录屏</span><br><span class="line">      const appShow = () =&gt; this.scene.share.recordResume();</span><br><span class="line">      wx.onAppHide(appHide);</span><br><span class="line">      wx.onAppShow(appShow);</span><br><span class="line">      wx.offAppHide(appHide);</span><br><span class="line">      wx.offAppShow(appShow);</span><br><span class="line">      </span><br><span class="line">      // 子传父，子组件向父组件传递参数</span><br><span class="line">      this.triggerEvent(&#x27;sceneReady&#x27;, &#123;width: scene.width, height: scene.height&#125;);</span><br><span class="line">    &#125;,</span><br><span class="line">    // 截屏</span><br><span class="line">    capture() &#123;</span><br><span class="line">      // share.captureToFriends() 直接截屏分享给好友</span><br><span class="line">      // filetype 输出图片编码，可选&#x27;jpg&#x27;、&#x27;png&#x27;</span><br><span class="line">      // quality 输出图片jpg时的品质，0~1</span><br><span class="line">      this.scene.share.captureToFriends(&#123;</span><br><span class="line">        fileType: this.data.captureType,</span><br><span class="line">        quality: this.data.captureQuality</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;,</span><br><span class="line">    // 开始录屏</span><br><span class="line">    recordStart() &#123;</span><br><span class="line">      console.log(&#x27;recordStart&#x27;)</span><br><span class="line">      // share.recordStart() 启动录屏</span><br><span class="line">      // fps 输出帧率，默认30</span><br><span class="line">      // videoBitsPerSecond 视频比特率，默认1000</span><br><span class="line">      // width 录制视频宽度</span><br><span class="line">      // height 录制视频高度</span><br><span class="line">      this.scene.share.recordStart(&#123;</span><br><span class="line">        fps: this.data.recordFPS,</span><br><span class="line">        videoBitsPerSecond: this.data.recordBPS,</span><br><span class="line">        width: this.data.recordWidth,</span><br><span class="line">        height: this.data.recordHeight</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;,</span><br><span class="line">    // 停止录屏</span><br><span class="line">    recordEnd() &#123;</span><br><span class="line">      console.log(&#x27;recordEnd&#x27;)</span><br><span class="line">      // share.recordFinishToAlbum() 录屏完成，直接保存到用户相册</span><br><span class="line">      this.scene.share.recordFinishToAlbum();</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+                    <h5 id="1-注册安装"><a href="#1-注册安装" class="headerlink" title="1 注册安装"></a>1 注册安装</h5><p>官网：<a class="link"   target="_blank" rel="noopener" href="https://vant-contrib.gitee.io/vant/v2/#/zh-CN/tab" >https://vant-contrib.gitee.io/vant/v2/#/zh-CN/tab<i class="fas fa-external-link-alt"></i></a></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">Vue</span> <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">Tab</span>, <span class="title class_">Tabs</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;vant&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="title class_">Vue</span>.<span class="title function_">use</span>(<span class="title class_">Tab</span>)</span><br><span class="line"><span class="title class_">Vue</span>.<span class="title function_">use</span>(<span class="title class_">Tabs</span>)</span><br></pre></td></tr></table></figure>
+<h5 id="2-使用方式"><a href="#2-使用方式" class="headerlink" title="2 使用方式"></a>2 使用方式</h5><p>通过 v-model 绑定当前激活标签对应的索引值，默认情况下启用第一个标签。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;van-tabs v-model=<span class="string">&quot;active&quot;</span>&gt;</span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">van-tab</span> <span class="attr">title</span>=<span class="string">&quot;标签 1&quot;</span>&gt;</span>内容 1<span class="tag">&lt;/<span class="name">van-tab</span>&gt;</span></span></span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">van-tab</span> <span class="attr">title</span>=<span class="string">&quot;标签 2&quot;</span>&gt;</span>内容 2<span class="tag">&lt;/<span class="name">van-tab</span>&gt;</span></span></span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">van-tab</span> <span class="attr">title</span>=<span class="string">&quot;标签 3&quot;</span>&gt;</span>内容 3<span class="tag">&lt;/<span class="name">van-tab</span>&gt;</span></span></span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">van-tab</span> <span class="attr">title</span>=<span class="string">&quot;标签 4&quot;</span>&gt;</span>内容 4<span class="tag">&lt;/<span class="name">van-tab</span>&gt;</span></span></span><br><span class="line">&lt;/van-tabs&gt;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  <span class="title function_">data</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      <span class="attr">active</span>: <span class="number">2</span>,</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
                 </div>
 
                 
@@ -310,11 +311,11 @@
     <div class="copyright-info-content border-box">
         <div class="copyright-info-top border-box">
             <div class="copyright-post-title border-box text-ellipsis">
-                XR-FRAME - 基础能力 - Share 录屏和截屏
+                vant组件-Tab标签页
             </div>
 
             <div class="copyright-post-link border-box text-ellipsis">
-                2023/12/15/XR-FRAME-基础能力-Share录屏和截屏/
+                2023/12/18/vant组件-Tab标签页/
             </div>
         </div>
 
@@ -330,7 +331,7 @@
                 <div class="type">
                     发布于
                 </div>
-                <div class="content">2023-12-15 14:45</div>
+                <div class="content">2023-12-18 12:21</div>
             </div>
 
 
@@ -364,11 +365,11 @@
                             <ul class="post-tags-box border-box">
                                 
                                     <li class="tag-item border-box">
-                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/">微信小程序</a>
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/Vue2/">Vue2</a>
                                     </li>
                                 
                                     <li class="tag-item border-box">
-                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/xr-frame/">xr-frame</a>
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/Vant-%E7%BB%84%E4%BB%B6%E5%BA%93/">Vant 组件库</a>
                                     </li>
                                 
                             </ul>
@@ -407,31 +408,15 @@
                 
                     <div class="post-nav border-box">
                         
-                            <div class="prev-post">
-                                <a class="prev"
-                                   rel="prev"
-                                   href="/2023/12/15/XR-FRAME-%E5%9F%BA%E7%A1%80%E8%83%BD%E5%8A%9B-VisibleLayer%E6%98%BE%E7%A4%BA%E5%92%8C%E5%9B%BE%E5%B1%82/"
-                                   title="XR-FRAME - 基础能力 - VisibleLayer 显示和图层"
-                                >
-                                    <span class="left arrow-icon flex-center">
-                                        <i class="fas fa-chevron-left"></i>
-                                    </span>
-                                    <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">XR-FRAME - 基础能力 - VisibleLayer 显示和图层</span>
-                                        <span class="post-nav-item">上一篇</span>
-                                    </span>
-                                </a>
-                            </div>
-                        
                         
                             <div class="next-post">
                                 <a class="next"
                                    rel="next"
-                                   href="/2023/12/15/vant%E7%BB%84%E4%BB%B6-Checkbox%E5%A4%8D%E9%80%89%E6%A1%86/"
-                                   title="Vant 组件 - Checkbox 复选框"
+                                   href="/2023/12/18/mixins%E6%B7%B7%E5%85%A5%E5%A4%84%E7%90%86/"
+                                   title="Mixins 混入处理"
                                 >
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">Vant 组件 - Checkbox 复选框</span>
+                                        <span class="post-nav-title-item text-ellipsis">Mixins 混入处理</span>
                                         <span class="post-nav-item">下一篇</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
@@ -541,7 +526,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E9%A1%B9%E7%9B%AE%E5%9C%B0%E5%9D%80"><span class="nav-text">1 项目地址</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E4%BB%A3%E7%A0%81%E8%A7%A3%E6%9E%90"><span class="nav-text">2 代码解析</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E6%B3%A8%E5%86%8C%E5%AE%89%E8%A3%85"><span class="nav-text">1 注册安装</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F"><span class="nav-text">2 使用方式</span></a></li></ol>
     </div>
 </div>
 
@@ -740,7 +725,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E9%A1%B9%E7%9B%AE%E5%9C%B0%E5%9D%80"><span class="nav-text">1 项目地址</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E4%BB%A3%E7%A0%81%E8%A7%A3%E6%9E%90"><span class="nav-text">2 代码解析</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E6%B3%A8%E5%86%8C%E5%AE%89%E8%A3%85"><span class="nav-text">1 注册安装</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F"><span class="nav-text">2 使用方式</span></a></li></ol>
     </div>
 </div>
 
