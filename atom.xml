@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-12-17T05:41:18.960Z</updated>
+  <updated>2023-12-18T03:45:28.662Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Mixins 混入处理</title>
+    <link href="http://example.com/2023/12/18/mixins%E6%B7%B7%E5%85%A5%E5%A4%84%E7%90%86/"/>
+    <id>http://example.com/2023/12/18/mixins%E6%B7%B7%E5%85%A5%E5%A4%84%E7%90%86/</id>
+    <published>2023-12-18T03:38:39.000Z</published>
+    <updated>2023-12-18T03:45:28.662Z</updated>
+    
+    <content type="html"><![CDATA[<h5 id="1-新建文件"><a href="#1-新建文件" class="headerlink" title="1 新建文件"></a>1 新建文件</h5><p>新建 /src/mixins/test.js</p><h5 id="2-编写所需要混入的内容"><a href="#2-编写所需要混入的内容" class="headerlink" title="2 编写所需要混入的内容"></a>2 编写所需要混入的内容</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  <span class="comment">// 此处编写的就是Vue组件实例的配置项，通过一定语法，可以直接混入到组件内部</span></span><br><span class="line">  <span class="comment">// data mothods computed 生命周期函数...</span></span><br><span class="line">  <span class="comment">// 1.注意点：如果此处和组件内，提供了同名的data或methods，则组件内优先级更高</span></span><br><span class="line">  <span class="comment">// 2.如果编写了生命周期函数，则mixins中的生命周期函数和页面的生命周期函数，会用数组管理，统一执行</span></span><br><span class="line">  <span class="title function_">data</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      <span class="attr">title</span>: <span class="string">&#x27;标题&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">methods</span>: &#123;</span><br><span class="line">    <span class="title function_">sayHi</span>(<span class="params"></span>) &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;你好&#x27;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h5 id="3-组件中导入"><a href="#3-组件中导入" class="headerlink" title="3 组件中导入"></a>3 组件中导入</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">  <span class="keyword">import</span> test <span class="keyword">from</span> <span class="string">&#x27;@/mixins/test.js&#x27;</span></span><br><span class="line">  <span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">    <span class="attr">mixins</span>: [test],</span><br><span class="line">    <span class="comment">// 调用导入的数据</span></span><br><span class="line">    <span class="title function_">created</span>(<span class="params"></span>) &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>.<span class="property">title</span>),</span><br><span class="line">      <span class="variable language_">this</span>.<span class="title function_">sayHi</span>()</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h5 id=&quot;1-新建文件&quot;&gt;&lt;a href=&quot;#1-新建文件&quot; class=&quot;headerlink&quot; title=&quot;1 新建文件&quot;&gt;&lt;/a&gt;1 新建文件&lt;/h5&gt;&lt;p&gt;新建 /src/mixins/test.js&lt;/p&gt;
+&lt;h5 id=&quot;2-编写所需要混入的内容&quot;&gt;&lt;a hr</summary>
+      
+    
+    
+    
+    <category term="Vue2" scheme="http://example.com/categories/Vue2/"/>
+    
+    <category term="Vue2 基础" scheme="http://example.com/categories/Vue2/Vue2-%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="Vue2" scheme="http://example.com/tags/Vue2/"/>
+    
+    <category term="Mixins" scheme="http://example.com/tags/Mixins/"/>
+    
+  </entry>
   
   <entry>
     <title>Vuex 中子模块调用自身数据</title>
@@ -539,34 +568,6 @@
     <category term="Vue2" scheme="http://example.com/tags/Vue2/"/>
     
     <category term="Vant 组件库" scheme="http://example.com/tags/Vant-%E7%BB%84%E4%BB%B6%E5%BA%93/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Vuex 中主模块调用子模块的数据</title>
-    <link href="http://example.com/2023/12/12/vuex%E4%B8%AD%E4%B8%BB%E6%A8%A1%E5%9D%97%E8%B0%83%E7%94%A8%E5%AD%90%E6%A8%A1%E5%9D%97%E7%9A%84%E6%95%B0%E6%8D%AE/"/>
-    <id>http://example.com/2023/12/12/vuex%E4%B8%AD%E4%B8%BB%E6%A8%A1%E5%9D%97%E8%B0%83%E7%94%A8%E5%AD%90%E6%A8%A1%E5%9D%97%E7%9A%84%E6%95%B0%E6%8D%AE/</id>
-    <published>2023-12-12T03:35:45.000Z</published>
-    <updated>2023-12-15T04:49:18.848Z</updated>
-    
-    <content type="html"><![CDATA[<h5 id="1-构建子模块"><a href="#1-构建子模块" class="headerlink" title="1 构建子模块"></a>1 构建子模块</h5><p>参考方法：<a class="link"   href="https://banlixxx.github.io/2023/12/12/vuex%E6%9E%84%E5%BB%BA%E5%AD%90%E6%A8%A1%E5%9D%97/" >Vuex 构建子模块<i class="fas fa-external-link-alt"></i></a></p><h5 id="2-调用子模块数据"><a href="#2-调用子模块数据" class="headerlink" title="2 调用子模块数据"></a>2 调用子模块数据</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// /store/index.js</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">Vue</span> <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">Vuex</span> <span class="keyword">from</span> <span class="string">&#x27;vuex&#x27;</span></span><br><span class="line"><span class="keyword">import</span> user <span class="keyword">from</span> <span class="string">&#x27;@/store/modules/user.js&#x27;</span></span><br><span class="line"><span class="title class_">Vue</span>.<span class="title function_">use</span>(<span class="title class_">Vuex</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">new</span> <span class="title class_">Vuex</span>.<span class="title class_">Store</span>(&#123;</span><br><span class="line">  <span class="attr">state</span>: &#123;&#125;,</span><br><span class="line">  <span class="attr">getters</span>: &#123;</span><br><span class="line">    <span class="title function_">token</span>(<span class="params">state</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> state.<span class="property">user</span>.<span class="property">userInfo</span>.<span class="property">token</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">mutations</span>: &#123;&#125;,</span><br><span class="line">  <span class="attr">actions</span>: &#123;&#125;,</span><br><span class="line">  <span class="attr">modules</span>: &#123;</span><br><span class="line">    user</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><h5 id="3-在-router-index-js-中调用"><a href="#3-在-router-index-js-中调用" class="headerlink" title="3 在 router/index.js 中调用"></a>3 在 router/index.js 中调用</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> store <span class="keyword">from</span> <span class="string">&#x27;@/store&#x27;</span></span><br><span class="line"></span><br><span class="line">.....</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> authUrl = [<span class="string">&#x27;/pay&#x27;</span>, <span class="string">&#x27;/myorder&#x27;</span>]</span><br><span class="line">router.<span class="title function_">beforeEach</span>(<span class="function">(<span class="params">to, <span class="keyword">from</span>, next</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> token = store.<span class="property">getters</span>.<span class="property">token</span></span><br><span class="line">  <span class="keyword">if</span> (!authUrl.<span class="title function_">includes</span>(to.<span class="property">path</span>)) &#123;</span><br><span class="line">    <span class="title function_">next</span>()</span><br><span class="line">    <span class="keyword">return</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (token) &#123;</span><br><span class="line">    <span class="title function_">next</span>()</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="title function_">next</span>(<span class="string">&#x27;/login&#x27;</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h5 id=&quot;1-构建子模块&quot;&gt;&lt;a href=&quot;#1-构建子模块&quot; class=&quot;headerlink&quot; title=&quot;1 构建子模块&quot;&gt;&lt;/a&gt;1 构建子模块&lt;/h5&gt;&lt;p&gt;参考方法：&lt;a class=&quot;link&quot;   href=&quot;https://banlixxx.gith</summary>
-      
-    
-    
-    
-    <category term="Vue2" scheme="http://example.com/categories/Vue2/"/>
-    
-    <category term="Vue2 基础" scheme="http://example.com/categories/Vue2/Vue2-%E5%9F%BA%E7%A1%80/"/>
-    
-    
-    <category term="Vue2" scheme="http://example.com/tags/Vue2/"/>
-    
-    <category term="Vuex" scheme="http://example.com/tags/Vuex/"/>
     
   </entry>
   
