@@ -9,7 +9,7 @@
     
     <title>
         
-            Vant 组件 - Grid 宫格 |
+            Vue3 中 router/index.js 基础配置 |
         
         斑狸
     </title>
@@ -203,7 +203,7 @@
             <div class="post-content-bottom border-box">
                 
                     <div class="post-title">
-                        Vant 组件 - Grid 宫格
+                        Vue3 中 router/index.js 基础配置
                     </div>
                 
 
@@ -231,13 +231,13 @@
         
             <span class="meta-info-item post-create-date">
                 <i class="icon fa-solid fa-calendar-check"></i>&nbsp;
-                <span class="pc">2023-12-13 10:31:33</span>
-                <span class="mobile">2023-12-13 10:31</span>
+                <span class="pc">2024-01-02 12:24:17</span>
+                <span class="mobile">2024-01-02 12:24</span>
             </span>
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="pc" data-updated="Fri Dec 15 2023 14:02:39 GMT+0800">2023-12-15 14:02:39</span>
+                <span class="pc" data-updated="Tue Jan 02 2024 12:30:47 GMT+0800">2024-01-02 12:30:47</span>
             </span>
         
 
@@ -245,10 +245,10 @@
             <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
                 <ul class="post-category-ul">
                     
-                            <li class="category-item"><a href="/categories/Vue2/">Vue2</a></li>
+                            <li class="category-item"><a href="/categories/Vue3/">Vue3</a></li>
                         
                     
-                            <li class="category-item">&nbsp;<i class="icon fas fa-angle-right"></i>&nbsp;<a href="/categories/Vue2/Vant-%E7%BB%84%E4%BB%B6%E5%BA%93/">Vant 组件库</a></li>
+                            <li class="category-item">&nbsp;<i class="icon fas fa-angle-right"></i>&nbsp;<a href="/categories/Vue3/Vue3-%E5%9F%BA%E7%A1%80/">Vue3 基础</a></li>
                         
                     
                 </ul>
@@ -260,10 +260,10 @@
                 <i class="icon fas fa-tags"></i>&nbsp;
                 <ul class="post-tag-ul">
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/Vue2/">Vue2</a></li>
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/vue-router/">vue-router</a></li>
                         
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/Vant-%E7%BB%84%E4%BB%B6%E5%BA%93/">Vant 组件库</a></li>
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/Vue3/">Vue3</a></li>
                         
                     
                 </ul>
@@ -273,7 +273,7 @@
         
         
             <span class="meta-info-item post-wordcount">
-                <i class="icon fas fa-file-word"></i>&nbsp;<span>134 字</span>
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>161 字</span>
             </span>
         
         
@@ -299,10 +299,8 @@
                 <div class="post-content keep-markdown-body">
                     
 
-                    <h5 id="1-注册安装"><a href="#1-注册安装" class="headerlink" title="1 注册安装"></a>1 注册安装</h5><p>官网：<a class="link"   target="_blank" rel="noopener" href="https://vant-contrib.gitee.io/vant/v2/#/zh-CN/grid" >https://vant-contrib.gitee.io/vant/v2/#/zh-CN/grid<i class="fas fa-external-link-alt"></i></a></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">Vue</span> <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">Grid</span>, <span class="title class_">GridItem</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;vant&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="title class_">Vue</span>.<span class="title function_">use</span>(<span class="title class_">Grid</span>)</span><br><span class="line"><span class="title class_">Vue</span>.<span class="title function_">use</span>(<span class="title class_">GridItem</span>)</span><br></pre></td></tr></table></figure>
-<h5 id="2-使用方式"><a href="#2-使用方式" class="headerlink" title="2 使用方式"></a>2 使用方式</h5><p>通过 icon 属性设置格子内的图标，text 属性设置文字内容。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;van-grid&gt;</span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">van-grid-item</span> <span class="attr">icon</span>=<span class="string">&quot;photo-o&quot;</span> <span class="attr">text</span>=<span class="string">&quot;文字&quot;</span> /&gt;</span></span></span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">van-grid-item</span> <span class="attr">icon</span>=<span class="string">&quot;photo-o&quot;</span> <span class="attr">text</span>=<span class="string">&quot;文字&quot;</span> /&gt;</span></span></span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">van-grid-item</span> <span class="attr">icon</span>=<span class="string">&quot;photo-o&quot;</span> <span class="attr">text</span>=<span class="string">&quot;文字&quot;</span> /&gt;</span></span></span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">van-grid-item</span> <span class="attr">icon</span>=<span class="string">&quot;photo-o&quot;</span> <span class="attr">text</span>=<span class="string">&quot;文字&quot;</span> /&gt;</span></span></span><br><span class="line">&lt;/van-grid&gt;</span><br></pre></td></tr></table></figure></p>
-
+                    <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// createRouter: 创建router实例对象</span></span><br><span class="line"><span class="comment">// createWebHistory: 创建History模式的路由</span></span><br><span class="line"><span class="keyword">import</span> &#123; createRouter, createWebHistory &#125; <span class="keyword">from</span> <span class="string">&#x27;vue-router&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">HomeView</span> <span class="keyword">from</span> <span class="string">&#x27;../views/HomeView.vue&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> router = <span class="title function_">createRouter</span>(&#123;</span><br><span class="line">  <span class="attr">history</span>: <span class="title function_">createWebHistory</span>(<span class="keyword">import</span>.<span class="property">meta</span>.<span class="property">env</span>.<span class="property">BASE_URL</span>),</span><br><span class="line">  <span class="attr">routes</span>: [</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">path</span>: <span class="string">&#x27;/&#x27;</span>,</span><br><span class="line">      <span class="attr">name</span>: <span class="string">&#x27;home&#x27;</span>,</span><br><span class="line">      <span class="attr">component</span>: <span class="title class_">HomeView</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">path</span>: <span class="string">&#x27;/about&#x27;</span>,</span><br><span class="line">      <span class="attr">name</span>: <span class="string">&#x27;about&#x27;</span>,</span><br><span class="line">      <span class="comment">// route level code-splitting</span></span><br><span class="line">      <span class="comment">// this generates a separate chunk (About.[hash].js) for this route</span></span><br><span class="line">      <span class="comment">// which is lazy-loaded when the route is visited.</span></span><br><span class="line">      <span class="attr">component</span>: <span class="function">() =&gt;</span> <span class="keyword">import</span>(<span class="string">&#x27;../views/AboutView.vue&#x27;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> router</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; createRouter, createWebHistory &#125; <span class="keyword">from</span> <span class="string">&#x27;vue-router&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">Layout</span> <span class="keyword">from</span> <span class="string">&#x27;@/views/layout/index.vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">Login</span> <span class="keyword">from</span> <span class="string">&#x27;@/views/login/index.vue&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> router = <span class="title function_">createRouter</span>(&#123;</span><br><span class="line">  <span class="attr">history</span>: <span class="title function_">createWebHistory</span>(<span class="keyword">import</span>.<span class="property">meta</span>.<span class="property">env</span>.<span class="property">BASE_URL</span>),</span><br><span class="line">  <span class="attr">routes</span>: [</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">path</span>: <span class="string">&#x27;/&#x27;</span>,</span><br><span class="line">      <span class="attr">component</span>: <span class="title class_">Layout</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">path</span>: <span class="string">&#x27;/login&#x27;</span>,</span><br><span class="line">      <span class="attr">component</span>: <span class="title class_">Login</span></span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> router</span><br></pre></td></tr></table></figure>
                 </div>
 
                 
@@ -311,11 +309,11 @@
     <div class="copyright-info-content border-box">
         <div class="copyright-info-top border-box">
             <div class="copyright-post-title border-box text-ellipsis">
-                Vant 组件 - Grid 宫格
+                Vue3 中 router/index.js 基础配置
             </div>
 
             <div class="copyright-post-link border-box text-ellipsis">
-                2023/12/13/vant组件-Grid宫格/
+                2024/01/02/Vue3中router-index-js基础配置/
             </div>
         </div>
 
@@ -331,7 +329,7 @@
                 <div class="type">
                     发布于
                 </div>
-                <div class="content">2023-12-13 10:31</div>
+                <div class="content">2024-01-02 12:24</div>
             </div>
 
 
@@ -365,11 +363,11 @@
                             <ul class="post-tags-box border-box">
                                 
                                     <li class="tag-item border-box">
-                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/Vue2/">Vue2</a>
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/vue-router/">vue-router</a>
                                     </li>
                                 
                                     <li class="tag-item border-box">
-                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/Vant-%E7%BB%84%E4%BB%B6%E5%BA%93/">Vant 组件库</a>
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/Vue3/">Vue3</a>
                                     </li>
                                 
                             </ul>
@@ -408,31 +406,15 @@
                 
                     <div class="post-nav border-box">
                         
-                            <div class="prev-post">
-                                <a class="prev"
-                                   rel="prev"
-                                   href="/2023/12/13/props%E4%B8%AD%E9%BB%98%E8%AE%A4%E4%B8%BA%E5%AF%B9%E8%B1%A1%E6%97%B6%E7%9A%84%E5%86%99%E6%B3%95/"
-                                   title="props中默认为对象时的写法"
-                                >
-                                    <span class="left arrow-icon flex-center">
-                                        <i class="fas fa-chevron-left"></i>
-                                    </span>
-                                    <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">props中默认为对象时的写法</span>
-                                        <span class="post-nav-item">上一篇</span>
-                                    </span>
-                                </a>
-                            </div>
-                        
                         
                             <div class="next-post">
                                 <a class="next"
                                    rel="next"
-                                   href="/2023/12/13/vant%E7%BB%84%E4%BB%B6-Swipe%E8%BD%AE%E6%92%AD/"
-                                   title="Vant 组件 - Swipe 轮播"
+                                   href="/2024/01/02/elementPlus%E4%B8%BB%E9%A2%98%E5%AE%9A%E5%88%B6/"
+                                   title="ElementPlus 主题定制"
                                 >
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">Vant 组件 - Swipe 轮播</span>
+                                        <span class="post-nav-title-item text-ellipsis">ElementPlus 主题定制</span>
                                         <span class="post-nav-item">下一篇</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
@@ -542,7 +524,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E6%B3%A8%E5%86%8C%E5%AE%89%E8%A3%85"><span class="nav-text">1 注册安装</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F"><span class="nav-text">2 使用方式</span></a></li></ol>
+        
     </div>
 </div>
 
@@ -741,7 +723,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E6%B3%A8%E5%86%8C%E5%AE%89%E8%A3%85"><span class="nav-text">1 注册安装</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F"><span class="nav-text">2 使用方式</span></a></li></ol>
+        
     </div>
 </div>
 
