@@ -9,7 +9,7 @@
     
     <title>
         
-            基于 postcss 插件实现项目 vw 配置 |
+            elementPlus主题定制 |
         
         斑狸
     </title>
@@ -203,7 +203,7 @@
             <div class="post-content-bottom border-box">
                 
                     <div class="post-title">
-                        基于 postcss 插件实现项目 vw 配置
+                        elementPlus主题定制
                     </div>
                 
 
@@ -231,13 +231,13 @@
         
             <span class="meta-info-item post-create-date">
                 <i class="icon fa-solid fa-calendar-check"></i>&nbsp;
-                <span class="pc">2023-12-07 12:08:15</span>
-                <span class="mobile">2023-12-07 12:08</span>
+                <span class="pc">2024-01-02 11:34:28</span>
+                <span class="mobile">2024-01-02 11:34</span>
             </span>
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="pc" data-updated="Tue Dec 12 2023 12:53:52 GMT+0800">2023-12-12 12:53:52</span>
+                <span class="pc" data-updated="Tue Jan 02 2024 11:57:15 GMT+0800">2024-01-02 11:57:15</span>
             </span>
         
 
@@ -245,10 +245,10 @@
             <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
                 <ul class="post-category-ul">
                     
-                            <li class="category-item"><a href="/categories/Vue2/">Vue2</a></li>
+                            <li class="category-item"><a href="/categories/Vue3/">Vue3</a></li>
                         
                     
-                            <li class="category-item">&nbsp;<i class="icon fas fa-angle-right"></i>&nbsp;<a href="/categories/Vue2/Vant-%E7%BB%84%E4%BB%B6%E5%BA%93/">Vant 组件库</a></li>
+                            <li class="category-item">&nbsp;<i class="icon fas fa-angle-right"></i>&nbsp;<a href="/categories/Vue3/ElementPlus-%E7%BB%84%E4%BB%B6%E5%BA%93/">ElementPlus 组件库</a></li>
                         
                     
                 </ul>
@@ -260,13 +260,10 @@
                 <i class="icon fas fa-tags"></i>&nbsp;
                 <ul class="post-tag-ul">
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/Vue2/">Vue2</a></li>
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/Vue3/">Vue3</a></li>
                         
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/Vant-%E7%BB%84%E4%BB%B6%E5%BA%93/">Vant 组件库</a></li>
-                        
-                    
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/postcss/">postcss</a></li>
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/ElementPlus-%E7%BB%84%E4%BB%B6%E5%BA%93/">ElementPlus 组件库</a></li>
                         
                     
                 </ul>
@@ -276,7 +273,7 @@
         
         
             <span class="meta-info-item post-wordcount">
-                <i class="icon fas fa-file-word"></i>&nbsp;<span>148 字</span>
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>229 字</span>
             </span>
         
         
@@ -302,10 +299,10 @@
                 <div class="post-content keep-markdown-body">
                     
 
-                    <h2 id="1-安装"><a href="#1-安装" class="headerlink" title="1 安装"></a>1 安装</h2><h6 id="1-1-postcss官方地址"><a href="#1-1-postcss官方地址" class="headerlink" title="1.1 postcss官方地址"></a>1.1 postcss官方地址</h6><p>&emsp;&emsp;<a class="link"   target="_blank" rel="noopener" href="https://vant-contrib.gitee.io/vant/v2/#/zh-CN/advanced-usage#liu-lan-qi-gua-pei" >https://vant-contrib.gitee.io/vant/v2/#/zh-CN/advanced-usage#liu-lan-qi-gua-pei<i class="fas fa-external-link-alt"></i></a></p>
-<h6 id="1-2-通过-npm-安装"><a href="#1-2-通过-npm-安装" class="headerlink" title="1.2 通过 npm 安装"></a>1.2 通过 npm 安装</h6><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i postcss-px-to-viewport@1.1.1 -D</span><br></pre></td></tr></table></figure>
-<h2 id="2-引入组件"><a href="#2-引入组件" class="headerlink" title="2 引入组件"></a>2 引入组件</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 新建postcss.config.js</span></span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">  <span class="attr">plugins</span>: &#123;</span><br><span class="line">    <span class="string">&#x27;postcss-px-to-viewport&#x27;</span>: &#123;</span><br><span class="line">      <span class="comment">// vw适配的标准屏的宽度，iphoneX</span></span><br><span class="line">      <span class="attr">viewportWidth</span>: <span class="number">375</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 组件中，直接按照px写就可以适配不同屏幕</span></span><br><span class="line">&lt;template&gt;</span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">style</span> <span class="attr">lang</span>=<span class="string">&quot;less&quot;</span>&gt;</span><span class="language-css"></span></span></span><br><span class="line"><span class="language-css"><span class="language-xml">  <span class="selector-class">.box</span> &#123;</span></span></span><br><span class="line"><span class="language-css"><span class="language-xml">    <span class="attribute">width</span>: <span class="number">200px</span>;</span></span></span><br><span class="line"><span class="language-css"><span class="language-xml">    <span class="attribute">height</span>: <span class="number">300px</span>;</span></span></span><br><span class="line"><span class="language-css"><span class="language-xml">    <span class="attribute">background-color</span>: pink;</span></span></span><br><span class="line"><span class="language-css"><span class="language-xml">  &#125;</span></span></span><br><span class="line"><span class="language-css"><span class="language-xml"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+                    <h5 id="1-安装-scss"><a href="#1-安装-scss" class="headerlink" title="1 安装 scss"></a>1 安装 scss</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i sass -D</span><br></pre></td></tr></table></figure>
+<h5 id="2-准备定制样式文件"><a href="#2-准备定制样式文件" class="headerlink" title="2 准备定制样式文件"></a>2 准备定制样式文件</h5><p>新建 /src/styles/element/index.scss<br><figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// styles/element/index.scss</span></span><br><span class="line"><span class="comment">/* 只需要重写你需要的即可 */</span></span><br><span class="line"><span class="keyword">@forward</span> <span class="string">&#x27;element-plus/theme-chalk/src/common/var.scss&#x27;</span> with (</span><br><span class="line">  <span class="variable">$colors</span>: (</span><br><span class="line">    <span class="string">&#x27;primary&#x27;</span>: (</span><br><span class="line">      <span class="string">&#x27;base&#x27;</span>: green,</span><br><span class="line">    ),</span><br><span class="line">  ),</span><br><span class="line">);</span><br></pre></td></tr></table></figure></p>
+<h5 id="3-对-ElementPlus-样式进行覆盖"><a href="#3-对-ElementPlus-样式进行覆盖" class="headerlink" title="3 对 ElementPlus 样式进行覆盖"></a>3 对 ElementPlus 样式进行覆盖</h5><p>通知 Element 采用 scss 语言，之后导入定制 scss 文件覆盖<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// vite.config.js</span></span><br><span class="line"><span class="keyword">import</span> &#123; fileURLToPath, <span class="variable constant_">URL</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;node:url&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> &#123; defineConfig &#125; <span class="keyword">from</span> <span class="string">&#x27;vite&#x27;</span></span><br><span class="line"><span class="keyword">import</span> vue <span class="keyword">from</span> <span class="string">&#x27;@vitejs/plugin-vue&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">AutoImport</span> <span class="keyword">from</span> <span class="string">&#x27;unplugin-auto-import/vite&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">Components</span> <span class="keyword">from</span> <span class="string">&#x27;unplugin-vue-components/vite&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">ElementPlusResolver</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;unplugin-vue-components/resolvers&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// https://vitejs.dev/config/</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="title function_">defineConfig</span>(&#123;</span><br><span class="line">  <span class="attr">plugins</span>: [</span><br><span class="line">    <span class="title function_">vue</span>(),</span><br><span class="line">    <span class="title class_">AutoImport</span>(&#123;</span><br><span class="line">      <span class="attr">resolvers</span>: [<span class="title class_">ElementPlusResolver</span>(&#123; <span class="attr">importStyle</span>: <span class="string">&#x27;sass&#x27;</span> &#125;)]</span><br><span class="line">    &#125;),</span><br><span class="line">    <span class="title class_">Components</span>(&#123;</span><br><span class="line">      <span class="attr">resolvers</span>: [<span class="title class_">ElementPlusResolver</span>(&#123; <span class="attr">importStyle</span>: <span class="string">&#x27;sass&#x27;</span> &#125;)]</span><br><span class="line">    &#125;)</span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">resolve</span>: &#123;</span><br><span class="line">    <span class="attr">alias</span>: &#123;</span><br><span class="line">      <span class="string">&#x27;@&#x27;</span>: <span class="title function_">fileURLToPath</span>(<span class="keyword">new</span> <span class="title function_">URL</span>(<span class="string">&#x27;./src&#x27;</span>, <span class="keyword">import</span>.<span class="property">meta</span>.<span class="property">url</span>))</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">css</span>: &#123;</span><br><span class="line">    <span class="attr">preprocessorOptions</span>: &#123;</span><br><span class="line">      <span class="attr">scss</span>: &#123;</span><br><span class="line">        <span class="comment">// 自动导入定制化样式文件进行样式覆盖</span></span><br><span class="line">        <span class="attr">additionalData</span>: <span class="string">`</span></span><br><span class="line"><span class="string">          @use &quot;@/styles/element/index.scss&quot; as *;</span></span><br><span class="line"><span class="string">        `</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
+
                 </div>
 
                 
@@ -314,11 +311,11 @@
     <div class="copyright-info-content border-box">
         <div class="copyright-info-top border-box">
             <div class="copyright-post-title border-box text-ellipsis">
-                基于 postcss 插件实现项目 vw 配置
+                elementPlus主题定制
             </div>
 
             <div class="copyright-post-link border-box text-ellipsis">
-                2023/12/07/基于postcss插件实现项目vw配置/
+                2024/01/02/elementPlus主题定制/
             </div>
         </div>
 
@@ -334,7 +331,7 @@
                 <div class="type">
                     发布于
                 </div>
-                <div class="content">2023-12-07 12:08</div>
+                <div class="content">2024-01-02 11:34</div>
             </div>
 
 
@@ -368,15 +365,11 @@
                             <ul class="post-tags-box border-box">
                                 
                                     <li class="tag-item border-box">
-                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/Vue2/">Vue2</a>
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/Vue3/">Vue3</a>
                                     </li>
                                 
                                     <li class="tag-item border-box">
-                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/Vant-%E7%BB%84%E4%BB%B6%E5%BA%93/">Vant 组件库</a>
-                                    </li>
-                                
-                                    <li class="tag-item border-box">
-                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/postcss/">postcss</a>
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/ElementPlus-%E7%BB%84%E4%BB%B6%E5%BA%93/">ElementPlus 组件库</a>
                                     </li>
                                 
                             </ul>
@@ -415,31 +408,15 @@
                 
                     <div class="post-nav border-box">
                         
-                            <div class="prev-post">
-                                <a class="prev"
-                                   rel="prev"
-                                   href="/2023/12/07/XR-FRAME%E6%A1%88%E4%BE%8B2DMarker-%E8%A7%86%E9%A2%91%EF%BC%8C%E8%AE%A9%E7%85%A7%E7%89%87%E5%8A%A8%E8%B5%B7%E6%9D%A5/"
-                                   title="XR-FRAME 案例 2DMarker+视频，让照片动起来"
-                                >
-                                    <span class="left arrow-icon flex-center">
-                                        <i class="fas fa-chevron-left"></i>
-                                    </span>
-                                    <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">XR-FRAME 案例 2DMarker+视频，让照片动起来</span>
-                                        <span class="post-nav-item">上一篇</span>
-                                    </span>
-                                </a>
-                            </div>
-                        
                         
                             <div class="next-post">
                                 <a class="next"
                                    rel="next"
-                                   href="/2023/12/07/Vue2%E4%B8%ADVant%E7%BB%84%E4%BB%B6%E5%BA%93%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/"
-                                   title="Vue2 中 Vant 组件库的基本使用方法"
+                                   href="/2024/01/02/elementPlus%E8%87%AA%E5%8A%A8%E6%8C%89%E9%9C%80%E5%AF%BC%E5%85%A5%E9%85%8D%E7%BD%AE/"
+                                   title="ElementPlus 自动按需导入配置"
                                 >
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">Vue2 中 Vant 组件库的基本使用方法</span>
+                                        <span class="post-nav-title-item text-ellipsis">ElementPlus 自动按需导入配置</span>
                                         <span class="post-nav-item">下一篇</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
@@ -549,7 +526,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E5%AE%89%E8%A3%85"><span class="nav-text">1 安装</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#1-1-postcss%E5%AE%98%E6%96%B9%E5%9C%B0%E5%9D%80"><span class="nav-text">1.1 postcss官方地址</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#1-2-%E9%80%9A%E8%BF%87-npm-%E5%AE%89%E8%A3%85"><span class="nav-text">1.2 通过 npm 安装</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E5%BC%95%E5%85%A5%E7%BB%84%E4%BB%B6"><span class="nav-text">2 引入组件</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E5%AE%89%E8%A3%85-scss"><span class="nav-text">1 安装 scss</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E5%87%86%E5%A4%87%E5%AE%9A%E5%88%B6%E6%A0%B7%E5%BC%8F%E6%96%87%E4%BB%B6"><span class="nav-text">2 准备定制样式文件</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-%E5%AF%B9-ElementPlus-%E6%A0%B7%E5%BC%8F%E8%BF%9B%E8%A1%8C%E8%A6%86%E7%9B%96"><span class="nav-text">3 对 ElementPlus 样式进行覆盖</span></a></li></ol>
     </div>
 </div>
 
@@ -748,7 +725,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E5%AE%89%E8%A3%85"><span class="nav-text">1 安装</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#1-1-postcss%E5%AE%98%E6%96%B9%E5%9C%B0%E5%9D%80"><span class="nav-text">1.1 postcss官方地址</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#1-2-%E9%80%9A%E8%BF%87-npm-%E5%AE%89%E8%A3%85"><span class="nav-text">1.2 通过 npm 安装</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E5%BC%95%E5%85%A5%E7%BB%84%E4%BB%B6"><span class="nav-text">2 引入组件</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E5%AE%89%E8%A3%85-scss"><span class="nav-text">1 安装 scss</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E5%87%86%E5%A4%87%E5%AE%9A%E5%88%B6%E6%A0%B7%E5%BC%8F%E6%96%87%E4%BB%B6"><span class="nav-text">2 准备定制样式文件</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-%E5%AF%B9-ElementPlus-%E6%A0%B7%E5%BC%8F%E8%BF%9B%E8%A1%8C%E8%A6%86%E7%9B%96"><span class="nav-text">3 对 ElementPlus 样式进行覆盖</span></a></li></ol>
     </div>
 </div>
 
