@@ -66,9 +66,9 @@
     <category term="Vue3 基础" scheme="http://example.com/categories/Vue3/Vue3-%E5%9F%BA%E7%A1%80/"/>
     
     
-    <category term="Vue3" scheme="http://example.com/tags/Vue3/"/>
-    
     <category term="vue-router" scheme="http://example.com/tags/vue-router/"/>
+    
+    <category term="Vue3" scheme="http://example.com/tags/Vue3/"/>
     
   </entry>
   
