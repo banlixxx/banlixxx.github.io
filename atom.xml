@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-01-09T07:23:05.125Z</updated>
+  <updated>2024-01-09T07:28:24.951Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>测试</title>
+    <link href="http://example.com/2024/01/09/%E6%B5%8B%E8%AF%95/"/>
+    <id>http://example.com/2024/01/09/%E6%B5%8B%E8%AF%95/</id>
+    <published>2024-01-09T07:27:50.000Z</published>
+    <updated>2024-01-09T07:28:24.951Z</updated>
+    
+    <content type="html"><![CDATA[<p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>=</mo><mo>−</mo><mfrac><mrow><mi>c</mi><mi>a</mi><mi>m</mi><mi>e</mi><mi>r</mi><mi>a</mi><mi>P</mi><mi>o</mi><mi>s</mi><mi mathvariant="normal">.</mi><mi>y</mi></mrow><mrow><mi>d</mi><mi>i</mi><mi>r</mi><mo stretchy="false">[</mo><mn>1</mn><mo stretchy="false">]</mo></mrow></mfrac><mi>d</mi><mi>i</mi><mi>r</mi><mo stretchy="false">[</mo><mn>0</mn><mo stretchy="false">]</mo><mo>+</mo><mi>c</mi><mi>a</mi><mi>m</mi><mi>e</mi><mi>r</mi><mi>a</mi><mi>P</mi><mi>o</mi><mi>s</mi><mi mathvariant="normal">.</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">x_{0} = - \frac{cameraPos.y}{dir[1]} dir[0]+cameraPos.x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">0</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.2963299999999998em;vertical-align:-0.936em;"></span><span class="mord">−</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603299999999998em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">d</span><span class="mord mathnormal">i</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mopen">[</span><span class="mord">1</span><span class="mclose">]</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">c</span><span class="mord mathnormal">a</span><span class="mord mathnormal">m</span><span class="mord mathnormal">e</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mord mathnormal">a</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mord mathnormal">o</span><span class="mord mathnormal">s</span><span class="mord">.</span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord mathnormal">d</span><span class="mord mathnormal">i</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mopen">[</span><span class="mord">0</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal">c</span><span class="mord mathnormal">a</span><span class="mord mathnormal">m</span><span class="mord mathnormal">e</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mord mathnormal">a</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mord mathnormal">o</span><span class="mord mathnormal">s</span><span class="mord">.</span><span class="mord mathnormal">x</span></span></span></span></span></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p class=&quot;katex-block&quot;&gt;&lt;span class=&quot;katex-display&quot;&gt;&lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math xmlns=&quot;http://www.w3.org/1998/Math/M</summary>
+      
+    
+    
+    
+    <category term="微信小程序" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+    <category term="xr-frame" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/xr-frame/"/>
+    
+    
+    <category term="微信小程序" scheme="http://example.com/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+    <category term="xr-frame" scheme="http://example.com/tags/xr-frame/"/>
+    
+  </entry>
   
   <entry>
     <title>完全数</title>
@@ -560,35 +588,6 @@
     <category term="Vue2" scheme="http://example.com/tags/Vue2/"/>
     
     <category term="Axios" scheme="http://example.com/tags/Axios/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Vant组件 - Dialog 弹出框</title>
-    <link href="http://example.com/2023/12/15/vant%E7%BB%84%E4%BB%B6-Dialog%E5%BC%B9%E5%87%BA%E6%A1%86/"/>
-    <id>http://example.com/2023/12/15/vant%E7%BB%84%E4%BB%B6-Dialog%E5%BC%B9%E5%87%BA%E6%A1%86/</id>
-    <published>2023-12-15T03:12:40.000Z</published>
-    <updated>2023-12-15T06:02:26.724Z</updated>
-    
-    <content type="html"><![CDATA[<h5 id="1-注册安装"><a class="markdownIt-Anchor" href="#1-注册安装"></a> 1 注册安装</h5><p>官网：<a class="link"   href="https://vant-contrib.gitee.io/vant/v2/#/zh-CN/dialog" >https://vant-contrib.gitee.io/vant/v2/#/zh-CN/dialog<i class="fas fa-external-link-alt"></i></a></p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">Vue</span> <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">Dialog</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;vant&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 全局注册</span></span><br><span class="line"><span class="title class_">Vue</span>.<span class="title function_">use</span>(<span class="title class_">Dialog</span>);</span><br></pre></td></tr></table></figure><h5 id="2-使用方式"><a class="markdownIt-Anchor" href="#2-使用方式"></a> 2 使用方式</h5><p>用于确认消息，包含取消和确认按钮。</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Dialog</span>.<span class="title function_">confirm</span>(&#123;</span><br><span class="line">  <span class="attr">title</span>: <span class="string">&#x27;标题&#x27;</span>,</span><br><span class="line">  <span class="attr">message</span>: <span class="string">&#x27;弹窗内容&#x27;</span>,</span><br><span class="line">&#125;)</span><br><span class="line">  .<span class="title function_">then</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// on confirm</span></span><br><span class="line">  &#125;)</span><br><span class="line">  .<span class="title function_">catch</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// on cancel</span></span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure><p>当然，引入 Dialog 组件后，会自动在 Vue 的 prototype 上挂载 $dialog 方法，在所有组件内部都可以直接调用此方法。</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  <span class="title function_">mounted</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">$dialog</span>.<span class="title function_">alert</span>(&#123;</span><br><span class="line">      <span class="attr">message</span>: <span class="string">&#x27;弹窗内容&#x27;</span>,</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h5 id=&quot;1-注册安装&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#1-注册安装&quot;&gt;&lt;/a&gt; 1 注册安装&lt;/h5&gt;
-&lt;p&gt;官网：&lt;a class=&quot;link&quot;   href=&quot;https://vant-contrib.gitee.io/van</summary>
-      
-    
-    
-    
-    <category term="Vue2" scheme="http://example.com/categories/Vue2/"/>
-    
-    <category term="Vant 组件库" scheme="http://example.com/categories/Vue2/Vant-%E7%BB%84%E4%BB%B6%E5%BA%93/"/>
-    
-    
-    <category term="Vue2" scheme="http://example.com/tags/Vue2/"/>
-    
-    <category term="Vant 组件库" scheme="http://example.com/tags/Vant-%E7%BB%84%E4%BB%B6%E5%BA%93/"/>
     
   </entry>
   
