@@ -273,7 +273,7 @@
         
         
             <span class="meta-info-item post-wordcount">
-                <i class="icon fas fa-file-word"></i>&nbsp;<span>253 字</span>
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>254 字</span>
             </span>
         
         
@@ -299,10 +299,13 @@
                 <div class="post-content keep-markdown-body">
                     
 
-                    <h5 id="1-自定义懒加载指令"><a href="#1-自定义懒加载指令" class="headerlink" title="1 自定义懒加载指令"></a>1 自定义懒加载指令</h5><p>自定义指令官方文档：<a class="link"   target="_blank" rel="noopener" href="https://cn.vuejs.org/guide/reusability/custom-directives.html" >https://cn.vuejs.org/guide/reusability/custom-directives.html<i class="fas fa-external-link-alt"></i></a><br>VueUse 的 useIntersectionObserver 方法官方文档：<a class="link"   target="_blank" rel="noopener" href="https://www.vueusejs.com/core/useIntersectionObserver/" >https://www.vueusejs.com/core/useIntersectionObserver/<i class="fas fa-external-link-alt"></i></a></p>
+                    <h5 id="1-自定义懒加载指令"><a class="markdownIt-Anchor" href="#1-自定义懒加载指令"></a> 1 自定义懒加载指令</h5>
+<p>自定义指令官方文档：<a class="link"   target="_blank" rel="noopener" href="https://cn.vuejs.org/guide/reusability/custom-directives.html" >https://cn.vuejs.org/guide/reusability/custom-directives.html<i class="fas fa-external-link-alt"></i></a><br />
+VueUse 的 useIntersectionObserver 方法官方文档：<a class="link"   target="_blank" rel="noopener" href="https://www.vueusejs.com/core/useIntersectionObserver/" >https://www.vueusejs.com/core/useIntersectionObserver/<i class="fas fa-external-link-alt"></i></a></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// main.js</span></span><br><span class="line"><span class="comment">// 用到了VueUse的useIntersectionObserver方法</span></span><br><span class="line"><span class="keyword">import</span> &#123; useIntersectionObserver &#125; <span class="keyword">from</span> <span class="string">&#x27;@vueuse/core&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> app = <span class="title function_">createApp</span>(<span class="title class_">App</span>)</span><br><span class="line"></span><br><span class="line">app.<span class="title function_">directive</span>(<span class="string">&#x27;img-lazy&#x27;</span>, &#123;</span><br><span class="line">  <span class="title function_">mounted</span>(<span class="params">el, binding</span>) &#123;</span><br><span class="line">    <span class="comment">// console.log(el, binding.value)</span></span><br><span class="line">    <span class="keyword">const</span> &#123; stop &#125; = <span class="title function_">useIntersectionObserver</span>(el, <span class="function">(<span class="params">[&#123; isIntersecting &#125;]</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="comment">// console.log(isIntersecting)</span></span><br><span class="line">      <span class="keyword">if</span> (isIntersecting) &#123;</span><br><span class="line">        el.<span class="property">src</span> = binding.<span class="property">value</span></span><br><span class="line">        <span class="title function_">stop</span>()</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 组件中使用</span><br><span class="line">&lt;img v-img-lazy=&quot;item.picture&quot; alt=&quot;&quot; /&gt;</span><br></pre></td></tr></table></figure>
-<h5 id="2-把自定义指令抽离成一个插件"><a href="#2-把自定义指令抽离成一个插件" class="headerlink" title="2 把自定义指令抽离成一个插件"></a>2 把自定义指令抽离成一个插件</h5><p>自定义插件官方文档：<a class="link"   target="_blank" rel="noopener" href="https://cn.vuejs.org/guide/reusability/plugins.html" >https://cn.vuejs.org/guide/reusability/plugins.html<i class="fas fa-external-link-alt"></i></a></p>
+<h5 id="2-把自定义指令抽离成一个插件"><a class="markdownIt-Anchor" href="#2-把自定义指令抽离成一个插件"></a> 2 把自定义指令抽离成一个插件</h5>
+<p>自定义插件官方文档：<a class="link"   target="_blank" rel="noopener" href="https://cn.vuejs.org/guide/reusability/plugins.html" >https://cn.vuejs.org/guide/reusability/plugins.html<i class="fas fa-external-link-alt"></i></a></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/directives/index.js</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 定义懒加载插件</span></span><br><span class="line"><span class="keyword">import</span> &#123; useIntersectionObserver &#125; <span class="keyword">from</span> <span class="string">&#x27;@vueuse/core&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> lazyPlugin = &#123;</span><br><span class="line">  <span class="title function_">install</span>(<span class="params">app</span>) &#123;</span><br><span class="line">    <span class="comment">// 懒加载指令逻辑</span></span><br><span class="line">    app.<span class="title function_">directive</span>(<span class="string">&#x27;img-lazy&#x27;</span>, &#123;</span><br><span class="line">      <span class="title function_">mounted</span>(<span class="params">el, binding</span>) &#123;</span><br><span class="line">        <span class="comment">// console.log(el, binding.value)</span></span><br><span class="line">        <span class="keyword">const</span> &#123; stop &#125; = <span class="title function_">useIntersectionObserver</span>(el, <span class="function">(<span class="params">[&#123; isIntersecting &#125;]</span>) =&gt;</span> &#123;</span><br><span class="line">          <span class="variable language_">console</span>.<span class="title function_">log</span>(isIntersecting)</span><br><span class="line">          <span class="keyword">if</span> (isIntersecting) &#123;</span><br><span class="line">            el.<span class="property">src</span> = binding.<span class="property">value</span></span><br><span class="line">            <span class="title function_">stop</span>()</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// main.js</span></span><br><span class="line"><span class="keyword">import</span> &#123; lazyPlugin &#125; <span class="keyword">from</span> <span class="string">&#x27;@/directives/index.js&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> app = <span class="title function_">createApp</span>(<span class="title class_">App</span>)</span><br><span class="line">app.<span class="title function_">use</span>(lazyPlugin)</span><br><span class="line"><span class="comment">// ......</span></span><br></pre></td></tr></table></figure>
 
@@ -545,7 +548,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E8%87%AA%E5%AE%9A%E4%B9%89%E6%87%92%E5%8A%A0%E8%BD%BD%E6%8C%87%E4%BB%A4"><span class="nav-text">1 自定义懒加载指令</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E6%8A%8A%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4%E6%8A%BD%E7%A6%BB%E6%88%90%E4%B8%80%E4%B8%AA%E6%8F%92%E4%BB%B6"><span class="nav-text">2 把自定义指令抽离成一个插件</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E8%87%AA%E5%AE%9A%E4%B9%89%E6%87%92%E5%8A%A0%E8%BD%BD%E6%8C%87%E4%BB%A4"><span class="nav-text"> 1 自定义懒加载指令</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E6%8A%8A%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4%E6%8A%BD%E7%A6%BB%E6%88%90%E4%B8%80%E4%B8%AA%E6%8F%92%E4%BB%B6"><span class="nav-text"> 2 把自定义指令抽离成一个插件</span></a></li></ol>
     </div>
 </div>
 
@@ -592,7 +595,7 @@
             
                 <span class="count-box border-box word">
                     <span class="item-type border-box">总字数</span>
-                    <span class="item-value border-box word">17.8k</span>
+                    <span class="item-value border-box word">17.4k</span>
                 </span>
             
 
@@ -744,7 +747,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E8%87%AA%E5%AE%9A%E4%B9%89%E6%87%92%E5%8A%A0%E8%BD%BD%E6%8C%87%E4%BB%A4"><span class="nav-text">1 自定义懒加载指令</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E6%8A%8A%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4%E6%8A%BD%E7%A6%BB%E6%88%90%E4%B8%80%E4%B8%AA%E6%8F%92%E4%BB%B6"><span class="nav-text">2 把自定义指令抽离成一个插件</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E8%87%AA%E5%AE%9A%E4%B9%89%E6%87%92%E5%8A%A0%E8%BD%BD%E6%8C%87%E4%BB%A4"><span class="nav-text"> 1 自定义懒加载指令</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E6%8A%8A%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4%E6%8A%BD%E7%A6%BB%E6%88%90%E4%B8%80%E4%B8%AA%E6%8F%92%E4%BB%B6"><span class="nav-text"> 2 把自定义指令抽离成一个插件</span></a></li></ol>
     </div>
 </div>
 
@@ -837,20 +840,5 @@
 
 
 
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </body>
 </html>

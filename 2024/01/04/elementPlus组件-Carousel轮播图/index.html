@@ -299,8 +299,10 @@
                 <div class="post-content keep-markdown-body">
                     
 
-                    <h5 id="1-官网"><a href="#1-官网" class="headerlink" title="1 官网"></a>1 官网</h5><p><a class="link"   target="_blank" rel="noopener" href="https://element-plus.org/zh-CN/component/carousel.html" >https://element-plus.org/zh-CN/component/carousel.html<i class="fas fa-external-link-alt"></i></a></p>
-<h5 id="2-基本使用方法"><a href="#2-基本使用方法" class="headerlink" title="2 基本使用方法"></a>2 基本使用方法</h5><p>结合使用 el-carousel 和 el-carousel-item 标签就得到了一个轮播图。默认情况下，在鼠标 hover 底部的指示器时就会触发切换。通过设置 trigger 属性为 click，可以达到点击触发的效果。</p>
+                    <h5 id="1-官网"><a class="markdownIt-Anchor" href="#1-官网"></a> 1 官网</h5>
+<p><a class="link"   target="_blank" rel="noopener" href="https://element-plus.org/zh-CN/component/carousel.html" >https://element-plus.org/zh-CN/component/carousel.html<i class="fas fa-external-link-alt"></i></a></p>
+<h5 id="2-基本使用方法"><a class="markdownIt-Anchor" href="#2-基本使用方法"></a> 2 基本使用方法</h5>
+<p>结合使用 el-carousel 和 el-carousel-item 标签就得到了一个轮播图。默认情况下，在鼠标 hover 底部的指示器时就会触发切换。通过设置 trigger 属性为 click，可以达到点击触发的效果。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div class=&quot;block text-center&quot;&gt;</span><br><span class="line">    &lt;span class=&quot;demonstration&quot;</span><br><span class="line">      &gt;Switch when indicator is hovered (default)&lt;/span</span><br><span class="line">    &gt;</span><br><span class="line">    &lt;el-carousel height=&quot;150px&quot;&gt;</span><br><span class="line">      &lt;el-carousel-item v-for=&quot;item in 4&quot; :key=&quot;item&quot;&gt;</span><br><span class="line">        &lt;h3 class=&quot;small justify-center&quot; text=&quot;2xl&quot;&gt;&#123;&#123; item &#125;&#125;&lt;/h3&gt;</span><br><span class="line">      &lt;/el-carousel-item&gt;</span><br><span class="line">    &lt;/el-carousel&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">  &lt;div class=&quot;block text-center&quot; m=&quot;t-4&quot;&gt;</span><br><span class="line">    &lt;span class=&quot;demonstration&quot;&gt;Switch when indicator is clicked&lt;/span&gt;</span><br><span class="line">    &lt;el-carousel trigger=&quot;click&quot; height=&quot;150px&quot;&gt;</span><br><span class="line">      &lt;el-carousel-item v-for=&quot;item in 4&quot; :key=&quot;item&quot;&gt;</span><br><span class="line">        &lt;h3 class=&quot;small justify-center&quot; text=&quot;2xl&quot;&gt;&#123;&#123; item &#125;&#125;&lt;/h3&gt;</span><br><span class="line">      &lt;/el-carousel-item&gt;</span><br><span class="line">    &lt;/el-carousel&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;style scoped&gt;</span><br><span class="line">.demonstration &#123;</span><br><span class="line">  color: var(--el-text-color-secondary);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.el-carousel__item h3 &#123;</span><br><span class="line">  color: #475669;</span><br><span class="line">  opacity: 0.75;</span><br><span class="line">  line-height: 150px;</span><br><span class="line">  margin: 0;</span><br><span class="line">  text-align: center;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.el-carousel__item:nth-child(2n) &#123;</span><br><span class="line">  background-color: #99a9bf;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.el-carousel__item:nth-child(2n + 1) &#123;</span><br><span class="line">  background-color: #d3dce6;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
                 </div>
 
@@ -541,7 +543,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E5%AE%98%E7%BD%91"><span class="nav-text">1 官网</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="nav-text">2 基本使用方法</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E5%AE%98%E7%BD%91"><span class="nav-text"> 1 官网</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="nav-text"> 2 基本使用方法</span></a></li></ol>
     </div>
 </div>
 
@@ -588,7 +590,7 @@
             
                 <span class="count-box border-box word">
                     <span class="item-type border-box">总字数</span>
-                    <span class="item-value border-box word">17.8k</span>
+                    <span class="item-value border-box word">17.4k</span>
                 </span>
             
 
@@ -740,7 +742,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E5%AE%98%E7%BD%91"><span class="nav-text">1 官网</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="nav-text">2 基本使用方法</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E5%AE%98%E7%BD%91"><span class="nav-text"> 1 官网</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="nav-text"> 2 基本使用方法</span></a></li></ol>
     </div>
 </div>
 
@@ -833,20 +835,5 @@
 
 
 
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </body>
 </html>
