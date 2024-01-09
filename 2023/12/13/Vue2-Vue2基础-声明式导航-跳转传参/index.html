@@ -9,7 +9,7 @@
     
     <title>
         
-            使用 VueUse 的 useScroll 判断页面滚动距离 |
+            声明式导航-跳转传参 |
         
         斑狸
     </title>
@@ -203,7 +203,7 @@
             <div class="post-content-bottom border-box">
                 
                     <div class="post-title">
-                        使用 VueUse 的 useScroll 判断页面滚动距离
+                        声明式导航-跳转传参
                     </div>
                 
 
@@ -231,13 +231,13 @@
         
             <span class="meta-info-item post-create-date">
                 <i class="icon fa-solid fa-calendar-check"></i>&nbsp;
-                <span class="pc">2024-01-03 12:25:36</span>
-                <span class="mobile">2024-01-03 12:25</span>
+                <span class="pc">2023-12-13 12:14:39</span>
+                <span class="mobile">2023-12-13 12:14</span>
             </span>
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="pc" data-updated="Wed Jan 03 2024 12:38:28 GMT+0800">2024-01-03 12:38:28</span>
+                <span class="pc" data-updated="Wed Dec 13 2023 12:48:01 GMT+0800">2023-12-13 12:48:01</span>
             </span>
         
 
@@ -245,10 +245,10 @@
             <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
                 <ul class="post-category-ul">
                     
-                            <li class="category-item"><a href="/categories/Vue3/">Vue3</a></li>
+                            <li class="category-item"><a href="/categories/Vue2/">Vue2</a></li>
                         
                     
-                            <li class="category-item">&nbsp;<i class="icon fas fa-angle-right"></i>&nbsp;<a href="/categories/Vue3/VueUse/">VueUse</a></li>
+                            <li class="category-item">&nbsp;<i class="icon fas fa-angle-right"></i>&nbsp;<a href="/categories/Vue2/Vue2-%E5%9F%BA%E7%A1%80/">Vue2 基础</a></li>
                         
                     
                 </ul>
@@ -260,10 +260,7 @@
                 <i class="icon fas fa-tags"></i>&nbsp;
                 <ul class="post-tag-ul">
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/Vue3/">Vue3</a></li>
-                        
-                    
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/VueUse/">VueUse</a></li>
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/Vue2/">Vue2</a></li>
                         
                     
                 </ul>
@@ -273,7 +270,7 @@
         
         
             <span class="meta-info-item post-wordcount">
-                <i class="icon fas fa-file-word"></i>&nbsp;<span>127 字</span>
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>317 字</span>
             </span>
         
         
@@ -299,10 +296,15 @@
                 <div class="post-content keep-markdown-body">
                     
 
-                    <h5 id="1-注册安装"><a href="#1-注册安装" class="headerlink" title="1 注册安装"></a>1 注册安装</h5><p>官网：<a class="link"   target="_blank" rel="noopener" href="https://www.vueusejs.com/core/useScroll/" >https://www.vueusejs.com/core/useScroll/<i class="fas fa-external-link-alt"></i></a></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i @vueuse/core</span><br></pre></td></tr></table></figure>
-<h5 id="2-使用方法"><a href="#2-使用方法" class="headerlink" title="2 使用方法"></a>2 使用方法</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;script setup lang=&quot;ts&quot;&gt;</span><br><span class="line">import &#123; useScroll &#125; from &#x27;@vueuse/core&#x27;</span><br><span class="line"></span><br><span class="line">const el = ref&lt;HTMLElement | null&gt;(null)</span><br><span class="line">const &#123; x, y, isScrolling, arrivedState, directions &#125; = useScroll(el)</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div ref=&quot;el&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;script setup&gt;</span><br><span class="line">// vueUse</span><br><span class="line">import &#123; useScroll &#125; from &#x27;@vueuse/core&#x27;</span><br><span class="line">const &#123; y &#125; = useScroll(window)</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div class=&quot;app-header-sticky&quot; :class=&quot;&#123; show: y &gt; 78 &#125;&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure>
+                    <h5 id="1-查询参数传参"><a href="#1-查询参数传参" class="headerlink" title="1 查询参数传参"></a>1 查询参数传参</h5><h6 id="1-1-配置动态路由"><a href="#1-1-配置动态路由" class="headerlink" title="1.1 配置动态路由"></a>1.1 配置动态路由</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// router/index.js中</span></span><br><span class="line"><span class="keyword">const</span> router = <span class="keyword">new</span> <span class="title class_">VueRouter</span>(&#123;</span><br><span class="line">  <span class="attr">routes</span>: [</span><br><span class="line">    ...,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">path</span>: <span class="string">&#x27;/search&#x27;</span>,</span><br><span class="line">      <span class="attr">component</span>: <span class="title class_">Search</span></span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h6 id="1-2-配置导航链接"><a href="#1-2-配置导航链接" class="headerlink" title="1.2 配置导航链接"></a>1.2 配置导航链接</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">to=<span class="string">&quot;/search?参数名=参数值&quot;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h6 id="1-3-对应组件接收传递过来的值"><a href="#1-3-对应组件接收传递过来的值" class="headerlink" title="1.3 对应组件接收传递过来的值"></a>1.3 对应组件接收传递过来的值</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$route.<span class="property">query</span>.参数名</span><br></pre></td></tr></table></figure>
+<h5 id="2-动态路由传参"><a href="#2-动态路由传参" class="headerlink" title="2 动态路由传参"></a>2 动态路由传参</h5><h6 id="2-1-配置动态路由"><a href="#2-1-配置动态路由" class="headerlink" title="2.1 配置动态路由"></a>2.1 配置动态路由</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// router/index.js中</span></span><br><span class="line"><span class="keyword">const</span> router = <span class="keyword">new</span> <span class="title class_">VueRouter</span>(&#123;</span><br><span class="line">  <span class="attr">routes</span>: [</span><br><span class="line">    ...,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">path</span>: <span class="string">&#x27;/search/:参数名&#x27;</span>,</span><br><span class="line">      <span class="attr">component</span>: <span class="title class_">Search</span></span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h6 id="2-2-配置导航链接"><a href="#2-2-配置导航链接" class="headerlink" title="2.2 配置导航链接"></a>2.2 配置导航链接</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">to=<span class="string">&quot;/search/参数值&quot;</span></span><br></pre></td></tr></table></figure>
+<h6 id="2-3-对应组件接收传递过来的值"><a href="#2-3-对应组件接收传递过来的值" class="headerlink" title="2.3 对应组件接收传递过来的值"></a>2.3 对应组件接收传递过来的值</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$route.<span class="property">params</span>.参数名</span><br></pre></td></tr></table></figure>
+<h5 id="3-两种传参方式的区别"><a href="#3-两种传参方式的区别" class="headerlink" title="3 两种传参方式的区别"></a>3 两种传参方式的区别</h5><h6 id="3-1-查询参数传参"><a href="#3-1-查询参数传参" class="headerlink" title="3.1 查询参数传参"></a>3.1 查询参数传参</h6><p>比较适合传多个参数<br>跳转：<code>to=&quot;/path?参数名1=参数值1&amp;参数名2=参数值2&quot;</code><br>获取：<code>$route.query.参数名</code></p>
+<h6 id="3-2-动态路由传参"><a href="#3-2-动态路由传参" class="headerlink" title="3.2 动态路由传参"></a>3.2 动态路由传参</h6><p>传单个参数比较方便<br>配置动态路由：<code>path: &quot;/path/:参数名&quot;</code><br>跳转：<code>to=&quot;/path/参数值&quot;</code><br>获取：<code>$route.params.参数名</code></p>
+<h5 id="4-小问题"><a href="#4-小问题" class="headerlink" title="4 小问题"></a>4 小问题</h5><p>问题：配置了路由<code>path:&quot;/path/:id&quot;</code>，为什么<code>to=&quot;/path&quot;</code>，会未匹配到组件，显示空白？<br>原因：<code>/path/:id</code>表示必须要传参，如果不传参也希望匹配，可以加个可选符“？”，<code>&#123;path: &quot;/path/:id?&quot;, component: ...&#125;</code></p>
 
                 </div>
 
@@ -312,11 +314,11 @@
     <div class="copyright-info-content border-box">
         <div class="copyright-info-top border-box">
             <div class="copyright-post-title border-box text-ellipsis">
-                使用 VueUse 的 useScroll 判断页面滚动距离
+                声明式导航-跳转传参
             </div>
 
             <div class="copyright-post-link border-box text-ellipsis">
-                2024/01/03/使用VueUse的useScroll判断页面滚动距离/
+                2023/12/13/Vue2-Vue2基础-声明式导航-跳转传参/
             </div>
         </div>
 
@@ -332,7 +334,7 @@
                 <div class="type">
                     发布于
                 </div>
-                <div class="content">2024-01-03 12:25</div>
+                <div class="content">2023-12-13 12:14</div>
             </div>
 
 
@@ -366,11 +368,7 @@
                             <ul class="post-tags-box border-box">
                                 
                                     <li class="tag-item border-box">
-                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/Vue3/">Vue3</a>
-                                    </li>
-                                
-                                    <li class="tag-item border-box">
-                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/VueUse/">VueUse</a>
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/Vue2/">Vue2</a>
                                     </li>
                                 
                             </ul>
@@ -412,14 +410,14 @@
                             <div class="prev-post">
                                 <a class="prev"
                                    rel="prev"
-                                   href="/2024/01/04/elementPlus%E7%BB%84%E4%BB%B6-Carousel%E8%BD%AE%E6%92%AD%E5%9B%BE/"
-                                   title="ElementPlus 组件 - Carousel 轮播图"
+                                   href="/2023/12/13/Vue2-Vue2%E5%9F%BA%E7%A1%80-%E7%BC%96%E7%A8%8B%E5%BC%8F%E5%AF%BC%E8%88%AA/"
+                                   title="编程式导航"
                                 >
                                     <span class="left arrow-icon flex-center">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">ElementPlus 组件 - Carousel 轮播图</span>
+                                        <span class="post-nav-title-item text-ellipsis">编程式导航</span>
                                         <span class="post-nav-item">上一篇</span>
                                     </span>
                                 </a>
@@ -429,11 +427,11 @@
                             <div class="next-post">
                                 <a class="next"
                                    rel="next"
-                                   href="/2024/01/02/Vue3%E4%B8%ADrouter-index-js%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/"
-                                   title="Vue3 中 router/index.js 基础配置"
+                                   href="/2023/12/13/props%E4%B8%AD%E9%BB%98%E8%AE%A4%E4%B8%BA%E5%AF%B9%E8%B1%A1%E6%97%B6%E7%9A%84%E5%86%99%E6%B3%95/"
+                                   title="props中默认为对象时的写法"
                                 >
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">Vue3 中 router/index.js 基础配置</span>
+                                        <span class="post-nav-title-item text-ellipsis">props中默认为对象时的写法</span>
                                         <span class="post-nav-item">下一篇</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
@@ -543,7 +541,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E6%B3%A8%E5%86%8C%E5%AE%89%E8%A3%85"><span class="nav-text">1 注册安装</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="nav-text">2 使用方法</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E6%9F%A5%E8%AF%A2%E5%8F%82%E6%95%B0%E4%BC%A0%E5%8F%82"><span class="nav-text">1 查询参数传参</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#1-1-%E9%85%8D%E7%BD%AE%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1"><span class="nav-text">1.1 配置动态路由</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#1-2-%E9%85%8D%E7%BD%AE%E5%AF%BC%E8%88%AA%E9%93%BE%E6%8E%A5"><span class="nav-text">1.2 配置导航链接</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#1-3-%E5%AF%B9%E5%BA%94%E7%BB%84%E4%BB%B6%E6%8E%A5%E6%94%B6%E4%BC%A0%E9%80%92%E8%BF%87%E6%9D%A5%E7%9A%84%E5%80%BC"><span class="nav-text">1.3 对应组件接收传递过来的值</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1%E4%BC%A0%E5%8F%82"><span class="nav-text">2 动态路由传参</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#2-1-%E9%85%8D%E7%BD%AE%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1"><span class="nav-text">2.1 配置动态路由</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-2-%E9%85%8D%E7%BD%AE%E5%AF%BC%E8%88%AA%E9%93%BE%E6%8E%A5"><span class="nav-text">2.2 配置导航链接</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-3-%E5%AF%B9%E5%BA%94%E7%BB%84%E4%BB%B6%E6%8E%A5%E6%94%B6%E4%BC%A0%E9%80%92%E8%BF%87%E6%9D%A5%E7%9A%84%E5%80%BC"><span class="nav-text">2.3 对应组件接收传递过来的值</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-%E4%B8%A4%E7%A7%8D%E4%BC%A0%E5%8F%82%E6%96%B9%E5%BC%8F%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-text">3 两种传参方式的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#3-1-%E6%9F%A5%E8%AF%A2%E5%8F%82%E6%95%B0%E4%BC%A0%E5%8F%82"><span class="nav-text">3.1 查询参数传参</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#3-2-%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1%E4%BC%A0%E5%8F%82"><span class="nav-text">3.2 动态路由传参</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-%E5%B0%8F%E9%97%AE%E9%A2%98"><span class="nav-text">4 小问题</span></a></li></ol>
     </div>
 </div>
 
@@ -742,7 +740,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E6%B3%A8%E5%86%8C%E5%AE%89%E8%A3%85"><span class="nav-text">1 注册安装</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="nav-text">2 使用方法</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E6%9F%A5%E8%AF%A2%E5%8F%82%E6%95%B0%E4%BC%A0%E5%8F%82"><span class="nav-text">1 查询参数传参</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#1-1-%E9%85%8D%E7%BD%AE%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1"><span class="nav-text">1.1 配置动态路由</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#1-2-%E9%85%8D%E7%BD%AE%E5%AF%BC%E8%88%AA%E9%93%BE%E6%8E%A5"><span class="nav-text">1.2 配置导航链接</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#1-3-%E5%AF%B9%E5%BA%94%E7%BB%84%E4%BB%B6%E6%8E%A5%E6%94%B6%E4%BC%A0%E9%80%92%E8%BF%87%E6%9D%A5%E7%9A%84%E5%80%BC"><span class="nav-text">1.3 对应组件接收传递过来的值</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1%E4%BC%A0%E5%8F%82"><span class="nav-text">2 动态路由传参</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#2-1-%E9%85%8D%E7%BD%AE%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1"><span class="nav-text">2.1 配置动态路由</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-2-%E9%85%8D%E7%BD%AE%E5%AF%BC%E8%88%AA%E9%93%BE%E6%8E%A5"><span class="nav-text">2.2 配置导航链接</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-3-%E5%AF%B9%E5%BA%94%E7%BB%84%E4%BB%B6%E6%8E%A5%E6%94%B6%E4%BC%A0%E9%80%92%E8%BF%87%E6%9D%A5%E7%9A%84%E5%80%BC"><span class="nav-text">2.3 对应组件接收传递过来的值</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-%E4%B8%A4%E7%A7%8D%E4%BC%A0%E5%8F%82%E6%96%B9%E5%BC%8F%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-text">3 两种传参方式的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#3-1-%E6%9F%A5%E8%AF%A2%E5%8F%82%E6%95%B0%E4%BC%A0%E5%8F%82"><span class="nav-text">3.1 查询参数传参</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#3-2-%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1%E4%BC%A0%E5%8F%82"><span class="nav-text">3.2 动态路由传参</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-%E5%B0%8F%E9%97%AE%E9%A2%98"><span class="nav-text">4 小问题</span></a></li></ol>
     </div>
 </div>
 

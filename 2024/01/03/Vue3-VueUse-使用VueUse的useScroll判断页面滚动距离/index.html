@@ -9,7 +9,7 @@
     
     <title>
         
-            响应拦截器统一处理错误 |
+            使用 VueUse 的 useScroll 判断页面滚动距离 |
         
         斑狸
     </title>
@@ -203,7 +203,7 @@
             <div class="post-content-bottom border-box">
                 
                     <div class="post-title">
-                        响应拦截器统一处理错误
+                        使用 VueUse 的 useScroll 判断页面滚动距离
                     </div>
                 
 
@@ -231,13 +231,13 @@
         
             <span class="meta-info-item post-create-date">
                 <i class="icon fa-solid fa-calendar-check"></i>&nbsp;
-                <span class="pc">2023-12-12 09:51:06</span>
-                <span class="mobile">2023-12-12 09:51</span>
+                <span class="pc">2024-01-03 12:25:36</span>
+                <span class="mobile">2024-01-03 12:25</span>
             </span>
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="pc" data-updated="Fri Dec 15 2023 11:53:15 GMT+0800">2023-12-15 11:53:15</span>
+                <span class="pc" data-updated="Wed Jan 03 2024 12:38:28 GMT+0800">2024-01-03 12:38:28</span>
             </span>
         
 
@@ -245,10 +245,10 @@
             <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
                 <ul class="post-category-ul">
                     
-                            <li class="category-item"><a href="/categories/Vue2/">Vue2</a></li>
+                            <li class="category-item"><a href="/categories/Vue3/">Vue3</a></li>
                         
                     
-                            <li class="category-item">&nbsp;<i class="icon fas fa-angle-right"></i>&nbsp;<a href="/categories/Vue2/Vue2-%E5%9F%BA%E7%A1%80/">Vue2 基础</a></li>
+                            <li class="category-item">&nbsp;<i class="icon fas fa-angle-right"></i>&nbsp;<a href="/categories/Vue3/VueUse/">VueUse</a></li>
                         
                     
                 </ul>
@@ -260,10 +260,10 @@
                 <i class="icon fas fa-tags"></i>&nbsp;
                 <ul class="post-tag-ul">
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/Vue2/">Vue2</a></li>
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/Vue3/">Vue3</a></li>
                         
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/Axios/">Axios</a></li>
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/VueUse/">VueUse</a></li>
                         
                     
                 </ul>
@@ -273,7 +273,7 @@
         
         
             <span class="meta-info-item post-wordcount">
-                <i class="icon fas fa-file-word"></i>&nbsp;<span>99 字</span>
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>127 字</span>
             </span>
         
         
@@ -299,8 +299,10 @@
                 <div class="post-content keep-markdown-body">
                     
 
-                    <h5 id="1-配置-Axios"><a href="#1-配置-Axios" class="headerlink" title="1 配置 Axios"></a>1 配置 Axios</h5><p>参考方法：<a class="link"   target="_blank" rel="noopener" href="https://banlixxx.github.io/2023/12/10/axios%E5%B0%81%E8%A3%85/" >Axios 封装<i class="fas fa-external-link-alt"></i></a></p>
-<h5 id="2-配置响应拦截器"><a href="#2-配置响应拦截器" class="headerlink" title="2 配置响应拦截器"></a>2 配置响应拦截器</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">Toast</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;vant&#x27;</span></span><br><span class="line"></span><br><span class="line">...</span><br><span class="line"></span><br><span class="line"><span class="comment">// 添加响应拦截器</span></span><br><span class="line">request.<span class="property">interceptors</span>.<span class="property">response</span>.<span class="title function_">use</span>(<span class="keyword">function</span> (<span class="params">response</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> res = response.<span class="property">data</span></span><br><span class="line">  <span class="keyword">if</span> (res.<span class="property">status</span> !== <span class="number">200</span>) &#123;</span><br><span class="line">    <span class="comment">// 给提示</span></span><br><span class="line">    <span class="title class_">Toast</span>(res.<span class="property">message</span>)</span><br><span class="line">    <span class="comment">// 抛出一个错误的Promise</span></span><br><span class="line">    <span class="keyword">return</span> <span class="title class_">Promise</span>.<span class="title function_">reject</span>(res.<span class="property">message</span>)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// 对响应数据做点什么</span></span><br><span class="line">  <span class="keyword">return</span> res</span><br><span class="line">&#125;, <span class="keyword">function</span> (<span class="params">error</span>) &#123;</span><br><span class="line">  <span class="comment">// 对响应错误做点什么</span></span><br><span class="line">  <span class="keyword">return</span> <span class="title class_">Promise</span>.<span class="title function_">reject</span>(error)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+                    <h5 id="1-注册安装"><a href="#1-注册安装" class="headerlink" title="1 注册安装"></a>1 注册安装</h5><p>官网：<a class="link"   target="_blank" rel="noopener" href="https://www.vueusejs.com/core/useScroll/" >https://www.vueusejs.com/core/useScroll/<i class="fas fa-external-link-alt"></i></a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i @vueuse/core</span><br></pre></td></tr></table></figure>
+<h5 id="2-使用方法"><a href="#2-使用方法" class="headerlink" title="2 使用方法"></a>2 使用方法</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;script setup lang=&quot;ts&quot;&gt;</span><br><span class="line">import &#123; useScroll &#125; from &#x27;@vueuse/core&#x27;</span><br><span class="line"></span><br><span class="line">const el = ref&lt;HTMLElement | null&gt;(null)</span><br><span class="line">const &#123; x, y, isScrolling, arrivedState, directions &#125; = useScroll(el)</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div ref=&quot;el&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;script setup&gt;</span><br><span class="line">// vueUse</span><br><span class="line">import &#123; useScroll &#125; from &#x27;@vueuse/core&#x27;</span><br><span class="line">const &#123; y &#125; = useScroll(window)</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div class=&quot;app-header-sticky&quot; :class=&quot;&#123; show: y &gt; 78 &#125;&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure>
 
                 </div>
 
@@ -310,11 +312,11 @@
     <div class="copyright-info-content border-box">
         <div class="copyright-info-top border-box">
             <div class="copyright-post-title border-box text-ellipsis">
-                响应拦截器统一处理错误
+                使用 VueUse 的 useScroll 判断页面滚动距离
             </div>
 
             <div class="copyright-post-link border-box text-ellipsis">
-                2023/12/12/响应拦截器统一处理错误/
+                2024/01/03/Vue3-VueUse-使用VueUse的useScroll判断页面滚动距离/
             </div>
         </div>
 
@@ -330,7 +332,7 @@
                 <div class="type">
                     发布于
                 </div>
-                <div class="content">2023-12-12 09:51</div>
+                <div class="content">2024-01-03 12:25</div>
             </div>
 
 
@@ -364,11 +366,11 @@
                             <ul class="post-tags-box border-box">
                                 
                                     <li class="tag-item border-box">
-                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/Vue2/">Vue2</a>
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/Vue3/">Vue3</a>
                                     </li>
                                 
                                     <li class="tag-item border-box">
-                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/Axios/">Axios</a>
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/VueUse/">VueUse</a>
                                     </li>
                                 
                             </ul>
@@ -410,14 +412,14 @@
                             <div class="prev-post">
                                 <a class="prev"
                                    rel="prev"
-                                   href="/2023/12/12/vuex%E6%9E%84%E5%BB%BA%E5%AD%90%E6%A8%A1%E5%9D%97/"
-                                   title="Vuex 构建子模块"
+                                   href="/2024/01/04/elementPlus%E7%BB%84%E4%BB%B6-Carousel%E8%BD%AE%E6%92%AD%E5%9B%BE/"
+                                   title="ElementPlus 组件 - Carousel 轮播图"
                                 >
                                     <span class="left arrow-icon flex-center">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">Vuex 构建子模块</span>
+                                        <span class="post-nav-title-item text-ellipsis">ElementPlus 组件 - Carousel 轮播图</span>
                                         <span class="post-nav-item">上一篇</span>
                                     </span>
                                 </a>
@@ -427,11 +429,11 @@
                             <div class="next-post">
                                 <a class="next"
                                    rel="next"
-                                   href="/2023/12/11/XR-FRAME-%E5%9F%BA%E7%A1%80%E8%83%BD%E5%8A%9B-Geometry%E5%9F%BA%E7%A1%80%E5%9B%BE%E5%BD%A2/"
-                                   title="XR-FRAME - 基础能力 - Geometry 基础图形"
+                                   href="/2024/01/02/Vue3%E4%B8%ADrouter-index-js%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/"
+                                   title="Vue3 中 router/index.js 基础配置"
                                 >
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">XR-FRAME - 基础能力 - Geometry 基础图形</span>
+                                        <span class="post-nav-title-item text-ellipsis">Vue3 中 router/index.js 基础配置</span>
                                         <span class="post-nav-item">下一篇</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
@@ -541,7 +543,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E9%85%8D%E7%BD%AE-Axios"><span class="nav-text">1 配置 Axios</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E9%85%8D%E7%BD%AE%E5%93%8D%E5%BA%94%E6%8B%A6%E6%88%AA%E5%99%A8"><span class="nav-text">2 配置响应拦截器</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E6%B3%A8%E5%86%8C%E5%AE%89%E8%A3%85"><span class="nav-text">1 注册安装</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="nav-text">2 使用方法</span></a></li></ol>
     </div>
 </div>
 
@@ -740,7 +742,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E9%85%8D%E7%BD%AE-Axios"><span class="nav-text">1 配置 Axios</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E9%85%8D%E7%BD%AE%E5%93%8D%E5%BA%94%E6%8B%A6%E6%88%AA%E5%99%A8"><span class="nav-text">2 配置响应拦截器</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E6%B3%A8%E5%86%8C%E5%AE%89%E8%A3%85"><span class="nav-text">1 注册安装</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="nav-text">2 使用方法</span></a></li></ol>
     </div>
 </div>
 

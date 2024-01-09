@@ -9,7 +9,7 @@
     
     <title>
         
-            全局前置导航守卫 |
+            使用 Vant 组件库实现底部导航 Tabbar |
         
         斑狸
     </title>
@@ -203,7 +203,7 @@
             <div class="post-content-bottom border-box">
                 
                     <div class="post-title">
-                        全局前置导航守卫
+                        使用 Vant 组件库实现底部导航 Tabbar
                     </div>
                 
 
@@ -231,13 +231,13 @@
         
             <span class="meta-info-item post-create-date">
                 <i class="icon fa-solid fa-calendar-check"></i>&nbsp;
-                <span class="pc">2023-12-12 11:09:17</span>
-                <span class="mobile">2023-12-12 11:09</span>
+                <span class="pc">2023-12-08 10:26:05</span>
+                <span class="mobile">2023-12-08 10:26</span>
             </span>
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="pc" data-updated="Tue Dec 12 2023 11:47:26 GMT+0800">2023-12-12 11:47:26</span>
+                <span class="pc" data-updated="Fri Dec 08 2023 10:59:17 GMT+0800">2023-12-08 10:59:17</span>
             </span>
         
 
@@ -248,7 +248,7 @@
                             <li class="category-item"><a href="/categories/Vue2/">Vue2</a></li>
                         
                     
-                            <li class="category-item">&nbsp;<i class="icon fas fa-angle-right"></i>&nbsp;<a href="/categories/Vue2/Vue2-%E5%9F%BA%E7%A1%80/">Vue2 基础</a></li>
+                            <li class="category-item">&nbsp;<i class="icon fas fa-angle-right"></i>&nbsp;<a href="/categories/Vue2/Vant-%E7%BB%84%E4%BB%B6%E5%BA%93/">Vant 组件库</a></li>
                         
                     
                 </ul>
@@ -263,7 +263,10 @@
                             <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/Vue2/">Vue2</a></li>
                         
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/vue-router/">vue-router</a></li>
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/Tabbar/">Tabbar</a></li>
+                        
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/Vant-%E7%BB%84%E4%BB%B6%E5%BA%93/">Vant 组件库</a></li>
                         
                     
                 </ul>
@@ -273,7 +276,7 @@
         
         
             <span class="meta-info-item post-wordcount">
-                <i class="icon fas fa-file-word"></i>&nbsp;<span>194 字</span>
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>216 字</span>
             </span>
         
         
@@ -299,10 +302,11 @@
                 <div class="post-content keep-markdown-body">
                     
 
-                    <h5 id="1-配置-vue-router"><a href="#1-配置-vue-router" class="headerlink" title="1 配置 vue-router"></a>1 配置 vue-router</h5><p>参考方法：<a class="link"   target="_blank" rel="noopener" href="https://banlixxx.github.io/2023/12/07/Vue2%E4%B8%ADrouter-index-js%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/" >Vue2 中 router/index.js 基础配置<i class="fas fa-external-link-alt"></i></a></p>
-<h5 id="2-配置全局导航守卫"><a href="#2-配置全局导航守卫" class="headerlink" title="2 配置全局导航守卫"></a>2 配置全局导航守卫</h5><p>官网：<a class="link"   target="_blank" rel="noopener" href="https://router.vuejs.org/zh/guide/advanced/navigation-guards.html" >https://router.vuejs.org/zh/guide/advanced/navigation-guards.html<i class="fas fa-external-link-alt"></i></a></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> router = <span class="keyword">new</span> <span class="title class_">VueRouter</span>(&#123;......&#125;)</span><br><span class="line"></span><br><span class="line">router.<span class="title function_">beforeEach</span>(<span class="function">(<span class="params">to, <span class="keyword">from</span>, next</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">// 1. to   往哪里去， 到哪去的路由信息对象</span></span><br><span class="line">  <span class="comment">//    to.path 跳转路径</span></span><br><span class="line">  <span class="comment">//    to.fullPath 包含查询参数的跳转路径</span></span><br><span class="line">  <span class="comment">// 2. from 从哪里来， 从哪来的路由信息对象</span></span><br><span class="line">  <span class="comment">// 3. next() 是否放行</span></span><br><span class="line">  <span class="comment">//    如果next()调用，就是放行</span></span><br><span class="line">  <span class="comment">//    next(路径) 拦截到某个路径页面</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> router</span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> store <span class="keyword">from</span> <span class="string">&#x27;@/store&#x27;</span></span><br><span class="line"></span><br><span class="line">.....</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> authUrl = [<span class="string">&#x27;/pay&#x27;</span>, <span class="string">&#x27;/myorder&#x27;</span>]</span><br><span class="line">router.<span class="title function_">beforeEach</span>(<span class="function">(<span class="params">to, <span class="keyword">from</span>, next</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> token = store.<span class="property">state</span>.<span class="property">user</span>.<span class="property">userInfo</span>.<span class="property">token</span></span><br><span class="line">  <span class="keyword">if</span> (!authUrl.<span class="title function_">includes</span>(to.<span class="property">path</span>)) &#123;</span><br><span class="line">    <span class="title function_">next</span>()</span><br><span class="line">    <span class="keyword">return</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// 跳转权限页，判断有无token</span></span><br><span class="line">  <span class="keyword">if</span> (token) &#123;</span><br><span class="line">    <span class="title function_">next</span>()</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="title function_">next</span>(<span class="string">&#x27;/login&#x27;</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+                    <h6 id="1-vant-ui-js-按需引入"><a href="#1-vant-ui-js-按需引入" class="headerlink" title="1 vant-ui,js 按需引入"></a>1 vant-ui,js 按需引入</h6><p>官方地址：<a class="link"   target="_blank" rel="noopener" href="https://vant-contrib.gitee.io/vant/v2/#/zh-CN/tabbar" >https://vant-contrib.gitee.io/vant/v2/#/zh-CN/tabbar<i class="fas fa-external-link-alt"></i></a></p>
+<p>icon图标：<a class="link"   target="_blank" rel="noopener" href="https://vant-contrib.gitee.io/vant/v2/#/zh-CN/icon" >https://vant-contrib.gitee.io/vant/v2/#/zh-CN/icon<i class="fas fa-external-link-alt"></i></a></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">Vue</span> <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">Tabbar</span>, <span class="title class_">TabbarItem</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;vant&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="title class_">Vue</span>.<span class="title function_">use</span>(<span class="title class_">Tabbar</span>)</span><br><span class="line"><span class="title class_">Vue</span>.<span class="title function_">use</span>(<span class="title class_">TabbarItem</span>)</span><br></pre></td></tr></table></figure>
+<h6 id="2-组件中使用"><a href="#2-组件中使用" class="headerlink" title="2 组件中使用"></a>2 组件中使用</h6><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">van-tabbar</span> <span class="attr">v-model</span>=<span class="string">&quot;active&quot;</span> <span class="attr">active-color</span>=<span class="string">&quot;#ee0a24&quot;</span> <span class="attr">inactive-color</span>=<span class="string">&quot;#000&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">van-tabbar-item</span> <span class="attr">icon</span>=<span class="string">&quot;home-o&quot;</span>&gt;</span>标签<span class="tag">&lt;/<span class="name">van-tabbar-item</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">van-tabbar-item</span> <span class="attr">icon</span>=<span class="string">&quot;search&quot;</span>&gt;</span>标签<span class="tag">&lt;/<span class="name">van-tabbar-item</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">van-tabbar-item</span> <span class="attr">icon</span>=<span class="string">&quot;friends-o&quot;</span>&gt;</span>标签<span class="tag">&lt;/<span class="name">van-tabbar-item</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">van-tabbar-item</span> <span class="attr">icon</span>=<span class="string">&quot;setting-o&quot;</span>&gt;</span>标签<span class="tag">&lt;/<span class="name">van-tabbar-item</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">van-tabbar</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 路由模式 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">router-view</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">van-tabbar</span> <span class="attr">route</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">van-tabbar-item</span> <span class="attr">replace</span> <span class="attr">to</span>=<span class="string">&quot;/home&quot;</span> <span class="attr">icon</span>=<span class="string">&quot;home-o&quot;</span>&gt;</span>标签<span class="tag">&lt;/<span class="name">van-tabbar-item</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">van-tabbar-item</span> <span class="attr">replace</span> <span class="attr">to</span>=<span class="string">&quot;/search&quot;</span> <span class="attr">icon</span>=<span class="string">&quot;search&quot;</span>&gt;</span>标签<span class="tag">&lt;/<span class="name">van-tabbar-item</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">van-tabbar</span>&gt;</span></span><br></pre></td></tr></table></figure>
                 </div>
 
                 
@@ -311,11 +315,11 @@
     <div class="copyright-info-content border-box">
         <div class="copyright-info-top border-box">
             <div class="copyright-post-title border-box text-ellipsis">
-                全局前置导航守卫
+                使用 Vant 组件库实现底部导航 Tabbar
             </div>
 
             <div class="copyright-post-link border-box text-ellipsis">
-                2023/12/12/全局前置导航守卫/
+                2023/12/08/Vue2-Vant组件库-使用vant组件库实现底部导航tabbar/
             </div>
         </div>
 
@@ -331,7 +335,7 @@
                 <div class="type">
                     发布于
                 </div>
-                <div class="content">2023-12-12 11:09</div>
+                <div class="content">2023-12-08 10:26</div>
             </div>
 
 
@@ -369,7 +373,11 @@
                                     </li>
                                 
                                     <li class="tag-item border-box">
-                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/vue-router/">vue-router</a>
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/Tabbar/">Tabbar</a>
+                                    </li>
+                                
+                                    <li class="tag-item border-box">
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/Vant-%E7%BB%84%E4%BB%B6%E5%BA%93/">Vant 组件库</a>
                                     </li>
                                 
                             </ul>
@@ -411,14 +419,14 @@
                             <div class="prev-post">
                                 <a class="prev"
                                    rel="prev"
-                                   href="/2023/12/12/vuex%E4%B8%AD%E4%B8%BB%E6%A8%A1%E5%9D%97%E8%B0%83%E7%94%A8%E5%AD%90%E6%A8%A1%E5%9D%97%E7%9A%84%E6%95%B0%E6%8D%AE/"
-                                   title="Vuex 中主模块调用子模块的数据"
+                                   href="/2023/12/08/Vue2-Vant%E7%BB%84%E4%BB%B6%E5%BA%93-%E4%BD%BF%E7%94%A8vant%E7%BB%84%E4%BB%B6%E5%BA%93%E5%AE%9E%E7%8E%B0%E9%A1%B6%E9%83%A8%E5%AF%BC%E8%88%AA%E6%A0%8Fnavbar/"
+                                   title="使用 Vant 组件库实现顶部导航栏 Navbar"
                                 >
                                     <span class="left arrow-icon flex-center">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">Vuex 中主模块调用子模块的数据</span>
+                                        <span class="post-nav-title-item text-ellipsis">使用 Vant 组件库实现顶部导航栏 Navbar</span>
                                         <span class="post-nav-item">上一篇</span>
                                     </span>
                                 </a>
@@ -428,11 +436,11 @@
                             <div class="next-post">
                                 <a class="next"
                                    rel="next"
-                                   href="/2023/12/12/%E7%BB%9F%E4%B8%80%E5%9C%A8%E6%AF%8F%E6%AC%A1%E8%AF%B7%E6%B1%82%E5%90%8E%E5%8F%B0%E6%97%B6%EF%BC%8C%E6%B7%BB%E5%8A%A0loading%E6%95%88%E6%9E%9C/"
-                                   title="统一在每次请求后台时，添加 loading 效果"
+                                   href="/2023/12/07/XR-FRAME%E6%A1%88%E4%BE%8B2DMarker-%E8%A7%86%E9%A2%91%EF%BC%8C%E8%AE%A9%E7%85%A7%E7%89%87%E5%8A%A8%E8%B5%B7%E6%9D%A5/"
+                                   title="XR-FRAME 案例 2DMarker+视频，让照片动起来"
                                 >
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">统一在每次请求后台时，添加 loading 效果</span>
+                                        <span class="post-nav-title-item text-ellipsis">XR-FRAME 案例 2DMarker+视频，让照片动起来</span>
                                         <span class="post-nav-item">下一篇</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
@@ -542,7 +550,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E9%85%8D%E7%BD%AE-vue-router"><span class="nav-text">1 配置 vue-router</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E9%85%8D%E7%BD%AE%E5%85%A8%E5%B1%80%E5%AF%BC%E8%88%AA%E5%AE%88%E5%8D%AB"><span class="nav-text">2 配置全局导航守卫</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#1-vant-ui-js-%E6%8C%89%E9%9C%80%E5%BC%95%E5%85%A5"><span class="nav-text">1 vant-ui,js 按需引入</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-%E7%BB%84%E4%BB%B6%E4%B8%AD%E4%BD%BF%E7%94%A8"><span class="nav-text">2 组件中使用</span></a></li></ol>
     </div>
 </div>
 
@@ -741,7 +749,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E9%85%8D%E7%BD%AE-vue-router"><span class="nav-text">1 配置 vue-router</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E9%85%8D%E7%BD%AE%E5%85%A8%E5%B1%80%E5%AF%BC%E8%88%AA%E5%AE%88%E5%8D%AB"><span class="nav-text">2 配置全局导航守卫</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#1-vant-ui-js-%E6%8C%89%E9%9C%80%E5%BC%95%E5%85%A5"><span class="nav-text">1 vant-ui,js 按需引入</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-%E7%BB%84%E4%BB%B6%E4%B8%AD%E4%BD%BF%E7%94%A8"><span class="nav-text">2 组件中使用</span></a></li></ol>
     </div>
 </div>
 

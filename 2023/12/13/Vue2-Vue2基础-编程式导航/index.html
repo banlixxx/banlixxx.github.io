@@ -9,7 +9,7 @@
     
     <title>
         
-            图片懒加载指令实现 |
+            编程式导航 |
         
         斑狸
     </title>
@@ -203,7 +203,7 @@
             <div class="post-content-bottom border-box">
                 
                     <div class="post-title">
-                        图片懒加载指令实现
+                        编程式导航
                     </div>
                 
 
@@ -231,13 +231,13 @@
         
             <span class="meta-info-item post-create-date">
                 <i class="icon fa-solid fa-calendar-check"></i>&nbsp;
-                <span class="pc">2024-01-08 14:37:01</span>
-                <span class="mobile">2024-01-08 14:37</span>
+                <span class="pc">2023-12-13 14:03:04</span>
+                <span class="mobile">2023-12-13 14:03</span>
             </span>
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="pc" data-updated="Mon Jan 08 2024 15:48:49 GMT+0800">2024-01-08 15:48:49</span>
+                <span class="pc" data-updated="Thu Dec 14 2023 10:45:37 GMT+0800">2023-12-14 10:45:37</span>
             </span>
         
 
@@ -245,10 +245,10 @@
             <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
                 <ul class="post-category-ul">
                     
-                            <li class="category-item"><a href="/categories/Vue3/">Vue3</a></li>
+                            <li class="category-item"><a href="/categories/Vue2/">Vue2</a></li>
                         
                     
-                            <li class="category-item">&nbsp;<i class="icon fas fa-angle-right"></i>&nbsp;<a href="/categories/Vue3/Vue3-%E5%9F%BA%E7%A1%80/">Vue3 基础</a></li>
+                            <li class="category-item">&nbsp;<i class="icon fas fa-angle-right"></i>&nbsp;<a href="/categories/Vue2/Vue2-%E5%9F%BA%E7%A1%80/">Vue2 基础</a></li>
                         
                     
                 </ul>
@@ -260,10 +260,7 @@
                 <i class="icon fas fa-tags"></i>&nbsp;
                 <ul class="post-tag-ul">
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/Vue3/">Vue3</a></li>
-                        
-                    
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/VueUse/">VueUse</a></li>
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/Vue2/">Vue2</a></li>
                         
                     
                 </ul>
@@ -273,12 +270,12 @@
         
         
             <span class="meta-info-item post-wordcount">
-                <i class="icon fas fa-file-word"></i>&nbsp;<span>253 字</span>
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>481 字</span>
             </span>
         
         
             <span class="meta-info-item post-min2read">
-                <i class="icon fas fa-clock"></i>&nbsp;<span>1 分钟</span>
+                <i class="icon fas fa-clock"></i>&nbsp;<span>2 分钟</span>
             </span>
         
         
@@ -299,13 +296,22 @@
                 <div class="post-content keep-markdown-body">
                     
 
-                    <h5 id="1-自定义懒加载指令"><a href="#1-自定义懒加载指令" class="headerlink" title="1 自定义懒加载指令"></a>1 自定义懒加载指令</h5><p>自定义指令官方文档：<a class="link"   target="_blank" rel="noopener" href="https://cn.vuejs.org/guide/reusability/custom-directives.html" >https://cn.vuejs.org/guide/reusability/custom-directives.html<i class="fas fa-external-link-alt"></i></a><br>VueUse 的 useIntersectionObserver 方法官方文档：<a class="link"   target="_blank" rel="noopener" href="https://www.vueusejs.com/core/useIntersectionObserver/" >https://www.vueusejs.com/core/useIntersectionObserver/<i class="fas fa-external-link-alt"></i></a></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// main.js</span></span><br><span class="line"><span class="comment">// 用到了VueUse的useIntersectionObserver方法</span></span><br><span class="line"><span class="keyword">import</span> &#123; useIntersectionObserver &#125; <span class="keyword">from</span> <span class="string">&#x27;@vueuse/core&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> app = <span class="title function_">createApp</span>(<span class="title class_">App</span>)</span><br><span class="line"></span><br><span class="line">app.<span class="title function_">directive</span>(<span class="string">&#x27;img-lazy&#x27;</span>, &#123;</span><br><span class="line">  <span class="title function_">mounted</span>(<span class="params">el, binding</span>) &#123;</span><br><span class="line">    <span class="comment">// console.log(el, binding.value)</span></span><br><span class="line">    <span class="keyword">const</span> &#123; stop &#125; = <span class="title function_">useIntersectionObserver</span>(el, <span class="function">(<span class="params">[&#123; isIntersecting &#125;]</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="comment">// console.log(isIntersecting)</span></span><br><span class="line">      <span class="keyword">if</span> (isIntersecting) &#123;</span><br><span class="line">        el.<span class="property">src</span> = binding.<span class="property">value</span></span><br><span class="line">        <span class="title function_">stop</span>()</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 组件中使用</span><br><span class="line">&lt;img v-img-lazy=&quot;item.picture&quot; alt=&quot;&quot; /&gt;</span><br></pre></td></tr></table></figure>
-<h5 id="2-把自定义指令抽离成一个插件"><a href="#2-把自定义指令抽离成一个插件" class="headerlink" title="2 把自定义指令抽离成一个插件"></a>2 把自定义指令抽离成一个插件</h5><p>自定义插件官方文档：<a class="link"   target="_blank" rel="noopener" href="https://cn.vuejs.org/guide/reusability/plugins.html" >https://cn.vuejs.org/guide/reusability/plugins.html<i class="fas fa-external-link-alt"></i></a></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/directives/index.js</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 定义懒加载插件</span></span><br><span class="line"><span class="keyword">import</span> &#123; useIntersectionObserver &#125; <span class="keyword">from</span> <span class="string">&#x27;@vueuse/core&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> lazyPlugin = &#123;</span><br><span class="line">  <span class="title function_">install</span>(<span class="params">app</span>) &#123;</span><br><span class="line">    <span class="comment">// 懒加载指令逻辑</span></span><br><span class="line">    app.<span class="title function_">directive</span>(<span class="string">&#x27;img-lazy&#x27;</span>, &#123;</span><br><span class="line">      <span class="title function_">mounted</span>(<span class="params">el, binding</span>) &#123;</span><br><span class="line">        <span class="comment">// console.log(el, binding.value)</span></span><br><span class="line">        <span class="keyword">const</span> &#123; stop &#125; = <span class="title function_">useIntersectionObserver</span>(el, <span class="function">(<span class="params">[&#123; isIntersecting &#125;]</span>) =&gt;</span> &#123;</span><br><span class="line">          <span class="variable language_">console</span>.<span class="title function_">log</span>(isIntersecting)</span><br><span class="line">          <span class="keyword">if</span> (isIntersecting) &#123;</span><br><span class="line">            el.<span class="property">src</span> = binding.<span class="property">value</span></span><br><span class="line">            <span class="title function_">stop</span>()</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// main.js</span></span><br><span class="line"><span class="keyword">import</span> &#123; lazyPlugin &#125; <span class="keyword">from</span> <span class="string">&#x27;@/directives/index.js&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> app = <span class="title function_">createApp</span>(<span class="title class_">App</span>)</span><br><span class="line">app.<span class="title function_">use</span>(lazyPlugin)</span><br><span class="line"><span class="comment">// ......</span></span><br></pre></td></tr></table></figure>
-
+                    <h4 id="1-基本跳转"><a href="#1-基本跳转" class="headerlink" title="1 基本跳转"></a>1 基本跳转</h4><h5 id="1-1-path-路径跳转"><a href="#1-1-path-路径跳转" class="headerlink" title="1.1 path 路径跳转"></a>1.1 path 路径跳转</h5><h6 id="1-1-1-配置路由"><a href="#1-1-1-配置路由" class="headerlink" title="1.1.1 配置路由"></a>1.1.1 配置路由</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// router/index.js中</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="attr">path</span>: <span class="string">&#x27;/path&#x27;</span>,</span><br><span class="line">  <span class="attr">component</span>: ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h6 id="1-1-2-路径跳转"><a href="#1-1-2-路径跳转" class="headerlink" title="1.1.2 路径跳转"></a>1.1.2 路径跳转</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">this</span>.<span class="property">$router</span>.<span class="title function_">push</span>(<span class="string">&#x27;/path&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<h5 id="1-2-name-命名路由跳转"><a href="#1-2-name-命名路由跳转" class="headerlink" title="1.2 name 命名路由跳转"></a>1.2 name 命名路由跳转</h5><h6 id="1-2-1-配置路由"><a href="#1-2-1-配置路由" class="headerlink" title="1.2.1 配置路由"></a>1.2.1 配置路由</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// router/index.js中</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&#x27;路由名&#x27;</span>,</span><br><span class="line">  <span class="attr">path</span>: <span class="string">&#x27;/path&#x27;</span>,</span><br><span class="line">  <span class="attr">component</span>: ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h6 id="1-2-2-路由跳转"><a href="#1-2-2-路由跳转" class="headerlink" title="1.2.2 路由跳转"></a>1.2.2 路由跳转</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">this</span>.<span class="property">$router</span>.<span class="title function_">push</span>(&#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&#x27;路由名&#x27;</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h4 id="2-路由传参"><a href="#2-路由传参" class="headerlink" title="2 路由传参"></a>2 路由传参</h4><h5 id="2-1-path-路径跳转传参-查询参数传参"><a href="#2-1-path-路径跳转传参-查询参数传参" class="headerlink" title="2.1 path 路径跳转传参 - 查询参数传参"></a>2.1 path 路径跳转传参 - 查询参数传参</h5><h6 id="2-1-1-配置路由"><a href="#2-1-1-配置路由" class="headerlink" title="2.1.1 配置路由"></a>2.1.1 配置路由</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">path</span>: <span class="string">&#x27;/path&#x27;</span>,</span><br><span class="line">  <span class="attr">component</span>: ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h6 id="2-1-2-跳转传参"><a href="#2-1-2-跳转传参" class="headerlink" title="2.1.2 跳转传参"></a>2.1.2 跳转传参</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">this</span>.<span class="property">$router</span>.<span class="title function_">push</span>(<span class="string">&#x27;/path?参数名1=参数值1&amp;参数名2=参数值2&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 或者</span></span><br><span class="line"><span class="variable language_">this</span>.<span class="property">$router</span>.<span class="title function_">push</span>(&#123;</span><br><span class="line">  <span class="attr">path</span>: <span class="string">&#x27;/path&#x27;</span>,</span><br><span class="line">  <span class="attr">query</span>: &#123;</span><br><span class="line">    参数名<span class="number">1</span>: 参数值<span class="number">1</span>,</span><br><span class="line">    参数名<span class="number">2</span>: 参数值<span class="number">2</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h6 id="2-1-3-对应组件接收传递过来的值"><a href="#2-1-3-对应组件接收传递过来的值" class="headerlink" title="2.1.3 对应组件接收传递过来的值"></a>2.1.3 对应组件接收传递过来的值</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$route.<span class="property">query</span>.参数名</span><br></pre></td></tr></table></figure>
+<h5 id="2-2-path-路径跳转传参-动态路由传参"><a href="#2-2-path-路径跳转传参-动态路由传参" class="headerlink" title="2.2 path 路径跳转传参 - 动态路由传参"></a>2.2 path 路径跳转传参 - 动态路由传参</h5><h6 id="2-2-1-配置路由"><a href="#2-2-1-配置路由" class="headerlink" title="2.2.1 配置路由"></a>2.2.1 配置路由</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">path</span>: <span class="string">&#x27;/path/:参数名&#x27;</span>,</span><br><span class="line">  <span class="attr">component</span>: ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h6 id="2-2-2-跳转传参"><a href="#2-2-2-跳转传参" class="headerlink" title="2.2.2 跳转传参"></a>2.2.2 跳转传参</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">this</span>.<span class="property">$router</span>.<span class="title function_">push</span>(<span class="string">&#x27;/path/参数值&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 或者</span></span><br><span class="line"><span class="variable language_">this</span>.<span class="property">$router</span>.<span class="title function_">push</span>(&#123;</span><br><span class="line">  <span class="attr">path</span>: <span class="string">&#x27;/path/参数值&#x27;</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h6 id="2-2-3-对应组件接收传递过来的值"><a href="#2-2-3-对应组件接收传递过来的值" class="headerlink" title="2.2.3 对应组件接收传递过来的值"></a>2.2.3 对应组件接收传递过来的值</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$route.<span class="property">params</span>.参数名</span><br></pre></td></tr></table></figure>
+<h5 id="2-3-name-命名路由跳转传参-查询参数传参"><a href="#2-3-name-命名路由跳转传参-查询参数传参" class="headerlink" title="2.3 name 命名路由跳转传参 - 查询参数传参"></a>2.3 name 命名路由跳转传参 - 查询参数传参</h5><h6 id="2-3-1-配置路由"><a href="#2-3-1-配置路由" class="headerlink" title="2.3.1 配置路由"></a>2.3.1 配置路由</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&#x27;路由名&#x27;</span>,</span><br><span class="line">  <span class="attr">path</span>: <span class="string">&#x27;/path&#x27;</span>,</span><br><span class="line">  <span class="attr">component</span>: ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h6 id="2-3-2-跳转传参"><a href="#2-3-2-跳转传参" class="headerlink" title="2.3.2 跳转传参"></a>2.3.2 跳转传参</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">this</span>.<span class="property">$router</span>.<span class="title function_">push</span>(&#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&#x27;路由名&#x27;</span>,</span><br><span class="line">  <span class="attr">query</span>: &#123;</span><br><span class="line">    参数名<span class="number">1</span>: 参数值<span class="number">1</span>,</span><br><span class="line">    参数名<span class="number">2</span>: 参数值<span class="number">2</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h6 id="2-3-3-对应组件接收传递过来的值"><a href="#2-3-3-对应组件接收传递过来的值" class="headerlink" title="2.3.3 对应组件接收传递过来的值"></a>2.3.3 对应组件接收传递过来的值</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$route.<span class="property">query</span>.参数名</span><br></pre></td></tr></table></figure>
+<h5 id="2-4-name-命名路由跳转传参-动态路由传参"><a href="#2-4-name-命名路由跳转传参-动态路由传参" class="headerlink" title="2.4 name 命名路由跳转传参 - 动态路由传参"></a>2.4 name 命名路由跳转传参 - 动态路由传参</h5><h6 id="2-4-1-配置路由"><a href="#2-4-1-配置路由" class="headerlink" title="2.4.1 配置路由"></a>2.4.1 配置路由</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&#x27;路由名&#x27;</span>,</span><br><span class="line">  <span class="attr">path</span>: <span class="string">&#x27;/path/:参数名&#x27;</span>,</span><br><span class="line">  <span class="attr">component</span>: ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h6 id="2-4-2-跳转传参"><a href="#2-4-2-跳转传参" class="headerlink" title="2.4.2 跳转传参"></a>2.4.2 跳转传参</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">this</span>.<span class="property">$router</span>.<span class="title function_">push</span>(&#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&#x27;路由名&#x27;</span>,</span><br><span class="line">  <span class="attr">params</span>: &#123;</span><br><span class="line">    参数名: 参数值</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h6 id="2-4-3-对应组件接收传递过来的值"><a href="#2-4-3-对应组件接收传递过来的值" class="headerlink" title="2.4.3 对应组件接收传递过来的值"></a>2.4.3 对应组件接收传递过来的值</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$route.<span class="property">params</span>.参数名</span><br></pre></td></tr></table></figure>
                 </div>
 
                 
@@ -314,11 +320,11 @@
     <div class="copyright-info-content border-box">
         <div class="copyright-info-top border-box">
             <div class="copyright-post-title border-box text-ellipsis">
-                图片懒加载指令实现
+                编程式导航
             </div>
 
             <div class="copyright-post-link border-box text-ellipsis">
-                2024/01/08/图片懒加载指令实现/
+                2023/12/13/Vue2-Vue2基础-编程式导航/
             </div>
         </div>
 
@@ -334,7 +340,7 @@
                 <div class="type">
                     发布于
                 </div>
-                <div class="content">2024-01-08 14:37</div>
+                <div class="content">2023-12-13 14:03</div>
             </div>
 
 
@@ -368,11 +374,7 @@
                             <ul class="post-tags-box border-box">
                                 
                                     <li class="tag-item border-box">
-                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/Vue3/">Vue3</a>
-                                    </li>
-                                
-                                    <li class="tag-item border-box">
-                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/VueUse/">VueUse</a>
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/Vue2/">Vue2</a>
                                     </li>
                                 
                             </ul>
@@ -414,14 +416,14 @@
                             <div class="prev-post">
                                 <a class="prev"
                                    rel="prev"
-                                   href="/2024/01/08/%E4%BD%BF%E7%94%A8VueUse%E7%9A%84useIntersectionObserver%E7%9B%91%E5%90%AC%E7%9B%AE%E6%A0%87%E5%85%83%E7%B4%A0%E7%9A%84%E5%8F%AF%E8%A7%81%E6%80%A7/"
-                                   title="使用 VueUse 的 useIntersectionObserver 监听目标元素的可见性"
+                                   href="/2023/12/13/XR-FRAME-%E5%9F%BA%E7%A1%80%E8%83%BD%E5%8A%9B-Animation%E5%8A%A8%E7%94%BB/"
+                                   title="XR-FRAME - 基础能力 - Animation 动画"
                                 >
                                     <span class="left arrow-icon flex-center">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">使用 VueUse 的 useIntersectionObserver 监听目标元素的可见性</span>
+                                        <span class="post-nav-title-item text-ellipsis">XR-FRAME - 基础能力 - Animation 动画</span>
                                         <span class="post-nav-item">上一篇</span>
                                     </span>
                                 </a>
@@ -431,11 +433,11 @@
                             <div class="next-post">
                                 <a class="next"
                                    rel="next"
-                                   href="/2024/01/04/elementPlus%E7%BB%84%E4%BB%B6-Carousel%E8%BD%AE%E6%92%AD%E5%9B%BE/"
-                                   title="ElementPlus 组件 - Carousel 轮播图"
+                                   href="/2023/12/13/Vue2-Vue2%E5%9F%BA%E7%A1%80-%E5%A3%B0%E6%98%8E%E5%BC%8F%E5%AF%BC%E8%88%AA-%E8%B7%B3%E8%BD%AC%E4%BC%A0%E5%8F%82/"
+                                   title="声明式导航-跳转传参"
                                 >
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">ElementPlus 组件 - Carousel 轮播图</span>
+                                        <span class="post-nav-title-item text-ellipsis">声明式导航-跳转传参</span>
                                         <span class="post-nav-item">下一篇</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
@@ -545,7 +547,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E8%87%AA%E5%AE%9A%E4%B9%89%E6%87%92%E5%8A%A0%E8%BD%BD%E6%8C%87%E4%BB%A4"><span class="nav-text">1 自定义懒加载指令</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E6%8A%8A%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4%E6%8A%BD%E7%A6%BB%E6%88%90%E4%B8%80%E4%B8%AA%E6%8F%92%E4%BB%B6"><span class="nav-text">2 把自定义指令抽离成一个插件</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E5%9F%BA%E6%9C%AC%E8%B7%B3%E8%BD%AC"><span class="nav-text">1 基本跳转</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-1-path-%E8%B7%AF%E5%BE%84%E8%B7%B3%E8%BD%AC"><span class="nav-text">1.1 path 路径跳转</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#1-1-1-%E9%85%8D%E7%BD%AE%E8%B7%AF%E7%94%B1"><span class="nav-text">1.1.1 配置路由</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#1-1-2-%E8%B7%AF%E5%BE%84%E8%B7%B3%E8%BD%AC"><span class="nav-text">1.1.2 路径跳转</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-2-name-%E5%91%BD%E5%90%8D%E8%B7%AF%E7%94%B1%E8%B7%B3%E8%BD%AC"><span class="nav-text">1.2 name 命名路由跳转</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#1-2-1-%E9%85%8D%E7%BD%AE%E8%B7%AF%E7%94%B1"><span class="nav-text">1.2.1 配置路由</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#1-2-2-%E8%B7%AF%E7%94%B1%E8%B7%B3%E8%BD%AC"><span class="nav-text">1.2.2 路由跳转</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E8%B7%AF%E7%94%B1%E4%BC%A0%E5%8F%82"><span class="nav-text">2 路由传参</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#2-1-path-%E8%B7%AF%E5%BE%84%E8%B7%B3%E8%BD%AC%E4%BC%A0%E5%8F%82-%E6%9F%A5%E8%AF%A2%E5%8F%82%E6%95%B0%E4%BC%A0%E5%8F%82"><span class="nav-text">2.1 path 路径跳转传参 - 查询参数传参</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#2-1-1-%E9%85%8D%E7%BD%AE%E8%B7%AF%E7%94%B1"><span class="nav-text">2.1.1 配置路由</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-1-2-%E8%B7%B3%E8%BD%AC%E4%BC%A0%E5%8F%82"><span class="nav-text">2.1.2 跳转传参</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-1-3-%E5%AF%B9%E5%BA%94%E7%BB%84%E4%BB%B6%E6%8E%A5%E6%94%B6%E4%BC%A0%E9%80%92%E8%BF%87%E6%9D%A5%E7%9A%84%E5%80%BC"><span class="nav-text">2.1.3 对应组件接收传递过来的值</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-2-path-%E8%B7%AF%E5%BE%84%E8%B7%B3%E8%BD%AC%E4%BC%A0%E5%8F%82-%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1%E4%BC%A0%E5%8F%82"><span class="nav-text">2.2 path 路径跳转传参 - 动态路由传参</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#2-2-1-%E9%85%8D%E7%BD%AE%E8%B7%AF%E7%94%B1"><span class="nav-text">2.2.1 配置路由</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-2-2-%E8%B7%B3%E8%BD%AC%E4%BC%A0%E5%8F%82"><span class="nav-text">2.2.2 跳转传参</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-2-3-%E5%AF%B9%E5%BA%94%E7%BB%84%E4%BB%B6%E6%8E%A5%E6%94%B6%E4%BC%A0%E9%80%92%E8%BF%87%E6%9D%A5%E7%9A%84%E5%80%BC"><span class="nav-text">2.2.3 对应组件接收传递过来的值</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-3-name-%E5%91%BD%E5%90%8D%E8%B7%AF%E7%94%B1%E8%B7%B3%E8%BD%AC%E4%BC%A0%E5%8F%82-%E6%9F%A5%E8%AF%A2%E5%8F%82%E6%95%B0%E4%BC%A0%E5%8F%82"><span class="nav-text">2.3 name 命名路由跳转传参 - 查询参数传参</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#2-3-1-%E9%85%8D%E7%BD%AE%E8%B7%AF%E7%94%B1"><span class="nav-text">2.3.1 配置路由</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-3-2-%E8%B7%B3%E8%BD%AC%E4%BC%A0%E5%8F%82"><span class="nav-text">2.3.2 跳转传参</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-3-3-%E5%AF%B9%E5%BA%94%E7%BB%84%E4%BB%B6%E6%8E%A5%E6%94%B6%E4%BC%A0%E9%80%92%E8%BF%87%E6%9D%A5%E7%9A%84%E5%80%BC"><span class="nav-text">2.3.3 对应组件接收传递过来的值</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-4-name-%E5%91%BD%E5%90%8D%E8%B7%AF%E7%94%B1%E8%B7%B3%E8%BD%AC%E4%BC%A0%E5%8F%82-%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1%E4%BC%A0%E5%8F%82"><span class="nav-text">2.4 name 命名路由跳转传参 - 动态路由传参</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#2-4-1-%E9%85%8D%E7%BD%AE%E8%B7%AF%E7%94%B1"><span class="nav-text">2.4.1 配置路由</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-4-2-%E8%B7%B3%E8%BD%AC%E4%BC%A0%E5%8F%82"><span class="nav-text">2.4.2 跳转传参</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-4-3-%E5%AF%B9%E5%BA%94%E7%BB%84%E4%BB%B6%E6%8E%A5%E6%94%B6%E4%BC%A0%E9%80%92%E8%BF%87%E6%9D%A5%E7%9A%84%E5%80%BC"><span class="nav-text">2.4.3 对应组件接收传递过来的值</span></a></li></ol></li></ol></li></ol>
     </div>
 </div>
 
@@ -744,7 +746,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E8%87%AA%E5%AE%9A%E4%B9%89%E6%87%92%E5%8A%A0%E8%BD%BD%E6%8C%87%E4%BB%A4"><span class="nav-text">1 自定义懒加载指令</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E6%8A%8A%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4%E6%8A%BD%E7%A6%BB%E6%88%90%E4%B8%80%E4%B8%AA%E6%8F%92%E4%BB%B6"><span class="nav-text">2 把自定义指令抽离成一个插件</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E5%9F%BA%E6%9C%AC%E8%B7%B3%E8%BD%AC"><span class="nav-text">1 基本跳转</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-1-path-%E8%B7%AF%E5%BE%84%E8%B7%B3%E8%BD%AC"><span class="nav-text">1.1 path 路径跳转</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#1-1-1-%E9%85%8D%E7%BD%AE%E8%B7%AF%E7%94%B1"><span class="nav-text">1.1.1 配置路由</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#1-1-2-%E8%B7%AF%E5%BE%84%E8%B7%B3%E8%BD%AC"><span class="nav-text">1.1.2 路径跳转</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-2-name-%E5%91%BD%E5%90%8D%E8%B7%AF%E7%94%B1%E8%B7%B3%E8%BD%AC"><span class="nav-text">1.2 name 命名路由跳转</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#1-2-1-%E9%85%8D%E7%BD%AE%E8%B7%AF%E7%94%B1"><span class="nav-text">1.2.1 配置路由</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#1-2-2-%E8%B7%AF%E7%94%B1%E8%B7%B3%E8%BD%AC"><span class="nav-text">1.2.2 路由跳转</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E8%B7%AF%E7%94%B1%E4%BC%A0%E5%8F%82"><span class="nav-text">2 路由传参</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#2-1-path-%E8%B7%AF%E5%BE%84%E8%B7%B3%E8%BD%AC%E4%BC%A0%E5%8F%82-%E6%9F%A5%E8%AF%A2%E5%8F%82%E6%95%B0%E4%BC%A0%E5%8F%82"><span class="nav-text">2.1 path 路径跳转传参 - 查询参数传参</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#2-1-1-%E9%85%8D%E7%BD%AE%E8%B7%AF%E7%94%B1"><span class="nav-text">2.1.1 配置路由</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-1-2-%E8%B7%B3%E8%BD%AC%E4%BC%A0%E5%8F%82"><span class="nav-text">2.1.2 跳转传参</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-1-3-%E5%AF%B9%E5%BA%94%E7%BB%84%E4%BB%B6%E6%8E%A5%E6%94%B6%E4%BC%A0%E9%80%92%E8%BF%87%E6%9D%A5%E7%9A%84%E5%80%BC"><span class="nav-text">2.1.3 对应组件接收传递过来的值</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-2-path-%E8%B7%AF%E5%BE%84%E8%B7%B3%E8%BD%AC%E4%BC%A0%E5%8F%82-%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1%E4%BC%A0%E5%8F%82"><span class="nav-text">2.2 path 路径跳转传参 - 动态路由传参</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#2-2-1-%E9%85%8D%E7%BD%AE%E8%B7%AF%E7%94%B1"><span class="nav-text">2.2.1 配置路由</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-2-2-%E8%B7%B3%E8%BD%AC%E4%BC%A0%E5%8F%82"><span class="nav-text">2.2.2 跳转传参</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-2-3-%E5%AF%B9%E5%BA%94%E7%BB%84%E4%BB%B6%E6%8E%A5%E6%94%B6%E4%BC%A0%E9%80%92%E8%BF%87%E6%9D%A5%E7%9A%84%E5%80%BC"><span class="nav-text">2.2.3 对应组件接收传递过来的值</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-3-name-%E5%91%BD%E5%90%8D%E8%B7%AF%E7%94%B1%E8%B7%B3%E8%BD%AC%E4%BC%A0%E5%8F%82-%E6%9F%A5%E8%AF%A2%E5%8F%82%E6%95%B0%E4%BC%A0%E5%8F%82"><span class="nav-text">2.3 name 命名路由跳转传参 - 查询参数传参</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#2-3-1-%E9%85%8D%E7%BD%AE%E8%B7%AF%E7%94%B1"><span class="nav-text">2.3.1 配置路由</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-3-2-%E8%B7%B3%E8%BD%AC%E4%BC%A0%E5%8F%82"><span class="nav-text">2.3.2 跳转传参</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-3-3-%E5%AF%B9%E5%BA%94%E7%BB%84%E4%BB%B6%E6%8E%A5%E6%94%B6%E4%BC%A0%E9%80%92%E8%BF%87%E6%9D%A5%E7%9A%84%E5%80%BC"><span class="nav-text">2.3.3 对应组件接收传递过来的值</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-4-name-%E5%91%BD%E5%90%8D%E8%B7%AF%E7%94%B1%E8%B7%B3%E8%BD%AC%E4%BC%A0%E5%8F%82-%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1%E4%BC%A0%E5%8F%82"><span class="nav-text">2.4 name 命名路由跳转传参 - 动态路由传参</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#2-4-1-%E9%85%8D%E7%BD%AE%E8%B7%AF%E7%94%B1"><span class="nav-text">2.4.1 配置路由</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-4-2-%E8%B7%B3%E8%BD%AC%E4%BC%A0%E5%8F%82"><span class="nav-text">2.4.2 跳转传参</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-4-3-%E5%AF%B9%E5%BA%94%E7%BB%84%E4%BB%B6%E6%8E%A5%E6%94%B6%E4%BC%A0%E9%80%92%E8%BF%87%E6%9D%A5%E7%9A%84%E5%80%BC"><span class="nav-text">2.4.3 对应组件接收传递过来的值</span></a></li></ol></li></ol></li></ol>
     </div>
 </div>
 
