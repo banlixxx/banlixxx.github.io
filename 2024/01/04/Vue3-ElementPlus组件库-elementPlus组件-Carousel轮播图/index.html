@@ -9,7 +9,7 @@
     
     <title>
         
-            ElementPlus 自动按需导入配置 |
+            ElementPlus 组件 - Carousel 轮播图 |
         
         斑狸
     </title>
@@ -207,7 +207,7 @@
             <div class="post-content-bottom border-box">
                 
                     <div class="post-title">
-                        ElementPlus 自动按需导入配置
+                        ElementPlus 组件 - Carousel 轮播图
                     </div>
                 
 
@@ -235,13 +235,13 @@
         
             <span class="meta-info-item post-create-date">
                 <i class="icon fa-solid fa-calendar-check"></i>&nbsp;
-                <span class="pc">2024-01-02 11:14:07</span>
-                <span class="mobile">2024-01-02 11:14</span>
+                <span class="pc">2024-01-04 11:40:44</span>
+                <span class="mobile">2024-01-04 11:40</span>
             </span>
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="pc" data-updated="Tue Jan 02 2024 11:57:14 GMT+0800">2024-01-02 11:57:14</span>
+                <span class="pc" data-updated="Thu Jan 04 2024 11:45:15 GMT+0800">2024-01-04 11:45:15</span>
             </span>
         
 
@@ -277,7 +277,7 @@
         
         
             <span class="meta-info-item post-wordcount">
-                <i class="icon fas fa-file-word"></i>&nbsp;<span>124 字</span>
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>316 字</span>
             </span>
         
         
@@ -303,16 +303,11 @@
                 <div class="post-content keep-markdown-body">
                     
 
-                    <h5 id="1-安装"><a class="markdownIt-Anchor" href="#1-安装"></a> 1 安装</h5>
-<h6 id="11-elementplus-组件库地址"><a class="markdownIt-Anchor" href="#11-elementplus-组件库地址"></a> 1.1 ElementPlus 组件库地址</h6>
-<p><a class="link"   target="_blank" rel="noopener" href="https://element-plus.org/zh-CN/" >https://element-plus.org/zh-CN/<i class="fas fa-external-link-alt"></i></a></p>
-<h6 id="12-通过-npm-安装"><a class="markdownIt-Anchor" href="#12-通过-npm-安装"></a> 1.2 通过 npm 安装</h6>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install element-plus --save</span><br></pre></td></tr></table></figure>
-<h5 id="2-按需引入组件"><a class="markdownIt-Anchor" href="#2-按需引入组件"></a> 2 按需引入组件</h5>
-<p>首先需要安装 unplugin-vue-components 和 unplugin-auto-import 这两款插件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -D unplugin-vue-components unplugin-auto-import</span><br></pre></td></tr></table></figure>
-<p>配置 vite.config.js</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// vite.config.js</span></span><br><span class="line"><span class="keyword">import</span> &#123; defineConfig &#125; <span class="keyword">from</span> <span class="string">&#x27;vite&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">AutoImport</span> <span class="keyword">from</span> <span class="string">&#x27;unplugin-auto-import/vite&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">Components</span> <span class="keyword">from</span> <span class="string">&#x27;unplugin-vue-components/vite&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">ElementPlusResolver</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;unplugin-vue-components/resolvers&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="title function_">defineConfig</span>(&#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">  <span class="attr">plugins</span>: [</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">    <span class="title class_">AutoImport</span>(&#123;</span><br><span class="line">      <span class="attr">resolvers</span>: [<span class="title class_">ElementPlusResolver</span>()],</span><br><span class="line">    &#125;),</span><br><span class="line">    <span class="title class_">Components</span>(&#123;</span><br><span class="line">      <span class="attr">resolvers</span>: [<span class="title class_">ElementPlusResolver</span>()],</span><br><span class="line">    &#125;),</span><br><span class="line">  ],</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+                    <h5 id="1-官网"><a class="markdownIt-Anchor" href="#1-官网"></a> 1 官网</h5>
+<p><a class="link"   target="_blank" rel="noopener" href="https://element-plus.org/zh-CN/component/carousel.html" >https://element-plus.org/zh-CN/component/carousel.html<i class="fas fa-external-link-alt"></i></a></p>
+<h5 id="2-基本使用方法"><a class="markdownIt-Anchor" href="#2-基本使用方法"></a> 2 基本使用方法</h5>
+<p>结合使用 el-carousel 和 el-carousel-item 标签就得到了一个轮播图。默认情况下，在鼠标 hover 底部的指示器时就会触发切换。通过设置 trigger 属性为 click，可以达到点击触发的效果。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div class=&quot;block text-center&quot;&gt;</span><br><span class="line">    &lt;span class=&quot;demonstration&quot;</span><br><span class="line">      &gt;Switch when indicator is hovered (default)&lt;/span</span><br><span class="line">    &gt;</span><br><span class="line">    &lt;el-carousel height=&quot;150px&quot;&gt;</span><br><span class="line">      &lt;el-carousel-item v-for=&quot;item in 4&quot; :key=&quot;item&quot;&gt;</span><br><span class="line">        &lt;h3 class=&quot;small justify-center&quot; text=&quot;2xl&quot;&gt;&#123;&#123; item &#125;&#125;&lt;/h3&gt;</span><br><span class="line">      &lt;/el-carousel-item&gt;</span><br><span class="line">    &lt;/el-carousel&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">  &lt;div class=&quot;block text-center&quot; m=&quot;t-4&quot;&gt;</span><br><span class="line">    &lt;span class=&quot;demonstration&quot;&gt;Switch when indicator is clicked&lt;/span&gt;</span><br><span class="line">    &lt;el-carousel trigger=&quot;click&quot; height=&quot;150px&quot;&gt;</span><br><span class="line">      &lt;el-carousel-item v-for=&quot;item in 4&quot; :key=&quot;item&quot;&gt;</span><br><span class="line">        &lt;h3 class=&quot;small justify-center&quot; text=&quot;2xl&quot;&gt;&#123;&#123; item &#125;&#125;&lt;/h3&gt;</span><br><span class="line">      &lt;/el-carousel-item&gt;</span><br><span class="line">    &lt;/el-carousel&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;style scoped&gt;</span><br><span class="line">.demonstration &#123;</span><br><span class="line">  color: var(--el-text-color-secondary);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.el-carousel__item h3 &#123;</span><br><span class="line">  color: #475669;</span><br><span class="line">  opacity: 0.75;</span><br><span class="line">  line-height: 150px;</span><br><span class="line">  margin: 0;</span><br><span class="line">  text-align: center;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.el-carousel__item:nth-child(2n) &#123;</span><br><span class="line">  background-color: #99a9bf;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.el-carousel__item:nth-child(2n + 1) &#123;</span><br><span class="line">  background-color: #d3dce6;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
                 </div>
 
                 
@@ -321,11 +316,11 @@
     <div class="copyright-info-content border-box">
         <div class="copyright-info-top border-box">
             <div class="copyright-post-title border-box text-ellipsis">
-                ElementPlus 自动按需导入配置
+                ElementPlus 组件 - Carousel 轮播图
             </div>
 
             <div class="copyright-post-link border-box text-ellipsis">
-                2024/01/02/elementPlus自动按需导入配置/
+                2024/01/04/Vue3-ElementPlus组件库-elementPlus组件-Carousel轮播图/
             </div>
         </div>
 
@@ -341,7 +336,7 @@
                 <div class="type">
                     发布于
                 </div>
-                <div class="content">2024-01-02 11:14</div>
+                <div class="content">2024-01-04 11:40</div>
             </div>
 
 
@@ -421,14 +416,14 @@
                             <div class="prev-post">
                                 <a class="prev"
                                    rel="prev"
-                                   href="/2024/01/02/elementPlus%E4%B8%BB%E9%A2%98%E5%AE%9A%E5%88%B6/"
-                                   title="ElementPlus 主题定制"
+                                   href="/2024/01/08/Vue3-Vue3%E5%9F%BA%E7%A1%80-%E5%9B%BE%E7%89%87%E6%87%92%E5%8A%A0%E8%BD%BD%E6%8C%87%E4%BB%A4%E5%AE%9E%E7%8E%B0/"
+                                   title="图片懒加载指令实现"
                                 >
                                     <span class="left arrow-icon flex-center">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">ElementPlus 主题定制</span>
+                                        <span class="post-nav-title-item text-ellipsis">图片懒加载指令实现</span>
                                         <span class="post-nav-item">上一篇</span>
                                     </span>
                                 </a>
@@ -438,11 +433,11 @@
                             <div class="next-post">
                                 <a class="next"
                                    rel="next"
-                                   href="/2024/01/02/%E6%96%B0%E5%BB%BAVue3%E9%A1%B9%E7%9B%AE%E7%9A%84%E6%AD%A5%E9%AA%A4/"
-                                   title="新建 Vue3 项目的步骤"
+                                   href="/2024/01/03/Vue3-VueUse-%E4%BD%BF%E7%94%A8VueUse%E7%9A%84useScroll%E5%88%A4%E6%96%AD%E9%A1%B5%E9%9D%A2%E6%BB%9A%E5%8A%A8%E8%B7%9D%E7%A6%BB/"
+                                   title="使用 VueUse 的 useScroll 判断页面滚动距离"
                                 >
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">新建 Vue3 项目的步骤</span>
+                                        <span class="post-nav-title-item text-ellipsis">使用 VueUse 的 useScroll 判断页面滚动距离</span>
                                         <span class="post-nav-item">下一篇</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
@@ -552,7 +547,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E5%AE%89%E8%A3%85"><span class="nav-text"> 1 安装</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#11-elementplus-%E7%BB%84%E4%BB%B6%E5%BA%93%E5%9C%B0%E5%9D%80"><span class="nav-text"> 1.1 ElementPlus 组件库地址</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#12-%E9%80%9A%E8%BF%87-npm-%E5%AE%89%E8%A3%85"><span class="nav-text"> 1.2 通过 npm 安装</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E6%8C%89%E9%9C%80%E5%BC%95%E5%85%A5%E7%BB%84%E4%BB%B6"><span class="nav-text"> 2 按需引入组件</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E5%AE%98%E7%BD%91"><span class="nav-text"> 1 官网</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="nav-text"> 2 基本使用方法</span></a></li></ol>
     </div>
 </div>
 
@@ -751,7 +746,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E5%AE%89%E8%A3%85"><span class="nav-text"> 1 安装</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#11-elementplus-%E7%BB%84%E4%BB%B6%E5%BA%93%E5%9C%B0%E5%9D%80"><span class="nav-text"> 1.1 ElementPlus 组件库地址</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#12-%E9%80%9A%E8%BF%87-npm-%E5%AE%89%E8%A3%85"><span class="nav-text"> 1.2 通过 npm 安装</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E6%8C%89%E9%9C%80%E5%BC%95%E5%85%A5%E7%BB%84%E4%BB%B6"><span class="nav-text"> 2 按需引入组件</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E5%AE%98%E7%BD%91"><span class="nav-text"> 1 官网</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="nav-text"> 2 基本使用方法</span></a></li></ol>
     </div>
 </div>
 

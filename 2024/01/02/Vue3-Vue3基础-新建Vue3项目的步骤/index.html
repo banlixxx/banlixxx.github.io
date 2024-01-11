@@ -9,7 +9,7 @@
     
     <title>
         
-            Git 基础操作 |
+            新建 Vue3 项目的步骤 |
         
         斑狸
     </title>
@@ -207,7 +207,7 @@
             <div class="post-content-bottom border-box">
                 
                     <div class="post-title">
-                        Git 基础操作
+                        新建 Vue3 项目的步骤
                     </div>
                 
 
@@ -235,13 +235,13 @@
         
             <span class="meta-info-item post-create-date">
                 <i class="icon fa-solid fa-calendar-check"></i>&nbsp;
-                <span class="pc">2023-12-06 16:33:49</span>
-                <span class="mobile">2023-12-06 16:33</span>
+                <span class="pc">2024-01-02 10:17:19</span>
+                <span class="mobile">2024-01-02 10:17</span>
             </span>
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="pc" data-updated="Thu Dec 07 2023 10:13:07 GMT+0800">2023-12-07 10:13:07</span>
+                <span class="pc" data-updated="Tue Jan 02 2024 12:41:58 GMT+0800">2024-01-02 12:41:58</span>
             </span>
         
 
@@ -249,10 +249,10 @@
             <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
                 <ul class="post-category-ul">
                     
-                            <li class="category-item"><a href="/categories/Git/">Git</a></li>
+                            <li class="category-item"><a href="/categories/Vue3/">Vue3</a></li>
                         
                     
-                            <li class="category-item">&nbsp;<i class="icon fas fa-angle-right"></i>&nbsp;<a href="/categories/Git/Git-%E5%9F%BA%E7%A1%80/">Git 基础</a></li>
+                            <li class="category-item">&nbsp;<i class="icon fas fa-angle-right"></i>&nbsp;<a href="/categories/Vue3/Vue3-%E5%9F%BA%E7%A1%80/">Vue3 基础</a></li>
                         
                     
                 </ul>
@@ -264,10 +264,7 @@
                 <i class="icon fas fa-tags"></i>&nbsp;
                 <ul class="post-tag-ul">
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/Git/">Git</a></li>
-                        
-                    
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a></li>
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/Vue3/">Vue3</a></li>
                         
                     
                 </ul>
@@ -277,7 +274,7 @@
         
         
             <span class="meta-info-item post-wordcount">
-                <i class="icon fas fa-file-word"></i>&nbsp;<span>167 字</span>
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>293 字</span>
             </span>
         
         
@@ -303,26 +300,15 @@
                 <div class="post-content keep-markdown-body">
                     
 
-                    <h3 id="1-初始化本地-git-仓库"><a class="markdownIt-Anchor" href="#1-初始化本地-git-仓库"></a> 1 初始化本地 Git 仓库</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
-<h3 id="2-把所有文件都加入到暂存区"><a class="markdownIt-Anchor" href="#2-把所有文件都加入到暂存区"></a> 2 把所有文件都加入到暂存区</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br></pre></td></tr></table></figure>
-<h3 id="3-本地提交更新"><a class="markdownIt-Anchor" href="#3-本地提交更新"></a> 3 本地提交更新</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m <span class="string">&quot;init project&quot;</span></span><br></pre></td></tr></table></figure>
-<h3 id="4-查看分支"><a class="markdownIt-Anchor" href="#4-查看分支"></a> 4 查看分支</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch</span><br></pre></td></tr></table></figure>
-<h3 id="5-创建-test-分支"><a class="markdownIt-Anchor" href="#5-创建-test-分支"></a> 5 创建 test 分支</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b <span class="built_in">test</span></span><br></pre></td></tr></table></figure>
-<h3 id="6-将本地的-test-分支进行本地的-commit-提交"><a class="markdownIt-Anchor" href="#6-将本地的-test-分支进行本地的-commit-提交"></a> 6 将本地的 test 分支进行本地的 commit 提交</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">&quot;完成了 test 的开发&quot;</span></span><br></pre></td></tr></table></figure>
-<h3 id="7-将本地的-test-分支推送到远程仓库进行保存"><a class="markdownIt-Anchor" href="#7-将本地的-test-分支推送到远程仓库进行保存"></a> 7 将本地的 test 分支推送到远程仓库进行保存</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push -u origin <span class="built_in">test</span></span><br></pre></td></tr></table></figure>
-<h3 id="8-将本地的-test-分支合并到本地的-main-分支"><a class="markdownIt-Anchor" href="#8-将本地的-test-分支合并到本地的-main-分支"></a> 8 将本地的 test 分支合并到本地的 main 分支</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git checkout master</span><br><span class="line">git merge tabbar</span><br></pre></td></tr></table></figure>
-<h3 id="9-删除本地的-test-分支"><a class="markdownIt-Anchor" href="#9-删除本地的-test-分支"></a> 9 删除本地的 test 分支</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -d <span class="built_in">test</span></span><br></pre></td></tr></table></figure>
-<h3 id="10-将本地的-main-分支推送到远程仓库进行保存"><a class="markdownIt-Anchor" href="#10-将本地的-main-分支推送到远程仓库进行保存"></a> 10 将本地的 main 分支推送到远程仓库进行保存</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push</span><br></pre></td></tr></table></figure>
+                    <h5 id="1-新建项目"><a class="markdownIt-Anchor" href="#1-新建项目"></a> 1 新建项目</h5>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm init vue@latest</span><br></pre></td></tr></table></figure>
+<h5 id="2-启动项目"><a class="markdownIt-Anchor" href="#2-启动项目"></a> 2 启动项目</h5>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> 项目名称</span><br><span class="line">npm install</span><br><span class="line">npm run dev</span><br></pre></td></tr></table></figure>
+<h5 id="3-配置-eslint-和-prettier"><a class="markdownIt-Anchor" href="#3-配置-eslint-和-prettier"></a> 3 配置 Eslint 和 Prettier</h5>
+<h6 id="31-eslintrccjs-文件"><a class="markdownIt-Anchor" href="#31-eslintrccjs-文件"></a> 3.1 .eslintrc.cjs 文件</h6>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* eslint-env node */</span></span><br><span class="line"><span class="built_in">require</span>(<span class="string">&#x27;@rushstack/eslint-patch/modern-module-resolution&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">  <span class="attr">root</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">extends</span>: [</span><br><span class="line">    <span class="string">&#x27;plugin:vue/vue3-essential&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;eslint:recommended&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;@vue/eslint-config-prettier/skip-formatting&#x27;</span></span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">parserOptions</span>: &#123;</span><br><span class="line">    <span class="attr">ecmaVersion</span>: <span class="string">&#x27;latest&#x27;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">rules</span>: &#123;</span><br><span class="line">    <span class="string">&#x27;prettier/prettier&#x27;</span>: [</span><br><span class="line">      <span class="string">&#x27;warn&#x27;</span>,</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">singleQuote</span>: <span class="literal">true</span>, <span class="comment">// 单引号</span></span><br><span class="line">        <span class="attr">semi</span>: <span class="literal">false</span>, <span class="comment">// 无分号</span></span><br><span class="line">        <span class="attr">printWidth</span>: <span class="number">80</span>, <span class="comment">// 每行宽度至多80字符</span></span><br><span class="line">        <span class="attr">trailingComma</span>: <span class="string">&#x27;none&#x27;</span>, <span class="comment">// 不加对象|数组最后逗号</span></span><br><span class="line">        <span class="attr">endOfLine</span>: <span class="string">&#x27;auto&#x27;</span> <span class="comment">// 换行符号不限制（win mac 不一致）</span></span><br><span class="line">      &#125;</span><br><span class="line">    ],</span><br><span class="line">    <span class="string">&#x27;vue/multi-word-component-names&#x27;</span>: [</span><br><span class="line">      <span class="string">&#x27;warn&#x27;</span>,</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">ignores</span>: [<span class="string">&#x27;index&#x27;</span>] <span class="comment">// vue组件名称多单词组成（忽略index.vue）</span></span><br><span class="line">      &#125;</span><br><span class="line">    ],</span><br><span class="line">    <span class="comment">// 或者，不再强制要求组件命名</span></span><br><span class="line">    <span class="comment">// &#x27;vue/multi-word-component-names&#x27;: 0,</span></span><br><span class="line">    <span class="string">&#x27;vue/no-setup-props-destructure&#x27;</span>: [<span class="string">&#x27;off&#x27;</span>], <span class="comment">// 关闭 props 解构的校验</span></span><br><span class="line">    <span class="comment">// 💡 添加未定义变量错误提示，create-vue@3.6.3 关闭，这里加上是为了支持下一个章节演示。</span></span><br><span class="line">    <span class="string">&#x27;no-undef&#x27;</span>: <span class="string">&#x27;error&#x27;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h6 id="32-prettierrcjson-文件"><a class="markdownIt-Anchor" href="#32-prettierrcjson-文件"></a> 3.2 .prettierrc.json 文件</h6>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;$schema&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://json.schemastore.org/prettierrc&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;semi&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;tabWidth&quot;</span><span class="punctuation">:</span> <span class="number">2</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;singleQuote&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;printWidth&quot;</span><span class="punctuation">:</span> <span class="number">100</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;trailingComma&quot;</span><span class="punctuation">:</span> <span class="string">&quot;none&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
                 </div>
 
                 
@@ -331,11 +317,11 @@
     <div class="copyright-info-content border-box">
         <div class="copyright-info-top border-box">
             <div class="copyright-post-title border-box text-ellipsis">
-                Git 基础操作
+                新建 Vue3 项目的步骤
             </div>
 
             <div class="copyright-post-link border-box text-ellipsis">
-                2023/12/06/Git基础操作/
+                2024/01/02/Vue3-Vue3基础-新建Vue3项目的步骤/
             </div>
         </div>
 
@@ -351,7 +337,7 @@
                 <div class="type">
                     发布于
                 </div>
-                <div class="content">2023-12-06 16:33</div>
+                <div class="content">2024-01-02 10:17</div>
             </div>
 
 
@@ -385,11 +371,7 @@
                             <ul class="post-tags-box border-box">
                                 
                                     <li class="tag-item border-box">
-                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/Git/">Git</a>
-                                    </li>
-                                
-                                    <li class="tag-item border-box">
-                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a>
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/Vue3/">Vue3</a>
                                     </li>
                                 
                             </ul>
@@ -431,14 +413,14 @@
                             <div class="prev-post">
                                 <a class="prev"
                                    rel="prev"
-                                   href="/2023/12/07/%E6%96%B0%E5%BB%BAVue2%E9%A1%B9%E7%9B%AE%E7%9A%84%E6%AD%A5%E9%AA%A4/"
-                                   title="新建 Vue2 项目的步骤"
+                                   href="/2024/01/02/Vue3-ElementPlus%E7%BB%84%E4%BB%B6%E5%BA%93-elementPlus%E8%87%AA%E5%8A%A8%E6%8C%89%E9%9C%80%E5%AF%BC%E5%85%A5%E9%85%8D%E7%BD%AE/"
+                                   title="ElementPlus 自动按需导入配置"
                                 >
                                     <span class="left arrow-icon flex-center">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">新建 Vue2 项目的步骤</span>
+                                        <span class="post-nav-title-item text-ellipsis">ElementPlus 自动按需导入配置</span>
                                         <span class="post-nav-item">上一篇</span>
                                     </span>
                                 </a>
@@ -448,11 +430,11 @@
                             <div class="next-post">
                                 <a class="next"
                                    rel="next"
-                                   href="/2023/12/06/%E9%A1%B9%E7%9B%AE%E4%B8%8Egithub%E8%BF%9E%E6%8E%A5%E7%9A%84%E6%AD%A5%E9%AA%A4/"
-                                   title="项目与 Github 连接的步骤"
+                                   href="/2023/12/21/Vue2-Vue2%E5%9F%BA%E7%A1%80-%E8%B7%AF%E7%94%B1%E6%87%92%E5%8A%A0%E8%BD%BD/"
+                                   title="路由懒加载"
                                 >
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">项目与 Github 连接的步骤</span>
+                                        <span class="post-nav-title-item text-ellipsis">路由懒加载</span>
                                         <span class="post-nav-item">下一篇</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
@@ -562,7 +544,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%88%9D%E5%A7%8B%E5%8C%96%E6%9C%AC%E5%9C%B0-git-%E4%BB%93%E5%BA%93"><span class="nav-text"> 1 初始化本地 Git 仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E6%8A%8A%E6%89%80%E6%9C%89%E6%96%87%E4%BB%B6%E9%83%BD%E5%8A%A0%E5%85%A5%E5%88%B0%E6%9A%82%E5%AD%98%E5%8C%BA"><span class="nav-text"> 2 把所有文件都加入到暂存区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E6%9C%AC%E5%9C%B0%E6%8F%90%E4%BA%A4%E6%9B%B4%E6%96%B0"><span class="nav-text"> 3 本地提交更新</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E6%9F%A5%E7%9C%8B%E5%88%86%E6%94%AF"><span class="nav-text"> 4 查看分支</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E5%88%9B%E5%BB%BA-test-%E5%88%86%E6%94%AF"><span class="nav-text"> 5 创建 test 分支</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-%E5%B0%86%E6%9C%AC%E5%9C%B0%E7%9A%84-test-%E5%88%86%E6%94%AF%E8%BF%9B%E8%A1%8C%E6%9C%AC%E5%9C%B0%E7%9A%84-commit-%E6%8F%90%E4%BA%A4"><span class="nav-text"> 6 将本地的 test 分支进行本地的 commit 提交</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-%E5%B0%86%E6%9C%AC%E5%9C%B0%E7%9A%84-test-%E5%88%86%E6%94%AF%E6%8E%A8%E9%80%81%E5%88%B0%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E8%BF%9B%E8%A1%8C%E4%BF%9D%E5%AD%98"><span class="nav-text"> 7 将本地的 test 分支推送到远程仓库进行保存</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-%E5%B0%86%E6%9C%AC%E5%9C%B0%E7%9A%84-test-%E5%88%86%E6%94%AF%E5%90%88%E5%B9%B6%E5%88%B0%E6%9C%AC%E5%9C%B0%E7%9A%84-main-%E5%88%86%E6%94%AF"><span class="nav-text"> 8 将本地的 test 分支合并到本地的 main 分支</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-%E5%88%A0%E9%99%A4%E6%9C%AC%E5%9C%B0%E7%9A%84-test-%E5%88%86%E6%94%AF"><span class="nav-text"> 9 删除本地的 test 分支</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-%E5%B0%86%E6%9C%AC%E5%9C%B0%E7%9A%84-main-%E5%88%86%E6%94%AF%E6%8E%A8%E9%80%81%E5%88%B0%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E8%BF%9B%E8%A1%8C%E4%BF%9D%E5%AD%98"><span class="nav-text"> 10 将本地的 main 分支推送到远程仓库进行保存</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E6%96%B0%E5%BB%BA%E9%A1%B9%E7%9B%AE"><span class="nav-text"> 1 新建项目</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E5%90%AF%E5%8A%A8%E9%A1%B9%E7%9B%AE"><span class="nav-text"> 2 启动项目</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-%E9%85%8D%E7%BD%AE-eslint-%E5%92%8C-prettier"><span class="nav-text"> 3 配置 Eslint 和 Prettier</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#31-eslintrccjs-%E6%96%87%E4%BB%B6"><span class="nav-text"> 3.1 .eslintrc.cjs 文件</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#32-prettierrcjson-%E6%96%87%E4%BB%B6"><span class="nav-text"> 3.2 .prettierrc.json 文件</span></a></li></ol></li></ol>
     </div>
 </div>
 
@@ -761,7 +743,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%88%9D%E5%A7%8B%E5%8C%96%E6%9C%AC%E5%9C%B0-git-%E4%BB%93%E5%BA%93"><span class="nav-text"> 1 初始化本地 Git 仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E6%8A%8A%E6%89%80%E6%9C%89%E6%96%87%E4%BB%B6%E9%83%BD%E5%8A%A0%E5%85%A5%E5%88%B0%E6%9A%82%E5%AD%98%E5%8C%BA"><span class="nav-text"> 2 把所有文件都加入到暂存区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E6%9C%AC%E5%9C%B0%E6%8F%90%E4%BA%A4%E6%9B%B4%E6%96%B0"><span class="nav-text"> 3 本地提交更新</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E6%9F%A5%E7%9C%8B%E5%88%86%E6%94%AF"><span class="nav-text"> 4 查看分支</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E5%88%9B%E5%BB%BA-test-%E5%88%86%E6%94%AF"><span class="nav-text"> 5 创建 test 分支</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-%E5%B0%86%E6%9C%AC%E5%9C%B0%E7%9A%84-test-%E5%88%86%E6%94%AF%E8%BF%9B%E8%A1%8C%E6%9C%AC%E5%9C%B0%E7%9A%84-commit-%E6%8F%90%E4%BA%A4"><span class="nav-text"> 6 将本地的 test 分支进行本地的 commit 提交</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-%E5%B0%86%E6%9C%AC%E5%9C%B0%E7%9A%84-test-%E5%88%86%E6%94%AF%E6%8E%A8%E9%80%81%E5%88%B0%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E8%BF%9B%E8%A1%8C%E4%BF%9D%E5%AD%98"><span class="nav-text"> 7 将本地的 test 分支推送到远程仓库进行保存</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-%E5%B0%86%E6%9C%AC%E5%9C%B0%E7%9A%84-test-%E5%88%86%E6%94%AF%E5%90%88%E5%B9%B6%E5%88%B0%E6%9C%AC%E5%9C%B0%E7%9A%84-main-%E5%88%86%E6%94%AF"><span class="nav-text"> 8 将本地的 test 分支合并到本地的 main 分支</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-%E5%88%A0%E9%99%A4%E6%9C%AC%E5%9C%B0%E7%9A%84-test-%E5%88%86%E6%94%AF"><span class="nav-text"> 9 删除本地的 test 分支</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-%E5%B0%86%E6%9C%AC%E5%9C%B0%E7%9A%84-main-%E5%88%86%E6%94%AF%E6%8E%A8%E9%80%81%E5%88%B0%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E8%BF%9B%E8%A1%8C%E4%BF%9D%E5%AD%98"><span class="nav-text"> 10 将本地的 main 分支推送到远程仓库进行保存</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E6%96%B0%E5%BB%BA%E9%A1%B9%E7%9B%AE"><span class="nav-text"> 1 新建项目</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E5%90%AF%E5%8A%A8%E9%A1%B9%E7%9B%AE"><span class="nav-text"> 2 启动项目</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-%E9%85%8D%E7%BD%AE-eslint-%E5%92%8C-prettier"><span class="nav-text"> 3 配置 Eslint 和 Prettier</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#31-eslintrccjs-%E6%96%87%E4%BB%B6"><span class="nav-text"> 3.1 .eslintrc.cjs 文件</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#32-prettierrcjson-%E6%96%87%E4%BB%B6"><span class="nav-text"> 3.2 .prettierrc.json 文件</span></a></li></ol></li></ol>
     </div>
 </div>
 

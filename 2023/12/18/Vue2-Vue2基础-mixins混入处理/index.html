@@ -9,7 +9,7 @@
     
     <title>
         
-            项目与 Github 连接的步骤 |
+            Mixins 混入处理 |
         
         斑狸
     </title>
@@ -207,7 +207,7 @@
             <div class="post-content-bottom border-box">
                 
                     <div class="post-title">
-                        项目与 Github 连接的步骤
+                        Mixins 混入处理
                     </div>
                 
 
@@ -235,13 +235,13 @@
         
             <span class="meta-info-item post-create-date">
                 <i class="icon fa-solid fa-calendar-check"></i>&nbsp;
-                <span class="pc">2023-12-06 15:59:41</span>
-                <span class="mobile">2023-12-06 15:59</span>
+                <span class="pc">2023-12-18 11:38:39</span>
+                <span class="mobile">2023-12-18 11:38</span>
             </span>
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="pc" data-updated="Thu Dec 07 2023 10:13:11 GMT+0800">2023-12-07 10:13:11</span>
+                <span class="pc" data-updated="Mon Dec 18 2023 11:45:28 GMT+0800">2023-12-18 11:45:28</span>
             </span>
         
 
@@ -249,10 +249,10 @@
             <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
                 <ul class="post-category-ul">
                     
-                            <li class="category-item"><a href="/categories/Git/">Git</a></li>
+                            <li class="category-item"><a href="/categories/Vue2/">Vue2</a></li>
                         
                     
-                            <li class="category-item">&nbsp;<i class="icon fas fa-angle-right"></i>&nbsp;<a href="/categories/Git/Git-%E5%9F%BA%E7%A1%80/">Git 基础</a></li>
+                            <li class="category-item">&nbsp;<i class="icon fas fa-angle-right"></i>&nbsp;<a href="/categories/Vue2/Vue2-%E5%9F%BA%E7%A1%80/">Vue2 基础</a></li>
                         
                     
                 </ul>
@@ -264,13 +264,10 @@
                 <i class="icon fas fa-tags"></i>&nbsp;
                 <ul class="post-tag-ul">
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/Git/">Git</a></li>
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/Vue2/">Vue2</a></li>
                         
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a></li>
-                        
-                    
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/Github/">Github</a></li>
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/Mixins/">Mixins</a></li>
                         
                     
                 </ul>
@@ -280,7 +277,7 @@
         
         
             <span class="meta-info-item post-wordcount">
-                <i class="icon fas fa-file-word"></i>&nbsp;<span>136 字</span>
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>205 字</span>
             </span>
         
         
@@ -306,44 +303,13 @@
                 <div class="post-content keep-markdown-body">
                     
 
-                    <h2 id="1-进入-github-新建仓库"><a class="markdownIt-Anchor" href="#1-进入-github-新建仓库"></a> 1 进入 Github ，新建仓库</h2>
-<h3 id="11-点击-new-repository"><a class="markdownIt-Anchor" href="#11-点击-new-repository"></a> 1.1 点击 New repository</h3>
-<p><img  
-                       lazyload
-                       alt="image"
-                       data-src="https://cdn.statically.io/gh/banlixxx/image-folder@main/img/1.5070svl0ffk0.webp"
-                        alt="" 
-                 ></p>
-<h3 id="12-填写-repository-name-和-description-之后点击-create-repository"><a class="markdownIt-Anchor" href="#12-填写-repository-name-和-description-之后点击-create-repository"></a> 1.2 填写 Repository name 和 Description ，之后点击 Create repository</h3>
-<p><img  
-                       lazyload
-                       alt="image"
-                       data-src="https://cdn.statically.io/gh/banlixxx/image-folder@main/img/2.4jecrv1nnz80.webp"
-                        alt="" 
-                 ></p>
-<p><img  
-                       lazyload
-                       alt="image"
-                       data-src="https://cdn.statically.io/gh/banlixxx/image-folder@main/img/3.41jz4gsqkae0.webp"
-                        alt="" 
-                 ></p>
-<p><img  
-                       lazyload
-                       alt="image"
-                       data-src="https://cdn.statically.io/gh/banlixxx/image-folder@main/img/4.4p8a2zu1lug0.webp"
-                        alt="" 
-                 ></p>
-<h2 id="2-使用-git-管理自己的项目"><a class="markdownIt-Anchor" href="#2-使用-git-管理自己的项目"></a> 2 使用 Git 管理自己的项目</h2>
-<h3 id="21-初始化本地-git-仓库"><a class="markdownIt-Anchor" href="#21-初始化本地-git-仓库"></a> 2.1 初始化本地 Git 仓库</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
-<h3 id="22-在项目根目录中新建-gitignore-忽略文件并配置如下"><a class="markdownIt-Anchor" href="#22-在项目根目录中新建-gitignore-忽略文件并配置如下"></a> 2.2 在项目根目录中新建 .gitignore 忽略文件，并配置如下</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 忽略 node_modules 目录</span></span><br><span class="line">/node_modules</span><br></pre></td></tr></table></figure>
-<h3 id="23-将所有文件都存入暂存区"><a class="markdownIt-Anchor" href="#23-将所有文件都存入暂存区"></a> 2.3 将所有文件都存入暂存区</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br></pre></td></tr></table></figure>
-<h3 id="24-本地提交更新"><a class="markdownIt-Anchor" href="#24-本地提交更新"></a> 2.4 本地提交更新</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git comit -m <span class="string">&quot;init project&quot;</span></span><br></pre></td></tr></table></figure>
-<h3 id="25-把项目托管到-github-上"><a class="markdownIt-Anchor" href="#25-把项目托管到-github-上"></a> 2.5 把项目托管到 Github 上</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin git@github.com:banlixxx/test.git</span><br><span class="line">git branch -M main</span><br><span class="line">git push -u origin main</span><br></pre></td></tr></table></figure>
+                    <h5 id="1-新建文件"><a class="markdownIt-Anchor" href="#1-新建文件"></a> 1 新建文件</h5>
+<p>新建 /src/mixins/test.js</p>
+<h5 id="2-编写所需要混入的内容"><a class="markdownIt-Anchor" href="#2-编写所需要混入的内容"></a> 2 编写所需要混入的内容</h5>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  <span class="comment">// 此处编写的就是Vue组件实例的配置项，通过一定语法，可以直接混入到组件内部</span></span><br><span class="line">  <span class="comment">// data mothods computed 生命周期函数...</span></span><br><span class="line">  <span class="comment">// 1.注意点：如果此处和组件内，提供了同名的data或methods，则组件内优先级更高</span></span><br><span class="line">  <span class="comment">// 2.如果编写了生命周期函数，则mixins中的生命周期函数和页面的生命周期函数，会用数组管理，统一执行</span></span><br><span class="line">  <span class="title function_">data</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      <span class="attr">title</span>: <span class="string">&#x27;标题&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">methods</span>: &#123;</span><br><span class="line">    <span class="title function_">sayHi</span>(<span class="params"></span>) &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;你好&#x27;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="3-组件中导入"><a class="markdownIt-Anchor" href="#3-组件中导入"></a> 3 组件中导入</h5>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">  <span class="keyword">import</span> test <span class="keyword">from</span> <span class="string">&#x27;@/mixins/test.js&#x27;</span></span><br><span class="line">  <span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">    <span class="attr">mixins</span>: [test],</span><br><span class="line">    <span class="comment">// 调用导入的数据</span></span><br><span class="line">    <span class="title function_">created</span>(<span class="params"></span>) &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>.<span class="property">title</span>),</span><br><span class="line">      <span class="variable language_">this</span>.<span class="title function_">sayHi</span>()</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
                 </div>
 
                 
@@ -352,11 +318,11 @@
     <div class="copyright-info-content border-box">
         <div class="copyright-info-top border-box">
             <div class="copyright-post-title border-box text-ellipsis">
-                项目与 Github 连接的步骤
+                Mixins 混入处理
             </div>
 
             <div class="copyright-post-link border-box text-ellipsis">
-                2023/12/06/项目与github连接的步骤/
+                2023/12/18/Vue2-Vue2基础-mixins混入处理/
             </div>
         </div>
 
@@ -372,7 +338,7 @@
                 <div class="type">
                     发布于
                 </div>
-                <div class="content">2023-12-06 15:59</div>
+                <div class="content">2023-12-18 11:38</div>
             </div>
 
 
@@ -406,15 +372,11 @@
                             <ul class="post-tags-box border-box">
                                 
                                     <li class="tag-item border-box">
-                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/Git/">Git</a>
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/Vue2/">Vue2</a>
                                     </li>
                                 
                                     <li class="tag-item border-box">
-                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a>
-                                    </li>
-                                
-                                    <li class="tag-item border-box">
-                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/Github/">Github</a>
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/Mixins/">Mixins</a>
                                     </li>
                                 
                             </ul>
@@ -456,19 +418,35 @@
                             <div class="prev-post">
                                 <a class="prev"
                                    rel="prev"
-                                   href="/2023/12/06/Git%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/"
-                                   title="Git 基础操作"
+                                   href="/2023/12/18/vant%E7%BB%84%E4%BB%B6-Tab%E6%A0%87%E7%AD%BE%E9%A1%B5/"
+                                   title="vant组件-Tab标签页"
                                 >
                                     <span class="left arrow-icon flex-center">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">Git 基础操作</span>
+                                        <span class="post-nav-title-item text-ellipsis">vant组件-Tab标签页</span>
                                         <span class="post-nav-item">上一篇</span>
                                     </span>
                                 </a>
                             </div>
                         
+                        
+                            <div class="next-post">
+                                <a class="next"
+                                   rel="next"
+                                   href="/2023/12/17/vuex%E4%B8%AD%E5%AD%90%E6%A8%A1%E5%9D%97%E8%B0%83%E7%94%A8%E8%87%AA%E8%BA%AB%E6%95%B0%E6%8D%AE/"
+                                   title="Vuex 中子模块调用自身数据"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">Vuex 中子模块调用自身数据</span>
+                                        <span class="post-nav-item">下一篇</span>
+                                    </span>
+                                    <span class="right arrow-icon flex-center">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
                         
                     </div>
                 
@@ -571,7 +549,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E8%BF%9B%E5%85%A5-github-%E6%96%B0%E5%BB%BA%E4%BB%93%E5%BA%93"><span class="nav-text"> 1 进入 Github ，新建仓库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#11-%E7%82%B9%E5%87%BB-new-repository"><span class="nav-text"> 1.1 点击 New repository</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12-%E5%A1%AB%E5%86%99-repository-name-%E5%92%8C-description-%E4%B9%8B%E5%90%8E%E7%82%B9%E5%87%BB-create-repository"><span class="nav-text"> 1.2 填写 Repository name 和 Description ，之后点击 Create repository</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E4%BD%BF%E7%94%A8-git-%E7%AE%A1%E7%90%86%E8%87%AA%E5%B7%B1%E7%9A%84%E9%A1%B9%E7%9B%AE"><span class="nav-text"> 2 使用 Git 管理自己的项目</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#21-%E5%88%9D%E5%A7%8B%E5%8C%96%E6%9C%AC%E5%9C%B0-git-%E4%BB%93%E5%BA%93"><span class="nav-text"> 2.1 初始化本地 Git 仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#22-%E5%9C%A8%E9%A1%B9%E7%9B%AE%E6%A0%B9%E7%9B%AE%E5%BD%95%E4%B8%AD%E6%96%B0%E5%BB%BA-gitignore-%E5%BF%BD%E7%95%A5%E6%96%87%E4%BB%B6%E5%B9%B6%E9%85%8D%E7%BD%AE%E5%A6%82%E4%B8%8B"><span class="nav-text"> 2.2 在项目根目录中新建 .gitignore 忽略文件，并配置如下</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#23-%E5%B0%86%E6%89%80%E6%9C%89%E6%96%87%E4%BB%B6%E9%83%BD%E5%AD%98%E5%85%A5%E6%9A%82%E5%AD%98%E5%8C%BA"><span class="nav-text"> 2.3 将所有文件都存入暂存区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#24-%E6%9C%AC%E5%9C%B0%E6%8F%90%E4%BA%A4%E6%9B%B4%E6%96%B0"><span class="nav-text"> 2.4 本地提交更新</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#25-%E6%8A%8A%E9%A1%B9%E7%9B%AE%E6%89%98%E7%AE%A1%E5%88%B0-github-%E4%B8%8A"><span class="nav-text"> 2.5 把项目托管到 Github 上</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6"><span class="nav-text"> 1 新建文件</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E7%BC%96%E5%86%99%E6%89%80%E9%9C%80%E8%A6%81%E6%B7%B7%E5%85%A5%E7%9A%84%E5%86%85%E5%AE%B9"><span class="nav-text"> 2 编写所需要混入的内容</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-%E7%BB%84%E4%BB%B6%E4%B8%AD%E5%AF%BC%E5%85%A5"><span class="nav-text"> 3 组件中导入</span></a></li></ol>
     </div>
 </div>
 
@@ -770,7 +748,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E8%BF%9B%E5%85%A5-github-%E6%96%B0%E5%BB%BA%E4%BB%93%E5%BA%93"><span class="nav-text"> 1 进入 Github ，新建仓库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#11-%E7%82%B9%E5%87%BB-new-repository"><span class="nav-text"> 1.1 点击 New repository</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12-%E5%A1%AB%E5%86%99-repository-name-%E5%92%8C-description-%E4%B9%8B%E5%90%8E%E7%82%B9%E5%87%BB-create-repository"><span class="nav-text"> 1.2 填写 Repository name 和 Description ，之后点击 Create repository</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E4%BD%BF%E7%94%A8-git-%E7%AE%A1%E7%90%86%E8%87%AA%E5%B7%B1%E7%9A%84%E9%A1%B9%E7%9B%AE"><span class="nav-text"> 2 使用 Git 管理自己的项目</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#21-%E5%88%9D%E5%A7%8B%E5%8C%96%E6%9C%AC%E5%9C%B0-git-%E4%BB%93%E5%BA%93"><span class="nav-text"> 2.1 初始化本地 Git 仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#22-%E5%9C%A8%E9%A1%B9%E7%9B%AE%E6%A0%B9%E7%9B%AE%E5%BD%95%E4%B8%AD%E6%96%B0%E5%BB%BA-gitignore-%E5%BF%BD%E7%95%A5%E6%96%87%E4%BB%B6%E5%B9%B6%E9%85%8D%E7%BD%AE%E5%A6%82%E4%B8%8B"><span class="nav-text"> 2.2 在项目根目录中新建 .gitignore 忽略文件，并配置如下</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#23-%E5%B0%86%E6%89%80%E6%9C%89%E6%96%87%E4%BB%B6%E9%83%BD%E5%AD%98%E5%85%A5%E6%9A%82%E5%AD%98%E5%8C%BA"><span class="nav-text"> 2.3 将所有文件都存入暂存区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#24-%E6%9C%AC%E5%9C%B0%E6%8F%90%E4%BA%A4%E6%9B%B4%E6%96%B0"><span class="nav-text"> 2.4 本地提交更新</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#25-%E6%8A%8A%E9%A1%B9%E7%9B%AE%E6%89%98%E7%AE%A1%E5%88%B0-github-%E4%B8%8A"><span class="nav-text"> 2.5 把项目托管到 Github 上</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6"><span class="nav-text"> 1 新建文件</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E7%BC%96%E5%86%99%E6%89%80%E9%9C%80%E8%A6%81%E6%B7%B7%E5%85%A5%E7%9A%84%E5%86%85%E5%AE%B9"><span class="nav-text"> 2 编写所需要混入的内容</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-%E7%BB%84%E4%BB%B6%E4%B8%AD%E5%AF%BC%E5%85%A5"><span class="nav-text"> 3 组件中导入</span></a></li></ol>
     </div>
 </div>
 

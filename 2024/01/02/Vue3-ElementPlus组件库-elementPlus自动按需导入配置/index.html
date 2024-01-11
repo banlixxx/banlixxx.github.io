@@ -9,7 +9,7 @@
     
     <title>
         
-            props中默认为对象时的写法 |
+            ElementPlus 自动按需导入配置 |
         
         斑狸
     </title>
@@ -207,7 +207,7 @@
             <div class="post-content-bottom border-box">
                 
                     <div class="post-title">
-                        props中默认为对象时的写法
+                        ElementPlus 自动按需导入配置
                     </div>
                 
 
@@ -235,13 +235,13 @@
         
             <span class="meta-info-item post-create-date">
                 <i class="icon fa-solid fa-calendar-check"></i>&nbsp;
-                <span class="pc">2023-12-13 11:18:14</span>
-                <span class="mobile">2023-12-13 11:18</span>
+                <span class="pc">2024-01-02 11:14:07</span>
+                <span class="mobile">2024-01-02 11:14</span>
             </span>
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="pc" data-updated="Wed Dec 13 2023 11:19:23 GMT+0800">2023-12-13 11:19:23</span>
+                <span class="pc" data-updated="Tue Jan 02 2024 11:57:14 GMT+0800">2024-01-02 11:57:14</span>
             </span>
         
 
@@ -249,10 +249,10 @@
             <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
                 <ul class="post-category-ul">
                     
-                            <li class="category-item"><a href="/categories/Vue2/">Vue2</a></li>
+                            <li class="category-item"><a href="/categories/Vue3/">Vue3</a></li>
                         
                     
-                            <li class="category-item">&nbsp;<i class="icon fas fa-angle-right"></i>&nbsp;<a href="/categories/Vue2/Vue2-%E5%9F%BA%E7%A1%80/">Vue2 基础</a></li>
+                            <li class="category-item">&nbsp;<i class="icon fas fa-angle-right"></i>&nbsp;<a href="/categories/Vue3/ElementPlus-%E7%BB%84%E4%BB%B6%E5%BA%93/">ElementPlus 组件库</a></li>
                         
                     
                 </ul>
@@ -264,7 +264,10 @@
                 <i class="icon fas fa-tags"></i>&nbsp;
                 <ul class="post-tag-ul">
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/Vue2/">Vue2</a></li>
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/Vue3/">Vue3</a></li>
+                        
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/ElementPlus-%E7%BB%84%E4%BB%B6%E5%BA%93/">ElementPlus 组件库</a></li>
                         
                     
                 </ul>
@@ -274,7 +277,7 @@
         
         
             <span class="meta-info-item post-wordcount">
-                <i class="icon fas fa-file-word"></i>&nbsp;<span>34 字</span>
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>124 字</span>
             </span>
         
         
@@ -300,8 +303,16 @@
                 <div class="post-content keep-markdown-body">
                     
 
-                    <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&#x27;GoodsItem&#x27;</span>,</span><br><span class="line">  <span class="attr">props</span>: &#123;</span><br><span class="line">    <span class="attr">item</span>: &#123;</span><br><span class="line">      <span class="attr">type</span>: <span class="title class_">Object</span>,</span><br><span class="line">      <span class="comment">// 写成函数</span></span><br><span class="line">      <span class="attr">default</span>: <span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> &#123;&#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-
+                    <h5 id="1-安装"><a class="markdownIt-Anchor" href="#1-安装"></a> 1 安装</h5>
+<h6 id="11-elementplus-组件库地址"><a class="markdownIt-Anchor" href="#11-elementplus-组件库地址"></a> 1.1 ElementPlus 组件库地址</h6>
+<p><a class="link"   target="_blank" rel="noopener" href="https://element-plus.org/zh-CN/" >https://element-plus.org/zh-CN/<i class="fas fa-external-link-alt"></i></a></p>
+<h6 id="12-通过-npm-安装"><a class="markdownIt-Anchor" href="#12-通过-npm-安装"></a> 1.2 通过 npm 安装</h6>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install element-plus --save</span><br></pre></td></tr></table></figure>
+<h5 id="2-按需引入组件"><a class="markdownIt-Anchor" href="#2-按需引入组件"></a> 2 按需引入组件</h5>
+<p>首先需要安装 unplugin-vue-components 和 unplugin-auto-import 这两款插件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -D unplugin-vue-components unplugin-auto-import</span><br></pre></td></tr></table></figure>
+<p>配置 vite.config.js</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// vite.config.js</span></span><br><span class="line"><span class="keyword">import</span> &#123; defineConfig &#125; <span class="keyword">from</span> <span class="string">&#x27;vite&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">AutoImport</span> <span class="keyword">from</span> <span class="string">&#x27;unplugin-auto-import/vite&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">Components</span> <span class="keyword">from</span> <span class="string">&#x27;unplugin-vue-components/vite&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">ElementPlusResolver</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;unplugin-vue-components/resolvers&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="title function_">defineConfig</span>(&#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">  <span class="attr">plugins</span>: [</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">    <span class="title class_">AutoImport</span>(&#123;</span><br><span class="line">      <span class="attr">resolvers</span>: [<span class="title class_">ElementPlusResolver</span>()],</span><br><span class="line">    &#125;),</span><br><span class="line">    <span class="title class_">Components</span>(&#123;</span><br><span class="line">      <span class="attr">resolvers</span>: [<span class="title class_">ElementPlusResolver</span>()],</span><br><span class="line">    &#125;),</span><br><span class="line">  ],</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
                 </div>
 
                 
@@ -310,11 +321,11 @@
     <div class="copyright-info-content border-box">
         <div class="copyright-info-top border-box">
             <div class="copyright-post-title border-box text-ellipsis">
-                props中默认为对象时的写法
+                ElementPlus 自动按需导入配置
             </div>
 
             <div class="copyright-post-link border-box text-ellipsis">
-                2023/12/13/props中默认为对象时的写法/
+                2024/01/02/Vue3-ElementPlus组件库-elementPlus自动按需导入配置/
             </div>
         </div>
 
@@ -330,7 +341,7 @@
                 <div class="type">
                     发布于
                 </div>
-                <div class="content">2023-12-13 11:18</div>
+                <div class="content">2024-01-02 11:14</div>
             </div>
 
 
@@ -364,7 +375,11 @@
                             <ul class="post-tags-box border-box">
                                 
                                     <li class="tag-item border-box">
-                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/Vue2/">Vue2</a>
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/Vue3/">Vue3</a>
+                                    </li>
+                                
+                                    <li class="tag-item border-box">
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/ElementPlus-%E7%BB%84%E4%BB%B6%E5%BA%93/">ElementPlus 组件库</a>
                                     </li>
                                 
                             </ul>
@@ -406,14 +421,14 @@
                             <div class="prev-post">
                                 <a class="prev"
                                    rel="prev"
-                                   href="/2023/12/13/Vue2-Vue2%E5%9F%BA%E7%A1%80-%E5%A3%B0%E6%98%8E%E5%BC%8F%E5%AF%BC%E8%88%AA-%E8%B7%B3%E8%BD%AC%E4%BC%A0%E5%8F%82/"
-                                   title="声明式导航-跳转传参"
+                                   href="/2024/01/02/Vue3-ElementPlus%E7%BB%84%E4%BB%B6%E5%BA%93-elementPlus%E4%B8%BB%E9%A2%98%E5%AE%9A%E5%88%B6/"
+                                   title="ElementPlus 主题定制"
                                 >
                                     <span class="left arrow-icon flex-center">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">声明式导航-跳转传参</span>
+                                        <span class="post-nav-title-item text-ellipsis">ElementPlus 主题定制</span>
                                         <span class="post-nav-item">上一篇</span>
                                     </span>
                                 </a>
@@ -423,11 +438,11 @@
                             <div class="next-post">
                                 <a class="next"
                                    rel="next"
-                                   href="/2023/12/13/vant%E7%BB%84%E4%BB%B6-Grid%E5%AE%AB%E6%A0%BC/"
-                                   title="Vant 组件 - Grid 宫格"
+                                   href="/2024/01/02/Vue3-Vue3%E5%9F%BA%E7%A1%80-%E6%96%B0%E5%BB%BAVue3%E9%A1%B9%E7%9B%AE%E7%9A%84%E6%AD%A5%E9%AA%A4/"
+                                   title="新建 Vue3 项目的步骤"
                                 >
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">Vant 组件 - Grid 宫格</span>
+                                        <span class="post-nav-title-item text-ellipsis">新建 Vue3 项目的步骤</span>
                                         <span class="post-nav-item">下一篇</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
@@ -537,7 +552,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        
+        <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E5%AE%89%E8%A3%85"><span class="nav-text"> 1 安装</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#11-elementplus-%E7%BB%84%E4%BB%B6%E5%BA%93%E5%9C%B0%E5%9D%80"><span class="nav-text"> 1.1 ElementPlus 组件库地址</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#12-%E9%80%9A%E8%BF%87-npm-%E5%AE%89%E8%A3%85"><span class="nav-text"> 1.2 通过 npm 安装</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E6%8C%89%E9%9C%80%E5%BC%95%E5%85%A5%E7%BB%84%E4%BB%B6"><span class="nav-text"> 2 按需引入组件</span></a></li></ol>
     </div>
 </div>
 
@@ -736,7 +751,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        
+        <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E5%AE%89%E8%A3%85"><span class="nav-text"> 1 安装</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#11-elementplus-%E7%BB%84%E4%BB%B6%E5%BA%93%E5%9C%B0%E5%9D%80"><span class="nav-text"> 1.1 ElementPlus 组件库地址</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#12-%E9%80%9A%E8%BF%87-npm-%E5%AE%89%E8%A3%85"><span class="nav-text"> 1.2 通过 npm 安装</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E6%8C%89%E9%9C%80%E5%BC%95%E5%85%A5%E7%BB%84%E4%BB%B6"><span class="nav-text"> 2 按需引入组件</span></a></li></ol>
     </div>
 </div>
 
