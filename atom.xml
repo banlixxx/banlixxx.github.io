@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-01-15T04:13:12.167Z</updated>
+  <updated>2024-01-31T03:41:39.197Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>合并两个排序的链表</title>
+    <link href="http://example.com/2024/01/31/%E7%AE%97%E6%B3%95-%E5%9F%BA%E7%A1%80%E9%A2%98-%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%8E%92%E5%BA%8F%E7%9A%84%E9%93%BE%E8%A1%A8/"/>
+    <id>http://example.com/2024/01/31/%E7%AE%97%E6%B3%95-%E5%9F%BA%E7%A1%80%E9%A2%98-%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%8E%92%E5%BA%8F%E7%9A%84%E9%93%BE%E8%A1%A8/</id>
+    <published>2024-01-31T03:34:20.000Z</published>
+    <updated>2024-01-31T03:41:39.197Z</updated>
+    
+    <content type="html"><![CDATA[<h5 id="1-题目"><a class="markdownIt-Anchor" href="#1-题目"></a> 1 题目</h5><h6 id="题目描述"><a class="markdownIt-Anchor" href="#题目描述"></a> 题目描述</h6><p><a class="link" href="https://www.acwing.com/problem/content/34/">https://www.acwing.com/problem/content/34/<i class="fas fa-external-link-alt"></i></a></p><p>输入两个递增排序的链表，合并这两个链表并使新链表中的结点仍然是按照递增排序的。</p><h6 id="数据范围"><a class="markdownIt-Anchor" href="#数据范围"></a> 数据范围</h6><p>链表长度 <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="6.789ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 3000.7 1000"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="5B" d="M118 -250V750H255V710H158V-210H255V-250H118Z"></path></g><g data-mml-node="mn" transform="translate(278,0)"><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"></path></g><g data-mml-node="mo" transform="translate(778,0)"><path data-c="2C" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z"></path></g><g data-mml-node="mn" transform="translate(1222.7,0)"><path data-c="35" d="M164 157Q164 133 148 117T109 101H102Q148 22 224 22Q294 22 326 82Q345 115 345 210Q345 313 318 349Q292 382 260 382H254Q176 382 136 314Q132 307 129 306T114 304Q97 304 95 310Q93 314 93 485V614Q93 664 98 664Q100 666 102 666Q103 666 123 658T178 642T253 634Q324 634 389 662Q397 666 402 666Q410 666 410 648V635Q328 538 205 538Q174 538 149 544L139 546V374Q158 388 169 396T205 412T256 420Q337 420 393 355T449 201Q449 109 385 44T229 -22Q148 -22 99 32T50 154Q50 178 61 192T84 210T107 214Q132 214 148 197T164 157Z"></path><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" transform="translate(500,0)"></path><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" transform="translate(1000,0)"></path></g><g data-mml-node="mo" transform="translate(2722.7,0)"><path data-c="5D" d="M22 710V750H159V-250H22V-210H119V710H22Z"></path></g></g></g></svg></mjx-container> 。</p><h6 id="样例"><a class="markdownIt-Anchor" href="#样例"></a> 样例</h6><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：1-&gt;3-&gt;5 , 2-&gt;4-&gt;5</span><br><span class="line"></span><br><span class="line">输出：1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;5</span><br></pre></td></tr></table></figure><h6 id="时空限制"><a class="markdownIt-Anchor" href="#时空限制"></a> 时/空限制</h6><p>1s / 64MB</p><h5 id="2-解答"><a class="markdownIt-Anchor" href="#2-解答"></a> 2 解答</h5><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * struct ListNode {</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode *next;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) : val(x), next(NULL) {}</span></span><br><span class="line"><span class="comment"> * };</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> {</span></span><br><span class="line">public:</span><br><span class="line">    ListNode* <span class="title function_">merge</span><span class="params">(ListNode* l1, ListNode* l2)</span> {</span><br><span class="line">        ListNode* L = new ListNode(<span class="number">0</span>);</span><br><span class="line">        ListNode* i = L;</span><br><span class="line">        <span class="keyword">while</span> (l1 &amp;&amp; l2) {</span><br><span class="line">            <span class="keyword">if</span> (l1-&gt;val &lt; l2-&gt;val) {</span><br><span class="line">                i-&gt;next = l1;</span><br><span class="line">                l1 = l1-&gt;next;</span><br><span class="line">                i = i-&gt;next;</span><br><span class="line">            } <span class="keyword">else</span> {</span><br><span class="line">                i-&gt;next = l2;</span><br><span class="line">                l2 = l2-&gt;next;</span><br><span class="line">                i = i-&gt;next;</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">        <span class="keyword">while</span> (l1) {</span><br><span class="line">            i-&gt;next = l1;</span><br><span class="line">            l1 = l1-&gt;next;</span><br><span class="line">            i = i-&gt;next;</span><br><span class="line">        }</span><br><span class="line">        <span class="keyword">while</span> (l2) {</span><br><span class="line">            i-&gt;next = l2;</span><br><span class="line">            l2 = l2-&gt;next;</span><br><span class="line">            i = i-&gt;next;</span><br><span class="line">        }</span><br><span class="line">        L = L-&gt;next;</span><br><span class="line">        <span class="keyword">return</span> L;</span><br><span class="line">    }</span><br><span class="line">};</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h5 id=&quot;1-题目&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#1-题目&quot;&gt;&lt;/a&gt; 1 题目&lt;/h5&gt;
+&lt;h6 id=&quot;题目描述&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题目描述&quot;&gt;&lt;/a&gt; 题目描述&lt;/h6</summary>
+      
+    
+    
+    
+    <category term="算法" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="基础题" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/%E5%9F%BA%E7%A1%80%E9%A2%98/"/>
+    
+    
+    <category term="算法" scheme="http://example.com/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="基础题" scheme="http://example.com/tags/%E5%9F%BA%E7%A1%80%E9%A2%98/"/>
+    
+  </entry>
   
   <entry>
     <title>蛇形矩阵</title>
@@ -559,35 +588,6 @@
     <category term="Vue2" scheme="http://example.com/tags/Vue2/"/>
     
     <category term="Vant 组件库" scheme="http://example.com/tags/Vant-%E7%BB%84%E4%BB%B6%E5%BA%93/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>请求拦截器统一携带Token</title>
-    <link href="http://example.com/2023/12/15/Vue2-Vue2%E5%9F%BA%E7%A1%80-%E8%AF%B7%E6%B1%82%E6%8B%A6%E6%88%AA%E5%99%A8%E7%BB%9F%E4%B8%80%E6%90%BA%E5%B8%A6Token/"/>
-    <id>http://example.com/2023/12/15/Vue2-Vue2%E5%9F%BA%E7%A1%80-%E8%AF%B7%E6%B1%82%E6%8B%A6%E6%88%AA%E5%99%A8%E7%BB%9F%E4%B8%80%E6%90%BA%E5%B8%A6Token/</id>
-    <published>2023-12-15T03:51:41.000Z</published>
-    <updated>2023-12-15T03:54:18.750Z</updated>
-    
-    <content type="html"><![CDATA[<h5 id="1-配置-axios"><a class="markdownIt-Anchor" href="#1-配置-axios"></a> 1 配置 Axios</h5><p>参考方法：<a class="link"   href="https://banlixxx.github.io/2023/12/10/axios%E5%B0%81%E8%A3%85/" >Axios 封装<i class="fas fa-external-link-alt"></i></a></p><h5 id="2-配置请求拦截器"><a class="markdownIt-Anchor" href="#2-配置请求拦截器"></a> 2 配置请求拦截器</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">Toast</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;vant&#x27;</span></span><br><span class="line"><span class="keyword">import</span> store <span class="keyword">from</span> <span class="string">&#x27;@/store/index&#x27;</span></span><br><span class="line">...</span><br><span class="line"></span><br><span class="line"><span class="comment">// 添加请求拦截器</span></span><br><span class="line">request.<span class="property">interceptors</span>.<span class="property">request</span>.<span class="title function_">use</span>(</span><br><span class="line">  <span class="keyword">function</span> (<span class="params">config</span>) &#123;</span><br><span class="line">    <span class="comment">// 在发送请求之前做些什么</span></span><br><span class="line">    <span class="title class_">Toast</span>.<span class="title function_">loading</span>(&#123;</span><br><span class="line">      <span class="attr">message</span>: <span class="string">&#x27;请求中...&#x27;</span>,</span><br><span class="line">      <span class="attr">forbidClick</span>: <span class="literal">true</span>,</span><br><span class="line">      <span class="attr">loadingType</span>: <span class="string">&#x27;spinner&#x27;</span>,</span><br><span class="line">      <span class="attr">duration</span>: <span class="number">0</span></span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 只要有 token，就在请求时携带，便于请求请求需要授权的接口</span></span><br><span class="line">    <span class="keyword">const</span> token = store.<span class="property">getters</span>.<span class="property">token</span></span><br><span class="line">    <span class="keyword">if</span> (token) &#123;</span><br><span class="line">      config.<span class="property">headers</span>[<span class="string">&#x27;Access-Token&#x27;</span>] = token</span><br><span class="line">      config.<span class="property">headers</span>.<span class="property">platform</span> = <span class="string">&#x27;H5&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> config</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="keyword">function</span> (<span class="params">error</span>) &#123;</span><br><span class="line">    <span class="comment">// 对请求错误做些什么</span></span><br><span class="line">    <span class="keyword">return</span> <span class="title class_">Promise</span>.<span class="title function_">reject</span>(error)</span><br><span class="line">  &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h5 id=&quot;1-配置-axios&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#1-配置-axios&quot;&gt;&lt;/a&gt; 1 配置 Axios&lt;/h5&gt;
-&lt;p&gt;参考方法：&lt;a class=&quot;link&quot;   href=&quot;https://banlixxx.gi</summary>
-      
-    
-    
-    
-    <category term="Vue2" scheme="http://example.com/categories/Vue2/"/>
-    
-    <category term="Vue2 基础" scheme="http://example.com/categories/Vue2/Vue2-%E5%9F%BA%E7%A1%80/"/>
-    
-    
-    <category term="Vue2" scheme="http://example.com/tags/Vue2/"/>
-    
-    <category term="Axios" scheme="http://example.com/tags/Axios/"/>
     
   </entry>
   
