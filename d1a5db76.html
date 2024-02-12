@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="斑狸">
+    
+    <title>
+        
+            XR-FRAME - 基础能力 - Interactions 交互 |
+        
+        斑狸
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="shortcut icon" href="/images/avatar.png">
+    
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.5/source/font/css/fontawesome.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.5/source/font/css/regular.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.5/source/font/css/solid.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.5/source/font/css/brands.min.css">
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"zh-CN","path":"search.json"}
+    KEEP.theme_config = {"base_info":{"primary_color":"#0066cc","title":"斑狸","author":"斑狸","avatar":"/images/avatar.png","logo":"/images/avatar.png","favicon":"/images/avatar.png"},"menu":{"Archives":"/archives","Tags":"/tags","Categories":"/categories","Links":"/links","About":"/about","Photos":"/photos"},"first_screen":{"enable":true,"background_img":"/images/bg.svg","background_img_dark":"/images/bg.svg","description":"“一切有为法，如梦幻泡影，如露亦如电，应作如是观”","hitokoto":false},"social_contact":{"enable":true,"links":{"github":"https://github.com/banlixxx","weixin":null,"qq":null,"weibo":null,"zhihu":null,"twitter":"https://twitter.com/Banli0504","facebook":null,"email":null}},"scroll":{"progress_bar":true,"percent":true,"hide_header":false},"home":{"category":true,"tag":true,"announcement":null},"post":{"author_badge":{"enable":true,"level_badge":true,"custom_badge":["One","Two","Three"]},"word_count":{"wordcount":true,"min2read":true},"datetime_format":"YYYY-MM-DD HH:mm:ss","copyright_info":true,"share":true,"reward":{"enable":false,"img_link":null,"text":null},"img_align":"center"},"code_block":{"tools":{"enable":true,"style":"mac"},"highlight_theme":"obsidian"},"toc":{"enable":true,"number":false,"expand_all":true,"init_open":true,"layout":"right"},"website_count":{"busuanzi_count":{"enable":true,"site_uv":true,"site_pv":true,"page_pv":true}},"local_search":{"enable":true,"preload":true},"comment":{"enable":true,"use":"valine","valine":{"appid":"mRoRGAuvS53rnOOcrzlumuEF-gzGzoHsz","appkey":"vV8tWI0otjHjeUzVNPVfySzO","server_urls":"https://mrorgauv.lc-cn-n1-shared.com","placeholder":"吐槽一下"},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.21"},"waline":{"server_url":null,"reaction":false,"version":2},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":true},"lazyload":{"enable":true},"cdn":{"enable":true,"provider":"jsdelivr"},"pjax":{"enable":true},"footer":{"since":2023,"word_count":true,"icp":{"enable":false,"record_code":null,"url":"https://beian.miit.gov.cn"},"site_deploy":{"enable":true,"provider":"github","url":null},"shields_style":{"enable":false,"custom":[{"link_url":null,"img_url":null}]}},"inject":{"enable":false,"css":[null],"js":[null]},"mathjax":{"tags":"none","single_dollars":true,"cjk_width":0.9,"normal_width":0.6,"append_css":true,"every_page":false},"root":"","photos":[{"url":"https://cdn.statically.io/gh/banlixxx/image-folder@main/img/1.199p025n9u1s.webp"},{"url":"https://cdn.statically.io/gh/banlixxx/image-folder@main/img/2.65nfvsbr3w00.webp"},{"url":"https://cdn.statically.io/gh/banlixxx/image-folder@main/img/3.63eb1ol1m1s0.webp"},{"url":"https://cdn.statically.io/gh/banlixxx/image-folder@main/img/4.3lsmje82yr60.webp"},{"url":"https://cdn.statically.io/gh/banlixxx/image-folder@main/img/5.433ic5126b60.webp"},{"url":"https://cdn.statically.io/gh/banlixxx/image-folder@main/img/6.1oy6sgkilbds.webp"},{"url":"https://cdn.statically.io/gh/banlixxx/image-folder@main/img/7.52nfy2mrutc0.webp"},{"url":"https://cdn.statically.io/gh/banlixxx/image-folder@main/img/8.21r73fmy1h40.webp"},{"url":"https://cdn.statically.io/gh/banlixxx/image-folder@main/img/9.5iz2qo53xto0.webp"},{"url":"https://cdn.statically.io/gh/banlixxx/image-folder@main/study/10.1sz11ucns40w.webp"},{"url":"https://cdn.statically.io/gh/banlixxx/image-folder@main/study/11.743794vlinwg.webp"},{"url":"https://cdn.statically.io/gh/banlixxx/image-folder@main/study/12.4k3d4o0d6hog.webp"},{"url":"https://cdn.statically.io/gh/banlixxx/image-folder@main/study/13.2fsez1avc1a8.webp"},{"url":"https://cdn.statically.io/gh/banlixxx/image-folder@main/study/14.1cxftedg8if4.webp"},{"url":"https://cdn.statically.io/gh/banlixxx/image-folder@main/study/15.2l222n5kw1s0.webp"},{"url":"https://cdn.statically.io/gh/banlixxx/image-folder@main/study/16.606t3y1raqv4.webp"},{"url":"https://cdn.statically.io/gh/banlixxx/image-folder@main/study/17.1cbz2k8imm8w.webp"},{"url":"https://cdn.statically.io/gh/banlixxx/image-folder@main/study/18.1kjgq7wvc3fk.webp"},{"url":"https://cdn.statically.io/gh/banlixxx/image-folder@main/study/19.63ray5bmzv28.webp"},{"url":"https://cdn.statically.io/gh/banlixxx/image-folder@main/study/20.7gime0qg0ikg.webp"}],"version":"4.0.5"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.0.0"><link rel="alternate" href="/atom.xml" title="斑狸" type="application/atom+xml">
+<style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <i class="pjax-progress-icon fas fa-circle-notch fa-spin"></i>
+    
+</div>
+
+
+<main class="page-container border-box">
+
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left border-box">
+            
+                <a class="logo-image border-box" href="/">
+                    <img src="/images/avatar.png">
+                </a>
+            
+            <a class="site-name border-box" href="/">
+               斑狸
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc">
+                <ul class="menu-list">
+                    <li class="menu-item">
+                        <a class=""
+                           href="/"
+                        >首页</a>
+                    </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >归档</a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >标签</a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >分类</a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/links"
+                            >友链</a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >关于</a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/photos"
+                            >相册</a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas search fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            <li class="drawer-menu-item flex-center">
+                <a class=""
+                   href="/"
+                >首页</a>
+            </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives"
+                    >归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags"
+                    >标签</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories"
+                    >分类</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/links"
+                    >友链</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about"
+                    >关于</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/photos"
+                    >相册</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+                
+
+                    
+<div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+        <div class="post-content-container border-box">
+            
+
+            <div class="post-content-bottom border-box">
+                
+                    <div class="post-title">
+                        XR-FRAME - 基础能力 - Interactions 交互
+                    </div>
+                
+
+                
+                    <div class="post-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="/images/avatar.png">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author border-box">
+                                <span class="name">斑狸</span>
+                                
+                                    <span class="author-badge">Lv4</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="post-meta-info-container border-box post">
+    <div class="post-meta-info border-box">
+        
+
+        
+            <span class="meta-info-item post-create-date">
+                <i class="icon fa-solid fa-calendar-check"></i>&nbsp;
+                <span class="pc">2023-12-14 14:54:48</span>
+                <span class="mobile">2023-12-14 14:54</span>
+            </span>
+
+            <span class="meta-info-item post-update-date">
+                <i class="icon fa-solid fa-file-pen"></i>&nbsp;
+                <span class="pc" data-updated="Mon Feb 12 2024 15:53:36 GMT+0800">2024-02-12 15:53:36</span>
+            </span>
+        
+
+        
+            <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
+                <ul class="post-category-ul">
+                    
+                            <li class="category-item"><a href="/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/">微信小程序</a></li>
+                        
+                    
+                            <li class="category-item">&nbsp;<i class="icon fas fa-angle-right"></i>&nbsp;<a href="/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/xr-frame/">xr-frame</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+            <span class="post-tag meta-info-item border-box">
+                <i class="icon fas fa-tags"></i>&nbsp;
+                <ul class="post-tag-ul">
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/">微信小程序</a></li>
+                        
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/xr-frame/">xr-frame</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+            <span class="meta-info-item post-wordcount">
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>2.3k 字</span>
+            </span>
+        
+        
+            <span class="meta-info-item post-min2read">
+                <i class="icon fas fa-clock"></i>&nbsp;<span>11 分钟</span>
+            </span>
+        
+        
+            <span class="meta-info-item post-pv">
+                <i class="icon fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+            </span>
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="post-content keep-markdown-body">
+                    
+
+                    <h4 id="1-项目地址"><a class="markdownIt-Anchor" href="#1-项目地址"></a> 1 项目地址</h4>
+<p>官方项目地址：<a class="link" target="_blank" rel="noopener" href="https://github.com/dtysky/xr-frame-demo/tree/master/miniprogram/components/xr-basic-touch">https://github.com/dtysky/xr-frame-demo/tree/master/miniprogram/components/xr-basic-touch<i class="fas fa-external-link-alt"></i></a></p>
+<h4 id="2-代码解析"><a class="markdownIt-Anchor" href="#2-代码解析"></a> 2 代码解析</h4>
+<p>主要代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">&lt;xr-scene id="xr-scene" bind:tick="handleTick" bind:ready="handleReady"&gt;</span><br><span class="line">  &lt;xr-assets bind:progress="handleAssetsProgress" bind:loaded="handleAssetsLoaded"&gt;</span><br><span class="line">    &lt;xr-asset-load type="texture" asset-id="earth-texture" src="https://mmbizwxaminiprogram-1258344707.cos.ap-guangzhou.myqcloud.com/xr-frame/demo/2k_earth_daymap.jpeg" /&gt;</span><br><span class="line">    &lt;xr-asset-load type="texture" asset-id="moon-texture" src="https://mmbizwxaminiprogram-1258344707.cos.ap-guangzhou.myqcloud.com/xr-frame/demo/2k_moon.jpeg" /&gt;</span><br><span class="line">    &lt;xr-asset-load type="texture" asset-id="sky" src="https://mmbizwxaminiprogram-1258344707.cos.ap-guangzhou.myqcloud.com/xr-frame/demo/dark-cosmos.jpg" /&gt;</span><br><span class="line">    &lt;xr-asset-material asset-id="standard-mat" effect="standard" /&gt;</span><br><span class="line">    &lt;xr-asset-material asset-id="earth-mat" effect="standard" uniforms="u_baseColorMap: earth-texture" render-queue="501"/&gt;</span><br><span class="line">    &lt;xr-asset-material asset-id="earth-silhouette" effect="simple" uniforms="u_baseColorFactor: 1.0 0.5 0 1.0" states="depthTestWrite: false" render-queue="500"/&gt;</span><br><span class="line">    &lt;xr-asset-material asset-id="moon-mat" effect="standard" uniforms="u_baseColorMap: moon-texture" render-queue="503"/&gt;</span><br><span class="line">    &lt;xr-asset-material asset-id="moon-silhouette" effect="simple" uniforms="u_baseColorFactor: 0.476 0.82 0.957 1.0" states="depthTestWrite: false" render-queue="502"/&gt;</span><br><span class="line">  &lt;/xr-assets&gt;</span><br><span class="line">  &lt;xr-env sky-map="sky" is-sky2d/&gt;</span><br><span class="line">  &lt;xr-node&gt;</span><br><span class="line">    &lt;xr-mesh node-id="mesh-earth" position="0 0 0" scale="8 8 8" geometry="sphere" material="earth-mat" bind:touch-shape="handleTouchEarth" bind:untouch-shape="handleUntouchEarth" bind:drag-shape="handleEarthRotation" sphere-shape receive-shadow cast-shadow&gt;&lt;/xr-mesh&gt;</span><br><span class="line">    &lt;xr-mesh node-id="earth-silhouette" scale="8.15 8.15 8.15" geometry="sphere" material="earth-silhouette" visible="{{touchingEarth}}"&gt;&lt;/xr-mesh&gt;</span><br><span class="line">    &lt;xr-mesh node-id="mesh-moon" position="10 0 0" scale="1.5 1.5 1.5" rotation="0 90 0" geometry="sphere" material="moon-mat" bind:drag-shape="handleDragMoon" bind:touch-shape="handleTouchMoon" bind:untouch-shape="handleUntouchMoon" sphere-shape="radius: 1.5" receive-shadow cast-shadow&gt;&lt;/xr-mesh&gt;</span><br><span class="line">    &lt;xr-mesh node-id="moon-silhouette" scale="1.1 1.1 1.1" geometry="sphere" material="moon-silhouette" visible="{{touchingMoon}}"&gt;&lt;/xr-mesh&gt;</span><br><span class="line">    &lt;xr-camera</span><br><span class="line">      id="camera" node-id="camera" position="0 20 -35" clear-color="0 0 0 1"</span><br><span class="line">      target="mesh-earth"</span><br><span class="line">      background="skybox"</span><br><span class="line">    &gt;&lt;/xr-camera&gt;</span><br><span class="line">  &lt;/xr-node&gt;</span><br><span class="line">  &lt;xr-node node-id="lights"&gt;</span><br><span class="line">    &lt;xr-light type="ambient" color="1 1 1" intensity="0.1" /&gt;</span><br><span class="line">    &lt;xr-light id="directional-light" type="directional" rotation="0 60 0" color="1 1 1" intensity="5"  shadow-distance="40" cast-shadow shadow-bias="0.004"/&gt;</span><br><span class="line">  &lt;/xr-node&gt;</span><br><span class="line">&lt;/xr-scene&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br></pre></td><td class="code"><pre><span class="line">Component({</span><br><span class="line">  behaviors: [require('../common/share-behavior').default],</span><br><span class="line">  properties: {</span><br><span class="line">    a: Number,</span><br><span class="line">  },</span><br><span class="line">  data: {</span><br><span class="line">    loaded: false,</span><br><span class="line">    touchingMoon: false,</span><br><span class="line">    touchingEarth: false,</span><br><span class="line">    θ: Math.PI,</span><br><span class="line">    r: 10,</span><br><span class="line">    ω: 5e-4,</span><br><span class="line">    outerRing: 20,</span><br><span class="line">    innerRing: 10</span><br><span class="line">  },</span><br><span class="line">  lifetimes: {},</span><br><span class="line">  methods: {</span><br><span class="line">    handleReady({detail}) {</span><br><span class="line">      const xrScene = this.scene = detail.value;</span><br><span class="line">      console.log('xr-scene', xrScene);</span><br><span class="line">    },</span><br><span class="line">    handleAssetsProgress: function({detail}) {</span><br><span class="line">      console.log('assets progress', detail.value);</span><br><span class="line">    },</span><br><span class="line">    handleAssetsLoaded: function({detail}) {</span><br><span class="line">      console.log('assets loaded', detail.value);</span><br><span class="line">      this.setData({loaded: true});</span><br><span class="line">    },</span><br><span class="line">    handleTouchEarth: function() {</span><br><span class="line">      this.setData({</span><br><span class="line">        touchingEarth: true</span><br><span class="line">      });</span><br><span class="line">    },</span><br><span class="line">    handleUntouchEarth: function() {</span><br><span class="line">      this.setData({</span><br><span class="line">        touchingEarth: false</span><br><span class="line">      });</span><br><span class="line">    },</span><br><span class="line">    handleEarthRotation: function({detail}) {</span><br><span class="line">        const { target, deltaX } = detail.value;</span><br><span class="line">        target._components.transform.rotation.y += deltaX / 100;</span><br><span class="line">    },</span><br><span class="line">    handleDragMoon: function({detail}) {</span><br><span class="line">        const { dir, target, camera } = detail.value;</span><br><span class="line">        const cameraPos = camera.el._components.transform.worldPosition;</span><br><span class="line">        const k = -cameraPos.y / dir[1];</span><br><span class="line">        const x = cameraPos.x + k * dir[0];</span><br><span class="line">        const z = cameraPos.z + k * dir[2];</span><br><span class="line">        const len = Math.sqrt(x * x + z * z);</span><br><span class="line">        if (len &gt; this.data.innerRing) {</span><br><span class="line">            const transform = target._components.transform;</span><br><span class="line">            const scale = len &gt; this.data.outerRing ? this.data.outerRing / len : 1.0;</span><br><span class="line">            transform.position.x = x * scale;</span><br><span class="line">            transform.position.z = z * scale;</span><br><span class="line">        }</span><br><span class="line">    },</span><br><span class="line">    handleTouchMoon: function() {</span><br><span class="line">        this.setData({touchingMoon: true});</span><br><span class="line">    },</span><br><span class="line">    handleUntouchMoon: function() {</span><br><span class="line">        const moon = this.scene.getNodeById("mesh-moon");</span><br><span class="line">        const transform = moon.el._components.transform;</span><br><span class="line">        const x = transform.position.x;</span><br><span class="line">        const z = transform.position.z;</span><br><span class="line">        const len = Math.sqrt(x * x + z * z);</span><br><span class="line">        this.setData({</span><br><span class="line">            r: len,</span><br><span class="line">            θ: x &lt; 0 ? Math.atan(z / x) + Math.PI : Math.atan(z / x),</span><br><span class="line">            ω: Math.sqrt(2.5e-4 / (len * len * len))</span><br><span class="line">        });</span><br><span class="line">        this.setData({touchingMoon: false});</span><br><span class="line">    },</span><br><span class="line">    handleTick: function({detail}) {</span><br><span class="line">        if (this.data.touchingMoon || !this.scene) return;</span><br><span class="line">        const deltaTime = detail.value;</span><br><span class="line">        const moon = this.scene.getNodeById("mesh-moon");</span><br><span class="line">        const transform = moon.el._components.transform;</span><br><span class="line">        const x = Math.cos(this.data.θ) * this.data.r;</span><br><span class="line">        const z = Math.sin(this.data.θ) * this.data.r;</span><br><span class="line">        transform.position.x = x;</span><br><span class="line">        transform.position.z = z;</span><br><span class="line">        transform.rotation.y -= this.data.ω * deltaTime;</span><br><span class="line">        this.setData({</span><br><span class="line">            θ: this.data.θ + this.data.ω * deltaTime</span><br><span class="line">        });</span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">})</span><br></pre></td></tr></table></figure>
+<h5 id="21-地球模块"><a class="markdownIt-Anchor" href="#21-地球模块"></a> 2.1 地球模块</h5>
+<h6 id="211-地球-加载资源"><a class="markdownIt-Anchor" href="#211-地球-加载资源"></a> 2.1.1 地球 - 加载资源</h6>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;xr-asset-load type="texture" asset-id="earth-texture" src="https://mmbizwxaminiprogram-1258344707.cos.ap-guangzhou.myqcloud.com/xr-frame/demo/2k_earth_daymap.jpeg" /&gt;</span><br><span class="line">&lt;xr-asset-material asset-id="earth-mat" effect="standard" uniforms="u_baseColorMap: earth-texture" render-queue="501"/&gt;</span><br><span class="line">&lt;xr-asset-material asset-id="earth-silhouette" effect="simple" uniforms="u_baseColorFactor: 1.0 0.5 0 1.0" states="depthTestWrite: false" render-queue="500"/&gt;</span><br></pre></td></tr></table></figure>
+<p>  首先去加载图片，命名 asset-id 为 earth-texture；之后加载了两种材质，材质 earth-mat 用于生成地球网格，通过 uniforms 绑定了刚刚加载的图片 earth-texture，材质 earth-silhouette 用于生成点击地球时出现的轮廓的网格。</p>
+<h6 id="212-地球-生成网格"><a class="markdownIt-Anchor" href="#212-地球-生成网格"></a> 2.1.2 地球 - 生成网格</h6>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;xr-mesh node-id="mesh-earth" position="0 0 0" scale="8 8 8" geometry="sphere" material="earth-mat" bind:touch-shape="handleTouchEarth" bind:untouch-shape="handleUntouchEarth" bind:drag-shape="handleEarthRotation" sphere-shape receive-shadow cast-shadow&gt;&lt;/xr-mesh&gt;</span><br><span class="line">&lt;xr-mesh node-id="earth-silhouette" scale="8.15 8.15 8.15" geometry="sphere" material="earth-silhouette" visible="{{touchingEarth}}"&gt;&lt;/xr-mesh&gt;</span><br></pre></td></tr></table></figure>
+<p>  通过 material 绑定不同的材质，生成了地球网格和轮廓网格。</p>
+<h6 id="213-地球-事件解析"><a class="markdownIt-Anchor" href="#213-地球-事件解析"></a> 2.1.3 地球 - 事件解析</h6>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">handleTouchEarth: function() {</span><br><span class="line">  this.setData({</span><br><span class="line">    touchingEarth: true</span><br><span class="line">  });</span><br><span class="line">},</span><br><span class="line">handleUntouchEarth: function() {</span><br><span class="line">  this.setData({</span><br><span class="line">    touchingEarth: false</span><br><span class="line">  });</span><br><span class="line">},</span><br><span class="line">handleEarthRotation: function({detail}) {</span><br><span class="line">    const { target, deltaX } = detail.value;</span><br><span class="line">    target._components.transform.rotation.y += deltaX / 100;</span><br><span class="line">},</span><br></pre></td></tr></table></figure>
+<p>  地球网格上绑定了三个事件处理函数：<br>
+  通过手指的触摸与松开地球网格，触发的事件函数 handleTouchEarth 和事件函数 handleUntouchEarth，可以改变轮廓网格上绑定的 touchingEarth 的值，来控制轮廓网格的现实与隐藏。<br>
+  通过手指对地球网格的拖拽，触发的事件函数 handleEarthRotation，可以改变地球的角度。其中 target 可以获取到地球网格，deltaX 为用户手指在屏幕上划过的距离，按照一定的比例，通过 deltaX 来改变地球网格的 transform.rotation.y，使得地球网格旋转起来。</p>
+<h5 id="22-月球模块"><a class="markdownIt-Anchor" href="#22-月球模块"></a> 2.2 月球模块</h5>
+<h6 id="221-月球-加载资源"><a class="markdownIt-Anchor" href="#221-月球-加载资源"></a> 2.2.1 月球 - 加载资源</h6>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;xr-asset-load type="texture" asset-id="moon-texture" src="https://mmbizwxaminiprogram-1258344707.cos.ap-guangzhou.myqcloud.com/xr-frame/demo/2k_moon.jpeg" /&gt;</span><br><span class="line">&lt;xr-asset-material asset-id="moon-mat" effect="standard" uniforms="u_baseColorMap: moon-texture" render-queue="503"/&gt;</span><br><span class="line">&lt;xr-asset-material asset-id="moon-silhouette" effect="simple" uniforms="u_baseColorFactor: 0.476 0.82 0.957 1.0" states="depthTestWrite: false" render-queue="502"/&gt;</span><br></pre></td></tr></table></figure>
+<p>  同样的方法加载资源，生成月球网格和点击时出现的轮廓的网格。</p>
+<h6 id="222-月球-生成网格"><a class="markdownIt-Anchor" href="#222-月球-生成网格"></a> 2.2.2 月球 - 生成网格</h6>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;xr-mesh node-id="mesh-moon" position="10 0 0" scale="1.5 1.5 1.5" rotation="0 90 0" geometry="sphere" material="moon-mat" bind:drag-shape="handleDragMoon" bind:touch-shape="handleTouchMoon" bind:untouch-shape="handleUntouchMoon" sphere-shape="radius: 1.5" receive-shadow cast-shadow&gt;&lt;/xr-mesh&gt;</span><br><span class="line">&lt;xr-mesh node-id="moon-silhouette" scale="1.1 1.1 1.1" geometry="sphere" material="moon-silhouette" visible="{{touchingMoon}}"&gt;&lt;/xr-mesh&gt;</span><br></pre></td></tr></table></figure>
+<h6 id="223-月球-事件解析"><a class="markdownIt-Anchor" href="#223-月球-事件解析"></a> 2.2.3 月球 - 事件解析</h6>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">handleDragMoon: function({detail}) {</span><br><span class="line">    const { dir, target, camera } = detail.value;</span><br><span class="line">    const cameraPos = camera.el._components.transform.worldPosition;</span><br><span class="line">    const k = -cameraPos.y / dir[1];</span><br><span class="line">    const x = cameraPos.x + k * dir[0];</span><br><span class="line">    const z = cameraPos.z + k * dir[2];</span><br><span class="line">    const len = Math.sqrt(x * x + z * z);</span><br><span class="line">    if (len &gt; this.data.innerRing) {</span><br><span class="line">        const transform = target._components.transform;</span><br><span class="line">        const scale = len &gt; this.data.outerRing ? this.data.outerRing / len : 1.0;</span><br><span class="line">        transform.position.x = x * scale;</span><br><span class="line">        transform.position.z = z * scale;</span><br><span class="line">    }</span><br><span class="line">},</span><br><span class="line">handleTouchMoon: function() {</span><br><span class="line">    this.setData({touchingMoon: true});</span><br><span class="line">},</span><br><span class="line">handleUntouchMoon: function() {</span><br><span class="line">    const moon = this.scene.getNodeById("mesh-moon");</span><br><span class="line">    const transform = moon.el._components.transform;</span><br><span class="line">    const x = transform.position.x;</span><br><span class="line">    const z = transform.position.z;</span><br><span class="line">    const len = Math.sqrt(x * x + z * z);</span><br><span class="line">    this.setData({</span><br><span class="line">        r: len,</span><br><span class="line">        θ: x &lt; 0 ? Math.atan(z / x) + Math.PI : Math.atan(z / x),</span><br><span class="line">        ω: Math.sqrt(2.5e-4 / (len * len * len))</span><br><span class="line">    });</span><br><span class="line">    this.setData({touchingMoon: false});</span><br><span class="line">},</span><br></pre></td></tr></table></figure>
+<p>  月球网格上绑定了三个事件处理函数：<br>
+  通过手指的触摸与松开月球网格，触发的事件函数 handleTouchMoon 和事件函数 handleUntouchMoon，可以改变轮廓网格上绑定的 touchingMoon 的值，来控制轮廓网格的现实与隐藏。当然，因为月球网格要围绕地球公转，所以在松开手指时，要更新月球到地球的距离 r、月球公转时所需要的角度 θ、公转的角速度 ω，其中<code>ω: Math.sqrt(2.5e-4 / (len * len * len))</code>为天体运动的基本公式，</p>
+<p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>m</mi><mi>a</mi><mo>=</mo><mi>m</mi><msup><mi>ω</mi><mn>2</mn></msup><mi>r</mi><mo>=</mo><mi>F</mi><mo>=</mo><msup><mfrac><mrow><mi>G</mi><mi>M</mi><mi>m</mi></mrow><mi>r</mi></mfrac><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">ma=mω^2r=F=\frac{GMm}{r}^2
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">m</span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8641079999999999em;vertical-align:0em;"></span><span class="mord mathnormal">m</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">ω</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641079999999999em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.250338em;vertical-align:-0.686em;"></span><span class="mord"><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.36033em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">r</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">G</span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="mord mathnormal">m</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:1.5643380000000002em;"><span style="top:-3.8132300000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span></p>
+<p>  通过手指对月球网格的拖拽，触发的事件函数 handleDragMoon，可以改变月球到地球的距离。具体的计算方法如下：<br>
+  dir 是由相机向地球和月球所在的三维世界发射出的一条射线的单位向量，通过手指在屏幕上的滑动可以改变射线的方向，该射线与平面 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">y=0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span> 的交点，即为月球网格的所在位置（在不受到最大、最小距离限制时）；cameraPos 是相机的所在的坐标，即射线上的一个点；有了直线的向量和一个点，可知直线方程为:</p>
+<p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mfrac><mrow><mi>x</mi><mo>−</mo><mi>c</mi><mi>a</mi><mi>m</mi><mi>e</mi><mi>r</mi><mi>a</mi><mi>P</mi><mi>o</mi><mi>s</mi><mi mathvariant="normal">.</mi><mi>x</mi></mrow><mrow><mi>d</mi><mi>i</mi><mi>r</mi><mo stretchy="false">[</mo><mn>0</mn><mo stretchy="false">]</mo></mrow></mfrac><mo>=</mo><mfrac><mrow><mi>y</mi><mo>−</mo><mi>c</mi><mi>a</mi><mi>m</mi><mi>e</mi><mi>r</mi><mi>a</mi><mi>P</mi><mi>o</mi><mi>s</mi><mi mathvariant="normal">.</mi><mi>y</mi></mrow><mrow><mi>d</mi><mi>i</mi><mi>r</mi><mo stretchy="false">[</mo><mn>1</mn><mo stretchy="false">]</mo></mrow></mfrac><mo>=</mo><mfrac><mrow><mi>z</mi><mo>−</mo><mi>c</mi><mi>a</mi><mi>m</mi><mi>e</mi><mi>r</mi><mi>a</mi><mi>P</mi><mi>o</mi><mi>s</mi><mi mathvariant="normal">.</mi><mi>z</mi></mrow><mrow><mi>d</mi><mi>i</mi><mi>r</mi><mo stretchy="false">[</mo><mn>2</mn><mo stretchy="false">]</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{x-cameraPos.x}{dir[0]} = \frac{y-cameraPos.y}{dir[1]} = \frac{z-cameraPos.z}{dir[2]}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.29633em;vertical-align:-0.936em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.36033em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">d</span><span class="mord mathnormal">i</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mopen">[</span><span class="mord">0</span><span class="mclose">]</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathnormal">c</span><span class="mord mathnormal">a</span><span class="mord mathnormal">m</span><span class="mord mathnormal">e</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mord mathnormal">a</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mord mathnormal">o</span><span class="mord mathnormal">s</span><span class="mord">.</span><span class="mord mathnormal">x</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.2963299999999998em;vertical-align:-0.936em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603299999999998em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">d</span><span class="mord mathnormal">i</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mopen">[</span><span class="mord">1</span><span class="mclose">]</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathnormal">c</span><span class="mord mathnormal">a</span><span class="mord mathnormal">m</span><span class="mord mathnormal">e</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mord mathnormal">a</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mord mathnormal">o</span><span class="mord mathnormal">s</span><span class="mord">.</span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.29633em;vertical-align:-0.936em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.36033em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">d</span><span class="mord mathnormal">i</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mopen">[</span><span class="mord">2</span><span class="mclose">]</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.04398em;">z</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathnormal">c</span><span class="mord mathnormal">a</span><span class="mord mathnormal">m</span><span class="mord mathnormal">e</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mord mathnormal">a</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mord mathnormal">o</span><span class="mord mathnormal">s</span><span class="mord">.</span><span class="mord mathnormal" style="margin-right:0.04398em;">z</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+<p>  假设该直线与平面 <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.464ex;" xmlns="http://www.w3.org/2000/svg" width="5.257ex" height="1.971ex" role="img" focusable="false" viewBox="0 -666 2323.6 871"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D466" d="M21 287Q21 301 36 335T84 406T158 442Q199 442 224 419T250 355Q248 336 247 334Q247 331 231 288T198 191T182 105Q182 62 196 45T238 27Q261 27 281 38T312 61T339 94Q339 95 344 114T358 173T377 247Q415 397 419 404Q432 431 462 431Q475 431 483 424T494 412T496 403Q496 390 447 193T391 -23Q363 -106 294 -155T156 -205Q111 -205 77 -183T43 -117Q43 -95 50 -80T69 -58T89 -48T106 -45Q150 -45 150 -87Q150 -107 138 -122T115 -142T102 -147L99 -148Q101 -153 118 -160T152 -167H160Q177 -167 186 -165Q219 -156 247 -127T290 -65T313 -9T321 21L315 17Q309 13 296 6T270 -6Q250 -11 231 -11Q185 -11 150 11T104 82Q103 89 103 113Q103 170 138 262T173 379Q173 380 173 381Q173 390 173 393T169 400T158 404H154Q131 404 112 385T82 344T65 302T57 280Q55 278 41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="mo" transform="translate(767.8,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path></g><g data-mml-node="mn" transform="translate(1823.6,0)"><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"></path></g></g></g></svg></mjx-container> 的交点为 <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="9.225ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 4077.4 1000"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="msub" transform="translate(389,0)"><g data-mml-node="mi"><path data-c="1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path></g><g data-mml-node="TeXAtom" transform="translate(605,-150) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mn"><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"></path></g></g></g><g data-mml-node="mo" transform="translate(1397.6,0)"><path data-c="2C" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z"></path></g><g data-mml-node="mn" transform="translate(1842.2,0)"><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"></path></g><g data-mml-node="mo" transform="translate(2342.2,0)"><path data-c="2C" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z"></path></g><g data-mml-node="msub" transform="translate(2786.9,0)"><g data-mml-node="mi"><path data-c="1D467" d="M347 338Q337 338 294 349T231 360Q211 360 197 356T174 346T162 335T155 324L153 320Q150 317 138 317Q117 317 117 325Q117 330 120 339Q133 378 163 406T229 440Q241 442 246 442Q271 442 291 425T329 392T367 375Q389 375 411 408T434 441Q435 442 449 442H462Q468 436 468 434Q468 430 463 420T449 399T432 377T418 358L411 349Q368 298 275 214T160 106L148 94L163 93Q185 93 227 82T290 71Q328 71 360 90T402 140Q406 149 409 151T424 153Q443 153 443 143Q443 138 442 134Q425 72 376 31T278 -11Q252 -11 232 6T193 40T155 57Q111 57 76 -3Q70 -11 59 -11H54H41Q35 -5 35 -2Q35 13 93 84Q132 129 225 214T340 322Q352 338 347 338Z"></path></g><g data-mml-node="TeXAtom" transform="translate(498,-150) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mn"><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"></path></g></g></g><g data-mml-node="mo" transform="translate(3688.4,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g></g></g></svg></mjx-container>，那么可知：</p>
+<p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>=</mo><mo>−</mo><mfrac><mrow><mi>c</mi><mi>a</mi><mi>m</mi><mi>e</mi><mi>r</mi><mi>a</mi><mi>P</mi><mi>o</mi><mi>s</mi><mi mathvariant="normal">.</mi><mi>y</mi></mrow><mrow><mi>d</mi><mi>i</mi><mi>r</mi><mo stretchy="false">[</mo><mn>1</mn><mo stretchy="false">]</mo></mrow></mfrac><mi>d</mi><mi>i</mi><mi>r</mi><mo stretchy="false">[</mo><mn>0</mn><mo stretchy="false">]</mo><mo>+</mo><mi>c</mi><mi>a</mi><mi>m</mi><mi>e</mi><mi>r</mi><mi>a</mi><mi>P</mi><mi>o</mi><mi>s</mi><mi mathvariant="normal">.</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">x_{0} = - \frac{cameraPos.y}{dir[1]} dir[0]+cameraPos.x
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">0</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.2963299999999998em;vertical-align:-0.936em;"></span><span class="mord">−</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603299999999998em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">d</span><span class="mord mathnormal">i</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mopen">[</span><span class="mord">1</span><span class="mclose">]</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">c</span><span class="mord mathnormal">a</span><span class="mord mathnormal">m</span><span class="mord mathnormal">e</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mord mathnormal">a</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mord mathnormal">o</span><span class="mord mathnormal">s</span><span class="mord">.</span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord mathnormal">d</span><span class="mord mathnormal">i</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mopen">[</span><span class="mord">0</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal">c</span><span class="mord mathnormal">a</span><span class="mord mathnormal">m</span><span class="mord mathnormal">e</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mord mathnormal">a</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mord mathnormal">o</span><span class="mord mathnormal">s</span><span class="mord">.</span><span class="mord mathnormal">x</span></span></span></span></span></p>
+<p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>z</mi><mn>0</mn></msub><mo>=</mo><mo>−</mo><mfrac><mrow><mi>c</mi><mi>a</mi><mi>m</mi><mi>e</mi><mi>r</mi><mi>a</mi><mi>P</mi><mi>o</mi><mi>s</mi><mi mathvariant="normal">.</mi><mi>y</mi></mrow><mrow><mi>d</mi><mi>i</mi><mi>r</mi><mo stretchy="false">[</mo><mn>1</mn><mo stretchy="false">]</mo></mrow></mfrac><mi>d</mi><mi>i</mi><mi>r</mi><mo stretchy="false">[</mo><mn>2</mn><mo stretchy="false">]</mo><mo>+</mo><mi>c</mi><mi>a</mi><mi>m</mi><mi>e</mi><mi>r</mi><mi>a</mi><mi>P</mi><mi>o</mi><mi>s</mi><mi mathvariant="normal">.</mi><mi>z</mi></mrow><annotation encoding="application/x-tex">z_{0} = - \frac{cameraPos.y}{dir[1]} dir[2]+cameraPos.z
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.04398em;">z</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.04398em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">0</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.2963299999999998em;vertical-align:-0.936em;"></span><span class="mord">−</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603299999999998em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">d</span><span class="mord mathnormal">i</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mopen">[</span><span class="mord">1</span><span class="mclose">]</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">c</span><span class="mord mathnormal">a</span><span class="mord mathnormal">m</span><span class="mord mathnormal">e</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mord mathnormal">a</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mord mathnormal">o</span><span class="mord mathnormal">s</span><span class="mord">.</span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord mathnormal">d</span><span class="mord mathnormal">i</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mopen">[</span><span class="mord">2</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal">c</span><span class="mord mathnormal">a</span><span class="mord mathnormal">m</span><span class="mord mathnormal">e</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mord mathnormal">a</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mord mathnormal">o</span><span class="mord mathnormal">s</span><span class="mord">.</span><span class="mord mathnormal" style="margin-right:0.04398em;">z</span></span></span></span></span></p>
+<p>  即与代码中的 x 与 z 对应，再计算出与地球的距离 len。当 len 小于 this.data.innerRing，手指的拖动是不会改变月球的位置的；当 len 大于 this.data.innerRing 时，将刚刚计算出的 x 与 z 赋值给月球网格的 transform，来改变月球网格的坐标；但当 len 大于 this.data.outerRing 时，按照一定的比例 scale，去改变月球的 transform。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">handleTick: function({detail}) {</span><br><span class="line">  if (this.data.touchingMoon || !this.scene) return;</span><br><span class="line">  const deltaTime = detail.value;</span><br><span class="line">  const moon = this.scene.getNodeById("mesh-moon");</span><br><span class="line">  const transform = moon.el._components.transform;</span><br><span class="line">  const x = Math.cos(this.data.θ) * this.data.r;</span><br><span class="line">  const z = Math.sin(this.data.θ) * this.data.r;</span><br><span class="line">  transform.position.x = x;</span><br><span class="line">  transform.position.z = z;</span><br><span class="line">  transform.rotation.y -= this.data.ω * deltaTime;</span><br><span class="line">  this.setData({</span><br><span class="line">    θ: this.data.θ + this.data.ω * deltaTime</span><br><span class="line">  });</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<p>  最后的函数 handleTick 绑定给了 xr-scene，来实现月球公转和触碰月球时停止公转的操作。</p>
+
+                </div>
+
+                
+                        
+<div class="post-copyright-info-container border-box">
+    <div class="copyright-info-content border-box">
+        <div class="copyright-info-top border-box">
+            <div class="copyright-post-title border-box text-ellipsis">
+                XR-FRAME - 基础能力 - Interactions 交互
+            </div>
+
+            <div class="copyright-post-link border-box text-ellipsis">
+                /d1a5db76.html
+            </div>
+        </div>
+
+        <div class="copyright-info-bottom border-box">
+            <div class="copyright-post-author bottom-item">
+                <div class="type">
+                    作者
+                </div>
+                <div class="content">斑狸</div>
+            </div>
+
+            <div class="post-time bottom-item">
+                <div class="type">
+                    发布于
+                </div>
+                <div class="content">2023-12-14 14:54</div>
+            </div>
+
+
+            <div class="post-license bottom-item">
+                <div class="type">
+                    许可
+                </div>
+                <div class="content tooltip" data-tooltip-content="CC BY-NC-SA 4.0">
+                    <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans">
+                        <i class="fa-brands fa-creative-commons"></i>
+                        <i class="fa-brands fa-creative-commons-by"></i>
+                        <i class="fa-brands fa-creative-commons-nc"></i>
+                        <i class="fa-brands fa-creative-commons-sa"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <i class="copyright-bg fa-solid fa-copyright"></i>
+    </div>
+    <div class="copy-copyright-info flex-center tooltip" data-tooltip-content="复制版权信息" data-tooltip-offset-y="-2px">
+        <i class="fa-solid fa-copy"></i>
+    </div>
+</div>
+
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                            <ul class="post-tags-box border-box">
+                                
+                                    <li class="tag-item border-box">
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/">微信小程序</a>
+                                    </li>
+                                
+                                    <li class="tag-item border-box">
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/xr-frame/">xr-frame</a>
+                                    </li>
+                                
+                            </ul>
+                        
+                    </div>
+                    <div>
+                        
+                            <div class="post-share-container border-box">
+    <ul class="share-list-wrap border-box">
+        <li class="qq share-item border-box flex-center tooltip"
+            data-tooltip-content="分享到 QQ"
+        >
+            <i class="fa-brands fa-qq"></i>
+        </li>
+        <li class="wechat share-item border-box flex-center tooltip tooltip-img"
+            data-tooltip-content="分享到微信"
+            data-tooltip-img-tip="微信扫一扫"
+            data-tooltip-img-style="background-color: #fff; top: -10px; padding: 0.6rem 0.6rem 0.1rem 0.6rem;"
+        >
+            <i class="fa-brands fa-weixin"></i>
+        </li>
+        <li class="weibo share-item border-box flex-center tooltip"
+            data-tooltip-content="分享到微博"
+        >
+            <i class="fa-brands fa-weibo"></i>
+        </li>
+    </ul>
+</div>
+
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="post-nav border-box">
+                        
+                            <div class="prev-post">
+                                <a class="prev"
+                                   rel="prev"
+                                   href="/a6da3acf.html"
+                                   title="Vant组件 - Dialog 弹出框"
+                                >
+                                    <span class="left arrow-icon flex-center">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">Vant组件 - Dialog 弹出框</span>
+                                        <span class="post-nav-item">上一篇</span>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                        
+                            <div class="next-post">
+                                <a class="next"
+                                   rel="next"
+                                   href="/261c2fb3.html"
+                                   title="Vant 组件 - ActionSheet 动作面板"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">Vant 组件 - ActionSheet 动作面板</span>
+                                        <span class="post-nav-item">下一篇</span>
+                                    </span>
+                                    <span class="right arrow-icon flex-center">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+    <div class="comments-container border-box">
+        <div id="comments-anchor" class="comment-area-title border-box">
+            <i class="fas fa-comments"></i>&nbsp;评论
+        </div>
+        <div class="comment-plugin-fail border-box">
+    <span class="fail-tip">评论插件加载失败</span>
+    <button class="reload keep-button">点击重新加载</button>
+</div>
+<div class="comment-plugin-loading flex-center border-box">
+    <i class="loading-icon fa-solid fa-spinner fa-spin"></i>
+    <span class="load-tip">正在加载评论插件</span>
+</div>
+<script data-pjax>
+  window.KeepCommentPlugin = {}
+  window.KeepCommentPlugin.hideLoading = () => {
+    const cplDom = document.querySelector('.comments-container .comment-plugin-loading')
+    cplDom.style.display = 'none'
+  }
+  window.KeepCommentPlugin.loadFailHandle = () => {
+    window.KeepCommentPlugin.hideLoading()
+    const cpfDom = document.querySelector('.comments-container .comment-plugin-fail')
+    cpfDom.style.display = 'flex'
+    cpfDom.querySelector('.reload').addEventListener('click', () => {
+      window.location.reload()
+    })
+  }
+</script>
+
+        
+            
+
+    <div class="valine-container">
+        <div id="vcomments"></div>
+        <script data-pjax
+                src="//cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"
+                async
+                onerror="window.KeepCommentPlugin.loadFailHandle()"
+        ></script>
+        <script data-pjax
+                async
+                onerror="window.KeepCommentPlugin.loadFailHandle()"
+        >
+          window.KeepCommentPlugin.initValine = () => {
+            const config = {
+              el: '#vcomments',
+              appId: 'mRoRGAuvS53rnOOcrzlumuEF-gzGzoHsz',
+              appKey: 'vV8tWI0otjHjeUzVNPVfySzO',
+              meta: ['nick', 'mail', 'link'],
+              avatar: 'wavatar',
+              enableQQ: true,
+              placeholder: '吐槽一下',
+              lang: 'zh-CN'.toLowerCase()
+            }
+
+            if ('https://mrorgauv.lc-cn-n1-shared.com') {
+              config.serverURLs = 'https://mrorgauv.lc-cn-n1-shared.com'
+            }
+
+            if (window?.Valine) {
+              new Valine(config)
+              window.KeepCommentPlugin.hideLoading()
+            } else {
+              setTimeout(() => {
+                window.KeepCommentPlugin.initValine()
+              }, 1000)
+            }
+          }
+
+          if ('true' === 'true') {
+            setTimeout(() => {
+              window.KeepCommentPlugin.initValine()
+            }, 1200)
+          } else {
+            window.addEventListener('DOMContentLoaded', window.KeepCommentPlugin.initValine)
+          }
+        </script>
+    </div>
+
+
+        
+    </div>
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+            <div class="pc-post-toc right-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E9%A1%B9%E7%9B%AE%E5%9C%B0%E5%9D%80"><span class="nav-text"> 1 项目地址</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E4%BB%A3%E7%A0%81%E8%A7%A3%E6%9E%90"><span class="nav-text"> 2 代码解析</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#21-%E5%9C%B0%E7%90%83%E6%A8%A1%E5%9D%97"><span class="nav-text"> 2.1 地球模块</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#211-%E5%9C%B0%E7%90%83-%E5%8A%A0%E8%BD%BD%E8%B5%84%E6%BA%90"><span class="nav-text"> 2.1.1 地球 - 加载资源</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#212-%E5%9C%B0%E7%90%83-%E7%94%9F%E6%88%90%E7%BD%91%E6%A0%BC"><span class="nav-text"> 2.1.2 地球 - 生成网格</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#213-%E5%9C%B0%E7%90%83-%E4%BA%8B%E4%BB%B6%E8%A7%A3%E6%9E%90"><span class="nav-text"> 2.1.3 地球 - 事件解析</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#22-%E6%9C%88%E7%90%83%E6%A8%A1%E5%9D%97"><span class="nav-text"> 2.2 月球模块</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#221-%E6%9C%88%E7%90%83-%E5%8A%A0%E8%BD%BD%E8%B5%84%E6%BA%90"><span class="nav-text"> 2.2.1 月球 - 加载资源</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#222-%E6%9C%88%E7%90%83-%E7%94%9F%E6%88%90%E7%BD%91%E6%A0%BC"><span class="nav-text"> 2.2.2 月球 - 生成网格</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#223-%E6%9C%88%E7%90%83-%E4%BA%8B%E4%BB%B6%E8%A7%A3%E6%9E%90"><span class="nav-text"> 2.2.3 月球 - 事件解析</span></a></li></ol></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2023</span>&nbsp;-&nbsp;2024
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">斑狸</a>
+                
+            </div>
+
+            <div class="theme-info info-item default">
+                由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+            </div>
+
+            
+
+            
+                
+                <div class="deploy-info info-item default">
+                    
+                        本站由 <span class="tooltip" data-tooltip-content="GitHub Pages"><img src="/images/deploy-provider/github.png"></span> 提供部署服务
+                    
+                </div>
+            
+        
+
+        <div class="count-item info-item default">
+            
+                <span class="count-box border-box word">
+                    <span class="item-type border-box">总字数</span>
+                    <span class="item-value border-box word">18.4k</span>
+                </span>
+            
+
+            
+                <span class="count-box border-box uv">
+                    <span class="item-type border-box">访客数</span>
+                    <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
+                </span>
+            
+
+            
+                <span class="count-box border-box pv">
+                    <span class="item-type border-box">访问量</span>
+                    <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
+                </span>
+            
+        </div>
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools right-toc">
+            <div class="post-tools-container border-box">
+    <ul class="tools-list border-box">
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+            <li class="tools-item flex-center go-to-comments">
+                <i class="fas fa-comment"></i>
+                <span class="post-comments-count"></span>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-toggle-theme-mode flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+            <li class="tools-item rss flex-center">
+                <a class="flex-center"
+                   href="/atom.xml"
+                   target="_blank"
+                >
+                    <i class="fas fa-rss"></i>
+                </a>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        
+            <li class="tools-item go-to-comments-tablet flex-center">
+                <i class="fas fa-comment"></i>
+            </li>
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+    <!-- tablet toc -->
+    
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E9%A1%B9%E7%9B%AE%E5%9C%B0%E5%9D%80"><span class="nav-text"> 1 项目地址</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E4%BB%A3%E7%A0%81%E8%A7%A3%E6%9E%90"><span class="nav-text"> 2 代码解析</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#21-%E5%9C%B0%E7%90%83%E6%A8%A1%E5%9D%97"><span class="nav-text"> 2.1 地球模块</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#211-%E5%9C%B0%E7%90%83-%E5%8A%A0%E8%BD%BD%E8%B5%84%E6%BA%90"><span class="nav-text"> 2.1.1 地球 - 加载资源</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#212-%E5%9C%B0%E7%90%83-%E7%94%9F%E6%88%90%E7%BD%91%E6%A0%BC"><span class="nav-text"> 2.1.2 地球 - 生成网格</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#213-%E5%9C%B0%E7%90%83-%E4%BA%8B%E4%BB%B6%E8%A7%A3%E6%9E%90"><span class="nav-text"> 2.1.3 地球 - 事件解析</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#22-%E6%9C%88%E7%90%83%E6%A8%A1%E5%9D%97"><span class="nav-text"> 2.2 月球模块</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#221-%E6%9C%88%E7%90%83-%E5%8A%A0%E8%BD%BD%E8%B5%84%E6%BA%90"><span class="nav-text"> 2.2.1 月球 - 加载资源</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#222-%E6%9C%88%E7%90%83-%E7%94%9F%E6%88%90%E7%BD%91%E6%A0%BC"><span class="nav-text"> 2.2.2 月球 - 生成网格</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#223-%E6%9C%88%E7%90%83-%E4%BA%8B%E4%BB%B6%E8%A7%A3%E6%9E%90"><span class="nav-text"> 2.2.3 月球 - 事件解析</span></a></li></ol></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        </div>
+    
+</main>
+
+
+
+<!-- common -->
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.5/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.5/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.5/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.5/source/js/toggle-theme.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.5/source/js/code-block.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.5/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.5/source/js/libs/anime.min.js"></script>
+
+<!-- local-search -->
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.5/source/js/local-search.js"></script>
+
+
+<!-- lazyload -->
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.5/source/js/lazyload.js"></script>
+
+
+<div class="pjax">
+    
+        <!-- post-helper -->
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.5/source/js/post/post-helper.js"></script>
+
+        <!-- toc -->
+        
+            <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.5/source/js/post/toc.js"></script>
+        
+
+        <!-- copyright-info -->
+        
+            <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.5/source/js/post/copyright-info.js"></script>
+        
+
+        <!-- share -->
+        
+            <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.5/source/js/post/share.js"></script>
+        
+    
+
+    <!-- category-page -->
+    
+
+    <!-- links-page -->
+    
+
+    <!-- photos-page -->
+    
+</div>
+
+<!-- mermaid -->
+
+
+<!-- pjax -->
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.5/source/js/libs/pjax.min.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart()
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd()
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'))
+            KEEP.initExecute()
+        });
+    });
+</script>
+
+
+
+
+</body>
+</html>
