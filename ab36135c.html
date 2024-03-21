@@ -353,7 +353,7 @@ mjx-container[display="true"] + br {
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="pc" data-updated="Wed Mar 20 2024 18:51:00 GMT+0800">2024-03-20 18:51:00</span>
+                <span class="pc" data-updated="Thu Mar 21 2024 08:38:50 GMT+0800">2024-03-21 08:38:50</span>
             </span>
         
 
@@ -389,7 +389,7 @@ mjx-container[display="true"] + br {
         
         
             <span class="meta-info-item post-wordcount">
-                <i class="icon fas fa-file-word"></i>&nbsp;<span>160 字</span>
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>194 字</span>
             </span>
         
         
@@ -428,10 +428,13 @@ mjx-container[display="true"] + br {
 <h6 id="时空限制"><a class="markdownIt-Anchor" href="#时空限制"></a> 时/空限制</h6>
 <p>1s / 64MB</p>
 <h5 id="2-解答"><a class="markdownIt-Anchor" href="#2-解答"></a> 2 解答</h5>
+<h6 id="解法一"><a class="markdownIt-Anchor" href="#解法一"></a> 解法一</h6>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> {</span></span><br><span class="line">public:</span><br><span class="line">    <span class="type">int</span> <span class="title function_">NumberOf1</span><span class="params">(<span class="type">int</span> n)</span> {</span><br><span class="line">        <span class="type">int</span> res = <span class="number">0</span>;</span><br><span class="line">        <span class="type">unsigned</span> <span class="type">int</span> un = n;</span><br><span class="line">        <span class="keyword">while</span> (un) {</span><br><span class="line">            res += un &amp; <span class="number">1</span>;</span><br><span class="line">            un &gt;&gt;= <span class="number">1</span>;</span><br><span class="line">        }</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    }</span><br><span class="line">};</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>注意：负数在计算机中用其绝对值的补码来表示，需要转换成无符号整数。</p>
 </blockquote>
+<h6 id="解法二"><a class="markdownIt-Anchor" href="#解法二"></a> 解法二</h6>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> {</span></span><br><span class="line">public:</span><br><span class="line">    <span class="type">int</span> <span class="title function_">NumberOf1</span><span class="params">(<span class="type">int</span> n)</span> {</span><br><span class="line">        <span class="type">int</span> res = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">32</span>; i ++ )</span><br><span class="line">            <span class="keyword">if</span> (n &gt;&gt; i &amp; <span class="number">1</span>)</span><br><span class="line">                res ++ ;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    }</span><br><span class="line">};</span><br></pre></td></tr></table></figure>
 
                 </div>
 
@@ -656,7 +659,7 @@ mjx-container[display="true"] + br {
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E9%A2%98%E7%9B%AE"><span class="nav-text"> 1 题目</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0"><span class="nav-text"> 题目描述</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E8%8C%83%E5%9B%B4"><span class="nav-text"> 数据范围</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E6%A0%B7%E4%BE%8B-1"><span class="nav-text"> 样例 1</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E6%A0%B7%E4%BE%8B-2"><span class="nav-text"> 样例 2</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E6%97%B6%E7%A9%BA%E9%99%90%E5%88%B6"><span class="nav-text"> 时&#x2F;空限制</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E8%A7%A3%E7%AD%94"><span class="nav-text"> 2 解答</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E9%A2%98%E7%9B%AE"><span class="nav-text"> 1 题目</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0"><span class="nav-text"> 题目描述</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E8%8C%83%E5%9B%B4"><span class="nav-text"> 数据范围</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E6%A0%B7%E4%BE%8B-1"><span class="nav-text"> 样例 1</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E6%A0%B7%E4%BE%8B-2"><span class="nav-text"> 样例 2</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E6%97%B6%E7%A9%BA%E9%99%90%E5%88%B6"><span class="nav-text"> 时&#x2F;空限制</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E8%A7%A3%E7%AD%94"><span class="nav-text"> 2 解答</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E8%A7%A3%E6%B3%95%E4%B8%80"><span class="nav-text"> 解法一</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E8%A7%A3%E6%B3%95%E4%BA%8C"><span class="nav-text"> 解法二</span></a></li></ol></li></ol>
     </div>
 </div>
 
@@ -846,7 +849,7 @@ mjx-container[display="true"] + br {
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E9%A2%98%E7%9B%AE"><span class="nav-text"> 1 题目</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0"><span class="nav-text"> 题目描述</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E8%8C%83%E5%9B%B4"><span class="nav-text"> 数据范围</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E6%A0%B7%E4%BE%8B-1"><span class="nav-text"> 样例 1</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E6%A0%B7%E4%BE%8B-2"><span class="nav-text"> 样例 2</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E6%97%B6%E7%A9%BA%E9%99%90%E5%88%B6"><span class="nav-text"> 时&#x2F;空限制</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E8%A7%A3%E7%AD%94"><span class="nav-text"> 2 解答</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E9%A2%98%E7%9B%AE"><span class="nav-text"> 1 题目</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0"><span class="nav-text"> 题目描述</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E8%8C%83%E5%9B%B4"><span class="nav-text"> 数据范围</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E6%A0%B7%E4%BE%8B-1"><span class="nav-text"> 样例 1</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E6%A0%B7%E4%BE%8B-2"><span class="nav-text"> 样例 2</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E6%97%B6%E7%A9%BA%E9%99%90%E5%88%B6"><span class="nav-text"> 时&#x2F;空限制</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E8%A7%A3%E7%AD%94"><span class="nav-text"> 2 解答</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E8%A7%A3%E6%B3%95%E4%B8%80"><span class="nav-text"> 解法一</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E8%A7%A3%E6%B3%95%E4%BA%8C"><span class="nav-text"> 解法二</span></a></li></ol></li></ol>
     </div>
 </div>
 
