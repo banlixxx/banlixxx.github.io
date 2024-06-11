@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-02-15T04:24:55.903Z</updated>
+  <updated>2024-06-11T00:46:57.910Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,19 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>AI绘画 ———— 云部署 Stable Diffusion</title>
+    <link href="http://example.com/311d54b6.html"/>
+    <id>http://example.com/311d54b6.html</id>
+    <published>2024-06-11T00:45:36.000Z</published>
+    <updated>2024-06-11T00:46:57.910Z</updated>
+    
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>IOS 上下载 ChatGPT、Twitter、YouTube 等 App 的方法</title>
@@ -560,36 +573,6 @@
     <category term="Vue2" scheme="http://example.com/tags/Vue2/"/>
     
     <category term="Vant 组件库" scheme="http://example.com/tags/Vant-%E7%BB%84%E4%BB%B6%E5%BA%93/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Mixins 混入处理</title>
-    <link href="http://example.com/e8b9f136.html"/>
-    <id>http://example.com/e8b9f136.html</id>
-    <published>2023-12-18T03:38:39.000Z</published>
-    <updated>2024-02-12T07:53:36.622Z</updated>
-    
-    <content type="html"><![CDATA[<h5 id="1-新建文件"><a class="markdownIt-Anchor" href="#1-新建文件"></a> 1 新建文件</h5><p>新建 /src/mixins/test.js</p><h5 id="2-编写所需要混入的内容"><a class="markdownIt-Anchor" href="#2-编写所需要混入的内容"></a> 2 编写所需要混入的内容</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  <span class="comment">// 此处编写的就是Vue组件实例的配置项，通过一定语法，可以直接混入到组件内部</span></span><br><span class="line">  <span class="comment">// data mothods computed 生命周期函数...</span></span><br><span class="line">  <span class="comment">// 1.注意点：如果此处和组件内，提供了同名的data或methods，则组件内优先级更高</span></span><br><span class="line">  <span class="comment">// 2.如果编写了生命周期函数，则mixins中的生命周期函数和页面的生命周期函数，会用数组管理，统一执行</span></span><br><span class="line">  <span class="title function_">data</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      <span class="attr">title</span>: <span class="string">&#x27;标题&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">methods</span>: &#123;</span><br><span class="line">    <span class="title function_">sayHi</span>(<span class="params"></span>) &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;你好&#x27;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h5 id="3-组件中导入"><a class="markdownIt-Anchor" href="#3-组件中导入"></a> 3 组件中导入</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">  <span class="keyword">import</span> test <span class="keyword">from</span> <span class="string">&#x27;@/mixins/test.js&#x27;</span></span><br><span class="line">  <span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">    <span class="attr">mixins</span>: [test],</span><br><span class="line">    <span class="comment">// 调用导入的数据</span></span><br><span class="line">    <span class="title function_">created</span>(<span class="params"></span>) &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>.<span class="property">title</span>),</span><br><span class="line">      <span class="variable language_">this</span>.<span class="title function_">sayHi</span>()</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h5 id=&quot;1-新建文件&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#1-新建文件&quot;&gt;&lt;/a&gt; 1 新建文件&lt;/h5&gt;
-&lt;p&gt;新建 /src/mixins/test.js&lt;/p&gt;
-&lt;h5 id=&quot;2-编写所需要混入的内容&quot;&gt;&lt;a class=&quot;m</summary>
-      
-    
-    
-    
-    <category term="Vue2" scheme="http://example.com/categories/Vue2/"/>
-    
-    <category term="Vue2 基础" scheme="http://example.com/categories/Vue2/Vue2-%E5%9F%BA%E7%A1%80/"/>
-    
-    
-    <category term="Vue2" scheme="http://example.com/tags/Vue2/"/>
-    
-    <category term="Mixins" scheme="http://example.com/tags/Mixins/"/>
     
   </entry>
   
