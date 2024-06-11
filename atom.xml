@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-06-11T00:49:17.688Z</updated>
+  <updated>2024-06-11T01:31:14.255Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,15 +17,29 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>AI绘画 ———— 云部署 Stable Diffusion</title>
-    <link href="http://example.com/311d54b6.html"/>
-    <id>http://example.com/311d54b6.html</id>
+    <title>AI 绘画 —— Stable Diffusion 的云部署方法</title>
+    <link href="http://example.com/754479e2.html"/>
+    <id>http://example.com/754479e2.html</id>
     <published>2024-06-11T00:45:36.000Z</published>
-    <updated>2024-06-11T00:49:17.688Z</updated>
+    <updated>2024-06-11T01:31:14.255Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>本文会教大家如何在 AutoDL 平台云部署 Stable Diffusion、如何上传下载数据等的方法。</p></blockquote><h5 id="1-在-autodl-平台云部署-stable-diffusion"><a class="markdownIt-Anchor" href="#1-在-autodl-平台云部署-stable-diffusion"></a> 1. 在 AutoDL 平台云部署 Stable Diffusion</h5><h6 id="11-注册-autodl-账号"><a class="markdownIt-Anchor" href="#11-注册-autodl-账号"></a> 1.1 注册 AutoDL 账号</h6><p>  官网：<a class="link"   href="https://www.autodl.com/home" >https://www.autodl.com/home<i class="fas fa-external-link-alt"></i></a></p><p><img                         lazyload                       alt="image"                       data-src="https://banliooki.cn/static/2024-06-11/01.png"                        alt=""                  ><br /><img                         lazyload                       alt="image"                       data-src="https://banliooki.cn/static/2024-06-11/02.png"                        alt=""                  ><br /><img                         lazyload                       alt="image"                       data-src="https://banliooki.cn/static/2024-06-11/03.png"                        alt=""                  ></p><h6 id="12-选择需要的显卡"><a class="markdownIt-Anchor" href="#12-选择需要的显卡"></a> 1.2 选择需要的显卡</h6>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;本文会教大家如何在 AutoDL 平台云部署 Stable Diffusion、如何上传下载数据等的方法。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h5 id=&quot;1-在-autodl-平台云部署-stable-diffusion&quot;&gt;&lt;a class=</summary>
+      
     
     
     
+    <category term="AI 绘画" scheme="http://example.com/categories/AI-%E7%BB%98%E7%94%BB/"/>
     
+    
+    <category term="AI 绘画" scheme="http://example.com/tags/AI-%E7%BB%98%E7%94%BB/"/>
     
   </entry>
   
